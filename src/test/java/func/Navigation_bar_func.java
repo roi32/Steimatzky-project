@@ -23,7 +23,6 @@ public abstract class Navigation_bar_func {
 			test.fail("you not in " + pageTitle + " page",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
 		}
-
 	}
 
 	public static WebElement topItem(WebDriver driver, int mCategoryNum) {
@@ -33,27 +32,25 @@ public abstract class Navigation_bar_func {
 	}
 
 	public static WebElement subCatagory(WebDriver driver, int mCategoryNum, int subCategorynum) {
-		subCatagory = driver.findElement(
-				By.xpath("//ul[@id='catMenu']/li[" + mCategoryNum + "]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
+		WebElement subCatagory = driver.findElement(By.xpath("//ul[@id='catMenu']/li[" + mCategoryNum + "]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 		return subCatagory;
 
 	}
 
 	public static WebElement books_subCategory(WebDriver driver, int clumNum, int subcatagoryNum) {
-		subCatagory = driver.findElement(
-				By.xpath("//li[@id='menuCat-398']/div/ul/li[" + clumNum + "]/ul/li[" + subcatagoryNum + "]/a"));
+		WebElement	subCatagory = driver.findElement(By.xpath("//li[@id='menuCat-398']/div/ul/li[" + clumNum + "]/ul/li[" + subcatagoryNum + "]/a"));
 		return subCatagory;
 
 	}
 
-	public	static WebDriver driver;
-	public	static Actions actions;
+	public static WebDriver driver;
+	public static Actions actions;
 	public static ExtentReports extent;
-	public	static ExtentTest test;
+	public static ExtentTest test;
 	public static Navigation_bar_id pof;
 	public static Extent_reports exm = new Extent_reports(driver);
-	public	static WebElement topItem;
-	public	static String topItemString;
+	public static WebElement topItem;
+	public static String topItemString;
 	public static WebElement subCatagory;
 	public static String subcatagoryString;
 	public static int mCategoryNum;

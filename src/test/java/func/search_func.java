@@ -23,11 +23,11 @@ public abstract class search_func {
 	}
 
 	public static WebDriver driver;
-	public	static String value;
-	public	static String path = "search - test.xlsx";
-	public	static int rows;
-	public	static String titleString;
-	public	static search_id pof;
+	public static String value;
+	public static String path = "search - test.xlsx";
+	public static int rows;
+	public static String titleString;
+	public static search_id pof;
 	public static Extent_reports exm = new Extent_reports(driver);
 	public static ExtentTest test1;
 	public static ExtentReports extent;

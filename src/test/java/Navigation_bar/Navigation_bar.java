@@ -297,8 +297,7 @@ public class Navigation_bar extends Navigation_bar_func {
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// Check if page title is equal to link text
 			if (subcatagoryString.equals("חברות במועדון")) {
-				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(),
-						"חברות במועדון הקוראים של סטימצקי - הסיפור שלי");
+				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(),"חברות במועדון הקוראים של סטימצקי - הסיפור שלי");
 			} else if (subcatagoryString.equals("תקנון המועדון")) {
 				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "תקנון מועדון הקוראים של סטימצקי");
 			} else {
