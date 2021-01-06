@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-steimatzky_test" class="navigator-link">
+              <span class="suite-name border-passed">steimatzky test</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-steimatzky_test" class="navigator-link ">
+                    <span>C:\Users\royko\git\Steimatzky-project\src\test\java\Navigation_bar\testmg.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-steimatzky_test" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-steimatzky_test" class="navigator-link ">
+                    <span>3 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-steimatzky_test" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-steimatzky_test" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-steimatzky_test" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-steimatzky_test" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">14 methods,   14 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-steimatzky_test" class="hide-methods passed suite-steimatzky_test"> (hide)</a> <!-- hide-methods passed suite-steimatzky_test -->
+                      <a href="#" panel-name="suite-steimatzky_test" class="show-methods passed suite-steimatzky_test"> (show)</a> <!-- show-methods passed suite-steimatzky_test -->
+                    </span>
+                    <div class="method-list-content passed suite-steimatzky_test">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-steimatzky_test" title="Navigation_bar.Navigation_bar" class="method navigator-link" hash-for-method="Appliances_subCategory">Appliances_subCategory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-steimatzky_test" title="Navigation_bar.Navigation_bar" class="method navigator-link" hash-for-method="Cosmetics_and_perfumes_subCategory">Cosmetics_and_perfumes_subCategory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-steimatzky_test" title="Navigation_bar.Navigation_bar" class="method navigator-link" hash-for-method="Costumers_club_subCategory">Costumers_club_subCategory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-steimatzky_test" title="Navigation_bar.Navigation_bar" class="method navigator-link" hash-for-method="English_Books_subCategory">English_Books_subCategory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-steimatzky_test" title="Navigation_bar.Navigation_bar" class="method navigator-link" hash-for-method="Gifts_and_leisure_subCategory">Gifts_and_leisure_subCategory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-steimatzky_test" title="Navigation_bar.Navigation_bar" class="method navigator-link" hash-for-method="HOME_subCategory">HOME_subCategory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-steimatzky_test" title="Navigation_bar.Navigation_bar" class="method navigator-link" hash-for-method="Smartphones_subCategory">Smartphones_subCategory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-steimatzky_test" title="Navigation_bar.Navigation_bar" class="method navigator-link" hash-for-method="books_subCategory">books_subCategory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-steimatzky_test" title="Navigation_bar.Navigation_bar" class="method navigator-link" hash-for-method="camping_subCategory">camping_subCategory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-steimatzky_test" title="Navigation_bar.Navigation_bar" class="method navigator-link" hash-for-method="club">club</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-steimatzky_test" title="Navigation_bar.Navigation_bar" class="method navigator-link" hash-for-method="games_subCategory">games_subCategory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-steimatzky_test" title="Navigation_bar.Navigation_bar" class="method navigator-link" hash-for-method="mCategorys">mCategorys</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-steimatzky_test" title="Navigation_bar.Navigation_bar" class="method navigator-link" hash-for-method="music_subCategory">music_subCategory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-steimatzky_test" title="Navigation_bar.Navigation_bar" class="method navigator-link" hash-for-method="sales">sales</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-steimatzky_test -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-steimatzky_test" class="panel steimatzky_test">
+          <div class="suite-steimatzky_test-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Navigation_bar.Navigation_bar</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Appliances_subCategory">
+                  </a> <!-- Appliances_subCategory -->
+                  <span class="method-name">Appliances_subCategory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Cosmetics_and_perfumes_subCategory">
+                  </a> <!-- Cosmetics_and_perfumes_subCategory -->
+                  <span class="method-name">Cosmetics_and_perfumes_subCategory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Costumers_club_subCategory">
+                  </a> <!-- Costumers_club_subCategory -->
+                  <span class="method-name">Costumers_club_subCategory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="English_Books_subCategory">
+                  </a> <!-- English_Books_subCategory -->
+                  <span class="method-name">English_Books_subCategory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Gifts_and_leisure_subCategory">
+                  </a> <!-- Gifts_and_leisure_subCategory -->
+                  <span class="method-name">Gifts_and_leisure_subCategory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="HOME_subCategory">
+                  </a> <!-- HOME_subCategory -->
+                  <span class="method-name">HOME_subCategory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Smartphones_subCategory">
+                  </a> <!-- Smartphones_subCategory -->
+                  <span class="method-name">Smartphones_subCategory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="books_subCategory">
+                  </a> <!-- books_subCategory -->
+                  <span class="method-name">books_subCategory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="camping_subCategory">
+                  </a> <!-- camping_subCategory -->
+                  <span class="method-name">camping_subCategory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="club">
+                  </a> <!-- club -->
+                  <span class="method-name">club</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="games_subCategory">
+                  </a> <!-- games_subCategory -->
+                  <span class="method-name">games_subCategory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="mCategorys">
+                  </a> <!-- mCategorys -->
+                  <span class="method-name">mCategorys</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="music_subCategory">
+                  </a> <!-- music_subCategory -->
+                  <span class="method-name">music_subCategory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="sales">
+                  </a> <!-- sales -->
+                  <span class="method-name">sales</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-steimatzky_test-class-passed -->
+        </div> <!-- panel steimatzky_test -->
+        <div panel-name="test-xml-steimatzky_test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\royko\git\Steimatzky-project\src\test\java\Navigation_bar\testmg.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;steimatzky test&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;steimatzky test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;Navigation_bar.Navigation_bar&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- steimatzky test --&gt;
+&lt;/suite&gt; &lt;!-- steimatzky test --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-steimatzky_test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for steimatzky test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">steimatzky test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-steimatzky_test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for steimatzky test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">mCategory</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">club</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">sales</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">mCategorys</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">mCategorys</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">subCategory</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">Appliances_subCategory</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">Cosmetics_and_perfumes_subCategory</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">Costumers_club_subCategory</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">English_Books_subCategory</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">Gifts_and_leisure_subCategory</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">HOME_subCategory</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">Smartphones_subCategory</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">books_subCategory</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">camping_subCategory</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">games_subCategory</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">music_subCategory</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-steimatzky_test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for steimatzky test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_steimatzky_test');
+function tableData_steimatzky_test() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(14);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'books_subCategory')
+data.setCell(0, 2, 'Navigation_bar.Navigation_bar')
+data.setCell(0, 3, 286858);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'mCategorys')
+data.setCell(1, 2, 'Navigation_bar.Navigation_bar')
+data.setCell(1, 3, 15424);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'English_Books_subCategory')
+data.setCell(2, 2, 'Navigation_bar.Navigation_bar')
+data.setCell(2, 3, 9691);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'Gifts_and_leisure_subCategory')
+data.setCell(3, 2, 'Navigation_bar.Navigation_bar')
+data.setCell(3, 3, 9190);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'music_subCategory')
+data.setCell(4, 2, 'Navigation_bar.Navigation_bar')
+data.setCell(4, 3, 8669);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'HOME_subCategory')
+data.setCell(5, 2, 'Navigation_bar.Navigation_bar')
+data.setCell(5, 3, 5844);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'Costumers_club_subCategory')
+data.setCell(6, 2, 'Navigation_bar.Navigation_bar')
+data.setCell(6, 3, 4837);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'Appliances_subCategory')
+data.setCell(7, 2, 'Navigation_bar.Navigation_bar')
+data.setCell(7, 3, 4285);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'Cosmetics_and_perfumes_subCategory')
+data.setCell(8, 2, 'Navigation_bar.Navigation_bar')
+data.setCell(8, 3, 3918);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'sales')
+data.setCell(9, 2, 'Navigation_bar.Navigation_bar')
+data.setCell(9, 3, 3111);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'camping_subCategory')
+data.setCell(10, 2, 'Navigation_bar.Navigation_bar')
+data.setCell(10, 3, 2214);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'Smartphones_subCategory')
+data.setCell(11, 2, 'Navigation_bar.Navigation_bar')
+data.setCell(11, 3, 2097);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'games_subCategory')
+data.setCell(12, 2, 'Navigation_bar.Navigation_bar')
+data.setCell(12, 3, 1431);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'club')
+data.setCell(13, 2, 'Navigation_bar.Navigation_bar')
+data.setCell(13, 3, 823);
+window.suiteTableData['steimatzky_test']= { tableData: data, tableDiv: 'times-div-steimatzky_test'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <div id="times-div-steimatzky_test">
+              </div> <!-- times-div-steimatzky_test -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-steimatzky_test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for steimatzky test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-steimatzky_test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-steimatzky_test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">Navigation_bar.Navigation_bar</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod</span>
+                <span class="method-start">9032 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">sales</span>
+                <span class="method-start">9049 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod</span>
+                <span class="method-start">12162 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod</span>
+                <span class="method-start">14165 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">mCategorys</span>
+                <span class="method-start">14169 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod</span>
+                <span class="method-start">29594 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod</span>
+                <span class="method-start">31597 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">club</span>
+                <span class="method-start">31600 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod</span>
+                <span class="method-start">32424 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod</span>
+                <span class="method-start">34426 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">books_subCategory</span>
+                <span class="method-start">34429 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod</span>
+                <span class="method-start">321287 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod</span>
+                <span class="method-start">323293 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">English_Books_subCategory</span>
+                <span class="method-start">323296 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod</span>
+                <span class="method-start">332988 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod</span>
+                <span class="method-start">335000 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">games_subCategory</span>
+                <span class="method-start">335002 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod</span>
+                <span class="method-start">336434 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod</span>
+                <span class="method-start">338436 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Gifts_and_leisure_subCategory</span>
+                <span class="method-start">338439 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod</span>
+                <span class="method-start">347629 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod</span>
+                <span class="method-start">349644 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">music_subCategory</span>
+                <span class="method-start">349646 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod</span>
+                <span class="method-start">358315 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod</span>
+                <span class="method-start">360324 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Appliances_subCategory</span>
+                <span class="method-start">360327 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod</span>
+                <span class="method-start">364612 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod</span>
+                <span class="method-start">366620 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Smartphones_subCategory</span>
+                <span class="method-start">366622 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod</span>
+                <span class="method-start">368719 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod</span>
+                <span class="method-start">370721 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Cosmetics_and_perfumes_subCategory</span>
+                <span class="method-start">370724 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod</span>
+                <span class="method-start">374642 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod</span>
+                <span class="method-start">376647 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">HOME_subCategory</span>
+                <span class="method-start">376649 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod</span>
+                <span class="method-start">382493 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod</span>
+                <span class="method-start">384496 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">camping_subCategory</span>
+                <span class="method-start">384499 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod</span>
+                <span class="method-start">386713 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod</span>
+                <span class="method-start">388720 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Costumers_club_subCategory</span>
+                <span class="method-start">388722 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AfterMethod</span>
+                <span class="method-start">393559 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">395563 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
