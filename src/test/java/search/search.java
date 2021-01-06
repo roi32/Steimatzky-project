@@ -14,8 +14,6 @@ import java.awt.AWTException;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
@@ -55,9 +53,7 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 58) {
 			// read from excel file
-			XSSFRow row_r = getsheet().getRow(rows);
-			XSSFCell cell_r = row_r.getCell(0);
-			String value = cell_r.getStringCellValue();
+			String value =value(rows);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -77,9 +73,7 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 11) {
 			// read from excel file
-			XSSFRow row_r = getsheet().getRow(rows);
-			XSSFCell cell_r = row_r.getCell(1);
-			String value = cell_r.getStringCellValue();
+			String value =value(rows);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -99,9 +93,7 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 5) {
 			// read from excel file
-			XSSFRow row_r = getsheet().getRow(rows);
-			XSSFCell cell_r = row_r.getCell(2);
-			String value = cell_r.getStringCellValue();
+			String value =value(rows);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -121,9 +113,7 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 13) {
 			// read from excel file
-			XSSFRow row_r = getsheet().getRow(rows);
-			XSSFCell cell_r = row_r.getCell(3);
-			String value = cell_r.getStringCellValue();
+			String value =value(rows);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -143,9 +133,7 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 6) {
 			// read from excel file
-			XSSFRow row_r = getsheet().getRow(rows);
-			XSSFCell cell_r = row_r.getCell(4);
-			String value = cell_r.getStringCellValue();
+			String value =value(rows);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -165,9 +153,7 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 10) {
 			// read from excel file
-			XSSFRow row_r = getsheet().getRow(rows);
-			XSSFCell cell_r = row_r.getCell(5);
-			String value = cell_r.getStringCellValue();
+			String value =value(rows);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -187,9 +173,7 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 5) {
 			// read from excel file
-			XSSFRow row_r = getsheet().getRow(rows);
-			XSSFCell cell_r = row_r.getCell(6);
-			String value = cell_r.getStringCellValue();
+			String value =value(rows);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -209,9 +193,7 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 11) {
 			// read from excel file
-			XSSFRow row_r = getsheet().getRow(rows);
-			XSSFCell cell_r = row_r.getCell(7);
-			String value = cell_r.getStringCellValue();
+			String value =value(rows);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();

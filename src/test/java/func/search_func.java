@@ -4,6 +4,8 @@ import java.awt.AWTException;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
@@ -31,11 +33,14 @@ public abstract class search_func {
 	}
 
 	@SuppressWarnings("resource")
-	public XSSFSheet getsheet() throws IOException {
+	public String value(int rows) throws IOException {
 		FileInputStream fis3 = new FileInputStream("search - test.xlsx");
 		XSSFWorkbook wb = new XSSFWorkbook(fis3);
 		XSSFSheet sheet = wb.getSheet("Product_search");
-		return sheet;
+		XSSFRow row_r = sheet.getRow(rows);
+		XSSFCell cell_r = row_r.getCell(0);
+		String value = cell_r.getStringCellValue();
+		return value;
 	}
 
 }

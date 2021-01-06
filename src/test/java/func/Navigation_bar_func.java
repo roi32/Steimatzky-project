@@ -4,8 +4,6 @@ import java.awt.AWTException;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -15,7 +13,7 @@ import Tools.Navigation_bar_id;
 
 public abstract class Navigation_bar_func {
 	public static WebDriver driver;
-	public static Actions actions;
+	
 	public static ExtentReports extent;
 	public static ExtentTest test;
 	public static Navigation_bar_id pof;

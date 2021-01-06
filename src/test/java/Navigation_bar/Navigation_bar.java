@@ -23,6 +23,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 
 public class Navigation_bar extends Navigation_bar_func {
+	static Actions actions;
 
 	@BeforeClass
 	public void beforeClass() {
