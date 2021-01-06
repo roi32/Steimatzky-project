@@ -1,209 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-06T10:52:51 IST" name="steimatzky test" finished-at="2021-01-06T10:59:27 IST" duration-ms="395801">
+  <suite started-at="2021-01-06T11:36:01 IST" name="steimatzky" finished-at="2021-01-06T11:44:13 IST" duration-ms="492017">
     <groups>
-      <group name="subCategory">
-        <method signature="Navigation_bar.Appliances_subCategory()[pri:9, instance:Navigation_bar.Navigation_bar@73700b80]" name="Appliances_subCategory" class="Navigation_bar.Navigation_bar"/>
-        <method signature="Navigation_bar.Cosmetics_and_perfumes_subCategory()[pri:11, instance:Navigation_bar.Navigation_bar@73700b80]" name="Cosmetics_and_perfumes_subCategory" class="Navigation_bar.Navigation_bar"/>
-        <method signature="Navigation_bar.Costumers_club_subCategory()[pri:14, instance:Navigation_bar.Navigation_bar@73700b80]" name="Costumers_club_subCategory" class="Navigation_bar.Navigation_bar"/>
-        <method signature="Navigation_bar.English_Books_subCategory()[pri:5, instance:Navigation_bar.Navigation_bar@73700b80]" name="English_Books_subCategory" class="Navigation_bar.Navigation_bar"/>
-        <method signature="Navigation_bar.Gifts_and_leisure_subCategory()[pri:7, instance:Navigation_bar.Navigation_bar@73700b80]" name="Gifts_and_leisure_subCategory" class="Navigation_bar.Navigation_bar"/>
-        <method signature="Navigation_bar.HOME_subCategory()[pri:12, instance:Navigation_bar.Navigation_bar@73700b80]" name="HOME_subCategory" class="Navigation_bar.Navigation_bar"/>
-        <method signature="Navigation_bar.Smartphones_subCategory()[pri:10, instance:Navigation_bar.Navigation_bar@73700b80]" name="Smartphones_subCategory" class="Navigation_bar.Navigation_bar"/>
-        <method signature="Navigation_bar.books_subCategory()[pri:4, instance:Navigation_bar.Navigation_bar@73700b80]" name="books_subCategory" class="Navigation_bar.Navigation_bar"/>
-        <method signature="Navigation_bar.camping_subCategory()[pri:13, instance:Navigation_bar.Navigation_bar@73700b80]" name="camping_subCategory" class="Navigation_bar.Navigation_bar"/>
-        <method signature="Navigation_bar.games_subCategory()[pri:6, instance:Navigation_bar.Navigation_bar@73700b80]" name="games_subCategory" class="Navigation_bar.Navigation_bar"/>
-        <method signature="Navigation_bar.music_subCategory()[pri:8, instance:Navigation_bar.Navigation_bar@73700b80]" name="music_subCategory" class="Navigation_bar.Navigation_bar"/>
-      </group> <!-- subCategory -->
-      <group name="mCategorys">
-        <method signature="Navigation_bar.mCategorys()[pri:2, instance:Navigation_bar.Navigation_bar@73700b80]" name="mCategorys" class="Navigation_bar.Navigation_bar"/>
-      </group> <!-- mCategorys -->
-      <group name="mCategory">
-        <method signature="Navigation_bar.club()[pri:3, instance:Navigation_bar.Navigation_bar@73700b80]" name="club" class="Navigation_bar.Navigation_bar"/>
-        <method signature="Navigation_bar.sales()[pri:1, instance:Navigation_bar.Navigation_bar@73700b80]" name="sales" class="Navigation_bar.Navigation_bar"/>
-      </group> <!-- mCategory -->
     </groups>
-    <test started-at="2021-01-06T10:52:51 IST" name="steimatzky test" finished-at="2021-01-06T10:59:27 IST" duration-ms="395801">
-      <class name="Navigation_bar.Navigation_bar">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:52:51 IST" name="beforeClass" finished-at="2021-01-06T10:53:00 IST" duration-ms="9026" status="PASS">
+    <test started-at="2021-01-06T11:36:01 IST" name="Product_search" finished-at="2021-01-06T11:44:13 IST" duration-ms="492017">
+      <class name="search.search">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:search.search@24fcf36f]" started-at="2021-01-06T11:36:01 IST" name="beforeClass" finished-at="2021-01-06T11:36:09 IST" duration-ms="8877" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:53:00 IST" name="BeforeMethod" finished-at="2021-01-06T10:53:00 IST" duration-ms="16" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@24fcf36f]" started-at="2021-01-06T11:36:10 IST" name="BeforeMethod" finished-at="2021-01-06T11:36:10 IST" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="sales()[pri:1, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:53:00 IST" name="sales" finished-at="2021-01-06T10:53:04 IST" duration-ms="3111" status="PASS">
+        <test-method signature="books()[pri:1, instance:search.search@24fcf36f]" started-at="2021-01-06T11:36:10 IST" name="books" finished-at="2021-01-06T11:39:55 IST" duration-ms="225102" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sales -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:53:04 IST" name="AfterMethod" finished-at="2021-01-06T10:53:06 IST" duration-ms="2002" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:53:06 IST" name="BeforeMethod" finished-at="2021-01-06T10:53:06 IST" duration-ms="4" status="PASS">
+        </test-method> <!-- books -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@24fcf36f]" started-at="2021-01-06T11:39:55 IST" name="BeforeMethod" finished-at="2021-01-06T11:39:55 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="mCategorys()[pri:2, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:53:06 IST" name="mCategorys" finished-at="2021-01-06T10:53:21 IST" duration-ms="15424" status="PASS">
+        <test-method signature="English_Books()[pri:2, instance:search.search@24fcf36f]" started-at="2021-01-06T11:39:55 IST" name="English_Books" finished-at="2021-01-06T11:40:40 IST" duration-ms="45029" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- mCategorys -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:53:21 IST" name="AfterMethod" finished-at="2021-01-06T10:53:23 IST" duration-ms="2003" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:53:23 IST" name="BeforeMethod" finished-at="2021-01-06T10:53:23 IST" duration-ms="3" status="PASS">
+        </test-method> <!-- English_Books -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@24fcf36f]" started-at="2021-01-06T11:40:40 IST" name="BeforeMethod" finished-at="2021-01-06T11:40:40 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="club()[pri:3, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:53:23 IST" name="club" finished-at="2021-01-06T10:53:24 IST" duration-ms="823" status="PASS">
+        <test-method signature="Games_toys_and_puzzles()[pri:3, instance:search.search@24fcf36f]" started-at="2021-01-06T11:40:40 IST" name="Games_toys_and_puzzles" finished-at="2021-01-06T11:41:02 IST" duration-ms="22609" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- club -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:53:24 IST" name="AfterMethod" finished-at="2021-01-06T10:53:26 IST" duration-ms="2002" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:53:26 IST" name="BeforeMethod" finished-at="2021-01-06T10:53:26 IST" duration-ms="3" status="PASS">
+        </test-method> <!-- Games_toys_and_puzzles -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@24fcf36f]" started-at="2021-01-06T11:41:02 IST" name="BeforeMethod" finished-at="2021-01-06T11:41:02 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="books_subCategory()[pri:4, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:53:26 IST" name="books_subCategory" finished-at="2021-01-06T10:58:13 IST" duration-ms="286858" status="PASS">
+        <test-method signature="Gifts_and_leisure()[pri:3, instance:search.search@24fcf36f]" started-at="2021-01-06T11:41:02 IST" name="Gifts_and_leisure" finished-at="2021-01-06T11:41:56 IST" duration-ms="53474" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- books_subCategory -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:58:13 IST" name="AfterMethod" finished-at="2021-01-06T10:58:15 IST" duration-ms="2006" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:58:15 IST" name="BeforeMethod" finished-at="2021-01-06T10:58:15 IST" duration-ms="3" status="PASS">
+        </test-method> <!-- Gifts_and_leisure -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@24fcf36f]" started-at="2021-01-06T11:41:56 IST" name="BeforeMethod" finished-at="2021-01-06T11:41:56 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="English_Books_subCategory()[pri:5, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:58:15 IST" name="English_Books_subCategory" finished-at="2021-01-06T10:58:24 IST" duration-ms="9691" status="PASS">
+        <test-method signature="music()[pri:4, instance:search.search@24fcf36f]" started-at="2021-01-06T11:41:56 IST" name="music" finished-at="2021-01-06T11:42:23 IST" duration-ms="26956" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- English_Books_subCategory -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:58:24 IST" name="AfterMethod" finished-at="2021-01-06T10:58:26 IST" duration-ms="2012" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:58:26 IST" name="BeforeMethod" finished-at="2021-01-06T10:58:26 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- music -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@24fcf36f]" started-at="2021-01-06T11:42:23 IST" name="BeforeMethod" finished-at="2021-01-06T11:42:23 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="games_subCategory()[pri:6, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:58:26 IST" name="games_subCategory" finished-at="2021-01-06T10:58:28 IST" duration-ms="1431" status="PASS">
+        <test-method signature="Appliances_and_smartphones()[pri:5, instance:search.search@24fcf36f]" started-at="2021-01-06T11:42:23 IST" name="Appliances_and_smartphones" finished-at="2021-01-06T11:43:04 IST" duration-ms="41514" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- games_subCategory -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:58:28 IST" name="AfterMethod" finished-at="2021-01-06T10:58:30 IST" duration-ms="2002" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:58:30 IST" name="BeforeMethod" finished-at="2021-01-06T10:58:30 IST" duration-ms="3" status="PASS">
+        </test-method> <!-- Appliances_and_smartphones -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@24fcf36f]" started-at="2021-01-06T11:43:04 IST" name="BeforeMethod" finished-at="2021-01-06T11:43:04 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="Gifts_and_leisure_subCategory()[pri:7, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:58:30 IST" name="Gifts_and_leisure_subCategory" finished-at="2021-01-06T10:58:39 IST" duration-ms="9190" status="PASS">
+        <test-method signature="Cosmetics_and_perfumes()[pri:6, instance:search.search@24fcf36f]" started-at="2021-01-06T11:43:04 IST" name="Cosmetics_and_perfumes" finished-at="2021-01-06T11:43:27 IST" duration-ms="22833" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Gifts_and_leisure_subCategory -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:58:39 IST" name="AfterMethod" finished-at="2021-01-06T10:58:41 IST" duration-ms="2015" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:58:41 IST" name="BeforeMethod" finished-at="2021-01-06T10:58:41 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- Cosmetics_and_perfumes -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@24fcf36f]" started-at="2021-01-06T11:43:27 IST" name="BeforeMethod" finished-at="2021-01-06T11:43:27 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="music_subCategory()[pri:8, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:58:41 IST" name="music_subCategory" finished-at="2021-01-06T10:58:50 IST" duration-ms="8669" status="PASS">
+        <test-method signature="Home_and_camping()[pri:7, instance:search.search@24fcf36f]" started-at="2021-01-06T11:43:27 IST" name="Home_and_camping" finished-at="2021-01-06T11:44:12 IST" duration-ms="45025" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- music_subCategory -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:58:50 IST" name="AfterMethod" finished-at="2021-01-06T10:58:52 IST" duration-ms="2009" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:58:52 IST" name="BeforeMethod" finished-at="2021-01-06T10:58:52 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="Appliances_subCategory()[pri:9, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:58:52 IST" name="Appliances_subCategory" finished-at="2021-01-06T10:58:56 IST" duration-ms="4285" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Appliances_subCategory -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:58:56 IST" name="AfterMethod" finished-at="2021-01-06T10:58:58 IST" duration-ms="2008" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:58:58 IST" name="BeforeMethod" finished-at="2021-01-06T10:58:58 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="Smartphones_subCategory()[pri:10, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:58:58 IST" name="Smartphones_subCategory" finished-at="2021-01-06T10:59:00 IST" duration-ms="2097" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Smartphones_subCategory -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:59:00 IST" name="AfterMethod" finished-at="2021-01-06T10:59:02 IST" duration-ms="2002" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:59:02 IST" name="BeforeMethod" finished-at="2021-01-06T10:59:02 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="Cosmetics_and_perfumes_subCategory()[pri:11, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:59:02 IST" name="Cosmetics_and_perfumes_subCategory" finished-at="2021-01-06T10:59:06 IST" duration-ms="3918" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Cosmetics_and_perfumes_subCategory -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:59:06 IST" name="AfterMethod" finished-at="2021-01-06T10:59:08 IST" duration-ms="2005" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:59:08 IST" name="BeforeMethod" finished-at="2021-01-06T10:59:08 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="HOME_subCategory()[pri:12, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:59:08 IST" name="HOME_subCategory" finished-at="2021-01-06T10:59:14 IST" duration-ms="5844" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HOME_subCategory -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:59:14 IST" name="AfterMethod" finished-at="2021-01-06T10:59:16 IST" duration-ms="2003" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:59:16 IST" name="BeforeMethod" finished-at="2021-01-06T10:59:16 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="camping_subCategory()[pri:13, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:59:16 IST" name="camping_subCategory" finished-at="2021-01-06T10:59:18 IST" duration-ms="2214" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- camping_subCategory -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:59:18 IST" name="AfterMethod" finished-at="2021-01-06T10:59:20 IST" duration-ms="2007" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:59:20 IST" name="BeforeMethod" finished-at="2021-01-06T10:59:20 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="Costumers_club_subCategory()[pri:14, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:59:20 IST" name="Costumers_club_subCategory" finished-at="2021-01-06T10:59:25 IST" duration-ms="4837" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Costumers_club_subCategory -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:59:25 IST" name="AfterMethod" finished-at="2021-01-06T10:59:27 IST" duration-ms="2004" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Navigation_bar.Navigation_bar@73700b80]" started-at="2021-01-06T10:59:27 IST" name="afterClass" finished-at="2021-01-06T10:59:27 IST" duration-ms="228" status="PASS">
+        </test-method> <!-- Home_and_camping -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:search.search@24fcf36f]" started-at="2021-01-06T11:44:12 IST" name="afterClass" finished-at="2021-01-06T11:44:13 IST" duration-ms="545" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- Navigation_bar.Navigation_bar -->
-    </test> <!-- steimatzky test -->
-  </suite> <!-- steimatzky test -->
+      </class> <!-- search.search -->
+    </test> <!-- Product_search -->
+  </suite> <!-- steimatzky -->
 </testng-results>
