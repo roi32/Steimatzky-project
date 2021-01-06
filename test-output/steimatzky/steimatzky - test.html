@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>steimatzky - test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>22/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>21/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jan 06 15:10:38 IST 2021</td>
+<td>Started on:</td><td>Wed Jan 06 15:35:08 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>971 seconds (971245 ms)</td>
+<tr><td>Total time:</td><td>892 seconds (892121 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,96 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Navigation_bar.Navigation_bar.Gifts_and_leisure_subCategory()'><b>Gifts_and_leisure_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//ul[@id=&apos;catMenu&apos;]/li[6]/div/ul/li/ul/li[8]/a&quot;}
+  (Session info: chrome=87.0.4280.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-CLI6E80&apos;, ip: &apos;10.100.102.12&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\royko\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63914}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 6814797224c0271d82c93ad17d927de6
+*** Element info: {Using=xpath, value=//ul[@id=&apos;catMenu&apos;]/li[6]/div/ul/li/ul/li[8]/a}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at Tools.Navigation_bar_id.subCatagory(Navigation_bar_id.java:20)
+	at Navigation_bar.Navigation_bar.Gifts_and_leisure_subCategory(Navigation_bar.java:163)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace541957855", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace541957855'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//ul[@id=&apos;catMenu&apos;]/li[6]/div/ul/li/ul/li[8]/a&quot;}
+  (Session info: chrome=87.0.4280.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-CLI6E80&apos;, ip: &apos;10.100.102.12&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\royko\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63914}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 6814797224c0271d82c93ad17d927de6
+*** Element info: {Using=xpath, value=//ul[@id=&apos;catMenu&apos;]/li[6]/div/ul/li/ul/li[8]/a}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at Tools.Navigation_bar_id.subCatagory(Navigation_bar_id.java:20)
+	at Navigation_bar.Navigation_bar.Gifts_and_leisure_subCategory(Navigation_bar.java:163)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>18</td>
+<td>Navigation_bar.Navigation_bar@5fbdfdcf</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -77,113 +167,108 @@ function toggleAllBoxes() {
 <tr>
 <td title='search.search.Appliances_and_smartphones()'><b>Appliances_and_smartphones</b><br>Test class: search.search</td>
 <td></td>
-<td>44</td>
-<td>search.search@156b88f5</td></tr>
+<td>42</td>
+<td>search.search@4efc180e</td></tr>
 <tr>
 <td title='Navigation_bar.Navigation_bar.Appliances_subCategory()'><b>Appliances_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
 <td></td>
-<td>4</td>
-<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<td>5</td>
+<td>Navigation_bar.Navigation_bar@5fbdfdcf</td></tr>
 <tr>
 <td title='search.search.Cosmetics_and_perfumes()'><b>Cosmetics_and_perfumes</b><br>Test class: search.search</td>
 <td></td>
 <td>23</td>
-<td>search.search@156b88f5</td></tr>
+<td>search.search@4efc180e</td></tr>
 <tr>
 <td title='Navigation_bar.Navigation_bar.Cosmetics_and_perfumes_subCategory()'><b>Cosmetics_and_perfumes_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
 <td></td>
 <td>3</td>
-<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<td>Navigation_bar.Navigation_bar@5fbdfdcf</td></tr>
 <tr>
 <td title='Navigation_bar.Navigation_bar.Costumers_club_subCategory()'><b>Costumers_club_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
 <td></td>
 <td>5</td>
-<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<td>Navigation_bar.Navigation_bar@5fbdfdcf</td></tr>
 <tr>
 <td title='search.search.English_Books()'><b>English_Books</b><br>Test class: search.search</td>
 <td></td>
-<td>53</td>
-<td>search.search@156b88f5</td></tr>
+<td>45</td>
+<td>search.search@4efc180e</td></tr>
 <tr>
 <td title='Navigation_bar.Navigation_bar.English_Books_subCategory()'><b>English_Books_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
 <td></td>
-<td>9</td>
-<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<td>11</td>
+<td>Navigation_bar.Navigation_bar@5fbdfdcf</td></tr>
 <tr>
 <td title='search.search.Games_toys_and_puzzles()'><b>Games_toys_and_puzzles</b><br>Test class: search.search</td>
 <td></td>
-<td>26</td>
-<td>search.search@156b88f5</td></tr>
+<td>23</td>
+<td>search.search@4efc180e</td></tr>
 <tr>
 <td title='search.search.Gifts_and_leisure()'><b>Gifts_and_leisure</b><br>Test class: search.search</td>
 <td></td>
-<td>59</td>
-<td>search.search@156b88f5</td></tr>
-<tr>
-<td title='Navigation_bar.Navigation_bar.Gifts_and_leisure_subCategory()'><b>Gifts_and_leisure_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
-<td></td>
-<td>8</td>
-<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<td>52</td>
+<td>search.search@4efc180e</td></tr>
 <tr>
 <td title='Navigation_bar.Navigation_bar.HOME_subCategory()'><b>HOME_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
 <td></td>
-<td>5</td>
-<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<td>6</td>
+<td>Navigation_bar.Navigation_bar@5fbdfdcf</td></tr>
 <tr>
 <td title='search.search.Home_and_camping()'><b>Home_and_camping</b><br>Test class: search.search</td>
 <td></td>
-<td>46</td>
-<td>search.search@156b88f5</td></tr>
+<td>47</td>
+<td>search.search@4efc180e</td></tr>
 <tr>
 <td title='Navigation_bar.Navigation_bar.Smartphones_subCategory()'><b>Smartphones_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
 <td></td>
 <td>2</td>
-<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<td>Navigation_bar.Navigation_bar@5fbdfdcf</td></tr>
 <tr>
 <td title='search.search.books()'><b>books</b><br>Test class: search.search</td>
 <td></td>
-<td>265</td>
-<td>search.search@156b88f5</td></tr>
+<td>230</td>
+<td>search.search@4efc180e</td></tr>
 <tr>
 <td title='Navigation_bar.Navigation_bar.books_subCategory()'><b>books_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
 <td></td>
-<td>290</td>
-<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<td>291</td>
+<td>Navigation_bar.Navigation_bar@5fbdfdcf</td></tr>
 <tr>
 <td title='Navigation_bar.Navigation_bar.camping_subCategory()'><b>camping_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
 <td></td>
 <td>2</td>
-<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<td>Navigation_bar.Navigation_bar@5fbdfdcf</td></tr>
 <tr>
 <td title='Navigation_bar.Navigation_bar.club()'><b>club</b><br>Test class: Navigation_bar.Navigation_bar</td>
 <td></td>
-<td>1</td>
-<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<td>0</td>
+<td>Navigation_bar.Navigation_bar@5fbdfdcf</td></tr>
 <tr>
 <td title='Navigation_bar.Navigation_bar.games_subCategory()'><b>games_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
 <td></td>
 <td>1</td>
-<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<td>Navigation_bar.Navigation_bar@5fbdfdcf</td></tr>
 <tr>
 <td title='Navigation_bar.Navigation_bar.mCategorys()'><b>mCategorys</b><br>Test class: Navigation_bar.Navigation_bar</td>
 <td></td>
 <td>17</td>
-<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<td>Navigation_bar.Navigation_bar@5fbdfdcf</td></tr>
 <tr>
 <td title='search.search.music()'><b>music</b><br>Test class: search.search</td>
 <td></td>
 <td>27</td>
-<td>search.search@156b88f5</td></tr>
+<td>search.search@4efc180e</td></tr>
 <tr>
 <td title='Navigation_bar.Navigation_bar.music_subCategory()'><b>music_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
 <td></td>
-<td>9</td>
-<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<td>11</td>
+<td>Navigation_bar.Navigation_bar@5fbdfdcf</td></tr>
 <tr>
 <td title='Navigation_bar.Navigation_bar.sales()'><b>sales</b><br>Test class: Navigation_bar.Navigation_bar</td>
 <td></td>
 <td>3</td>
-<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<td>Navigation_bar.Navigation_bar@5fbdfdcf</td></tr>
 </table><p>
 </body>
 </html>

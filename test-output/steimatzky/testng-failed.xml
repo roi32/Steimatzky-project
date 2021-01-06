@@ -7,39 +7,10 @@
         <methods>
           <include name="BeforeMethod"/>
           <include name="afterClass"/>
-          <include name="music_subCategory"/>
-          <include name="club"/>
-          <include name="beforeClass"/>
-          <include name="camping_subCategory"/>
-          <include name="HOME_subCategory"/>
-          <include name="Appliances_subCategory"/>
-          <include name="games_subCategory"/>
-          <include name="sales"/>
           <include name="Gifts_and_leisure_subCategory"/>
-          <include name="Smartphones_subCategory"/>
-          <include name="English_Books_subCategory"/>
-          <include name="mCategorys"/>
-          <include name="Cosmetics_and_perfumes_subCategory"/>
-          <include name="books_subCategory"/>
-          <include name="Costumers_club_subCategory"/>
+          <include name="beforeClass"/>
         </methods>
       </class> <!-- Navigation_bar.Navigation_bar -->
-      <class name="search.search">
-        <methods>
-          <include name="Games_toys_and_puzzles"/>
-          <include name="music"/>
-          <include name="AfterMethod"/>
-          <include name="Cosmetics_and_perfumes"/>
-          <include name="books"/>
-          <include name="English_Books"/>
-          <include name="Gifts_and_leisure"/>
-          <include name="Appliances_and_smartphones"/>
-          <include name="Home_and_camping"/>
-          <include name="BeforeMethod"/>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- search.search -->
     </classes>
   </test> <!-- steimatzky - test(failed) -->
 </suite> <!-- Failed suite [steimatzky] -->
