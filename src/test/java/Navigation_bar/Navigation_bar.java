@@ -2,13 +2,9 @@ package Navigation_bar;
 
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.MediaEntityBuilder;
-
 import Tools.Extent_reports;
 import Tools.Navigation_bar_id;
-
+import func.Navigation_bar_func;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.testng.annotations.BeforeClass;
@@ -20,54 +16,13 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 
-public class Navigation_bar {
-
-	public static void pageTitleTest(String link, String pageTitle) throws IOException, AWTException {
-		if (link.equals(pageTitle)) {
-			test.pass("you in " + pageTitle + " page");
-		} else {
-			test.fail("you not in " + pageTitle + " page",
-					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
-		}
-
-	}
-	public static WebElement topItem(WebDriver driver,int mCategoryNum) {
-		WebElement topItem =driver.findElement(By.xpath("//ul[@id='catMenu']/li[" + mCategoryNum + "]/a"));
-		return topItem;
-		
-	}
-
-	public static WebElement subCatagory(WebDriver driver,int mCategoryNum,int subCategorynum) {
-		subCatagory = driver.findElement(By.xpath("//ul[@id='catMenu']/li["+mCategoryNum+"]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
-		return subCatagory;
-		
-	}	
-	public static WebElement books_subCategory(WebDriver driver,int clumNum,int subcatagoryNum) {
-		subCatagory = driver.findElement(By.xpath("//li[@id='menuCat-398']/div/ul/li[" + clumNum + "]/ul/li[" + subcatagoryNum + "]/a"));
-		return subCatagory;
-		
-	}
-
-	static WebDriver driver;
-	static Actions actions;
-	public static ExtentReports extent;
-	static ExtentTest test;
-	public	static Navigation_bar_id pof;
-    public	static Extent_reports exm = new Extent_reports(driver);
-	static WebElement topItem;
-	static String topItemString;
-	static WebElement subCatagory;
-	static String subcatagoryString;
-	static int mCategoryNum;
-	static int subCategoryNum;
+public class Navigation_bar extends Navigation_bar_func {
 
 	@BeforeClass
 	public void beforeClass() {
@@ -129,7 +84,8 @@ public class Navigation_bar {
 		test.info("--------club link test --------");
 		pof.club.click();
 		// Check if page title is equal to link text
-		pageTitleTest("חברות במועדון הקוראים של סטימצקי - הסיפור שלי", driver.findElement(By.xpath("//div[@class='page-title']/h1")).getText());
+		pageTitleTest("חברות במועדון הקוראים של סטימצקי - הסיפור שלי",
+				driver.findElement(By.xpath("//div[@class='page-title']/h1")).getText());
 	}
 
 	@Test(groups = "subCategory", priority = 4, enabled = true)
@@ -195,7 +151,7 @@ public class Navigation_bar {
 		test.info("--------games_subCategory links test --------");
 		actions.moveToElement(pof.games).perform();
 		// Get link text and click on the link
-		subcatagoryString = pof.Subgames.getText();	
+		subcatagoryString = pof.Subgames.getText();
 		actions.moveToElement(pof.Subgames).click().perform();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// Check if page title is equal to link text
@@ -209,7 +165,7 @@ public class Navigation_bar {
 		subCategoryNum = 1;
 		while (subCategoryNum <= 8) {
 			actions.moveToElement(pof.Gifts_and_leisure).perform();
-			subCatagory =subCatagory(driver, mCategoryNum, subCategoryNum);
+			subCatagory = subCatagory(driver, mCategoryNum, subCategoryNum);
 			// Get link text and click on the link
 			subcatagoryString = subCatagory.getText();
 			actions.moveToElement(subCatagory).click().perform();

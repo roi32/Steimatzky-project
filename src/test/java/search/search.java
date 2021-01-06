@@ -2,12 +2,9 @@ package search;
 
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.MediaEntityBuilder;
-
 import Tools.Extent_reports;
 import Tools.search_id;
+import func.search_func;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.testng.annotations.BeforeClass;
@@ -22,32 +19,11 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 
-public class search {
-
-
-	public void resuleTest(String titleString, String value) throws IOException, AWTException {
-		if (titleString.contains(value)) {
-			test1.pass("the product " + value + " is found");
-		} else {
-			test1.fail("the product not " + value + " is found",
-					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
-		}
-	}
-
-	public static WebDriver driver;
-	static String value;
-	static String path = "search - test.xlsx";
-	static int rows;
-	static String titleString;
-	static search_id pof;
-	public static Extent_reports exm = new Extent_reports(driver);
-	public	static ExtentTest test1;
-	public	static ExtentReports extent;
+public class search extends search_func{
 
 	@BeforeClass
 	public void beforeClass() {
@@ -88,7 +64,7 @@ public class search {
 			XSSFCell cell_r = row_r.getCell(0);
 			value = cell_r.getStringCellValue();
 			Thread.sleep(500);
-			//search the product
+			// search the product
 			pof.search.clear();
 			pof.search.sendKeys(value);
 			pof.submit.click();
@@ -115,7 +91,7 @@ public class search {
 			XSSFCell cell_r = row_r.getCell(1);
 			value = cell_r.getStringCellValue();
 			Thread.sleep(500);
-			//search the product
+			// search the product
 			pof.search.clear();
 			pof.search.sendKeys(value);
 			pof.submit.click();
@@ -142,7 +118,7 @@ public class search {
 			XSSFCell cell_r = row_r.getCell(2);
 			value = cell_r.getStringCellValue();
 			Thread.sleep(500);
-			//search the product
+			// search the product
 			pof.search.clear();
 			pof.search.sendKeys(value);
 			pof.submit.click();
@@ -169,7 +145,7 @@ public class search {
 			XSSFCell cell_r = row_r.getCell(3);
 			value = cell_r.getStringCellValue();
 			Thread.sleep(500);
-			//search the product
+			// search the product
 			pof.search.clear();
 			pof.search.sendKeys(value);
 			pof.submit.click();
@@ -196,7 +172,7 @@ public class search {
 			XSSFCell cell_r = row_r.getCell(4);
 			value = cell_r.getStringCellValue();
 			Thread.sleep(500);
-			//search the product
+			// search the product
 			pof.search.clear();
 			pof.search.sendKeys(value);
 			pof.submit.click();
@@ -223,7 +199,7 @@ public class search {
 			XSSFCell cell_r = row_r.getCell(5);
 			value = cell_r.getStringCellValue();
 			Thread.sleep(500);
-			//search the product
+			// search the product
 			pof.search.clear();
 			pof.search.sendKeys(value);
 			pof.submit.click();
@@ -250,7 +226,7 @@ public class search {
 			XSSFCell cell_r = row_r.getCell(6);
 			value = cell_r.getStringCellValue();
 			Thread.sleep(500);
-			//search the product
+			// search the product
 			pof.search.clear();
 			pof.search.sendKeys(value);
 			pof.submit.click();
@@ -277,7 +253,7 @@ public class search {
 			XSSFCell cell_r = row_r.getCell(7);
 			value = cell_r.getStringCellValue();
 			Thread.sleep(500);
-			//search the product
+			// search the product
 			pof.search.clear();
 			pof.search.sendKeys(value);
 			pof.submit.click();
