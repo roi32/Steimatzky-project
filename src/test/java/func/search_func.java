@@ -33,12 +33,12 @@ public abstract class search_func {
 	}
 
 	@SuppressWarnings("resource")
-	public String value(int rows) throws IOException {
+	public String Product_value(int rows,int cell) throws IOException {
 		FileInputStream fis3 = new FileInputStream("search - test.xlsx");
 		XSSFWorkbook wb = new XSSFWorkbook(fis3);
 		XSSFSheet sheet = wb.getSheet("Product_search");
 		XSSFRow row_r = sheet.getRow(rows);
-		XSSFCell cell_r = row_r.getCell(0);
+		XSSFCell cell_r = row_r.getCell(cell);
 		String value = cell_r.getStringCellValue();
 		return value;
 	}

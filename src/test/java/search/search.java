@@ -53,13 +53,13 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 58) {
 			// read from excel file
-			String value =value(rows);
+			String value = Product_value(rows, 0);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
 			pof.search.sendKeys(value);
 			pof.submit.click();
-			Thread.sleep(1000);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if product is found
 			resuleTest(driver.getTitle(), value);
 			Thread.sleep(1000);
@@ -73,13 +73,13 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 11) {
 			// read from excel file
-			String value =value(rows);
+			String value = Product_value(rows, 1);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
 			pof.search.sendKeys(value);
 			pof.submit.click();
-			Thread.sleep(1000);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if product is found
 			resuleTest(driver.getTitle(), value);
 			Thread.sleep(1000);
@@ -93,13 +93,13 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 5) {
 			// read from excel file
-			String value =value(rows);
+			String value = Product_value(rows, 2);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
 			pof.search.sendKeys(value);
 			pof.submit.click();
-			Thread.sleep(1000);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if product is found
 			resuleTest(driver.getTitle(), value);
 			Thread.sleep(1000);
@@ -113,13 +113,13 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 13) {
 			// read from excel file
-			String value =value(rows);
+			String value = Product_value(rows, 3);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
 			pof.search.sendKeys(value);
 			pof.submit.click();
-			Thread.sleep(1000);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if product is found
 			resuleTest(driver.getTitle(), value);
 			Thread.sleep(1000);
@@ -133,13 +133,13 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 6) {
 			// read from excel file
-			String value =value(rows);
+			String value = Product_value(rows, 4);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
 			pof.search.sendKeys(value);
 			pof.submit.click();
-			Thread.sleep(1000);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if product is found
 			resuleTest(driver.getTitle(), value);
 			Thread.sleep(1000);
@@ -153,13 +153,13 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 10) {
 			// read from excel file
-			String value =value(rows);
+			String value = Product_value(rows, 5);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
 			pof.search.sendKeys(value);
 			pof.submit.click();
-			Thread.sleep(1000);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if product is found
 			resuleTest(driver.getTitle(), value);
 			Thread.sleep(1000);
@@ -173,13 +173,13 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 5) {
 			// read from excel file
-			String value =value(rows);
+			String value = Product_value(rows, 6);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
 			pof.search.sendKeys(value);
 			pof.submit.click();
-			Thread.sleep(1000);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if product is found
 			resuleTest(driver.getTitle(), value);
 			Thread.sleep(1000);
@@ -193,13 +193,13 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 11) {
 			// read from excel file
-			String value =value(rows);
+			String value = Product_value(rows, 7);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
 			pof.search.sendKeys(value);
 			pof.submit.click();
-			Thread.sleep(1000);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if product is found
 			resuleTest(driver.getTitle(), value);
 			Thread.sleep(1000);
