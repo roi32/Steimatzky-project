@@ -11,19 +11,18 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import java.awt.AWTException;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 
-public class search extends search_func{
+public class search extends search_func {
+
+	static search_id pof;
 
 	@BeforeClass
 	public void beforeClass() {
@@ -50,19 +49,15 @@ public class search extends search_func{
 
 	}
 
-	@SuppressWarnings("resource")
-	@Test(priority = 1)
+	@Test(priority = 1, enabled = true)
 	public void books() throws IOException, InterruptedException, AWTException {
 		test1.info("---------books search----------- ");
-		// read from excel file
-		FileInputStream fis3 = new FileInputStream(path);
-		XSSFWorkbook wb = new XSSFWorkbook(fis3);
-		XSSFSheet sheet = wb.getSheet("Product_search");
-		rows = 0;
+		int rows = 0;
 		while (rows <= 58) {
-			XSSFRow row_r = sheet.getRow(rows);
+			// read from excel file
+			XSSFRow row_r = getsheet().getRow(rows);
 			XSSFCell cell_r = row_r.getCell(0);
-			value = cell_r.getStringCellValue();
+			String value = cell_r.getStringCellValue();
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -70,26 +65,21 @@ public class search extends search_func{
 			pof.submit.click();
 			Thread.sleep(1000);
 			// test if product is found
-			titleString = driver.getTitle();
-			resuleTest(titleString, value);
+			resuleTest(driver.getTitle(), value);
 			Thread.sleep(1000);
 			rows++;
 		}
 	}
 
-	@SuppressWarnings("resource")
-	@Test(priority = 2)
+	@Test(priority = 2, enabled = true)
 	public void English_Books() throws IOException, InterruptedException, AWTException {
 		test1.info("---------English Books search----------- ");
-		// read from excel file
-		FileInputStream fis3 = new FileInputStream(path);
-		XSSFWorkbook wb = new XSSFWorkbook(fis3);
-		XSSFSheet sheet = wb.getSheet("Product_search");
-		rows = 0;
+		int rows = 0;
 		while (rows <= 11) {
-			XSSFRow row_r = sheet.getRow(rows);
+			// read from excel file
+			XSSFRow row_r = getsheet().getRow(rows);
 			XSSFCell cell_r = row_r.getCell(1);
-			value = cell_r.getStringCellValue();
+			String value = cell_r.getStringCellValue();
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -97,26 +87,21 @@ public class search extends search_func{
 			pof.submit.click();
 			Thread.sleep(1000);
 			// test if product is found
-			titleString = driver.getTitle();
-			resuleTest(titleString, value);
+			resuleTest(driver.getTitle(), value);
 			Thread.sleep(1000);
 			rows++;
 		}
 	}
 
-	@SuppressWarnings("resource")
-	@Test(priority = 3)
+	@Test(priority = 3, enabled = true)
 	public void Games_toys_and_puzzles() throws IOException, InterruptedException, AWTException {
 		test1.info("---------Games toys and puzzles search----------- ");
-		// read from excel file
-		FileInputStream fis3 = new FileInputStream(path);
-		XSSFWorkbook wb = new XSSFWorkbook(fis3);
-		XSSFSheet sheet = wb.getSheet("Product_search");
-		rows = 0;
+		int rows = 0;
 		while (rows <= 5) {
-			XSSFRow row_r = sheet.getRow(rows);
+			// read from excel file
+			XSSFRow row_r = getsheet().getRow(rows);
 			XSSFCell cell_r = row_r.getCell(2);
-			value = cell_r.getStringCellValue();
+			String value = cell_r.getStringCellValue();
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -124,26 +109,21 @@ public class search extends search_func{
 			pof.submit.click();
 			Thread.sleep(1000);
 			// test if product is found
-			titleString = driver.getTitle();
-			resuleTest(titleString, value);
+			resuleTest(driver.getTitle(), value);
 			Thread.sleep(1000);
 			rows++;
 		}
 	}
 
-	@SuppressWarnings("resource")
-	@Test(priority = 3)
+	@Test(priority = 3, enabled = true)
 	public void Gifts_and_leisure() throws IOException, InterruptedException, AWTException {
 		test1.info("---------Gifts and leisure search----------- ");
-		// read from excel file
-		FileInputStream fis3 = new FileInputStream(path);
-		XSSFWorkbook wb = new XSSFWorkbook(fis3);
-		XSSFSheet sheet = wb.getSheet("Product_search");
-		rows = 0;
+		int rows = 0;
 		while (rows <= 13) {
-			XSSFRow row_r = sheet.getRow(rows);
+			// read from excel file
+			XSSFRow row_r = getsheet().getRow(rows);
 			XSSFCell cell_r = row_r.getCell(3);
-			value = cell_r.getStringCellValue();
+			String value = cell_r.getStringCellValue();
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -151,26 +131,21 @@ public class search extends search_func{
 			pof.submit.click();
 			Thread.sleep(1000);
 			// test if product is found
-			titleString = driver.getTitle();
-			resuleTest(titleString, value);
+			resuleTest(driver.getTitle(), value);
 			Thread.sleep(1000);
 			rows++;
 		}
 	}
 
-	@SuppressWarnings("resource")
-	@Test(priority = 4)
+	@Test(priority = 4, enabled = true)
 	public void music() throws IOException, InterruptedException, AWTException {
 		test1.info("---------music search----------- ");
-		// read from excel file
-		FileInputStream fis3 = new FileInputStream(path);
-		XSSFWorkbook wb = new XSSFWorkbook(fis3);
-		XSSFSheet sheet = wb.getSheet("Product_search");
-		rows = 0;
+		int rows = 0;
 		while (rows <= 6) {
-			XSSFRow row_r = sheet.getRow(rows);
+			// read from excel file
+			XSSFRow row_r = getsheet().getRow(rows);
 			XSSFCell cell_r = row_r.getCell(4);
-			value = cell_r.getStringCellValue();
+			String value = cell_r.getStringCellValue();
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -178,26 +153,21 @@ public class search extends search_func{
 			pof.submit.click();
 			Thread.sleep(1000);
 			// test if product is found
-			titleString = driver.getTitle();
-			resuleTest(titleString, value);
+			resuleTest(driver.getTitle(), value);
 			Thread.sleep(1000);
 			rows++;
 		}
 	}
 
-	@SuppressWarnings("resource")
-	@Test(priority = 5)
+	@Test(priority = 5, enabled = true)
 	public void Appliances_and_smartphones() throws IOException, InterruptedException, AWTException {
 		test1.info("---------Appliances and smartphones search----------- ");
-		// read from excel file
-		FileInputStream fis3 = new FileInputStream(path);
-		XSSFWorkbook wb = new XSSFWorkbook(fis3);
-		XSSFSheet sheet = wb.getSheet("Product_search");
-		rows = 0;
+		int rows = 0;
 		while (rows <= 10) {
-			XSSFRow row_r = sheet.getRow(rows);
+			// read from excel file
+			XSSFRow row_r = getsheet().getRow(rows);
 			XSSFCell cell_r = row_r.getCell(5);
-			value = cell_r.getStringCellValue();
+			String value = cell_r.getStringCellValue();
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -205,26 +175,21 @@ public class search extends search_func{
 			pof.submit.click();
 			Thread.sleep(1000);
 			// test if product is found
-			titleString = driver.getTitle();
-			resuleTest(titleString, value);
+			resuleTest(driver.getTitle(), value);
 			Thread.sleep(1000);
 			rows++;
 		}
 	}
 
-	@SuppressWarnings("resource")
-	@Test(priority = 6)
+	@Test(priority = 6, enabled = true)
 	public void Cosmetics_and_perfumes() throws IOException, InterruptedException, AWTException {
 		test1.info("---------Cosmetics and perfumes search----------- ");
-		// read from excel file
-		FileInputStream fis3 = new FileInputStream(path);
-		XSSFWorkbook wb = new XSSFWorkbook(fis3);
-		XSSFSheet sheet = wb.getSheet("Product_search");
-		rows = 0;
+		int rows = 0;
 		while (rows <= 5) {
-			XSSFRow row_r = sheet.getRow(rows);
+			// read from excel file
+			XSSFRow row_r = getsheet().getRow(rows);
 			XSSFCell cell_r = row_r.getCell(6);
-			value = cell_r.getStringCellValue();
+			String value = cell_r.getStringCellValue();
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -232,26 +197,21 @@ public class search extends search_func{
 			pof.submit.click();
 			Thread.sleep(1000);
 			// test if product is found
-			titleString = driver.getTitle();
-			resuleTest(titleString, value);
+			resuleTest(driver.getTitle(), value);
 			Thread.sleep(1000);
 			rows++;
 		}
 	}
 
-	@SuppressWarnings("resource")
-	@Test(priority = 7)
+	@Test(priority = 7, enabled = true)
 	public void Home_and_camping() throws IOException, InterruptedException, AWTException {
 		test1.info("---------Home and camping----------- ");
-		// read from excel file
-		FileInputStream fis3 = new FileInputStream(path);
-		XSSFWorkbook wb = new XSSFWorkbook(fis3);
-		XSSFSheet sheet = wb.getSheet("Product_search");
-		rows = 0;
+		int rows = 0;
 		while (rows <= 11) {
-			XSSFRow row_r = sheet.getRow(rows);
+			// read from excel file
+			XSSFRow row_r = getsheet().getRow(rows);
 			XSSFCell cell_r = row_r.getCell(7);
-			value = cell_r.getStringCellValue();
+			String value = cell_r.getStringCellValue();
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -259,8 +219,7 @@ public class search extends search_func{
 			pof.submit.click();
 			Thread.sleep(1000);
 			// test if product is found
-			titleString = driver.getTitle();
-			resuleTest(titleString, value);
+			resuleTest(driver.getTitle(), value);
 			Thread.sleep(1000);
 			rows++;
 		}

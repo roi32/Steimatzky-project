@@ -1,0 +1,189 @@
+<html>
+<head>
+<title>TestNG:  steimatzky - test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>steimatzky - test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>22/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jan 06 15:10:38 IST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>971 seconds (971245 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='search.search.Appliances_and_smartphones()'><b>Appliances_and_smartphones</b><br>Test class: search.search</td>
+<td></td>
+<td>44</td>
+<td>search.search@156b88f5</td></tr>
+<tr>
+<td title='Navigation_bar.Navigation_bar.Appliances_subCategory()'><b>Appliances_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
+<td></td>
+<td>4</td>
+<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<tr>
+<td title='search.search.Cosmetics_and_perfumes()'><b>Cosmetics_and_perfumes</b><br>Test class: search.search</td>
+<td></td>
+<td>23</td>
+<td>search.search@156b88f5</td></tr>
+<tr>
+<td title='Navigation_bar.Navigation_bar.Cosmetics_and_perfumes_subCategory()'><b>Cosmetics_and_perfumes_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
+<td></td>
+<td>3</td>
+<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<tr>
+<td title='Navigation_bar.Navigation_bar.Costumers_club_subCategory()'><b>Costumers_club_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
+<td></td>
+<td>5</td>
+<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<tr>
+<td title='search.search.English_Books()'><b>English_Books</b><br>Test class: search.search</td>
+<td></td>
+<td>53</td>
+<td>search.search@156b88f5</td></tr>
+<tr>
+<td title='Navigation_bar.Navigation_bar.English_Books_subCategory()'><b>English_Books_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
+<td></td>
+<td>9</td>
+<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<tr>
+<td title='search.search.Games_toys_and_puzzles()'><b>Games_toys_and_puzzles</b><br>Test class: search.search</td>
+<td></td>
+<td>26</td>
+<td>search.search@156b88f5</td></tr>
+<tr>
+<td title='search.search.Gifts_and_leisure()'><b>Gifts_and_leisure</b><br>Test class: search.search</td>
+<td></td>
+<td>59</td>
+<td>search.search@156b88f5</td></tr>
+<tr>
+<td title='Navigation_bar.Navigation_bar.Gifts_and_leisure_subCategory()'><b>Gifts_and_leisure_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
+<td></td>
+<td>8</td>
+<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<tr>
+<td title='Navigation_bar.Navigation_bar.HOME_subCategory()'><b>HOME_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
+<td></td>
+<td>5</td>
+<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<tr>
+<td title='search.search.Home_and_camping()'><b>Home_and_camping</b><br>Test class: search.search</td>
+<td></td>
+<td>46</td>
+<td>search.search@156b88f5</td></tr>
+<tr>
+<td title='Navigation_bar.Navigation_bar.Smartphones_subCategory()'><b>Smartphones_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
+<td></td>
+<td>2</td>
+<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<tr>
+<td title='search.search.books()'><b>books</b><br>Test class: search.search</td>
+<td></td>
+<td>265</td>
+<td>search.search@156b88f5</td></tr>
+<tr>
+<td title='Navigation_bar.Navigation_bar.books_subCategory()'><b>books_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
+<td></td>
+<td>290</td>
+<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<tr>
+<td title='Navigation_bar.Navigation_bar.camping_subCategory()'><b>camping_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
+<td></td>
+<td>2</td>
+<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<tr>
+<td title='Navigation_bar.Navigation_bar.club()'><b>club</b><br>Test class: Navigation_bar.Navigation_bar</td>
+<td></td>
+<td>1</td>
+<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<tr>
+<td title='Navigation_bar.Navigation_bar.games_subCategory()'><b>games_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
+<td></td>
+<td>1</td>
+<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<tr>
+<td title='Navigation_bar.Navigation_bar.mCategorys()'><b>mCategorys</b><br>Test class: Navigation_bar.Navigation_bar</td>
+<td></td>
+<td>17</td>
+<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<tr>
+<td title='search.search.music()'><b>music</b><br>Test class: search.search</td>
+<td></td>
+<td>27</td>
+<td>search.search@156b88f5</td></tr>
+<tr>
+<td title='Navigation_bar.Navigation_bar.music_subCategory()'><b>music_subCategory</b><br>Test class: Navigation_bar.Navigation_bar</td>
+<td></td>
+<td>9</td>
+<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+<tr>
+<td title='Navigation_bar.Navigation_bar.sales()'><b>sales</b><br>Test class: Navigation_bar.Navigation_bar</td>
+<td></td>
+<td>3</td>
+<td>Navigation_bar.Navigation_bar@25084a1e</td></tr>
+</table><p>
+</body>
+</html>
