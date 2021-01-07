@@ -3,14 +3,14 @@
 <suite name="Failed suite [steimatzky]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="steimatzky - test(failed)">
     <classes>
-      <class name="Navigation_bar.Navigation_bar">
+      <class name="search.text_search">
         <methods>
+          <include name="beforeClass"/>
+          <include name="test1"/>
           <include name="BeforeMethod"/>
           <include name="afterClass"/>
-          <include name="Gifts_and_leisure_subCategory"/>
-          <include name="beforeClass"/>
         </methods>
-      </class> <!-- Navigation_bar.Navigation_bar -->
+      </class> <!-- search.text_search -->
     </classes>
   </test> <!-- steimatzky - test(failed) -->
 </suite> <!-- Failed suite [steimatzky] -->

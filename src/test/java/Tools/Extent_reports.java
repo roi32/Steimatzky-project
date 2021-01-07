@@ -51,8 +51,8 @@ public class Extent_reports  {
 
 	private static ExtentHtmlReporter getHtmlReporter() {
 		htmlReporter = new ExtentHtmlReporter(filePath);
-		htmlReporter.config().setDocumentTitle("steimatzky- navi_linkes test");
-		htmlReporter.config().setReportName("navi_linkes test");
+		htmlReporter.config().setDocumentTitle("Steimatzky");
+		htmlReporter.config().setReportName("Steimatzky");
 		htmlReporter.config().setEncoding("windows-1255");
 		return htmlReporter;
 	}

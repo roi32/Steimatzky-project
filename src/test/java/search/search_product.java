@@ -2,9 +2,9 @@ package search;
 
 import org.testng.annotations.Test;
 
+import ID.search_id;
 import Tools.Extent_reports;
 import Tools.search_func;
-import Tools.search_id;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.testng.annotations.BeforeClass;
@@ -18,9 +18,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 
-public class search extends search_func {
+public class search_product extends search_func {
 
 	static search_id pof;
+	static String sheet ="Product_search";
 
 	@BeforeClass
 	public void beforeClass() {
@@ -35,7 +36,7 @@ public class search extends search_func {
 
 	@BeforeMethod
 	public void BeforeMethod() {
-		pof = new Tools.search_id();
+		pof = new ID.search_id();
 		pof = PageFactory.initElements(driver, search_id.class);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
@@ -53,7 +54,7 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 58) {
 			// read from excel file
-			String value = Product_value(rows, 0);
+			String value = Product_value(rows, 0,sheet);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -73,7 +74,7 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 11) {
 			// read from excel file
-			String value = Product_value(rows, 1);
+			String value = Product_value(rows, 1,sheet);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -93,7 +94,7 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 5) {
 			// read from excel file
-			String value = Product_value(rows, 2);
+			String value = Product_value(rows, 2,sheet);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -113,7 +114,7 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 13) {
 			// read from excel file
-			String value = Product_value(rows, 3);
+			String value = Product_value(rows, 3,sheet);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -133,7 +134,7 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 6) {
 			// read from excel file
-			String value = Product_value(rows, 4);
+			String value = Product_value(rows, 4,sheet);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -153,7 +154,7 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 10) {
 			// read from excel file
-			String value = Product_value(rows, 5);
+			String value = Product_value(rows, 5,sheet);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -173,7 +174,7 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 5) {
 			// read from excel file
-			String value = Product_value(rows, 6);
+			String value = Product_value(rows, 6,sheet);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();
@@ -193,7 +194,7 @@ public class search extends search_func {
 		int rows = 0;
 		while (rows <= 11) {
 			// read from excel file
-			String value = Product_value(rows, 7);
+			String value = Product_value(rows, 7,sheet);
 			Thread.sleep(500);
 			// search the product
 			pof.search.clear();

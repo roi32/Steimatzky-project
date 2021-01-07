@@ -8,6 +8,8 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
+import ID.Navigation_bar_id;
+
 public abstract class Navigation_bar_func {
 	public static WebDriver driver;
 

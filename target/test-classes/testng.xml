@@ -3,8 +3,7 @@
 <suite name="steimatzky">
 	<test name="steimatzky - test">
 		<classes>
-			<class name="Navigation_bar.Navigation_bar" />
-			<class name="search.search" />
+			<class name="search.text_search" />
 		</classes>
 	</test>
 </suite>
