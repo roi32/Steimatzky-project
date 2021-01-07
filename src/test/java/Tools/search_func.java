@@ -1,4 +1,4 @@
-package func;
+package Tools;
 
 import java.awt.AWTException;
 import java.io.FileInputStream;
@@ -13,8 +13,6 @@ import org.openqa.selenium.WebDriver;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
-
-import Tools.Extent_reports;
 
 public abstract class search_func {
 

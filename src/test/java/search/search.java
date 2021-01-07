@@ -3,8 +3,8 @@ package search;
 import org.testng.annotations.Test;
 
 import Tools.Extent_reports;
+import Tools.search_func;
 import Tools.search_id;
-import func.search_func;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.testng.annotations.BeforeClass;
