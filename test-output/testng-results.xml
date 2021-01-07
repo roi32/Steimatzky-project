@@ -2,80 +2,80 @@
 <testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-06T18:04:04 IST" name="steimatzky" finished-at="2021-01-06T18:12:28 IST" duration-ms="504111">
+  <suite started-at="2021-01-07T09:46:49 IST" name="steimatzky" finished-at="2021-01-07T09:53:12 IST" duration-ms="382791">
     <groups>
     </groups>
-    <test started-at="2021-01-06T18:04:04 IST" name="steimatzky - test" finished-at="2021-01-06T18:12:28 IST" duration-ms="504111">
+    <test started-at="2021-01-07T09:46:49 IST" name="steimatzky - test" finished-at="2021-01-07T09:53:12 IST" duration-ms="382791">
       <class name="search.search">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:search.search@2053d869]" started-at="2021-01-06T18:04:04 IST" name="beforeClass" finished-at="2021-01-06T18:04:13 IST" duration-ms="9236" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:search.search@7a419da4]" started-at="2021-01-07T09:46:49 IST" name="beforeClass" finished-at="2021-01-07T09:46:59 IST" duration-ms="9655" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@2053d869]" started-at="2021-01-06T18:04:13 IST" name="BeforeMethod" finished-at="2021-01-06T18:04:13 IST" duration-ms="16" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@7a419da4]" started-at="2021-01-07T09:46:59 IST" name="BeforeMethod" finished-at="2021-01-07T09:46:59 IST" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="books()[pri:1, instance:search.search@2053d869]" started-at="2021-01-06T18:04:13 IST" name="books" finished-at="2021-01-06T18:08:05 IST" duration-ms="232115" status="PASS">
+        <test-method signature="books()[pri:1, instance:search.search@7a419da4]" started-at="2021-01-07T09:46:59 IST" name="books" finished-at="2021-01-07T09:49:52 IST" duration-ms="172992" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- books -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@2053d869]" started-at="2021-01-06T18:08:05 IST" name="BeforeMethod" finished-at="2021-01-06T18:08:05 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@7a419da4]" started-at="2021-01-07T09:49:52 IST" name="BeforeMethod" finished-at="2021-01-07T09:49:52 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="English_Books()[pri:2, instance:search.search@2053d869]" started-at="2021-01-06T18:08:05 IST" name="English_Books" finished-at="2021-01-06T18:08:50 IST" duration-ms="45451" status="PASS">
+        <test-method signature="English_Books()[pri:2, instance:search.search@7a419da4]" started-at="2021-01-07T09:49:52 IST" name="English_Books" finished-at="2021-01-07T09:50:26 IST" duration-ms="34246" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- English_Books -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@2053d869]" started-at="2021-01-06T18:08:50 IST" name="BeforeMethod" finished-at="2021-01-06T18:08:50 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@7a419da4]" started-at="2021-01-07T09:50:26 IST" name="BeforeMethod" finished-at="2021-01-07T09:50:26 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="Games_toys_and_puzzles()[pri:3, instance:search.search@2053d869]" started-at="2021-01-06T18:08:50 IST" name="Games_toys_and_puzzles" finished-at="2021-01-06T18:09:13 IST" duration-ms="22725" status="PASS">
+        <test-method signature="Games_toys_and_puzzles()[pri:3, instance:search.search@7a419da4]" started-at="2021-01-07T09:50:26 IST" name="Games_toys_and_puzzles" finished-at="2021-01-07T09:50:43 IST" duration-ms="17315" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Games_toys_and_puzzles -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@2053d869]" started-at="2021-01-06T18:09:13 IST" name="BeforeMethod" finished-at="2021-01-06T18:09:13 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@7a419da4]" started-at="2021-01-07T09:50:43 IST" name="BeforeMethod" finished-at="2021-01-07T09:50:43 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="Gifts_and_leisure()[pri:3, instance:search.search@2053d869]" started-at="2021-01-06T18:09:13 IST" name="Gifts_and_leisure" finished-at="2021-01-06T18:10:07 IST" duration-ms="53843" status="PASS">
+        <test-method signature="Gifts_and_leisure()[pri:3, instance:search.search@7a419da4]" started-at="2021-01-07T09:50:43 IST" name="Gifts_and_leisure" finished-at="2021-01-07T09:51:23 IST" duration-ms="39838" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Gifts_and_leisure -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@2053d869]" started-at="2021-01-06T18:10:07 IST" name="BeforeMethod" finished-at="2021-01-06T18:10:07 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@7a419da4]" started-at="2021-01-07T09:51:23 IST" name="BeforeMethod" finished-at="2021-01-07T09:51:23 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="music()[pri:4, instance:search.search@2053d869]" started-at="2021-01-06T18:10:07 IST" name="music" finished-at="2021-01-06T18:10:34 IST" duration-ms="26877" status="PASS">
+        <test-method signature="music()[pri:4, instance:search.search@7a419da4]" started-at="2021-01-07T09:51:23 IST" name="music" finished-at="2021-01-07T09:51:44 IST" duration-ms="20730" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- music -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@2053d869]" started-at="2021-01-06T18:10:34 IST" name="BeforeMethod" finished-at="2021-01-06T18:10:34 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@7a419da4]" started-at="2021-01-07T09:51:44 IST" name="BeforeMethod" finished-at="2021-01-07T09:51:44 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="Appliances_and_smartphones()[pri:5, instance:search.search@2053d869]" started-at="2021-01-06T18:10:34 IST" name="Appliances_and_smartphones" finished-at="2021-01-06T18:11:16 IST" duration-ms="42527" status="PASS">
+        <test-method signature="Appliances_and_smartphones()[pri:5, instance:search.search@7a419da4]" started-at="2021-01-07T09:51:44 IST" name="Appliances_and_smartphones" finished-at="2021-01-07T09:52:17 IST" duration-ms="33134" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Appliances_and_smartphones -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@2053d869]" started-at="2021-01-06T18:11:16 IST" name="BeforeMethod" finished-at="2021-01-06T18:11:16 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@7a419da4]" started-at="2021-01-07T09:52:17 IST" name="BeforeMethod" finished-at="2021-01-07T09:52:17 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="Cosmetics_and_perfumes()[pri:6, instance:search.search@2053d869]" started-at="2021-01-06T18:11:16 IST" name="Cosmetics_and_perfumes" finished-at="2021-01-06T18:11:40 IST" duration-ms="23719" status="PASS">
+        <test-method signature="Cosmetics_and_perfumes()[pri:6, instance:search.search@7a419da4]" started-at="2021-01-07T09:52:17 IST" name="Cosmetics_and_perfumes" finished-at="2021-01-07T09:52:34 IST" duration-ms="17307" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Cosmetics_and_perfumes -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@2053d869]" started-at="2021-01-06T18:11:40 IST" name="BeforeMethod" finished-at="2021-01-06T18:11:40 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@7a419da4]" started-at="2021-01-07T09:52:34 IST" name="BeforeMethod" finished-at="2021-01-07T09:52:34 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="Home_and_camping()[pri:7, instance:search.search@2053d869]" started-at="2021-01-06T18:11:40 IST" name="Home_and_camping" finished-at="2021-01-06T18:12:27 IST" duration-ms="47025" status="PASS">
+        <test-method signature="Home_and_camping()[pri:7, instance:search.search@7a419da4]" started-at="2021-01-07T09:52:34 IST" name="Home_and_camping" finished-at="2021-01-07T09:53:11 IST" duration-ms="36976" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Home_and_camping -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:search.search@2053d869]" started-at="2021-01-06T18:12:27 IST" name="afterClass" finished-at="2021-01-06T18:12:28 IST" duration-ms="538" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:search.search@7a419da4]" started-at="2021-01-07T09:53:11 IST" name="afterClass" finished-at="2021-01-07T09:53:12 IST" duration-ms="545" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

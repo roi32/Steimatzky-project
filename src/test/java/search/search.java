@@ -25,7 +25,7 @@ public class search extends search_func {
 	@BeforeClass
 	public void beforeClass() {
 		extent = Extent_reports.GetExtent();
-		test1 = Extent_reports.createTest("name", "desc");
+		test1 = Extent_reports.createTest1("name", "desc");
 		WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		driver = new ChromeDriver();

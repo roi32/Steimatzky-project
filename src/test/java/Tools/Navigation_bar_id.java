@@ -17,15 +17,13 @@ public class Navigation_bar_id extends Navigation_bar {
 	}
 
 	public WebElement subCatagory(WebDriver driver, int mCategoryNum, int subCategorynum) {
-		WebElement subCatagory = driver.findElement(
-				By.xpath("//ul[@id='catMenu']/li[" + mCategoryNum + "]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
+		WebElement subCatagory = driver.findElement(By.xpath("//ul[@id='catMenu']/li[" + mCategoryNum + "]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 		return subCatagory;
 
 	}
 
 	public WebElement books_subCategory(WebDriver driver, int clumNum, int subcatagoryNum) {
-		WebElement subCatagory = driver.findElement(
-				By.xpath("//li[@id='menuCat-398']/div/ul/li[" + clumNum + "]/ul/li[" + subcatagoryNum + "]/a"));
+		WebElement subCatagory = driver.findElement(By.xpath("//li[@id='menuCat-398']/div/ul/li[" + clumNum + "]/ul/li[" + subcatagoryNum + "]/a"));
 		return subCatagory;
 
 	}
