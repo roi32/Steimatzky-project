@@ -237,7 +237,6 @@ public class text_search extends search_func {
 					pof.search.clear();
 				}
 			}
-
 			Thread.sleep(1000);
 			rows++;
 		}
