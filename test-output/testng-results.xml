@@ -1,61 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="7" total="8" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-07T14:32:53 IST" name="steimatzky" finished-at="2021-01-07T14:35:09 IST" duration-ms="136075">
+  <suite started-at="2021-01-08T10:36:42 IST" name="Default suite" finished-at="2021-01-08T10:38:17 IST" duration-ms="95256">
     <groups>
     </groups>
-    <test started-at="2021-01-07T14:32:53 IST" name="steimatzky - test" finished-at="2021-01-07T14:35:09 IST" duration-ms="136075">
+    <test started-at="2021-01-08T10:36:42 IST" name="Default test" finished-at="2021-01-08T10:38:17 IST" duration-ms="95256">
       <class name="search.text_search">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:search.text_search@10feca44]" started-at="2021-01-07T14:32:53 IST" name="beforeClass" finished-at="2021-01-07T14:33:00 IST" duration-ms="6684" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:search.text_search@73700b80]" started-at="2021-01-08T10:36:42 IST" name="beforeClass" finished-at="2021-01-08T10:36:48 IST" duration-ms="5615" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.text_search@10feca44]" started-at="2021-01-07T14:33:00 IST" name="BeforeMethod" finished-at="2021-01-07T14:33:00 IST" duration-ms="21" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.text_search@73700b80]" started-at="2021-01-08T10:36:48 IST" name="BeforeMethod" finished-at="2021-01-08T10:36:48 IST" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="Boundary()[pri:0, instance:search.text_search@10feca44]" started-at="2021-01-07T14:33:00 IST" name="Boundary" finished-at="2021-01-07T14:33:12 IST" duration-ms="12023" status="PASS">
+        <test-method signature="books()[pri:8, instance:search.text_search@73700b80]" started-at="2021-01-08T10:36:48 IST" name="books" finished-at="2021-01-08T10:38:17 IST" duration-ms="89575" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Boundary -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.text_search@10feca44]" started-at="2021-01-07T14:33:12 IST" name="BeforeMethod" finished-at="2021-01-07T14:33:12 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="EauthorTitle()[pri:0, instance:search.text_search@10feca44]" started-at="2021-01-07T14:33:12 IST" name="EauthorTitle" finished-at="2021-01-07T14:33:35 IST" duration-ms="23743" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EauthorTitle -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.text_search@10feca44]" started-at="2021-01-07T14:33:35 IST" name="BeforeMethod" finished-at="2021-01-07T14:33:35 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="Negative()[pri:0, instance:search.text_search@10feca44]" started-at="2021-01-07T14:33:35 IST" name="Negative" finished-at="2021-01-07T14:33:53 IST" duration-ms="17745" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Negative -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.text_search@10feca44]" started-at="2021-01-07T14:33:53 IST" name="BeforeMethod" finished-at="2021-01-07T14:33:53 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="authorTitle()[pri:0, instance:search.text_search@10feca44]" started-at="2021-01-07T14:33:53 IST" name="authorTitle" finished-at="2021-01-07T14:34:35 IST" duration-ms="41574" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- authorTitle -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.text_search@10feca44]" started-at="2021-01-07T14:34:35 IST" name="BeforeMethod" finished-at="2021-01-07T14:34:35 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="key_word()[pri:0, instance:search.text_search@10feca44]" started-at="2021-01-07T14:34:35 IST" name="key_word" finished-at="2021-01-07T14:35:09 IST" duration-ms="34225" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- key_word -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:search.text_search@10feca44]" started-at="2021-01-07T14:35:09 IST" name="afterClass" finished-at="2021-01-07T14:35:09 IST" duration-ms="29" status="PASS">
+        </test-method> <!-- books -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:search.text_search@73700b80]" started-at="2021-01-08T10:38:17 IST" name="afterClass" finished-at="2021-01-08T10:38:17 IST" duration-ms="29" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- search.text_search -->
-    </test> <!-- steimatzky - test -->
-  </suite> <!-- steimatzky -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

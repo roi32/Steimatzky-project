@@ -5,8 +5,8 @@
     <classes>
       <class name="search.text_search">
         <methods>
+          <include name="books"/>
           <include name="beforeClass"/>
-          <include name="Negative"/>
           <include name="BeforeMethod"/>
           <include name="afterClass"/>
         </methods>
