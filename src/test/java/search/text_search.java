@@ -143,8 +143,7 @@ public class text_search extends search_func {
 			pof.submit.click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if products is found
-			if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText()
-					.contains("אין תוצאות לשאילתת חיפוש שלך")) {
+			if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
 				System.out.println("test pass");
 			} else {
 				System.err.println("tast fail");
@@ -168,8 +167,7 @@ public class text_search extends search_func {
 			pof.submit.click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if products is found
-			if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText()
-					.contains("אין תוצאות לשאילתת חיפוש שלך") && search.length() <= 128 && search.length() >= 3) {
+			if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך") && search.length() <= 128 && search.length() >= 3) {
 				System.out.println("test pass");
 			} else {
 				System.err.println("tast fail");
@@ -178,25 +176,24 @@ public class text_search extends search_func {
 			rows++;
 		}
 	}
-
 	@Test(priority = 7)
-	public void Num() throws InterruptedException {
-		// search the product
-		pof.search.clear();
-		pof.search.sendKeys("4564654556");
-		pof.submit.click();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		// test if products is found
-		if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
-			System.out.println("test pass");
-		} else {
-			System.err.println("tast fail");
-		}
-		Thread.sleep(1000);
+	public void Num() throws InterruptedException  {
+			// search the product
+			pof.search.clear();
+			pof.search.sendKeys("4564654556");
+			pof.submit.click();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			// test if products is found
+			if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
+				System.out.println("test pass");
+			} else {
+				System.err.println("tast fail");
+			}
+			Thread.sleep(1000);
 	}
-
+	
 	@Test(priority = 1)
-	public void space() throws InterruptedException {
+	public void space() throws InterruptedException  {
 		// search the product
 		pof.search.clear();
 		pof.search.sendKeys("   ");
@@ -209,14 +206,14 @@ public class text_search extends search_func {
 			System.err.println("tast fail");
 		}
 		Thread.sleep(1000);
-	}
-
+}
+	
 	@Test(priority = 8, enabled = true)
 	public void books() throws IOException, InterruptedException, AWTException {
 		int rows = 0;
 		while (rows <= 30) {
 			// read from excel file
-			String value = Product_value(rows, 0, "Product_search");
+			String value = Product_value(rows, 0,"Product_search");
 			Thread.sleep(500);
 			// search the product
 			pof.search.sendKeys(value);
@@ -225,18 +222,21 @@ public class text_search extends search_func {
 			String search = pof.search.getAttribute("value");
 			// test if product is found
 			try {
-
+			
 				if (search.equals("מה תרצו לקנות היום?")) {
 					System.out.println("test pass");
-				} else {
+				}else {
 					System.err.println("test fail");
-				}
+				}	
 			} catch (Exception e) {
-				if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText()
-						.contains("אין תוצאות לשאילתת חיפוש שלך")) {
+				if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
 					pof.search.clear();
 				}
 			}
+<<<<<<< master
+=======
+		
+>>>>>>> f4962ea Project organization + text_search class is work in progress
 			Thread.sleep(1000);
 			rows++;
 		}
