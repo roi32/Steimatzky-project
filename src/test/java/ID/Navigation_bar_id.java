@@ -1,31 +1,15 @@
 package ID;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import Navigation_bar.Test_links;
 
-public class Navigation_bar_id extends Test_links {
+public class Navigation_bar_id {
 
-	public WebElement topItem(WebDriver driver, int mCategoryNum) {
-		WebElement topItem = driver.findElement(By.xpath("//ul[@id='catMenu']/li[" + mCategoryNum + "]/a"));
-		return topItem;
-
-	}
-
-	public WebElement subCatagory(WebDriver driver, int mCategoryNum, int subCategorynum) {
-		WebElement subCatagory = driver.findElement(By.xpath("//ul[@id='catMenu']/li[" + mCategoryNum + "]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
-		return subCatagory;
-
-	}
-
-	public WebElement books_subCategory(WebDriver driver, int clumNum, int subcatagoryNum) {
-		WebElement subCatagory = driver.findElement(By.xpath("//li[@id='menuCat-398']/div/ul/li[" + clumNum + "]/ul/li[" + subcatagoryNum + "]/a"));
-		return subCatagory;
-
-	}
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li/a")
+	public List<WebElement> mCategory;
 
 	@FindBy(how = How.XPATH, using = "//a[@class='sales']")
 	public WebElement sales;
@@ -33,11 +17,20 @@ public class Navigation_bar_id extends Test_links {
 	@FindBy(how = How.XPATH, using = "//a[@class='club']")
 	public WebElement club;
 
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[13]/div/ul/li/ul/li/a")
+	public List<WebElement> club_subCategory;
+
 	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[1]/a")
 	public WebElement books;
 
+	@FindBy(how = How.XPATH, using = "//li[@id='menuCat-398']/div/ul/li/ul/li/a")
+	public List<WebElement> books_subCategory;
+
 	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[2]/a")
 	public WebElement Ebooks;
+
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[2]/div/ul/li/ul/li/a")
+	public List<WebElement> ebooks_subCategory;
 
 	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[3]/a")
 	public WebElement games;
@@ -48,22 +41,43 @@ public class Navigation_bar_id extends Test_links {
 	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[6]/a")
 	public WebElement Gifts_and_leisure;
 
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[6]/div/ul/li/ul/li/a")
+	public List<WebElement> Gifts_and_leisure_subCategory;
+
 	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[7]/a")
 	public WebElement music;
+
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[7]/div/ul/li/ul/li/a")
+	public List<WebElement> music_subCategory;
 
 	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[8]/a")
 	public WebElement Appliances;
 
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[8]/div/ul/li/ul/li/a")
+	public List<WebElement> Appliances_subCategory;
+
 	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[9]/a")
 	public WebElement Smartphones;
+
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[9]/div/ul/li/ul/li/a")
+	public List<WebElement> Smartphones_subCategory;
 
 	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[10]/a")
 	public WebElement Cosmetics_and_perfumes;
 
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[10]/div/ul/li/ul/li/a")
+	public List<WebElement> Cosmetics_and_perfumes_subCategory;
+
 	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[11]/a")
 	public WebElement HOME;
 
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[11]/div/ul/li/ul/li/a")
+	public List<WebElement> home_subCategory;
+
 	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[12]/a")
 	public WebElement camping;
+
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[12]/div/ul/li/ul/li/a")
+	public List<WebElement> camping_subCategory;
 
 }

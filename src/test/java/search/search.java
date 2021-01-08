@@ -223,7 +223,7 @@ public class search extends search_func {
 			pof.submit.click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			String search = pof.search.getAttribute("value");
-			// test if product is found
+			// test if  search field is clear
 			try {
 
 				if (search.equals("מה תרצו לקנות היום?")) {
@@ -232,12 +232,12 @@ public class search extends search_func {
 					System.err.println("test fail");
 				}
 			} catch (Exception e) {
+				// if don't find product
 				if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText()
 						.contains("אין תוצאות לשאילתת חיפוש שלך")) {
 					pof.search.clear();
 				}
 			}
-
 			Thread.sleep(1000);
 			rows++;
 		}
