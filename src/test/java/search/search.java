@@ -212,13 +212,13 @@ public class search extends search_func {
 	}
 
 	@Test(priority = 8, enabled = true)
-	public void books() throws IOException, InterruptedException, AWTException {
+	public void clean_search_field() throws IOException, InterruptedException, AWTException {
 		int rows = 0;
 		while (rows <= 30) {
 			// read from excel file
 			String value = Product_value(rows, 0, "Product_search");
 			Thread.sleep(500);
-			// search the product
+			// search the value
 			pof.search.sendKeys(value);
 			pof.submit.click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
