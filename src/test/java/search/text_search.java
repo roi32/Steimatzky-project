@@ -34,7 +34,7 @@ public class text_search extends search_func {
 
 	@BeforeMethod
 	public void BeforeMethod() {
-		pof = new ID.search_id();
+		pof = new search_id();
 		pof = PageFactory.initElements(driver, search_id.class);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
@@ -45,7 +45,7 @@ public class text_search extends search_func {
 
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void key_word() throws IOException, InterruptedException, AWTException {
 		int rows = 0;
 		while (rows <= 9) {
@@ -70,7 +70,7 @@ public class text_search extends search_func {
 		}
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void authorTitle() throws IOException, InterruptedException, AWTException {
 		int rows = 0;
 		while (rows <= 11) {
@@ -100,7 +100,7 @@ public class text_search extends search_func {
 		}
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 4)
 	public void EauthorTitle() throws IOException, InterruptedException, AWTException {
 		int rows = 0;
 		while (rows <= 6) {
@@ -129,7 +129,8 @@ public class text_search extends search_func {
 			rows++;
 		}
 	}
-	@Test(priority = 4)
+
+	@Test(priority = 5)
 	public void Negative() throws IOException, InterruptedException, AWTException {
 		int rows = 0;
 		while (rows <= 6) {
@@ -144,7 +145,7 @@ public class text_search extends search_func {
 			// test if products is found
 			if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
 				System.out.println("test pass");
-			}else {
+			} else {
 				System.err.println("tast fail");
 			}
 			Thread.sleep(1000);
@@ -152,7 +153,7 @@ public class text_search extends search_func {
 		}
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 6)
 	public void Boundary() throws IOException, InterruptedException, AWTException {
 		int rows = 0;
 		while (rows <= 3) {
@@ -162,22 +163,79 @@ public class text_search extends search_func {
 			// search the product
 			pof.search.clear();
 			pof.search.sendKeys(value);
-			String search=pof.search.getAttribute("value");
-			if (!search.isEmpty() && search.length()<=128) {
-				System.out.println("Boundary test pass");
-			}else {
-				System.err.println("Boundary tast fail");
-			}
+			String search = pof.search.getAttribute("value");
 			pof.submit.click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if products is found
-			if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
+			if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך") && search.length() <= 128 && search.length() >= 3) {
 				System.out.println("test pass");
-			}else {
+			} else {
 				System.err.println("tast fail");
 			}
 			Thread.sleep(1000);
 			rows++;
 		}
+	}
+	@Test(priority = 7)
+	public void Num() throws InterruptedException  {
+			// search the product
+			pof.search.clear();
+			pof.search.sendKeys("4564654556");
+			pof.submit.click();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			// test if products is found
+			if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
+				System.out.println("test pass");
+			} else {
+				System.err.println("tast fail");
+			}
+			Thread.sleep(1000);
+	}
+	
+	@Test(priority = 1)
+	public void space() throws InterruptedException  {
+		// search the product
+		pof.search.clear();
+		pof.search.sendKeys("   ");
+		pof.submit.click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		// test if products is found
+		if (driver.getTitle().equals("ספרים זה סטימצקי | ספרים באינטרנט קונים באתר סטימצקי")) {
+			System.out.println("test pass");
+		} else {
+			System.err.println("tast fail");
+		}
+		Thread.sleep(1000);
+}
+	
+	@Test(priority = 8, enabled = true)
+	public void books() throws IOException, InterruptedException, AWTException {
+		int rows = 0;
+		while (rows <= 30) {
+			// read from excel file
+			String value = Product_value(rows, 0,"Product_search");
+			Thread.sleep(500);
+			// search the product
+			pof.search.sendKeys(value);
+			pof.submit.click();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			String search = pof.search.getAttribute("value");
+			// test if product is found
+			try {
+			
+				if (search.equals("מה תרצו לקנות היום?")) {
+					System.out.println("test pass");
+				}else {
+					System.err.println("test fail");
+				}	
+			} catch (Exception e) {
+				if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
+					pof.search.clear();
+				}
+			}
+		
+			Thread.sleep(1000);
+			rows++;
 		}
 	}
+}

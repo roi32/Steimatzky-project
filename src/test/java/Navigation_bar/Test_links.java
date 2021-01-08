@@ -22,7 +22,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 
-public class Navigation_bar extends Navigation_bar_func {
+public class Test_links extends Navigation_bar_func {
+	
 	static Actions actions;
 
 	@BeforeClass
@@ -183,6 +184,7 @@ public class Navigation_bar extends Navigation_bar_func {
 			// Get link text and click on the link
 			String subcatagoryString = subCatagory.getText();
 			actions.moveToElement(subCatagory).click().perform();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// Check if page title is equal to link text
 			pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1[@class='pageTitle']")).getText());
 			subCategoryNum++;
@@ -293,8 +295,7 @@ public class Navigation_bar extends Navigation_bar_func {
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// Check if page title is equal to link text
 			if (subcatagoryString.equals("חברות במועדון")) {
-				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(),
-						"חברות במועדון הקוראים של סטימצקי - הסיפור שלי");
+				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(),"חברות במועדון הקוראים של סטימצקי - הסיפור שלי");
 			} else if (subcatagoryString.equals("תקנון המועדון")) {
 				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "תקנון מועדון הקוראים של סטימצקי");
 			} else {

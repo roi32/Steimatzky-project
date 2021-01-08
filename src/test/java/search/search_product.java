@@ -36,7 +36,7 @@ public class search_product extends search_func {
 
 	@BeforeMethod
 	public void BeforeMethod() {
-		pof = new ID.search_id();
+		pof = new search_id();
 		pof = PageFactory.initElements(driver, search_id.class);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}

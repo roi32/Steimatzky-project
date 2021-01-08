@@ -5,10 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import Navigation_bar.Test_links;
 
-import Navigation_bar.Navigation_bar;
-
-public class Navigation_bar_id extends Navigation_bar {
+public class Navigation_bar_id extends Test_links {
 
 	public WebElement topItem(WebDriver driver, int mCategoryNum) {
 		WebElement topItem = driver.findElement(By.xpath("//ul[@id='catMenu']/li[" + mCategoryNum + "]/a"));
