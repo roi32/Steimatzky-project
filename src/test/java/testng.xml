@@ -3,7 +3,7 @@
 <suite name="steimatzky">
 	<test name="steimatzky - test">
 		<classes>
-			<class name="search.text_search" />
+			<class name="test.search" />
 		</classes>
 	</test>
 </suite>
