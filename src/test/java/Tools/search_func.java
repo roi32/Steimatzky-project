@@ -26,7 +26,7 @@ public abstract class search_func {
 			test1.pass("the product " + value + " is found");
 		} else {
 			test1.fail("the product not " + value + " is found",
-					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
 	}
 
@@ -41,4 +41,12 @@ public abstract class search_func {
 		return value;
 	}
 
+public void resuleTest2(String product_grid, String value) throws IOException, AWTException {
+	if (product_grid.contains(value)) {
+		test1.pass("the result contain " + value);
+	}else {
+		test1.fail("the result not contain " + value,
+				MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+	}
+	}
 }

@@ -53,7 +53,7 @@ public class Test_links extends Navigation_bar_func {
 	public void sales() throws IOException, AWTException {
 		test.info("--------sales link test --------");
 		// Get link text and click on the link
-		pof.sales.click();
+		actions.moveToElement(pof.sales).click().perform();
 		// Check if page title is equal to link text
 		pageTitleTest(pof.sales.getText(), driver.findElement(By.className("pageTitle")).getText());
 	}
@@ -67,8 +67,7 @@ public class Test_links extends Navigation_bar_func {
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// Check if page title is equal to link text
 			if (topItemString.equals("מועדון לקוחות")) {
-				pageTitleTest("חברות במועדון הקוראים של סטימצקי - הסיפור שלי",
-						driver.findElement(By.xpath("//div[@class='page-title']/h1")).getText());
+				pageTitleTest("חברות במועדון הקוראים של סטימצקי - הסיפור שלי",driver.findElement(By.xpath("//div[@class='page-title']/h1")).getText());
 			} else {
 				pageTitleTest(topItemString, driver.findElement(By.className("pageTitle")).getText());
 			}
@@ -234,12 +233,11 @@ public class Test_links extends Navigation_bar_func {
 			actions.moveToElement(pof.club).perform();
 			// Get link text and click on the link
 			String subcatagoryString = pof.club_subCategory.get(i).getText();
-			pof.club_subCategory.get(i).click();
+			actions.moveToElement(pof.club_subCategory.get(i)).click().perform();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// Check if page title is equal to link text
 			if (subcatagoryString.equals("חברות במועדון")) {
-				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(),
-						"חברות במועדון הקוראים של סטימצקי - הסיפור שלי");
+				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(),"חברות במועדון הקוראים של סטימצקי - הסיפור שלי");
 			} else if (subcatagoryString.equals("תקנון המועדון")) {
 				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "תקנון מועדון הקוראים של סטימצקי");
 			} else {

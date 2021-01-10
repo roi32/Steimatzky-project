@@ -3,7 +3,8 @@
 <suite name="steimatzky">
 	<test name="steimatzky - test">
 		<classes>
-			<class name="test.search" />
+			<class name="Navigation_bar.Test_links" />
+			<class name="search.search_product" />
 		</classes>
 	</test>
 </suite>

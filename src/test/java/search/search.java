@@ -2,6 +2,8 @@ package search;
 
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
+
 import ID.search_id;
 import Tools.search_func;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -28,7 +30,7 @@ public class search extends search_func {
 		WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		driver = new ChromeDriver();
-		// driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		driver.get("https://www.steimatzky.co.il/");
 	}
 
@@ -42,7 +44,6 @@ public class search extends search_func {
 	@AfterClass
 	public void afterClass() {
 		driver.close();
-
 	}
 
 	@Test(priority = 2)
@@ -59,11 +60,7 @@ public class search extends search_func {
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if products is found
 			for (int i = 0; i < pof.product_grid.size(); i++) {
-				if (pof.product_grid.get(i).getText().contains(value)) {
-					System.out.println("the result contain " + value);
-				} else {
-					System.err.println("the result not contain " + value);
-				}
+				resuleTest2(pof.product_grid.get(i).getText(), value);
 			}
 			Thread.sleep(1000);
 			rows++;
@@ -85,11 +82,7 @@ public class search extends search_func {
 			// test if products is found
 			if (driver.findElement(By.xpath("//div/h1")).getText().contains("תוצאות חיפוש")) {
 				for (WebElement authorTitle : pof.authorTitle) {
-					if (authorTitle.getText().contains(value)) {
-						System.out.println("the result contain " + value);
-					} else {
-						System.err.println("the result not contain " + value);
-					}
+					resuleTest2(authorTitle.getText(), value);
 				}
 			} else {
 				driver.navigate().back();
@@ -115,11 +108,7 @@ public class search extends search_func {
 			// test if products is found
 			if (driver.findElement(By.xpath("//div/h1")).getText().contains("תוצאות חיפוש")) {
 				for (WebElement EauthorTitle : pof.authorTitle) {
-					if (EauthorTitle.getText().contains(value)) {
-						System.out.println("the result contain " + value);
-					} else {
-						System.err.println("the result not contain " + value);
-					}
+					resuleTest2(EauthorTitle.getText(), value);
 				}
 			} else {
 				driver.navigate().back();
@@ -143,12 +132,7 @@ public class search extends search_func {
 			pof.submit.click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if products is found
-			if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText()
-					.contains("אין תוצאות לשאילתת חיפוש שלך")) {
-				System.out.println("test pass");
-			} else {
-				System.err.println("tast fail");
-			}
+			resuleTest2(driver.findElement(By.xpath("//p[@class='note-msg']")).getText(),"אין תוצאות לשאילתת חיפוש שלך");
 			Thread.sleep(1000);
 			rows++;
 		}
@@ -180,23 +164,19 @@ public class search extends search_func {
 	}
 
 	@Test(priority = 7)
-	public void Num() throws InterruptedException {
+	public void Num() throws InterruptedException, IOException, AWTException {
 		// search the product
 		pof.search.clear();
 		pof.search.sendKeys("4564654556");
 		pof.submit.click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// test if products is found
-		if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
-			System.out.println("test pass");
-		} else {
-			System.err.println("tast fail");
-		}
+		resuleTest2(driver.findElement(By.xpath("//p[@class='note-msg']")).getText(), "אין תוצאות לשאילתת חיפוש שלך");
 		Thread.sleep(1000);
 	}
 
 	@Test(priority = 1)
-	public void space() throws InterruptedException {
+	public void space() throws InterruptedException, IOException, AWTException {
 		// search the product
 		pof.search.clear();
 		pof.search.sendKeys("   ");
@@ -204,15 +184,16 @@ public class search extends search_func {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// test if products is found
 		if (driver.getTitle().equals("ספרים זה סטימצקי | ספרים באינטרנט קונים באתר סטימצקי")) {
-			System.out.println("test pass");
+			test1.pass("test pass");
 		} else {
-			System.err.println("tast fail");
+			test1.fail("tast fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
 		Thread.sleep(1000);
 	}
 
 	@Test(priority = 8, enabled = true)
 	public void clean_search_field() throws IOException, InterruptedException, AWTException {
+		pof.search.clear();
 		int rows = 0;
 		while (rows <= 30) {
 			// read from excel file
@@ -223,20 +204,16 @@ public class search extends search_func {
 			pof.submit.click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			String search = pof.search.getAttribute("value");
-			// test if  search field is clear
-			try {
-
-				if (search.equals("מה תרצו לקנות היום?")) {
-					System.out.println("test pass");
-				} else {
-					System.err.println("test fail");
-				}
-			} catch (Exception e) {
-				// if don't find product
-				if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText()
-						.contains("אין תוצאות לשאילתת חיפוש שלך")) {
-					pof.search.clear();
-				}
+			// test if search field is clear
+			if (search.equals("מה תרצו לקנות היום?")) {
+				test1.pass("test pass");
+				// if product not found
+			} else if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText()
+					.contains("אין תוצאות לשאילתת חיפוש שלך")) {
+				test1.info("product not found");
+				pof.search.clear();
+			} else {
+				test1.fail("test fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			}
 			Thread.sleep(1000);
 			rows++;

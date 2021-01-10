@@ -11,8 +11,8 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import ID.Navigation_bar_id;
 
 public abstract class Navigation_bar_func {
+	
 	public static WebDriver driver;
-
 	public static ExtentReports extent;
 	public static ExtentTest test;
 	public static Navigation_bar_id pof;
@@ -23,7 +23,7 @@ public abstract class Navigation_bar_func {
 			test.pass("you in " + pageTitle + " page");
 		} else {
 			test.fail("you not in " + pageTitle + " page",
-					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
 	}
 
