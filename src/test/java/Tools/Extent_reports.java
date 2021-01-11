@@ -33,8 +33,6 @@ public class Extent_reports  {
 		this.driver = driver;
 	}
 
-	
-
 	static DateFormat df = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
 	static Date today = Calendar.getInstance().getTime();
 	static String reportDate = df.format(today);
@@ -66,7 +64,7 @@ public class Extent_reports  {
 		return test1;
 	}
 
-	public String CaptureScreen(WebDriver driver) throws AWTException, IOException {
+	public String CaptureScreen() throws AWTException, IOException {
 		LocalDateTime now = LocalDateTime.now();
 		String time = now.format(DateTimeFormatter.ofPattern("ddHHmmss"));
 		String folderPath = ("C:\\test\\" + reportDate);
