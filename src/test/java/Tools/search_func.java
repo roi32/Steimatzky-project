@@ -16,6 +16,8 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
+
+
 public abstract class search_func {
 
 	public static WebDriver driver;
@@ -33,7 +35,7 @@ public abstract class search_func {
 	}
 
 	@SuppressWarnings("resource")
-	public String Product_value(int rows,int cell,String sheets) throws IOException {
+	public String Product_value(int rows, int cell, String sheets) throws IOException {
 		FileInputStream fis3 = new FileInputStream("search - test.xlsx");
 		XSSFWorkbook wb = new XSSFWorkbook(fis3);
 		XSSFSheet sheet = wb.getSheet(sheets);
@@ -43,22 +45,28 @@ public abstract class search_func {
 		return value;
 	}
 
-public void resuleTest2(String product_grid, String value) throws IOException, AWTException {
-	if (product_grid.contains(value)) {
-		test1.pass("the result contain " + value);
-	}else {
-		test1.fail("the result not contain " + value,
-				MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
-	}
-	}
-
-
-public void resuleTest3(List<WebElement> product_grid, String value) throws IOException, AWTException {
-	for (int i = 0; i < product_grid.size(); i++) {
-		if(!product_grid.get(i).getText().contains(value)) {
-		test1.fail("not all products contains :"+value,MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+	public void resuleTest2(String product_grid, String value) throws IOException, AWTException {
+		if (product_grid.contains(value)) {
+			test1.pass("the result contain " + value);
+		} else {
+			test1.fail("the result not contain " + value,
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
 	}
-	test1.pass("all products contains :"+value);
+
+	public void resuleTest3(List<WebElement> product_grid, String value) throws IOException, AWTException {
+		boolean check = true;
+		for (int i = 0; i < product_grid.size(); i++) {
+			if (!product_grid.get(i).getText().contains(value)) {
+				check = false;
+			}
+		}
+		if (check == true) {
+			test1.pass("all products contains :" + value);
+		} else {
+			test1.fail("not all products contains :" + value,
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+
 	}
 }

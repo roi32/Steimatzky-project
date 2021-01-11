@@ -115,7 +115,7 @@ public class search extends search_func {
 				resuleTest(driver.getTitle(), value);
 				}
 			else {
-				test1.fail("the search of " + value+"not found products",MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+				test1.fail("the search of " + value +"not found products",MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 				}
 			Thread.sleep(1000);
 			rows++;
