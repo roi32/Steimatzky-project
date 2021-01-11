@@ -32,7 +32,7 @@ public class search extends search_func {
 		WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		driver = new ChromeDriver();
-	//	driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		driver.get("https://www.steimatzky.co.il/");
 	}
 

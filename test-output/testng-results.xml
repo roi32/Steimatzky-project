@@ -1,29 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="7" total="8" passed="1" failed="0" skipped="0">
+<testng-results ignored="12" total="14" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-11T09:06:15 IST" name="Default suite" finished-at="2021-01-11T09:07:01 IST" duration-ms="45172">
+  <suite started-at="2021-01-11T10:14:18 IST" name="Default suite" finished-at="2021-01-11T10:14:36 IST" duration-ms="18333">
     <groups>
+      <group name="subCategory">
+        <method signature="Test_links.Costumers_club_subCategory()[pri:14, instance:Navigation_bar.Test_links@49c7b90e]" name="Costumers_club_subCategory" class="Navigation_bar.Test_links"/>
+      </group> <!-- subCategory -->
+      <group name="login">
+        <method signature="Test_links.Login()[pri:13, instance:Navigation_bar.Test_links@49c7b90e]" name="Login" class="Navigation_bar.Test_links"/>
+      </group> <!-- login -->
     </groups>
-    <test started-at="2021-01-11T09:06:15 IST" name="Default test" finished-at="2021-01-11T09:07:01 IST" duration-ms="45172">
-      <class name="search.search">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:search.search@10d307f1]" started-at="2021-01-11T09:06:15 IST" name="beforeClass" finished-at="2021-01-11T09:06:22 IST" duration-ms="6249" status="PASS">
+    <test started-at="2021-01-11T10:14:18 IST" name="Default test" finished-at="2021-01-11T10:14:36 IST" duration-ms="18333">
+      <class name="Navigation_bar.Test_links">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Navigation_bar.Test_links@49c7b90e]" started-at="2021-01-11T10:14:18 IST" name="beforeClass" finished-at="2021-01-11T10:14:27 IST" duration-ms="8838" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:search.search@10d307f1]" started-at="2021-01-11T09:06:22 IST" name="BeforeMethod" finished-at="2021-01-11T09:06:22 IST" duration-ms="18" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Navigation_bar.Test_links@49c7b90e]" started-at="2021-01-11T10:14:27 IST" name="BeforeMethod" finished-at="2021-01-11T10:14:27 IST" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="authorTitle()[pri:3, instance:search.search@10d307f1]" started-at="2021-01-11T09:06:22 IST" name="authorTitle" finished-at="2021-01-11T09:07:00 IST" duration-ms="38671" status="PASS">
+        <test-method signature="Login()[pri:13, instance:Navigation_bar.Test_links@49c7b90e]" started-at="2021-01-11T10:14:27 IST" name="Login" finished-at="2021-01-11T10:14:31 IST" duration-ms="4516" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- authorTitle -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:search.search@10d307f1]" started-at="2021-01-11T09:07:00 IST" name="afterClass" finished-at="2021-01-11T09:07:01 IST" duration-ms="217" status="PASS">
+        </test-method> <!-- Login -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Navigation_bar.Test_links@49c7b90e]" started-at="2021-01-11T10:14:31 IST" name="BeforeMethod" finished-at="2021-01-11T10:14:31 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Costumers_club_subCategory()[pri:14, instance:Navigation_bar.Test_links@49c7b90e]" started-at="2021-01-11T10:14:31 IST" name="Costumers_club_subCategory" finished-at="2021-01-11T10:14:36 IST" depends-on-methods="Navigation_bar.Test_links.Login" duration-ms="4717" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Costumers_club_subCategory -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Navigation_bar.Test_links@49c7b90e]" started-at="2021-01-11T10:14:36 IST" name="afterClass" finished-at="2021-01-11T10:14:36 IST" duration-ms="226" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- search.search -->
+      </class> <!-- Navigation_bar.Test_links -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

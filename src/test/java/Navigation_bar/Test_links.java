@@ -1,6 +1,7 @@
 package Navigation_bar;
 
 import org.testng.annotations.Test;
+import org.xml.sax.SAXException;
 
 import ID.Navigation_bar_id;
 import Tools.Extent_reports;
@@ -14,6 +15,8 @@ import java.awt.AWTException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
+
+import javax.xml.parsers.ParserConfigurationException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -67,7 +70,8 @@ public class Test_links extends Navigation_bar_func {
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// Check if page title is equal to link text
 			if (topItemString.equals("מועדון לקוחות")) {
-				pageTitleTest("חברות במועדון הקוראים של סטימצקי - הסיפור שלי",driver.findElement(By.xpath("//div[@class='page-title']/h1")).getText());
+				pageTitleTest("חברות במועדון הקוראים של סטימצקי - הסיפור שלי",
+						driver.findElement(By.xpath("//div[@class='page-title']/h1")).getText());
 			} else {
 				pageTitleTest(topItemString, driver.findElement(By.className("pageTitle")).getText());
 			}
@@ -75,7 +79,7 @@ public class Test_links extends Navigation_bar_func {
 	}
 
 	@Test(groups = "subCategory", priority = 3, enabled = true)
-	public void books_subCategory() throws IOException, AWTException  {
+	public void books_subCategory() throws IOException, AWTException {
 		test.info("--------books_subCategory links test --------");
 		for (int i = 0; i < pof.books_subCategory.size(); i++) {
 			// move to books category
@@ -225,8 +229,21 @@ public class Test_links extends Navigation_bar_func {
 			pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText());
 		}
 	}
+// login for test all club subCategory
+	@Test(groups = "login",priority = 13,enabled = true)
+	public void Login() throws SAXException, IOException, ParserConfigurationException, InterruptedException {
+		actions.moveToElement(pof.login).click().perform();
+		Thread.sleep(2000);
+		//enter email and password
+		pof.email.sendKeys(getData("email"));
+		pof.pass.sendKeys(getData("pass"));
+		//login for user
+		actions.moveToElement(pof.send2).click().perform();
+		Thread.sleep(2000);
 
-	@Test(groups = "subCategory", priority = 13, enabled = true)
+	}
+
+	@Test(groups = "subCategory", priority = 14, dependsOnMethods = { "Login" }, enabled = true)
 	public void Costumers_club_subCategory() throws IOException, AWTException {
 		test.info("--------Costumers_club_subCategory links test --------");
 		for (int i = 0; i < pof.club_subCategory.size(); i++) {
@@ -237,9 +254,11 @@ public class Test_links extends Navigation_bar_func {
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// Check if page title is equal to link text
 			if (subcatagoryString.equals("חברות במועדון")) {
-				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(),"חברות במועדון הקוראים של סטימצקי - הסיפור שלי");
+				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "חברות במועדון הקוראים של סטימצקי - הסיפור שלי");
 			} else if (subcatagoryString.equals("תקנון המועדון")) {
 				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "תקנון מועדון הקוראים של סטימצקי");
+			} else if (subcatagoryString.equals("הפרטים שלי")) {
+				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "מועדון לקוחות סטימצקי");
 			} else {
 				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//div/h1")).getText());
 			}
