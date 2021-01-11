@@ -7,7 +7,11 @@
         <methods>
           <include name="BeforeMethod"/>
           <include name="afterClass"/>
+<<<<<<< HEAD
           <include name="mCategorys"/>
+=======
+          <include name="Login"/>
+>>>>>>> parent of 6bdeabc... test
           <include name="beforeClass"/>
         </methods>
       </class> <!-- Navigation_bar.Test_links -->
