@@ -7,7 +7,7 @@
         <methods>
           <include name="BeforeMethod"/>
           <include name="afterClass"/>
-          <include name="key_word"/>
+          <include name="authorTitle"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- search.search -->
