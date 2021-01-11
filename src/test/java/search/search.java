@@ -51,6 +51,7 @@ public class search extends search_func {
 
 	@Test(priority = 2)
 	public void key_word() throws IOException, InterruptedException, AWTException {
+		test1.info("----------- key word search ----------------");
 		int rows = 0;
 		while (rows <= 9) {
 			// read from excel file
@@ -69,6 +70,7 @@ public class search extends search_func {
 
 	@Test(priority = 3)
 	public void authorTitle() throws IOException, InterruptedException, AWTException {
+		test1.info("----------- authorTitle search ----------------");
 		int rows = 0;
 		while (rows <= 11) {
 			// read from excel file
@@ -80,20 +82,22 @@ public class search extends search_func {
 			pof.submit.click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if products is found
-			if (driver.findElement(By.xpath("//div/h1")).getText().contains("תוצאות חיפוש")) {
+			if (driver.findElement(By.xpath("//h1")).getText().contains("תוצאות חיפוש")) {
 				resuleTest3(pof.authorTitle, value);
-			} else {
-				driver.navigate().back();
-				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			}else if (driver.findElement(By.xpath("//div[@id='product-info']/h1[@class='productTitle']")).isDisplayed()) {
+				resuleTest(driver.getTitle(), value);
+				}
+			else {
 				test1.fail("the search of " + value+"not found products",MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
-			}
+				}
 			Thread.sleep(1000);
 			rows++;
 		}
 	}
 
 	@Test(priority = 4)
-	public void EauthorTitle() throws IOException, InterruptedException, AWTException {
+	public void English_authorTitle() throws IOException, InterruptedException, AWTException {
+		test1.info("----------- English authorTitle search ----------------");
 		int rows = 0;
 		while (rows <= 6) {
 			// read from excel file
@@ -105,13 +109,14 @@ public class search extends search_func {
 			pof.submit.click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if products is found
-			if (driver.findElement(By.xpath("//div/h1")).getText().contains("תוצאות חיפוש")) {
+			if (driver.findElement(By.xpath("//h1")).getText().contains("תוצאות חיפוש")) {
 				resuleTest3(pof.authorTitle, value);
-			} else {
-				driver.navigate().back();
-				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			}else if (driver.findElement(By.xpath("//div[@id='product-info']/h1[@class='productTitle']")).isDisplayed()) {
+				resuleTest(driver.getTitle(), value);
+				}
+			else {
 				test1.fail("the search of " + value+"not found products",MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
-			}
+				}
 			Thread.sleep(1000);
 			rows++;
 		}
@@ -119,6 +124,7 @@ public class search extends search_func {
 
 	@Test(priority = 5)
 	public void Negative() throws IOException, InterruptedException, AWTException {
+		test1.info("----------- Negative search ----------------");
 		int rows = 0;
 		while (rows <= 6) {
 			// read from excel file
@@ -138,6 +144,8 @@ public class search extends search_func {
 
 	@Test(priority = 6)
 	public void Boundary() throws IOException, InterruptedException, AWTException {
+		test1.info("----------- Boundary test ----------------");
+
 		int rows = 0;
 		while (rows <= 3) {
 			// read from excel file
@@ -161,7 +169,8 @@ public class search extends search_func {
 	}
 
 	@Test(priority = 7)
-	public void Num() throws InterruptedException, IOException, AWTException {
+	public void numbers() throws InterruptedException, IOException, AWTException {
+		test1.info("----------- numbers search ----------------");
 		// search the product
 		pof.search.clear();
 		pof.search.sendKeys("4564654556");
@@ -173,7 +182,8 @@ public class search extends search_func {
 	}
 
 	@Test(priority = 1)
-	public void space() throws InterruptedException, IOException, AWTException {
+	public void spaces() throws InterruptedException, IOException, AWTException {
+		test1.info("----------- spaces search ----------------");
 		// search the product
 		pof.search.sendKeys("   ");
 		pof.submit.click();
@@ -188,7 +198,8 @@ public class search extends search_func {
 	}
 
 	@Test(priority = 8, enabled = true)
-	public void clean_search_field() throws IOException, InterruptedException, AWTException {
+	public void clear_search_field() throws IOException, InterruptedException, AWTException {
+		test1.info("----------- clear search field test ----------------");
 		pof.search.clear();
 		int rows = 0;
 		while (rows <= 30) {
