@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Footer.link_test">
+      <class name="Navigation_bar.Test_links">
         <methods>
           <include name="BeforeMethod"/>
           <include name="afterClass"/>
-          <include name="facebook"/>
+          <include name="mCategorys"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- Footer.link_test -->
+      </class> <!-- Navigation_bar.Test_links -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
