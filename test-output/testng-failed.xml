@@ -3,22 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Footer.link_test">
+      <class name="Navigation_bar.Test_links">
         <methods>
           <include name="BeforeMethod"/>
           <include name="afterClass"/>
-<<<<<<< HEAD
 <<<<<<< HEAD
           <include name="mCategorys"/>
 =======
           <include name="Login"/>
 >>>>>>> parent of 6bdeabc... test
-=======
-          <include name="facebook"/>
->>>>>>> parent of e1171e0... Revert "Merge branch 'master' of https://github.com/roi32/Steimatzky-project"
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- Footer.link_test -->
+      </class> <!-- Navigation_bar.Test_links -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
