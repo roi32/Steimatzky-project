@@ -5,10 +5,10 @@
     <classes>
       <class name="Pages.homepage">
         <methods>
+          <include name="SearchProduct"/>
           <include name="BeforeMethod"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
-          <include name="Navigation_bar"/>
         </methods>
       </class> <!-- Pages.homepage -->
     </classes>
