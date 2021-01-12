@@ -202,20 +202,20 @@ public class link_test extends Footer_func {
 			}
 		}
 	}
-	
-@Test(priority = 5)
-public void facebook() throws InterruptedException {
-	js.executeScript("window.scrollBy(0,10000)", "");
-	actions.moveToElement(pof.facebook_link).click().perform();
-	Thread.sleep(2000);
-	ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	driver.switchTo().window(tabs2.get(1));
-	if (driver.getTitle().contains("סטימצקי - דף הבית | פייסבוק")) {
-		System.out.println("you in סטימצקי - דף הבית | פייסבוק page");
-	} else {
-		System.err.println("you not in סטימצקי - דף הבית | פייסבוק page");
+
+	@Test(priority = 5)
+	public void facebook() throws InterruptedException {
+		js.executeScript("window.scrollBy(0,10000)", "");
+		actions.moveToElement(pof.facebook_link).click().perform();
+		Thread.sleep(2000);
+		ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.switchTo().window(tabs2.get(1));
+		if (driver.getTitle().contains("סטימצקי - דף הבית | פייסבוק")) {
+			System.out.println("you in סטימצקי - דף הבית | פייסבוק page");
+		} else {
+			System.err.println("you not in סטימצקי - דף הבית | פייסבוק page");
+		}
+
 	}
-	
-}
 }

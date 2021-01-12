@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="steimatzky">
-	<test name="steimatzky - test">
+<suite name="homepage - steimatzky">
+	<test name="Navigation bar - test">
 		<classes>
-			<class name="test.search" />
+			<class name="Pages.homepage" />
+			<class name="Navigation_bar.Test_links" />
 		</classes>
 	</test>
 </suite>

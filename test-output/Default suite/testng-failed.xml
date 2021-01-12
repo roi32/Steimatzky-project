@@ -3,17 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Navigation_bar.Test_links">
+      <class name="search.search">
         <methods>
           <include name="BeforeMethod"/>
           <include name="afterClass"/>
-          <include name="Cosmetics_and_perfumes_subCategory"/>
-          <include name="music_subCategory"/>
-          <include name="Appliances_subCategory"/>
+          <include name="authorTitle"/>
           <include name="beforeClass"/>
-          <include name="Smartphones_subCategory"/>
         </methods>
-      </class> <!-- Navigation_bar.Test_links -->
+      </class> <!-- search.search -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -3,7 +3,6 @@ package Navigation_bar;
 import org.testng.annotations.Test;
 
 import ID.Navigation_bar_id;
-import Tools.Extent_reports;
 import Tools.Navigation_bar_func;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -27,15 +26,14 @@ public class Test_links extends Navigation_bar_func {
 
 	@BeforeClass
 	public void beforeClass() {
-		extent = Extent_reports.GetExtent();
-		test = Extent_reports.createTest("name", "desc");
+		
+		actions = new Actions(driver);
 		WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.steimatzky.co.il/");
-		actions = new Actions(driver);
-	}
+		}
 
 	@BeforeMethod
 	public void BeforeMethod() {
@@ -45,7 +43,6 @@ public class Test_links extends Navigation_bar_func {
 
 	@AfterClass
 	public void afterClass() {
-		extent.flush();
 		driver.close();
 	}
 
@@ -58,7 +55,7 @@ public class Test_links extends Navigation_bar_func {
 		pageTitleTest(pof.sales.getText(), driver.findElement(By.className("pageTitle")).getText());
 	}
 
-	@Test(groups = "mCategorys", priority = 2, enabled = false)
+	@Test(groups = "mCategorys", priority = 2, enabled = true)
 	public void mCategorys() throws IOException, AWTException {
 		test.info("--------mCategorys links test --------");
 		for (int i = 0; i < pof.mCategory.size(); i++) {
@@ -75,7 +72,7 @@ public class Test_links extends Navigation_bar_func {
 		}
 	}
 
-	@Test(groups = "subCategory", priority = 3, enabled = false)
+	@Test(groups = "subCategory", priority = 3, enabled = true)
 	public void books_subCategory() throws IOException, AWTException  {
 		test.info("--------books_subCategory links test --------");
 		for (int i = 0; i < pof.books_subCategory.size(); i++) {
