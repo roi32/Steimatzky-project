@@ -17,12 +17,13 @@ public class homepage extends homepage_func {
 		extent = Extent_reports.GetExtent();
 		test = Extent_reports.createTest("name", "desc");
 		test1 = Extent_reports.createTest1("name", "desc");
-		actions = new Actions(driver);
 		WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.steimatzky.co.il/");
+		actions = new Actions(driver);
+
 	}
 
 	@AfterSuite

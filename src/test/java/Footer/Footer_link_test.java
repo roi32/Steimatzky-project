@@ -55,6 +55,7 @@ public class Footer_link_test extends Footer_func {
 
 	@Test(priority = 1)
 	public void About() {
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		js.executeScript("window.scrollBy(0,10000)", "");
 		for (int i = 0; i < pof.about.size(); i++) {
 			String aboutString = pof.about.get(i).getText();
@@ -81,7 +82,6 @@ public class Footer_link_test extends Footer_func {
 			} else if (aboutString.equals("סניפים")) {
 				if (pof.popup.isDisplayed()) {
 					actions.moveToElement(pof.popup).click().perform();
-
 					if (driver.getTitle().contains("סניפים פתוחים")) {
 						System.out.println("you in " + aboutString + " page");
 					} else {
