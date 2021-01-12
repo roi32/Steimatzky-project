@@ -11,10 +11,11 @@ import org.xml.sax.SAXException;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
 import Navigation_bar.Navigation_bar;
+import Tools.Extent_reports;
 
 public class login_user extends Navigation_bar {
 
-	public void Login(Actions actions, String Description) throws IOException, AWTException {
+	public void Login(Actions actions, String Description,Extent_reports exm) throws IOException, AWTException {
 		try {
 			actions.moveToElement(pof.login).click().perform();
 			Thread.sleep(2000);

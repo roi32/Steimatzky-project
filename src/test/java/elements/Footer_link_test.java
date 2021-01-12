@@ -1,11 +1,10 @@
-package Footer;
+package elements;
 
 import org.testng.annotations.Test;
 import org.xml.sax.SAXException;
 
 import ID.Footer_ID;
 import Tools.Footer_func;
-import elements.login_user;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.testng.annotations.BeforeClass;

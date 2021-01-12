@@ -4,6 +4,7 @@ import java.awt.AWTException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -13,27 +14,18 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.WebElement;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
-import ID.Navigation_bar_id;
+public class homepage_func extends setUp {
 
-public class homepage_func {
-	public static WebDriver driver;
-	public static ExtentReports extent;
-	public static ExtentTest test;
-	public static ExtentTest test1;
-	public static Navigation_bar_id pof;
-	public static Extent_reports exm = new Extent_reports(driver);
-	public static Actions actions;
+	static String Description = "home page";
 
-	public static void pageTitleTest(String link, String pageTitle) throws IOException, AWTException {
+	public static void pageTitleTest(String link, String pageTitle, Extent_reports exm)
+			throws IOException, AWTException {
 		if (link.equals(pageTitle)) {
 			test.pass("you in " + pageTitle + " page");
 		} else {
@@ -60,6 +52,33 @@ public class homepage_func {
 		XSSFCell cell_r = row_r.getCell(cell);
 		String value = cell_r.getStringCellValue();
 		return value;
+	}
+
+	public void resuleTest(String titleString, String value, Extent_reports exm) throws IOException, AWTException {
+		if (titleString.contains(value)) {
+			test.pass("the product " + value + " is found");
+		} else {
+			test.fail("the product not " + value + " is found",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+	}
+
+	public void resuleTest3(List<WebElement> product_grid, String value, Extent_reports exm)
+			throws IOException, AWTException {
+		boolean check = true;
+		for (int i = 0; i < product_grid.size(); i++) {
+			if (!product_grid.get(i).getText().contains(value)) {
+				check = false;
+			}
+		}
+
+		if (check == true) {
+			test.pass("all products contains :" + value);
+		} else {
+			test.fail("not all products contains :" + value,
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+
 	}
 
 }
