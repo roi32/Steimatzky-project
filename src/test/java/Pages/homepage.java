@@ -4,8 +4,8 @@ import Tools.Extent_reports;
 import Tools.setUp;
 import elements.login_user;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import search.search;
 import search.search_product;
-
 import java.awt.AWTException;
 import java.io.IOException;
 
@@ -64,5 +64,11 @@ public class homepage extends setUp {
 	@Test(priority = 3)
 	public void SearchProduct() {
 		search_product.searchProduct(driver, test1, exm);
+	}
+
+	@Test(priority = 4)
+	public void Search() throws IOException, InterruptedException, AWTException {
+		search.Search(driver, test1, exm);
+
 	}
 }

@@ -46,7 +46,7 @@ public class func extends setUp {
 		}
 	}
 
-	public void resuleTest3(List<WebElement> product_grid, String value, Extent_reports exm)
+	public static void resuleTest3(List<WebElement> product_grid, String value, Extent_reports exm)
 			throws IOException, AWTException {
 		boolean check = true;
 		for (int i = 0; i < product_grid.size(); i++) {
