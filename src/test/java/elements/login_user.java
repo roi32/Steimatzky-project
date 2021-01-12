@@ -6,16 +6,22 @@ import java.io.IOException;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
 import org.xml.sax.SAXException;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 
-import Navigation_bar.Navigation_bar;
+import ID.homepage_id;
 import Tools.Extent_reports;
+import Tools.setUp;
 
-public class login_user extends Navigation_bar {
+public class login_user extends setUp{
+	static Actions actions;
 
-	public void Login(Actions actions, String Description,Extent_reports exm) throws IOException, AWTException {
+	public static void Login( String Description,Extent_reports exm) throws IOException, AWTException {
+		pof = new homepage_id();
+		pof = PageFactory.initElements(driver, homepage_id.class);
+		actions= new Actions(driver);
 		try {
 			actions.moveToElement(pof.login).click().perform();
 			Thread.sleep(2000);

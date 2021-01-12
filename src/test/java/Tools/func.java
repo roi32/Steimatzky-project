@@ -20,7 +20,7 @@ import org.xml.sax.SAXException;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 
-public class homepage_func extends setUp {
+public class func extends setUp {
 
 	static String Description = "home page";
 
@@ -34,7 +34,7 @@ public class homepage_func extends setUp {
 		}
 	}
 
-	public String getData(String nodeName) throws ParserConfigurationException, SAXException, IOException {
+	public static String getData(String nodeName) throws ParserConfigurationException, SAXException, IOException {
 		File fXmlFile = new File("C:\\test\\configurtion\\configurtion.xml");
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -44,7 +44,7 @@ public class homepage_func extends setUp {
 	}
 
 	@SuppressWarnings("resource")
-	public String Product_value(int rows, int cell, String sheets) throws IOException {
+	public static String Product_value(int rows, int cell, String sheets) throws IOException {
 		FileInputStream fis3 = new FileInputStream("search - test.xlsx");
 		XSSFWorkbook wb = new XSSFWorkbook(fis3);
 		XSSFSheet sheet = wb.getSheet(sheets);
@@ -54,11 +54,11 @@ public class homepage_func extends setUp {
 		return value;
 	}
 
-	public void resuleTest(String titleString, String value, Extent_reports exm) throws IOException, AWTException {
+	public static void resuleTest(String titleString, String value, Extent_reports exm) throws IOException, AWTException {
 		if (titleString.contains(value)) {
-			test.pass("the product " + value + " is found");
+			test1.pass("the product " + value + " is found");
 		} else {
-			test.fail("the product not " + value + " is found",
+			test1.fail("the product not " + value + " is found",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
 	}
@@ -73,9 +73,9 @@ public class homepage_func extends setUp {
 		}
 
 		if (check == true) {
-			test.pass("all products contains :" + value);
+			test1.pass("all products contains :" + value);
 		} else {
-			test.fail("not all products contains :" + value,
+			test1.fail("not all products contains :" + value,
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
 

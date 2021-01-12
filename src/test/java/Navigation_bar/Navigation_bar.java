@@ -14,9 +14,9 @@ import com.aventstack.extentreports.ExtentTest;
 
 import ID.homepage_id;
 import Tools.Extent_reports;
-import Tools.homepage_func;
+import Tools.func;
 
-public class Navigation_bar extends homepage_func {
+public class Navigation_bar extends func {
 	public static homepage_id pof = new homepage_id();
 
 	public static void NavigationBar(WebDriver driver, ExtentTest test, Extent_reports exm) {

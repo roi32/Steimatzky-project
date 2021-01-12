@@ -23,7 +23,7 @@ public abstract class search_func {
 	public static ExtentTest test1;
 	public static ExtentReports extent;
 
-	public void resuleTest(String titleString, String value) throws IOException, AWTException {
+	public static void resuleTest(String titleString, String value) throws IOException, AWTException {
 		if (titleString.contains(value)) {
 			test1.pass("the product " + value + " is found");
 		} else {
@@ -33,7 +33,7 @@ public abstract class search_func {
 	}
 
 	@SuppressWarnings("resource")
-	public String Product_value(int rows, int cell, String sheets) throws IOException {
+	public static String Product_value(int rows, int cell, String sheets) throws IOException {
 		FileInputStream fis3 = new FileInputStream("search - test.xlsx");
 		XSSFWorkbook wb = new XSSFWorkbook(fis3);
 		XSSFSheet sheet = wb.getSheet(sheets);
@@ -43,7 +43,7 @@ public abstract class search_func {
 		return value;
 	}
 
-	public void resuleTest2(String product_grid, String value) throws IOException, AWTException {
+	public static void resuleTest2(String product_grid, String value) throws IOException, AWTException {
 		if (product_grid.contains(value)) {
 			test1.pass("the result contain " + value);
 		} else {
@@ -52,7 +52,7 @@ public abstract class search_func {
 		}
 	}
 
-	public void resuleTest3(List<WebElement> product_grid, String value) throws IOException, AWTException {
+	public static void resuleTest3(List<WebElement> product_grid, String value) throws IOException, AWTException {
 		boolean check = true;
 		for (int i = 0; i < product_grid.size(); i++) {
 			if (!product_grid.get(i).getText().contains(value)) {
