@@ -20,7 +20,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 
-public class Test_links extends Navigation_bar_func {
+public class Navigation_bar extends Navigation_bar_func {
 
 	static Actions actions;
 

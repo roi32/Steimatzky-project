@@ -10,9 +10,8 @@ import org.xml.sax.SAXException;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 
-import Navigation_bar.Test_links;
-import Tools.Navigation_bar_func;
-public abstract class login_user extends Test_links {
+import Navigation_bar.Navigation_bar;
+public class login_user extends Navigation_bar {
 	
 
 	

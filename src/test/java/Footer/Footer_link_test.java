@@ -24,7 +24,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 
-public class link_test extends Footer_func {
+public class Footer_link_test extends Footer_func {
 	static Actions actions;
 	static login_user login;
 	static JavascriptExecutor js;
