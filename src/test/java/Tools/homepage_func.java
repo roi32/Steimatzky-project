@@ -14,6 +14,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
@@ -30,6 +31,7 @@ public class homepage_func {
 	public static ExtentTest test1;
 	public static Navigation_bar_id pof;
 	public static Extent_reports exm = new Extent_reports(driver);
+	public static Actions actions;
 
 	public static void pageTitleTest(String link, String pageTitle) throws IOException, AWTException {
 		if (link.equals(pageTitle)) {

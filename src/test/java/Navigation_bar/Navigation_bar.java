@@ -3,6 +3,7 @@ package Navigation_bar;
 import org.testng.annotations.Test;
 
 import ID.Navigation_bar_id;
+import Tools.Extent_reports;
 import Tools.Navigation_bar_func;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -26,7 +27,8 @@ public class Navigation_bar extends Navigation_bar_func {
 
 	@BeforeClass
 	public void beforeClass() {
-
+		extent = Extent_reports.GetExtent();
+		test = Extent_reports.createTest("name", "desc");
 		actions = new Actions(driver);
 		WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.silentOutput", "true");
@@ -43,6 +45,7 @@ public class Navigation_bar extends Navigation_bar_func {
 
 	@AfterClass
 	public void afterClass() {
+		extent.flush();
 		driver.close();
 	}
 
