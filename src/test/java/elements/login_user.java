@@ -26,16 +26,16 @@ public class login_user extends Navigation_bar {
 			Thread.sleep(2000);
 			test.pass("User login successful" + Description);
 		} catch (InterruptedException e) {
-			test.fail("User login failed", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			test.fail("User login failed"+ Description, MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		} catch (ParserConfigurationException e) {
-			test.fail("User login failed", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			test.fail("User login failed"+ Description, MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		} catch (SAXException e) {
-			test.fail("User login failed", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			test.fail("User login failed"+ Description, MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		} catch (IOException e) {
-			test.fail("User login failed", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			test.fail("User login failed"+ Description, MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 

@@ -1,15 +1,5 @@
 package Navigation_bar;
 
-import org.testng.annotations.Test;
-
-import ID.Navigation_bar_id;
-import Tools.Extent_reports;
-import Tools.Navigation_bar_func;
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-
 import java.awt.AWTException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -20,21 +10,32 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+
+import ID.Navigation_bar_id;
+import Tools.Extent_reports;
+import Tools.Navigation_bar_func;
+import elements.login_user;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Navigation_bar extends Navigation_bar_func {
 
 	static Actions actions;
+	static login_user user;
 
 	@BeforeClass
 	public void beforeClass() {
 		extent = Extent_reports.GetExtent();
 		test = Extent_reports.createTest("name", "desc");
-		actions = new Actions(driver);
 		WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.steimatzky.co.il/");
+		user = new login_user();
+		actions = new Actions(driver);
 	}
 
 	@BeforeMethod
@@ -230,6 +231,7 @@ public class Navigation_bar extends Navigation_bar_func {
 	@Test(groups = "subCategory", priority = 13, enabled = true)
 	public void Costumers_club_subCategory() throws IOException, AWTException {
 		test.info("--------Costumers_club_subCategory links test --------");
+		user.Login(actions, "home page");
 		for (int i = 0; i < pof.club_subCategory.size(); i++) {
 			actions.moveToElement(pof.club).perform();
 			// Get link text and click on the link

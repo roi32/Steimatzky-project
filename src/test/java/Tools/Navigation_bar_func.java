@@ -20,7 +20,6 @@ import ID.Navigation_bar_id;
 
 public abstract class Navigation_bar_func {
 	public static WebDriver driver;
-
 	public static ExtentReports extent;
 	public static ExtentTest test;
 	public static Navigation_bar_id pof;

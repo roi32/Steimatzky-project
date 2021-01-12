@@ -3,8 +3,7 @@
 <suite name="homepage - steimatzky" verbose="1">
 	<test name="Navigation bar - test">
 		<classes>
-			<class name="Pages.homepage" />
-			<class name="Navigation_bar.Test_links" />
+			<class name="Navigation_bar.Navigation_bar" />
 		</classes>
 	</test>
 </suite>
