@@ -1,10 +1,10 @@
 package Navigation_bar;
 
 import org.testng.annotations.Test;
-
 import ID.Navigation_bar_id;
 import Tools.Extent_reports;
 import Tools.Navigation_bar_func;
+import elements.login_user;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.testng.annotations.BeforeClass;
@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -24,6 +25,8 @@ import org.testng.annotations.AfterClass;
 public class Test_links extends Navigation_bar_func {
 
 	static Actions actions;
+	static login_user login;
+
 
 	@BeforeClass
 	public void beforeClass() {
@@ -35,6 +38,8 @@ public class Test_links extends Navigation_bar_func {
 		driver.manage().window().maximize();
 		driver.get("https://www.steimatzky.co.il/");
 		actions = new Actions(driver);
+		login=new login_user() {
+		};
 	}
 
 	@BeforeMethod
@@ -50,10 +55,10 @@ public class Test_links extends Navigation_bar_func {
 	}
 
 	@Test(groups = "mCategory", priority = 1, enabled = true)
-	public void sales() throws IOException, AWTException {
-		test.info("--------sales link test --------");
+	public void Sales() throws IOException, AWTException {
+		test.info("--------Sales link test --------");
 		// Get link text and click on the link
-		pof.sales.click();
+		actions.moveToElement(pof.sales).click().perform();
 		// Check if page title is equal to link text
 		pageTitleTest(pof.sales.getText(), driver.findElement(By.className("pageTitle")).getText());
 	}
@@ -76,8 +81,8 @@ public class Test_links extends Navigation_bar_func {
 	}
 
 	@Test(groups = "subCategory", priority = 3, enabled = true)
-	public void books_subCategory() throws IOException, AWTException  {
-		test.info("--------books_subCategory links test --------");
+	public void Books_subCategory() throws IOException, AWTException {
+		test.info("--------Books_subCategory links test --------");
 		for (int i = 0; i < pof.books_subCategory.size(); i++) {
 			// move to books category
 			actions.moveToElement(pof.books).perform();
@@ -117,8 +122,8 @@ public class Test_links extends Navigation_bar_func {
 	}
 
 	@Test(groups = "subCategory", priority = 5, enabled = true)
-	public void games_subCategory() throws IOException, AWTException {
-		test.info("--------games_subCategory links test --------");
+	public void Games_subCategory() throws IOException, AWTException {
+		test.info("--------Games_subCategory links test --------");
 		actions.moveToElement(pof.games).perform();
 		// Get link text and click on the link
 		String subcatagoryString = pof.Subgames.getText();
@@ -144,8 +149,8 @@ public class Test_links extends Navigation_bar_func {
 	}
 
 	@Test(groups = "subCategory", priority = 7, enabled = true)
-	public void music_subCategory() throws InterruptedException, IOException, AWTException {
-		test.info("--------music_subCategory links test --------");
+	public void Music_subCategory() throws InterruptedException, IOException, AWTException {
+		test.info("--------Music_subCategory links test --------");
 		for (int i = 0; i < pof.music_subCategory.size(); i++) {
 			actions.moveToElement(pof.music).perform();
 			// Get link text and click on the link
@@ -214,8 +219,8 @@ public class Test_links extends Navigation_bar_func {
 	}
 
 	@Test(groups = "subCategory", priority = 12, enabled = true)
-	public void camping_subCategory() throws IOException, AWTException {
-		test.info("--------camping_subCategory links test --------");
+	public void Camping_subCategory() throws IOException, AWTException {
+		test.info("--------Camping_subCategory links test --------");
 		for (int i = 0; i < pof.camping_subCategory.size(); i++) {
 			actions.moveToElement(pof.camping).perform();
 			// Get link text and click on the link
@@ -227,21 +232,29 @@ public class Test_links extends Navigation_bar_func {
 		}
 	}
 
-	@Test(groups = "subCategory", priority = 13, enabled = true)
+// login for test all club subCategory
+	@Test(groups = "login", priority = 13, enabled = true)
+	public void Login() throws IOException, AWTException {
+		login.Login(actions,"Navigation bar - link test");
+
+	}
+
+	@Test(groups = "subCategory", priority = 14, dependsOnMethods = { "Login" }, enabled = true)
 	public void Costumers_club_subCategory() throws IOException, AWTException {
 		test.info("--------Costumers_club_subCategory links test --------");
 		for (int i = 0; i < pof.club_subCategory.size(); i++) {
 			actions.moveToElement(pof.club).perform();
 			// Get link text and click on the link
 			String subcatagoryString = pof.club_subCategory.get(i).getText();
-			pof.club_subCategory.get(i).click();
+			actions.moveToElement(pof.club_subCategory.get(i)).click().perform();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// Check if page title is equal to link text
 			if (subcatagoryString.equals("חברות במועדון")) {
-				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(),
-						"חברות במועדון הקוראים של סטימצקי - הסיפור שלי");
+				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(),"חברות במועדון הקוראים של סטימצקי - הסיפור שלי");
 			} else if (subcatagoryString.equals("תקנון המועדון")) {
 				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "תקנון מועדון הקוראים של סטימצקי");
+			} else if (subcatagoryString.equals("הפרטים שלי")) {
+				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "מועדון לקוחות סטימצקי");
 			} else {
 				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//div/h1")).getText());
 			}
