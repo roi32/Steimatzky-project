@@ -87,7 +87,7 @@ public class Navigation_bar_id {
 
 	@FindBy(how = How.ID, using = "send2")
 	public WebElement send2;
-	
+
 	@FindBy(how = How.XPATH, using = "//div[@id='userBox']//div[@class='loginbox ']/a[@class='login-btn'][1]")
 	public WebElement login;
 }

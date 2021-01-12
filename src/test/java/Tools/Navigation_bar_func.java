@@ -34,7 +34,7 @@ public abstract class Navigation_bar_func {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
 	}
-	
+
 	public String getData(String nodeName) throws ParserConfigurationException, SAXException, IOException {
 		File fXmlFile = new File("C:\\test\\configurtion\\configurtion.xml");
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();

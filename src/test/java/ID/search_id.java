@@ -13,12 +13,11 @@ public class search_id {
 
 	@FindBy(how = How.XPATH, using = "//form[@id='search_mini_form']/input[2]")
 	public WebElement submit;
-	
+
 	@FindBy(how = How.XPATH, using = "//section[@id='product-grid']//div[@class='inner']//h4[@class='bookTitle']/a")
-	public List <WebElement> product_grid;
+	public List<WebElement> product_grid;
 
 	@FindBy(how = How.XPATH, using = "//section[@id='product-grid']//span[@class='bookAuthor']/a")
-	public List <WebElement> authorTitle;
-
+	public List<WebElement> authorTitle;
 
 }

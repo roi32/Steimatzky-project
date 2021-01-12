@@ -26,14 +26,14 @@ public class Navigation_bar extends Navigation_bar_func {
 
 	@BeforeClass
 	public void beforeClass() {
-		
+
 		actions = new Actions(driver);
 		WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.steimatzky.co.il/");
-		}
+	}
 
 	@BeforeMethod
 	public void BeforeMethod() {
@@ -73,7 +73,7 @@ public class Navigation_bar extends Navigation_bar_func {
 	}
 
 	@Test(groups = "subCategory", priority = 3, enabled = true)
-	public void books_subCategory() throws IOException, AWTException  {
+	public void books_subCategory() throws IOException, AWTException {
 		test.info("--------books_subCategory links test --------");
 		for (int i = 0; i < pof.books_subCategory.size(); i++) {
 			// move to books category

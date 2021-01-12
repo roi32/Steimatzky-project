@@ -30,7 +30,7 @@ public class homepage_func {
 	public static ExtentTest test1;
 	public static Navigation_bar_id pof;
 	public static Extent_reports exm = new Extent_reports(driver);
-	
+
 	public static void pageTitleTest(String link, String pageTitle) throws IOException, AWTException {
 		if (link.equals(pageTitle)) {
 			test.pass("you in " + pageTitle + " page");
@@ -39,7 +39,7 @@ public class homepage_func {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
 	}
-	
+
 	public String getData(String nodeName) throws ParserConfigurationException, SAXException, IOException {
 		File fXmlFile = new File("C:\\test\\configurtion\\configurtion.xml");
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -48,9 +48,9 @@ public class homepage_func {
 		doc.getDocumentElement().normalize();
 		return doc.getElementsByTagName(nodeName).item(0).getTextContent();
 	}
-	
+
 	@SuppressWarnings("resource")
-	public String Product_value(int rows,int cell,String sheets) throws IOException {
+	public String Product_value(int rows, int cell, String sheets) throws IOException {
 		FileInputStream fis3 = new FileInputStream("search - test.xlsx");
 		XSSFWorkbook wb = new XSSFWorkbook(fis3);
 		XSSFSheet sheet = wb.getSheet(sheets);
