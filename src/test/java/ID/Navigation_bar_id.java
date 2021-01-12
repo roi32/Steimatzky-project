@@ -79,5 +79,15 @@ public class Navigation_bar_id {
 
 	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[12]/div/ul/li/ul/li/a")
 	public List<WebElement> camping_subCategory;
+	@FindBy(how = How.ID, using = "email")
+	public WebElement email;
 
+	@FindBy(how = How.ID, using = "pass")
+	public WebElement pass;
+
+	@FindBy(how = How.ID, using = "send2")
+	public WebElement send2;
+	
+	@FindBy(how = How.XPATH, using = "//div[@id='userBox']//div[@class='loginbox ']/a[@class='login-btn'][1]")
+	public WebElement login;
 }

@@ -26,7 +26,7 @@ public abstract class search_func {
 			test1.pass("the product " + value + " is found");
 		} else {
 			test1.fail("the product not " + value + " is found",
-					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
 	}
 
