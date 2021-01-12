@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\royko\AppData\Local\Temp\testng-eclipse--499806093\testng-customsuite.xml</span>
+                    <span>C:\Users\royko\AppData\Local\Temp\testng-eclipse--1910846184\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +104,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Pages.homepage" class="method navigator-link" hash-for-method="Navigation_bar">Navigation_bar</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Pages.homepage" class="method navigator-link" hash-for-method="login_user">login_user</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Pages.homepage" class="method navigator-link" hash-for-method="Search">Search</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -132,16 +127,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Navigation_bar">
-                  </a> <!-- Navigation_bar -->
-                  <span class="method-name">Navigation_bar</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="login_user">
-                  </a> <!-- login_user -->
-                  <span class="method-name">login_user</span>
+                  <a name="Search">
+                  </a> <!-- Search -->
+                  <span class="method-name">Search</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -149,7 +137,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\royko\AppData\Local\Temp\testng-eclipse--499806093\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\royko\AppData\Local\Temp\testng-eclipse--1910846184\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -158,7 +146,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Pages.homepage&quot;/&gt;
+      &lt;class name=&quot;Pages.homepage&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;Search&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- Pages.homepage --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -198,15 +190,11 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Navigation_bar')
+data.setCell(0, 1, 'Search')
 data.setCell(0, 2, 'Pages.homepage')
-data.setCell(0, 3, 77415);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'login_user')
-data.setCell(1, 2, 'Pages.homepage')
-data.setCell(1, 3, 4466);
+data.setCell(0, 3, 90572);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -226,13 +214,17 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">Pages.homepage</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">SearchProduct</span>
+                <br/>
+                <span class="ignored-method-name">login_user</span>
+                <br/>
+                <span class="ignored-method-name">Navigation_bar</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -251,23 +243,15 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">BeforeMethod</span>
-                <span class="method-start">7806 ms</span>
+                <span class="method-start">8656 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">login_user</span>
-                <span class="method-start">7822 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">BeforeMethod</span>
-                <span class="method-start">12291 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">Navigation_bar</span>
-                <span class="method-start">12292 ms</span>
+                <span class="method-name">Search</span>
+                <span class="method-start">8673 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">89708 ms</span>
+                <span class="method-start">99247 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
