@@ -19,13 +19,11 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import ID.Navigation_bar_id;
 
 public abstract class Navigation_bar_func {
-
 	public static WebDriver driver;
 	public static ExtentReports extent;
 	public static ExtentTest test;
 	public static Navigation_bar_id pof;
 	public static Extent_reports exm = new Extent_reports(driver);
-
 
 	public static void pageTitleTest(String link, String pageTitle) throws IOException, AWTException {
 		if (link.equals(pageTitle)) {
@@ -44,4 +42,5 @@ public abstract class Navigation_bar_func {
 		doc.getDocumentElement().normalize();
 		return doc.getElementsByTagName(nodeName).item(0).getTextContent();
 	}
+
 }

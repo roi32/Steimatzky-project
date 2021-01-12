@@ -16,8 +16,6 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
-
-
 public abstract class search_func {
 
 	public static WebDriver driver;
@@ -61,6 +59,7 @@ public abstract class search_func {
 				check = false;
 			}
 		}
+
 		if (check == true) {
 			test1.pass("all products contains :" + value);
 		} else {

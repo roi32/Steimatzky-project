@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
 =======
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
@@ -194,20 +195,60 @@
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
         <test-method signature="Login()[pri:13, instance:Navigation_bar.Test_links@49c7b90e]" started-at="2021-01-11T13:35:11 IST" name="Login" finished-at="2021-01-11T13:35:16 IST" duration-ms="4436" status="PASS">
+=======
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-01-12T16:55:32 IST" name="Default suite" finished-at="2021-01-12T16:56:15 IST" duration-ms="43168">
+    <groups>
+    </groups>
+    <test started-at="2021-01-12T16:55:32 IST" name="Default test" finished-at="2021-01-12T16:56:15 IST" duration-ms="43168">
+      <class name="Footer.Footer_link_test">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Footer.Footer_link_test@3fb1549b]" started-at="2021-01-12T16:55:32 IST" name="beforeClass" finished-at="2021-01-12T16:55:40 IST" duration-ms="8776" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Footer.Footer_link_test@3fb1549b]" started-at="2021-01-12T16:55:40 IST" name="BeforeMethod" finished-at="2021-01-12T16:55:40 IST" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="About()[pri:1, instance:Footer.Footer_link_test@3fb1549b]" started-at="2021-01-12T16:55:40 IST" name="About" finished-at="2021-01-12T16:55:49 IST" duration-ms="8106" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- About -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Footer.Footer_link_test@3fb1549b]" started-at="2021-01-12T16:55:49 IST" name="BeforeMethod" finished-at="2021-01-12T16:55:49 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Useful_information()[pri:2, instance:Footer.Footer_link_test@3fb1549b]" started-at="2021-01-12T16:55:49 IST" name="Useful_information" finished-at="2021-01-12T16:55:58 IST" duration-ms="9125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Useful_information -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Footer.Footer_link_test@3fb1549b]" started-at="2021-01-12T16:55:58 IST" name="BeforeMethod" finished-at="2021-01-12T16:55:58 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Login()[pri:3, instance:Footer.Footer_link_test@3fb1549b]" started-at="2021-01-12T16:55:58 IST" name="Login" finished-at="2021-01-12T16:56:02 IST" duration-ms="4437" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Navigation_bar.Test_links@49c7b90e]" started-at="2021-01-11T13:35:11 IST" name="BeforeMethod" finished-at="2021-01-11T13:35:11 IST" duration-ms="0" status="PASS">
+        <test-method signature="Information_for_buyers_on_the_site()[pri:4, instance:Footer.Footer_link_test@3fb1549b]" started-at="2021-01-12T16:56:02 IST" name="Information_for_buyers_on_the_site" finished-at="2021-01-12T16:56:08 IST" depends-on-methods="Footer.Footer_link_test.Login" duration-ms="6264" status="PASS">
+>>>>>>> f18bfbe30901af35647b16835002ddb05641e955
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Information_for_buyers_on_the_site -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Footer.Footer_link_test@3fb1549b]" started-at="2021-01-12T16:56:02 IST" name="BeforeMethod" finished-at="2021-01-12T16:56:02 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Navigation_bar.Test_links@49c7b90e]" started-at="2021-01-11T13:35:16 IST" name="BeforeMethod" finished-at="2021-01-11T13:35:16 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Footer.Footer_link_test@3fb1549b]" started-at="2021-01-12T16:56:08 IST" name="BeforeMethod" finished-at="2021-01-12T16:56:08 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="Costumers_club_subCategory()[pri:14, instance:Navigation_bar.Test_links@49c7b90e]" started-at="2021-01-11T13:35:16 IST" name="Costumers_club_subCategory" finished-at="2021-01-11T13:35:21 IST" depends-on-methods="Navigation_bar.Test_links.Login" duration-ms="4862" status="PASS">
+        <test-method signature="facebook()[pri:5, instance:Footer.Footer_link_test@3fb1549b]" started-at="2021-01-12T16:56:08 IST" name="facebook" finished-at="2021-01-12T16:56:14 IST" duration-ms="5765" status="PASS">
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- Costumers_club_subCategory -->
         <test-method is-config="true" signature="afterClass()[pri:0, instance:Navigation_bar.Test_links@49c7b90e]" started-at="2021-01-11T13:35:21 IST" name="afterClass" finished-at="2021-01-11T13:35:21 IST" duration-ms="237" status="PASS">
 >>>>>>> parent of 6bdeabc... test
@@ -218,6 +259,14 @@
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- Footer.link_test -->
+=======
+        </test-method> <!-- facebook -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Footer.Footer_link_test@3fb1549b]" started-at="2021-01-12T16:56:14 IST" name="afterClass" finished-at="2021-01-12T16:56:15 IST" duration-ms="656" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Footer.Footer_link_test -->
+>>>>>>> f18bfbe30901af35647b16835002ddb05641e955
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

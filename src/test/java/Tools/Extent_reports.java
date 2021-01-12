@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Extent_reports  {
+public class Extent_reports {
 
 	public static ExtentReports extent;
 	public static ExtentTest test;
@@ -59,6 +59,7 @@ public class Extent_reports  {
 		test = extent.createTest("Navigation bar", "link test");
 		return test;
 	}
+
 	public static ExtentTest createTest1(String name, String description) {
 		test1 = extent.createTest("steimatzky search", "search test");
 		return test1;
@@ -70,7 +71,8 @@ public class Extent_reports  {
 		String folderPath = ("C:\\test\\" + reportDate);
 		String imagePath = folderPath + "/pic" + time + ".jpg";
 		Robot robot = new Robot();
-		BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+		BufferedImage screenShot = robot
+				.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
 		ImageIO.write(screenShot, "JPG", new File(imagePath));
 		return imagePath;
 	}

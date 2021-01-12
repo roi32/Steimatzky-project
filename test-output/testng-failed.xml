@@ -3,6 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="Footer.link_test">
         <methods>
           <include name="BeforeMethod"/>
@@ -16,9 +17,22 @@
 =======
           <include name="facebook"/>
 >>>>>>> parent of e1171e0... Revert "Merge branch 'master' of https://github.com/roi32/Steimatzky-project"
+=======
+      <class name="Footer.Footer_link_test">
+        <methods>
+          <include name="facebook"/>
+          <include name="Login"/>
+>>>>>>> f18bfbe30901af35647b16835002ddb05641e955
           <include name="beforeClass"/>
+          <include name="Information_for_buyers_on_the_site"/>
+          <include name="BeforeMethod"/>
+          <include name="afterClass"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- Footer.link_test -->
+=======
+      </class> <!-- Footer.Footer_link_test -->
+>>>>>>> f18bfbe30901af35647b16835002ddb05641e955
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

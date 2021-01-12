@@ -10,12 +10,11 @@ import org.xml.sax.SAXException;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 
-import Tools.Navigation_bar_func;
-public abstract class login_user extends Navigation_bar_func {
-	
+import Navigation_bar.Navigation_bar;
 
-	
-	public void Login(Actions actions ,String Description) throws IOException, AWTException {
+public class login_user extends Navigation_bar {
+
+	public void Login(Actions actions, String Description) throws IOException, AWTException {
 		try {
 			actions.moveToElement(pof.login).click().perform();
 			Thread.sleep(2000);
@@ -25,20 +24,20 @@ public abstract class login_user extends Navigation_bar_func {
 			// login for user
 			actions.moveToElement(pof.send2).click().perform();
 			Thread.sleep(2000);
-			test.pass("User login successful"+Description);
+			test.pass("User login successful" + Description);
 		} catch (InterruptedException e) {
-			test.fail("User login failed", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			test.fail("User login failed"+ Description, MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		} catch (ParserConfigurationException e) {
-			test.fail("User login failed", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			test.fail("User login failed"+ Description, MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		} catch (SAXException e) {
-			test.fail("User login failed", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			test.fail("User login failed"+ Description, MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		} catch (IOException e) {
-			test.fail("User login failed", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			test.fail("User login failed"+ Description, MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
-		
-}
+
+	}
 }
