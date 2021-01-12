@@ -20,15 +20,15 @@ import ID.homepage_id;
 import Navigation_bar.Navigation_bar;
 
 public class homepage extends setUp {
-
+	static String Title = "homepage";
 	static Extent_reports exm = new Extent_reports(driver);
 	static String Description = "home page";
 
 	@BeforeClass
 	public void beforeSuite() {
-		extent = Extent_reports.GetExtent();
-		test = Extent_reports.createTest("name", "desc");
-		test1 = Extent_reports.createTest1("name", "desc");
+		extent = Extent_reports.GetExtent(Title);
+		test = Extent_reports.createTest("homepage", "Navigation bar");
+		test1 = Extent_reports.createTest1("homepage", "search test");
 		WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		driver = new ChromeDriver();
@@ -52,7 +52,7 @@ public class homepage extends setUp {
 
 	@Test(priority = 1)
 	public void login_user() throws IOException, AWTException {
-		login_user.Login( Description, exm);
+		login_user.Login(Description, exm);
 	}
 
 	@Test(priority = 2)

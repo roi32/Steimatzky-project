@@ -1,23 +1,15 @@
 package Tools;
 
 import java.awt.AWTException;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebElement;
-import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
-
 import com.aventstack.extentreports.MediaEntityBuilder;
 
 public class func extends setUp {
@@ -32,15 +24,6 @@ public class func extends setUp {
 			test.fail("you not in " + pageTitle + " page",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
-	}
-
-	public static String getData(String nodeName) throws ParserConfigurationException, SAXException, IOException {
-		File fXmlFile = new File("C:\\test\\configurtion\\configurtion.xml");
-		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-		Document doc = dBuilder.parse(fXmlFile);
-		doc.getDocumentElement().normalize();
-		return doc.getElementsByTagName(nodeName).item(0).getTextContent();
 	}
 
 	@SuppressWarnings("resource")

@@ -38,30 +38,30 @@ public class Extent_reports {
 	static String reportDate = df.format(today);
 	public static String filePath = "C:\\test\\" + reportDate + "\\exReport.html";
 
-	public static ExtentReports GetExtent() {
+	public static ExtentReports GetExtent(String Title) {
 		new File("C:\\test\\" + reportDate).mkdirs();
 		if (extent != null)
 			return extent;
 		extent = new ExtentReports();
-		extent.attachReporter(getHtmlReporter());
+		extent.attachReporter(getHtmlReporter(Title));
 		return extent;
 	}
 
-	private static ExtentHtmlReporter getHtmlReporter() {
+	private static ExtentHtmlReporter getHtmlReporter(String Title) {
 		htmlReporter = new ExtentHtmlReporter(filePath);
 		htmlReporter.config().setDocumentTitle("Steimatzky");
-		htmlReporter.config().setReportName("Steimatzky");
+		htmlReporter.config().setReportName(Title);
 		htmlReporter.config().setEncoding("windows-1255");
 		return htmlReporter;
 	}
 
 	public static ExtentTest createTest(String name, String description) {
-		test = extent.createTest("Navigation bar", "link test");
+		test = extent.createTest(name, description);
 		return test;
 	}
 
 	public static ExtentTest createTest1(String name, String description) {
-		test1 = extent.createTest("steimatzky search", "search test");
+		test1 = extent.createTest(name, description);
 		return test1;
 	}
 
