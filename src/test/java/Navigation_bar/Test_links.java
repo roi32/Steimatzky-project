@@ -58,7 +58,7 @@ public class Test_links extends Navigation_bar_func {
 		pageTitleTest(pof.sales.getText(), driver.findElement(By.className("pageTitle")).getText());
 	}
 
-	@Test(groups = "mCategorys", priority = 2, enabled = true)
+	@Test(groups = "mCategorys", priority = 2, enabled = false)
 	public void mCategorys() throws IOException, AWTException {
 		test.info("--------mCategorys links test --------");
 		for (int i = 0; i < pof.mCategory.size(); i++) {
@@ -75,7 +75,7 @@ public class Test_links extends Navigation_bar_func {
 		}
 	}
 
-	@Test(groups = "subCategory", priority = 3, enabled = true)
+	@Test(groups = "subCategory", priority = 3, enabled = false)
 	public void books_subCategory() throws IOException, AWTException  {
 		test.info("--------books_subCategory links test --------");
 		for (int i = 0; i < pof.books_subCategory.size(); i++) {
