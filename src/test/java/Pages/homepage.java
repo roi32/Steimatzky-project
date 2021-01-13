@@ -22,6 +22,7 @@ import org.testng.annotations.Test;
 import ID.homepage_id;
 
 public class homepage extends setUp {
+
 	static String Title = "homepage";
 	static Extent_reports exm = new Extent_reports(driver);
 	static String Description = "home page";
@@ -53,30 +54,31 @@ public class homepage extends setUp {
 		driver.quit();
 	}
 
-	@Test(priority = 1,enabled = true)
+	@Test(priority = 1, enabled = true)
 	public void login_user() throws IOException, AWTException {
 		login_user.Login(Description, exm);
 	}
 
-	@Test(priority = 4,enabled =  true)
+	@Test(priority = 4, enabled = true)
 	public void Navigation_bar() {
 		Navigation_bar.NavigationBar(driver, test, exm);
 
 	}
 
-	@Test(priority = 3,enabled = false)
+	@Test(priority = 3, enabled = true)
 	public void SearchProduct() {
 		search_product.searchProduct(driver, test1, exm);
 	}
 
-	@Test(priority = 2,enabled = false)
+	@Test(priority = 2, enabled = true)
 	public void Search() throws IOException, InterruptedException, AWTException {
 		search.Search(driver, test1, exm);
 
 	}
+
 	@Test(priority = 5)
 	public void footer() {
 		Footer_link_test.Footer(driver, test2, exm);
-		
+
 	}
 }

@@ -24,12 +24,13 @@ public class search extends func {
 		try {
 			test1.info("---- space ------");
 			// search the product
+			String titleString=driver.getTitle();
 			pof.search.clear();
 			pof.search.sendKeys("   ");
 			pof.submit.click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if products is found
-			if (driver.getTitle().equals("ספרים זה סטימצקי | ספרים באינטרנט קונים באתר סטימצקי")) {
+			if (driver.getTitle().equals(titleString)) {
 				test1.pass("test pass");
 			} else {
 				test1.fail("tast fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());

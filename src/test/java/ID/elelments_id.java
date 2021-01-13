@@ -114,7 +114,7 @@ public class elelments_id {
 	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[12]/div/ul/li/ul/li/a")
 	public List<WebElement> camping_subCategory;
 
-	@FindBy(how = How.ID, using = "ZA_CANVAS_1093222_CLOSE_IMG5_4_IMG")
+	@FindBy(how = How.XPATH, using = "//div[@id='ZA_CANVAS_1093222_CLOSE_IMG5_4_CONT']/img")
 	public WebElement Cpopup;
 
 }

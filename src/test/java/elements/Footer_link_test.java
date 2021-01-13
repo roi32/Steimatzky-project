@@ -35,12 +35,20 @@ public class Footer_link_test extends setUp {
 				actions.moveToElement(pof.about.get(i)).click().perform();
 				ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				try {
+					if (pof.Cpopup.isDisplayed()) {
+						actions.moveToElement(pof.Cpopup).click().perform();
+						Thread.sleep(2000);
+					}
+				} catch (Exception e) {
+				}
 				if (tabs2.size() == 2) {
 					driver.switchTo().window(tabs2.get(1));
 					if (driver.getTitle().contains(aboutString)) {
 						test2.pass("you in " + aboutString + " page");
 					} else {
-						test2.fail("you not in " + aboutString + " page");
+						test2.fail("you not in " + aboutString + " page",
+								MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 					}
 					driver.close();
 					driver.switchTo().window(tabs2.get(0));
@@ -55,15 +63,14 @@ public class Footer_link_test extends setUp {
 					}
 				} else if (aboutString.equals("סניפים")) {
 					Thread.sleep(2000);
-					if (pof.Cpopup.isDisplayed()) {
-						actions.moveToElement(pof.Cpopup).pause(10000).click().perform();
-						if (driver.getTitle().contains("סניפים פתוחים")) {
-							test2.pass("you in " + aboutString + " page");
-						} else {
-							test2.fail("you not in " + aboutString + " page",
-									MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
-						}
+
+					if (driver.getTitle().contains("סניפים פתוחים")) {
+						test2.pass("you in " + aboutString + " page");
+					} else {
+						test2.fail("you not in " + aboutString + " page",
+								MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 					}
+
 				} else {
 					test2.fail("you not in " + aboutString + " page",
 							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
