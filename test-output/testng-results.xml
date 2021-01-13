@@ -2,24 +2,24 @@
 <testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-12T22:45:58 IST" name="Default suite" finished-at="2021-01-12T22:47:38 IST" duration-ms="100090">
+  <suite started-at="2021-01-13T10:16:35 IST" name="Default suite" finished-at="2021-01-13T10:16:50 IST" duration-ms="14298">
     <groups>
     </groups>
-    <test started-at="2021-01-12T22:45:58 IST" name="Default test" finished-at="2021-01-12T22:47:38 IST" duration-ms="100090">
+    <test started-at="2021-01-13T10:16:35 IST" name="Default test" finished-at="2021-01-13T10:16:50 IST" duration-ms="14298">
       <class name="Pages.homepage">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:Pages.homepage@1e683a3e]" started-at="2021-01-12T22:45:58 IST" name="beforeSuite" finished-at="2021-01-12T22:46:06 IST" duration-ms="8650" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:Pages.homepage@1e683a3e]" started-at="2021-01-13T10:16:35 IST" name="beforeSuite" finished-at="2021-01-13T10:16:44 IST" duration-ms="8940" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.homepage@1e683a3e]" started-at="2021-01-12T22:46:06 IST" name="BeforeMethod" finished-at="2021-01-12T22:46:06 IST" duration-ms="17" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.homepage@1e683a3e]" started-at="2021-01-13T10:16:44 IST" name="BeforeMethod" finished-at="2021-01-13T10:16:44 IST" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="Search()[pri:4, instance:Pages.homepage@1e683a3e]" started-at="2021-01-12T22:46:06 IST" name="Search" finished-at="2021-01-12T22:47:37 IST" duration-ms="90572" status="PASS">
+        <test-method signature="login_user()[pri:1, instance:Pages.homepage@1e683a3e]" started-at="2021-01-13T10:16:44 IST" name="login_user" finished-at="2021-01-13T10:16:49 IST" duration-ms="4508" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Search -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:Pages.homepage@1e683a3e]" started-at="2021-01-12T22:47:37 IST" name="afterSuite" finished-at="2021-01-12T22:47:38 IST" duration-ms="833" status="PASS">
+        </test-method> <!-- login_user -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:Pages.homepage@1e683a3e]" started-at="2021-01-13T10:16:49 IST" name="afterSuite" finished-at="2021-01-13T10:16:50 IST" duration-ms="814" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
