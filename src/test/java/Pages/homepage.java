@@ -41,7 +41,6 @@ public class homepage extends setUp {
 	public void BeforeMethod() {
 		pof = new homepage_id();
 		pof = PageFactory.initElements(driver, homepage_id.class);
-
 	}
 
 	@AfterClass
@@ -55,7 +54,7 @@ public class homepage extends setUp {
 		login_user.Login(Description, exm);
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 4)
 	public void Navigation_bar() {
 		Navigation_bar.NavigationBar(driver, test, exm);
 
@@ -66,7 +65,7 @@ public class homepage extends setUp {
 		search_product.searchProduct(driver, test1, exm);
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 2)
 	public void Search() throws IOException, InterruptedException, AWTException {
 		search.Search(driver, test1, exm);
 

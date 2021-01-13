@@ -5,21 +5,19 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aventstack.extentreports.ExtentTest;
 
-import ID.homepage_id;
+import ID.elelments_id;
 import Tools.Extent_reports;
 import Tools.func;
-import java.awt.AWTException;
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class search_product extends func {
 
 	static String sheet = "Product_search";
-	static homepage_id pof = new homepage_id();
+	static elelments_id pof = new elelments_id();
 
 	public static void searchProduct(WebDriver driver, ExtentTest test1, Extent_reports exm) {
 
-		pof = PageFactory.initElements(driver, homepage_id.class);
+		pof = PageFactory.initElements(driver, elelments_id.class);
 
 		try {
 			test1.info("---------books search----------- ");
@@ -38,16 +36,9 @@ public class search_product extends func {
 				Thread.sleep(1000);
 				rows++;
 			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (Exception e) {
 			e.printStackTrace();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (AWTException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		} 
 
 		try {
 			test1.info("---------English Books search----------- ");
@@ -66,14 +57,7 @@ public class search_product extends func {
 				Thread.sleep(1000);
 				rows++;
 			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (AWTException e) {
-			// TODO Auto-generated catch block
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
@@ -94,16 +78,9 @@ public class search_product extends func {
 				Thread.sleep(1000);
 				rows++;
 			}
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (InterruptedException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (AWTException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
 
 		try {
 			test1.info("---------Gifts and leisure search----------- ");
@@ -122,14 +99,7 @@ public class search_product extends func {
 				Thread.sleep(1000);
 				rows++;
 			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (AWTException e) {
-			// TODO Auto-generated catch block
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
@@ -150,14 +120,7 @@ public class search_product extends func {
 				Thread.sleep(1000);
 				rows++;
 			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (AWTException e) {
-			// TODO Auto-generated catch block
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
@@ -178,16 +141,9 @@ public class search_product extends func {
 				Thread.sleep(1000);
 				rows++;
 			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (Exception e) {
 			e.printStackTrace();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (AWTException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		} 
 
 		try {
 			test1.info("---------Cosmetics and perfumes search----------- ");
@@ -206,16 +162,9 @@ public class search_product extends func {
 				Thread.sleep(1000);
 				rows++;
 			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (Exception e) {
 			e.printStackTrace();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (AWTException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		} 
 
 		try {
 			test1.info("---------Home and camping----------- ");
@@ -234,15 +183,8 @@ public class search_product extends func {
 				Thread.sleep(1000);
 				rows++;
 			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (Exception e) {
 			e.printStackTrace();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (AWTException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		} 
 	}
 }

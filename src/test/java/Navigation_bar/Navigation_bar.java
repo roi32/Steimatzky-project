@@ -1,7 +1,5 @@
 package Navigation_bar;
 
-import java.awt.AWTException;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
@@ -29,12 +27,9 @@ public class Navigation_bar extends func {
 			pof.sales.click();
 			// Check if page title is equal to link text
 			pageTitleTest(pof.sales.getText(), driver.findElement(By.className("pageTitle")).getText(), exm);
-		} catch (IOException e2) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e2.printStackTrace();
-		} catch (AWTException e2) {
-			// TODO Auto-generated catch block
-			e2.printStackTrace();
+			e.printStackTrace();
 		}
 
 		try {
@@ -51,12 +46,9 @@ public class Navigation_bar extends func {
 					pageTitleTest(topItemString, driver.findElement(By.className("pageTitle")).getText(), exm);
 				}
 			}
-		} catch (IOException e2) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e2.printStackTrace();
-		} catch (AWTException e2) {
-			// TODO Auto-generated catch block
-			e2.printStackTrace();
+			e.printStackTrace();
 		}
 
 		try {
@@ -114,12 +106,9 @@ public class Navigation_bar extends func {
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// Check if page title is equal to link text
 			pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm);
-		} catch (IOException e1) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (AWTException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			e.printStackTrace();
 		}
 
 		try {
@@ -134,12 +123,9 @@ public class Navigation_bar extends func {
 				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm);
 
 			}
-		} catch (IOException e1) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (AWTException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			e.printStackTrace();
 		}
 
 		try {
@@ -249,19 +235,16 @@ public class Navigation_bar extends func {
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// Check if page title is equal to link text
 				if (subcatagoryString.equals("חברות במועדון")) {
-					pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(),
-							"חברות במועדון הקוראים של סטימצקי - הסיפור שלי", exm);
+					pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(),"חברות במועדון הקוראים של סטימצקי - הסיפור שלי", exm);
 				} else if (subcatagoryString.equals("תקנון המועדון")) {
-					pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "תקנון מועדון הקוראים של סטימצקי",
-							exm);
+					pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "תקנון מועדון הקוראים של סטימצקי",	exm);
+				}else if (subcatagoryString.equals("הפרטים שלי")) {
+					pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "המועדון של סטימצקי / ספרים זה סטימצקי",	exm);
 				} else {
 					pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//div/h1")).getText(), exm);
 				}
 			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (AWTException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
