@@ -10,9 +10,6 @@ public class elelments_id {
 	@FindBy(how = How.XPATH, using = "//footer//nav[@class='col-sm-4'][1]/div/ul/li/a")
 	public List<WebElement> about;
 
-	@FindBy(how = How.ID, using = "ZA_CANVAS_1093222_CLOSE_IMG5_4_IMG")
-	public WebElement popup;
-
 	@FindBy(how = How.XPATH, using = "//footer//nav[@class='col-sm-4'][2]/div/ul/li/a")
 	public List<WebElement> Useful_information;
 
@@ -33,7 +30,7 @@ public class elelments_id {
 
 	@FindBy(how = How.ID, using = "fb-link")
 	public WebElement facebook_link;
-	
+
 	@FindBy(how = How.ID, using = "search")
 	public WebElement search;
 
@@ -116,6 +113,8 @@ public class elelments_id {
 
 	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[12]/div/ul/li/ul/li/a")
 	public List<WebElement> camping_subCategory;
-	
+
+	@FindBy(how = How.ID, using = "ZA_CANVAS_1093222_CLOSE_IMG5_4_IMG")
+	public WebElement Cpopup;
 
 }

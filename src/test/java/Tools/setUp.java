@@ -24,6 +24,7 @@ public class setUp {
 	public static homepage_id pof;
 	public static Actions actions;
 	public static ExtentTest test1;
+	public static ExtentTest test2;
 
 	public static String getData(String nodeName) throws ParserConfigurationException, SAXException, IOException {
 		File fXmlFile = new File("C:\\test\\configurtion\\configurtion.xml");

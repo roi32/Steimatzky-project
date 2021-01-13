@@ -26,6 +26,7 @@ public class Extent_reports {
 	public static ExtentReports extent;
 	public static ExtentTest test;
 	public static ExtentTest test1;
+	public static ExtentTest test2;
 	public static ExtentHtmlReporter htmlReporter;
 	public WebDriver driver;
 
@@ -63,6 +64,10 @@ public class Extent_reports {
 	public static ExtentTest createTest1(String name, String description) {
 		test1 = extent.createTest(name, description);
 		return test1;
+	}
+	public static ExtentTest createTest2(String name, String description) {
+		test2 = extent.createTest(name, description);
+		return test2;
 	}
 
 	public String CaptureScreen() throws AWTException, IOException {
