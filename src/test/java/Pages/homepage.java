@@ -40,7 +40,6 @@ public class homepage extends setUp {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.steimatzky.co.il/");
-
 	}
 
 	@BeforeMethod
@@ -56,31 +55,28 @@ public class homepage extends setUp {
 		driver.quit();
 	}
 
-	@Test(priority = 1, enabled = true)
+	@Test(priority = 1,groups = "elements", enabled = true)
 	public void login_user() throws IOException, AWTException {
 		login_user.Login(Title, exm, test);
 	}
 
-	@Test(priority = 2, dependsOnMethods = { "login_user" }, enabled = true)
-	public void Navigation_bar() {
+	@Test(priority = 2,groups = "elements", dependsOnMethods = { "login_user" }, enabled = true)
+	public void Navigation_bar() throws AWTException, IOException {
 		Navigation_bar.NavigationBar(driver, test1, exm);
-
 	}
 
-	@Test(priority = 3, enabled = true)
-	public void SearchProduct() {
+	@Test(priority = 3,groups = "elements", enabled = true)
+	public void SearchProduct() throws AWTException, IOException {
 		search_product.searchProduct(driver, test2, exm);
 	}
 
-	@Test(priority = 4, enabled = true)
+	@Test(priority = 4,groups = "elements", enabled = true)
 	public void Search() throws IOException, InterruptedException, AWTException {
 		search.Search(driver, test2, exm);
-
 	}
 
-	@Test(priority = 5, dependsOnMethods = { "login_user" }, enabled = true)
-	public void footer() {
+	@Test(priority = 5,groups = "elements", dependsOnMethods = { "login_user" }, enabled = true)
+	public void footer() throws AWTException, IOException {
 		Footer_Buttom.Footer(driver, test3, exm);
-
 	}
 }

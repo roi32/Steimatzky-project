@@ -4,10 +4,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 
 import ID.elelments_id;
 import Tools.Extent_reports;
 import Tools.func;
+
+import java.awt.AWTException;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class search_product extends func {
@@ -15,7 +19,7 @@ public class search_product extends func {
 	static String sheet = "Product_search";
 	static elelments_id pof = new elelments_id();
 
-	public static void searchProduct(WebDriver driver, ExtentTest test, Extent_reports exm) {
+	public static void searchProduct(WebDriver driver, ExtentTest test, Extent_reports exm) throws AWTException, IOException {
 
 		pof = PageFactory.initElements(driver, elelments_id.class);
 
@@ -38,6 +42,8 @@ public class search_product extends func {
 				rows++;
 			}
 		} catch (Exception e) {
+			test.fail("The  search of books products fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
@@ -60,6 +66,8 @@ public class search_product extends func {
 				rows++;
 			}
 		} catch (Exception e) {
+			test.fail("The  search of English books products fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
@@ -82,6 +90,8 @@ public class search_product extends func {
 				rows++;
 			}
 		} catch (Exception e) {
+			test.fail("The  search of Games toys and puzzles products fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
@@ -104,6 +114,8 @@ public class search_product extends func {
 				rows++;
 			}
 		} catch (Exception e) {
+			test.fail("The  search of Gifts and leisure products fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
@@ -126,6 +138,8 @@ public class search_product extends func {
 				rows++;
 			}
 		} catch (Exception e) {
+			test.fail("The  search of music products fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
@@ -148,6 +162,8 @@ public class search_product extends func {
 				rows++;
 			}
 		} catch (Exception e) {
+			test.fail("The  search of Appliances and smartphones products fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
@@ -170,6 +186,8 @@ public class search_product extends func {
 				rows++;
 			}
 		} catch (Exception e) {
+			test.fail("The  search of Cosmetics and perfumes products fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
@@ -192,6 +210,8 @@ public class search_product extends func {
 				rows++;
 			}
 		} catch (Exception e) {
+			test.fail("The  search of Home and camping products fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 	}

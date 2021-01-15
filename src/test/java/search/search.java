@@ -7,6 +7,8 @@ import ID.elelments_id;
 import Tools.Extent_reports;
 import Tools.func;
 
+import java.awt.AWTException;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -18,7 +20,7 @@ public class search extends func {
 	static String sheet = "text_search";
 	static elelments_id pof = new elelments_id();
 
-	public static void Search(WebDriver driver, ExtentTest test, Extent_reports exm) {
+	public static void Search(WebDriver driver, ExtentTest test, Extent_reports exm) throws AWTException, IOException {
 
 		pof = PageFactory.initElements(driver, elelments_id.class);
 
@@ -39,11 +41,13 @@ public class search extends func {
 			}
 			Thread.sleep(1000);
 		} catch (Exception e) {
+			test.fail("The of search spaces fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
 		try {
-			test.info("---- Keyword ------");
+			test.info("---- Keywords ------");
 			int rows = 0;
 
 			while (rows <= 9) {
@@ -69,6 +73,8 @@ public class search extends func {
 				rows++;
 			}
 		} catch (Exception e) {
+			test.fail("The of search Keywords fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
@@ -98,6 +104,8 @@ public class search extends func {
 				rows++;
 			}
 		} catch (Exception e) {
+			test.fail("The of search AuthorTitle fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
@@ -127,6 +135,8 @@ public class search extends func {
 				rows++;
 			}
 		} catch (Exception e) {
+			test.fail("The of search EauthorTitle fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
@@ -154,6 +164,8 @@ public class search extends func {
 				rows++;
 			}
 		} catch (Exception e) {
+			test.fail("The Nagative search  fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
@@ -182,6 +194,8 @@ public class search extends func {
 				rows++;
 			}
 		} catch (Exception e) {
+			test.fail("The Boundary test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
@@ -201,11 +215,13 @@ public class search extends func {
 			}
 			Thread.sleep(1000);
 		} catch (Exception e) {
+			test.fail("The Num test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
 		try {
-			test.info("---- clean_search_field ------");
+			test.info("---- clean search field ------");
 			pof.search.clear();
 			int rows = 0;
 			while (rows <= 30) {
@@ -232,6 +248,8 @@ public class search extends func {
 				rows++;
 			}
 		} catch (Exception e) {
+			test.fail("The clean search field test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 

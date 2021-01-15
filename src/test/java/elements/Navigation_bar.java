@@ -1,5 +1,7 @@
 package elements;
 
+import java.awt.AWTException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
@@ -9,6 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 
 import ID.elelments_id;
 import Tools.Extent_reports;
@@ -19,22 +22,24 @@ public class Navigation_bar extends func {
 	static elelments_id pof = new elelments_id();
 	static Actions actions;
 
-	public static void NavigationBar(WebDriver driver, ExtentTest test, Extent_reports exm) {
+	public static void NavigationBar(WebDriver driver, ExtentTest test, Extent_reports exm) throws AWTException, IOException {
 		pof = PageFactory.initElements(driver, elelments_id.class);
 		actions = new Actions(driver);
 
 		try {
-			test.info("--------sales link test --------");
+			test.info("-------- sales link test --------");
 			// Get link text and click on the link
 			pof.sales.click();
 			// Check if page title is equal to link text
 			pageTitleTest(pof.sales.getText(), driver.findElement(By.className("pageTitle")).getText(), exm, test);
 		} catch (Exception e) {
+			test.fail("The test of sales link test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
 		try {
-			test.info("--------mCategorys links test --------");
+			test.info("-------- mCategorys links test --------");
 			for (int i = 0; i < pof.mCategory.size(); i++) {
 				String topItemString = pof.mCategory.get(i).getText();
 				actions.moveToElement(pof.mCategory.get(i)).click().perform();
@@ -48,11 +53,13 @@ public class Navigation_bar extends func {
 				}
 			}
 		} catch (Exception e) {
+			test.fail("The test of mCategorys links test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
 		try {
-			test.info("--------books_subCategory links test --------");
+			test.info("-------- books subCategory links test --------");
 			for (int i = 0; i < pof.books_subCategory.size(); i++) {
 				// move to books category
 				actions.moveToElement(pof.books).perform();
@@ -72,16 +79,17 @@ public class Navigation_bar extends func {
 					driver.switchTo().window(tabs2.get(0));
 				} else if (tabs2.size() == 1) {
 					// Check if the browser in right page
-					pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//div[@id='content']/h1")).getText(),
-							exm, test);
+					pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//div[@id='content']/h1")).getText(), exm, test);
 				}
 			}
 		} catch (Exception e) {
+			test.fail("The test of books subCategory links test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
 		try {
-			test.info("--------English_Books_subCategory links test --------");
+			test.info("-------- English Books subCategory links test --------");
 			for (int i = 0; i < pof.ebooks_subCategory.size(); i++) {
 				actions.moveToElement(pof.Ebooks).perform();
 				// Get link text and click on the link
@@ -92,11 +100,13 @@ public class Navigation_bar extends func {
 				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test);
 			}
 		} catch (Exception e) {
+			test.fail("The test of english books subCategory links test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
 		try {
-			test.info("--------games_subCategory links test --------");
+			test.info("--------Games subCategory links test --------");
 			actions.moveToElement(pof.games).perform();
 			// Get link text and click on the link
 			String subcatagoryString = pof.Subgames.getText();
@@ -105,11 +115,14 @@ public class Navigation_bar extends func {
 			// Check if page title is equal to link text
 			pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test);
 		} catch (Exception e) {
+			test.fail("The test of games subCategory links test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
+
 		}
 
 		try {
-			test.info("--------Gifts_and_leisure_subCategory links test --------");
+			test.info("-------- Gifts and leisure subCategory links test --------");
 			for (int i = 0; i < pof.Gifts_and_leisure_subCategory.size(); i++) {
 				actions.moveToElement(pof.Gifts_and_leisure).perform();
 				// Get link text and click on the link
@@ -118,14 +131,15 @@ public class Navigation_bar extends func {
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// Check if page title is equal to link text
 				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test);
-
 			}
 		} catch (Exception e) {
+			test.fail("The test of Gifts and leisure subCategory links test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
 		try {
-			test.info("--------music_subCategory links test --------");
+			test.info("-------- Music subCategory links test --------");
 			for (int i = 0; i < pof.music_subCategory.size(); i++) {
 				actions.moveToElement(pof.music).perform();
 				// Get link text and click on the link
@@ -133,15 +147,16 @@ public class Navigation_bar extends func {
 				actions.moveToElement(pof.music_subCategory.get(i)).click().perform();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// Check if page title is equal to link text
-				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1[@class='pageTitle']")).getText(),
-						exm, test);
+				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1[@class='pageTitle']")).getText(),exm, test);
 			}
 		} catch (Exception e) {
+			test.fail("The test of music subCategory links test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
 		try {
-			test.info("--------Appliances_subCategory links test --------");
+			test.info("-------- Appliances subCategory links test --------");
 			for (int i = 0; i < pof.Appliances_subCategory.size(); i++) {
 				actions.moveToElement(pof.Appliances).perform();
 				// Get link text and click on the link
@@ -152,11 +167,13 @@ public class Navigation_bar extends func {
 				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test);
 			}
 		} catch (Exception e) {
+			test.fail("The test of appliances subCategory links test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
 		try {
-			test.info("--------Smartphones_subCategory links test --------");
+			test.info("-------- Smartphones subCategory links test --------");
 			for (int i = 0; i < pof.Smartphones_subCategory.size(); i++) {
 				actions.moveToElement(pof.Smartphones).perform();
 				// Get link text and click on the link
@@ -167,11 +184,13 @@ public class Navigation_bar extends func {
 				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test);
 			}
 		} catch (Exception e) {
+			test.fail("The test of smartphones subCategory links test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
 		try {
-			test.info("--------Cosmetics_and_perfumes_subCategory links test --------");
+			test.info("-------- Cosmetics and perfumes subCategory links test --------");
 			for (int i = 0; i < pof.Cosmetics_and_perfumes_subCategory.size(); i++) {
 				actions.moveToElement(pof.Cosmetics_and_perfumes).perform();
 				// Get link text and click on the link
@@ -182,11 +201,13 @@ public class Navigation_bar extends func {
 				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test);
 			}
 		} catch (Exception e) {
+			test.fail("The test of cosmetics and perfumes subCategory links test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
 		try {
-			test.info("--------HOME_subCategory links test --------");
+			test.info("-------- HOME subCategory links test --------");
 			for (int i = 0; i < pof.home_subCategory.size(); i++) {
 				actions.moveToElement(pof.HOME).perform();
 				// Get link text and click on the link
@@ -197,11 +218,13 @@ public class Navigation_bar extends func {
 				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test);
 			}
 		} catch (Exception e) {
+			test.fail("The test of HOME subCategory links test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
 		try {
-			test.info("--------camping_subCategory links test --------");
+			test.info("-------- Camping subCategory links test --------");
 			for (int i = 0; i < pof.camping_subCategory.size(); i++) {
 				actions.moveToElement(pof.camping).perform();
 				// Get link text and click on the link
@@ -212,11 +235,13 @@ public class Navigation_bar extends func {
 				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test);
 			}
 		} catch (Exception e) {
+			test.fail("The test of camping subCategory links test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
 		try {
-			test.info("--------Costumers_club_subCategory links test --------");
+			test.info("-------- Costumers club_subCategory links test --------");
 			for (int i = 0; i < pof.club_subCategory.size(); i++) {
 				actions.moveToElement(pof.club).perform();
 				// Get link text and click on the link
@@ -225,19 +250,18 @@ public class Navigation_bar extends func {
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// Check if page title is equal to link text
 				if (subcatagoryString.equals("חברות במועדון")) {
-					pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(),
-							"חברות במועדון הקוראים של סטימצקי - הסיפור שלי", exm, test1);
+					pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(),"חברות במועדון הקוראים של סטימצקי - הסיפור שלי", exm, test1);
 				} else if (subcatagoryString.equals("תקנון המועדון")) {
-					pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "תקנון מועדון הקוראים של סטימצקי",
-							exm, test);
+					pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "תקנון מועדון הקוראים של סטימצקי",	exm, test);
 				} else if (subcatagoryString.equals("הפרטים שלי")) {
-					pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "מועדון לקוחות סטימצקי", exm,
-							test);
+					pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "מועדון לקוחות סטימצקי", exm, test);
 				} else {
 					pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//div/h1")).getText(), exm, test);
 				}
 			}
 		} catch (Exception e) {
+			test.fail("The test of costumers club subCategory links test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 

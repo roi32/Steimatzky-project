@@ -1,57 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="2" total="5" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-15T16:17:25 IST" name="steimatzky" finished-at="2021-01-15T16:31:33 IST" duration-ms="848021">
+  <suite started-at="2021-01-15T22:37:46 IST" name="steimatzky" finished-at="2021-01-15T22:39:12 IST" duration-ms="85388">
     <groups>
+      <group name="elements">
+        <method signature="homepage.login_user()[pri:1, instance:Pages.homepage@1022d1b5]" name="login_user" class="Pages.homepage"/>
+        <method signature="homepage.Navigation_bar()[pri:2, instance:Pages.homepage@1022d1b5]" name="Navigation_bar" class="Pages.homepage"/>
+        <method signature="homepage.footer()[pri:5, instance:Pages.homepage@1022d1b5]" name="footer" class="Pages.homepage"/>
+      </group> <!-- elements -->
     </groups>
-    <test started-at="2021-01-15T16:17:25 IST" name="steimatzky - homepage" finished-at="2021-01-15T16:31:33 IST" duration-ms="848021">
+    <test started-at="2021-01-15T22:37:46 IST" name="steimatzky - homepage" finished-at="2021-01-15T22:39:12 IST" duration-ms="85388">
       <class name="Pages.homepage">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Pages.homepage@6cc2636e]" started-at="2021-01-15T16:17:25 IST" name="BeforeClass" finished-at="2021-01-15T16:17:33 IST" duration-ms="7955" status="PASS">
+        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Pages.homepage@1022d1b5]" started-at="2021-01-15T22:37:46 IST" name="BeforeClass" finished-at="2021-01-15T22:37:55 IST" duration-ms="8703" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.homepage@6cc2636e]" started-at="2021-01-15T16:17:33 IST" name="BeforeMethod" finished-at="2021-01-15T16:17:33 IST" duration-ms="23" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.homepage@1022d1b5]" started-at="2021-01-15T22:37:55 IST" name="BeforeMethod" finished-at="2021-01-15T22:37:55 IST" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="login_user()[pri:1, instance:Pages.homepage@6cc2636e]" started-at="2021-01-15T16:17:33 IST" name="login_user" finished-at="2021-01-15T16:17:37 IST" duration-ms="4455" status="PASS">
+        <test-method signature="login_user()[pri:1, instance:Pages.homepage@1022d1b5]" started-at="2021-01-15T22:37:55 IST" name="login_user" finished-at="2021-01-15T22:38:00 IST" duration-ms="4492" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_user -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.homepage@6cc2636e]" started-at="2021-01-15T16:17:37 IST" name="BeforeMethod" finished-at="2021-01-15T16:17:37 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.homepage@1022d1b5]" started-at="2021-01-15T22:38:00 IST" name="BeforeMethod" finished-at="2021-01-15T22:38:00 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="Navigation_bar()[pri:2, instance:Pages.homepage@6cc2636e]" started-at="2021-01-15T16:17:37 IST" name="Navigation_bar" finished-at="2021-01-15T16:20:37 IST" duration-ms="179346" status="PASS">
+        <test-method signature="Navigation_bar()[pri:2, instance:Pages.homepage@1022d1b5]" started-at="2021-01-15T22:38:00 IST" name="Navigation_bar" finished-at="2021-01-15T22:38:04 IST" depends-on-methods="Pages.homepage.login_user" duration-ms="4111" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Navigation_bar -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.homepage@6cc2636e]" started-at="2021-01-15T16:20:37 IST" name="BeforeMethod" finished-at="2021-01-15T16:20:37 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.homepage@1022d1b5]" started-at="2021-01-15T22:38:04 IST" name="BeforeMethod" finished-at="2021-01-15T22:38:04 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="SearchProduct()[pri:3, instance:Pages.homepage@6cc2636e]" started-at="2021-01-15T16:20:37 IST" name="SearchProduct" finished-at="2021-01-15T16:26:52 IST" duration-ms="375398" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SearchProduct -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.homepage@6cc2636e]" started-at="2021-01-15T16:26:52 IST" name="BeforeMethod" finished-at="2021-01-15T16:26:52 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="Search()[pri:4, instance:Pages.homepage@6cc2636e]" started-at="2021-01-15T16:26:52 IST" name="Search" finished-at="2021-01-15T16:30:24 IST" duration-ms="211537" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Search -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.homepage@6cc2636e]" started-at="2021-01-15T16:30:24 IST" name="BeforeMethod" finished-at="2021-01-15T16:30:24 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="footer()[pri:5, instance:Pages.homepage@6cc2636e]" started-at="2021-01-15T16:30:24 IST" name="footer" finished-at="2021-01-15T16:31:32 IST" duration-ms="68053" status="PASS">
+        <test-method signature="footer()[pri:5, instance:Pages.homepage@1022d1b5]" started-at="2021-01-15T22:38:04 IST" name="footer" finished-at="2021-01-15T22:39:11 IST" depends-on-methods="Pages.homepage.login_user" duration-ms="67195" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- footer -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:Pages.homepage@6cc2636e]" started-at="2021-01-15T16:31:32 IST" name="AfterClass" finished-at="2021-01-15T16:31:33 IST" duration-ms="1224" status="PASS">
+        <test-method is-config="true" signature="AfterClass()[pri:0, instance:Pages.homepage@1022d1b5]" started-at="2021-01-15T22:39:11 IST" name="AfterClass" finished-at="2021-01-15T22:39:12 IST" duration-ms="842" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
