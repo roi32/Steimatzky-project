@@ -85,8 +85,7 @@ public class Extent_reports {
 		String folderPath = ("C:\\test\\" + reportDate);
 		String imagePath = folderPath + "/pic" + time + ".jpg";
 		Robot robot = new Robot();
-		BufferedImage screenShot = robot
-				.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+		BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
 		ImageIO.write(screenShot, "JPG", new File(imagePath));
 		return imagePath;
 	}

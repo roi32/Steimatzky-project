@@ -28,7 +28,7 @@ public class Navigation_bar extends func {
 			// Get link text and click on the link
 			pof.sales.click();
 			// Check if page title is equal to link text
-			pageTitleTest(pof.sales.getText(), driver.findElement(By.className("pageTitle")).getText(), exm, test1);
+			pageTitleTest(pof.sales.getText(), driver.findElement(By.className("pageTitle")).getText(), exm, test);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -42,9 +42,9 @@ public class Navigation_bar extends func {
 				// Check if page title is equal to link text
 				if (topItemString.equals("מועדון לקוחות")) {
 					pageTitleTest("חברות במועדון הקוראים של סטימצקי - הסיפור שלי",
-							driver.findElement(By.xpath("//div[@class='page-title']/h1")).getText(), exm, test1);
+							driver.findElement(By.xpath("//div[@class='page-title']/h1")).getText(), exm, test);
 				} else {
-					pageTitleTest(topItemString, driver.findElement(By.className("pageTitle")).getText(), exm, test1);
+					pageTitleTest(topItemString, driver.findElement(By.className("pageTitle")).getText(), exm, test);
 				}
 			}
 		} catch (Exception e) {
@@ -67,13 +67,13 @@ public class Navigation_bar extends func {
 					driver.switchTo().window(tabs2.get(1));
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 					// Check if the browser in right page
-					pageTitleTest(driver.getTitle(), "ספרים דיגיטליים בעברית להורדה", exm, test1);
+					pageTitleTest(driver.getTitle(), "ספרים דיגיטליים בעברית להורדה", exm, test);
 					driver.close();
 					driver.switchTo().window(tabs2.get(0));
 				} else if (tabs2.size() == 1) {
 					// Check if the browser in right page
 					pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//div[@id='content']/h1")).getText(),
-							exm, test1);
+							exm, test);
 				}
 			}
 		} catch (Exception e) {
@@ -89,7 +89,7 @@ public class Navigation_bar extends func {
 				actions.moveToElement(pof.ebooks_subCategory.get(i)).click().perform();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// Check if page title is equal to link text
-				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test1);
+				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -103,7 +103,7 @@ public class Navigation_bar extends func {
 			actions.moveToElement(pof.Subgames).click().perform();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// Check if page title is equal to link text
-			pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test1);
+			pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -117,7 +117,7 @@ public class Navigation_bar extends func {
 				actions.moveToElement(pof.Gifts_and_leisure_subCategory.get(i)).click().perform();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// Check if page title is equal to link text
-				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test1);
+				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test);
 
 			}
 		} catch (Exception e) {
@@ -134,7 +134,7 @@ public class Navigation_bar extends func {
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// Check if page title is equal to link text
 				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1[@class='pageTitle']")).getText(),
-						exm, test1);
+						exm, test);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -149,7 +149,7 @@ public class Navigation_bar extends func {
 				actions.moveToElement(pof.Appliances_subCategory.get(i)).click().perform();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// Check if page title is equal to link text
-				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test1);
+				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -164,7 +164,7 @@ public class Navigation_bar extends func {
 				actions.moveToElement(pof.Smartphones_subCategory.get(i)).click().perform();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// Check if page title is equal to link text
-				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test1);
+				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -179,7 +179,7 @@ public class Navigation_bar extends func {
 				actions.moveToElement(pof.Cosmetics_and_perfumes_subCategory.get(i)).click().perform();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// Check if page title is equal to link text
-				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test1);
+				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -194,7 +194,7 @@ public class Navigation_bar extends func {
 				actions.moveToElement(pof.home_subCategory.get(i)).click().perform();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// Check if page title is equal to link text
-				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test1);
+				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -209,7 +209,7 @@ public class Navigation_bar extends func {
 				actions.moveToElement(pof.camping_subCategory.get(i)).click().perform();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// Check if page title is equal to link text
-				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test1);
+				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1")).getText(), exm, test);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -229,12 +229,12 @@ public class Navigation_bar extends func {
 							"חברות במועדון הקוראים של סטימצקי - הסיפור שלי", exm, test1);
 				} else if (subcatagoryString.equals("תקנון המועדון")) {
 					pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "תקנון מועדון הקוראים של סטימצקי",
-							exm, test1);
+							exm, test);
 				} else if (subcatagoryString.equals("הפרטים שלי")) {
 					pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "מועדון לקוחות סטימצקי", exm,
-							test1);
+							test);
 				} else {
-					pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//div/h1")).getText(), exm, test1);
+					pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//div/h1")).getText(), exm, test);
 				}
 			}
 		} catch (Exception e) {

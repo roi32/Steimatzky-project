@@ -6,7 +6,6 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import ID.elelments_id;
 import Tools.Extent_reports;
 import Tools.func;
-import Tools.setUp;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
@@ -15,7 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
-public class Footer_Buttom extends setUp {
+public class Footer_Buttom extends func {
 
 	static Actions actions;
 	static JavascriptExecutor js;
@@ -46,17 +45,17 @@ public class Footer_Buttom extends setUp {
 				if (tabs2.size() == 2) {
 					driver.switchTo().window(tabs2.get(1));
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					func.pageTitleTest(driver.getTitle(), "הוצאה לאור:", exm, test);
+					pageTitleTest(driver.getTitle(), "הוצאה לאור:", exm, test);
 					driver.close();
 					driver.switchTo().window(tabs2.get(0));
 				} else if (driver.getTitle().contains(aboutString)) {
 					test.pass("you in " + aboutString + " page");
 				} else if (aboutString.equals("סטימצקי לעסקים")) {
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					func.pageTitleTest(driver.getTitle(), "סטימצקי - המחלקה העסקית", exm, test);
+					pageTitleTest(driver.getTitle(), "סטימצקי - המחלקה העסקית", exm, test);
 				} else if (aboutString.equals("סניפים")) {
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					func.pageTitleTest(driver.getTitle(), "סניפים פתוחים", exm, test);
+					pageTitleTest(driver.getTitle(), "סניפים פתוחים", exm, test);
 				} else {
 					test.fail("you not in " + aboutString + " page",
 							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
@@ -79,7 +78,7 @@ public class Footer_Buttom extends setUp {
 					driver.switchTo().window(tabs2.get(1));
 					if (aboutString.equals("בדיקת יתרת כרטיס מתנה")) {
 						driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-						func.pageTitleTest(driver.getTitle(), "ברוכים הבאים לפרקסל כרטיסי מתנה", exm, test);
+						pageTitleTest(driver.getTitle(), "ברוכים הבאים לפרקסל כרטיסי מתנה", exm, test);
 						driver.close();
 						driver.switchTo().window(tabs2.get(0));
 					}
@@ -88,14 +87,14 @@ public class Footer_Buttom extends setUp {
 
 				} else if (aboutString.equals("בלוג סטימצקי")) {
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					func.pageTitleTest(driver.getTitle(), "Blog", exm, test);
+					pageTitleTest(driver.getTitle(), "Blog", exm, test);
 
 				} else if (aboutString.equals("מועדון הסיפור שלי")) {
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					func.pageTitleTest(driver.getTitle(), "חברות במועדון הקוראים של סטימצקי - הסיפור שלי", exm, test);
+					pageTitleTest(driver.getTitle(), "חברות במועדון הקוראים של סטימצקי - הסיפור שלי", exm, test);
 				} else if (aboutString.equals("צור קשר")) {
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					func.pageTitleTest(driver.getTitle(), "יצירת קשר", exm, test);
+					pageTitleTest(driver.getTitle(), "יצירת קשר", exm, test);
 				} else {
 					test.fail("you not in " + aboutString + " page",
 							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
@@ -116,13 +115,13 @@ public class Footer_Buttom extends setUp {
 					test.pass("you in " + aboutString + " page");
 				} else if (aboutString.equals("מדיניות משלוחים")) {
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					func.pageTitleTest(driver.getTitle(), "תקנון משלוחים", exm, test);
+					pageTitleTest(driver.getTitle(), "תקנון משלוחים", exm, test);
 				} else if (aboutString.equals("תקנונים")) {
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					func.pageTitleTest(driver.getTitle(), "תקנון מועדון לקוחות", exm, test);
+					pageTitleTest(driver.getTitle(), "תקנון מועדון לקוחות", exm, test);
 				} else if (aboutString.equals("מדיניות החזרות מוצרים")) {
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					func.pageTitleTest(driver.getTitle(), "מדיניות החזרת מוצרים וביטולי עיסקאות", exm, test);
+					pageTitleTest(driver.getTitle(), "מדיניות החזרת מוצרים וביטולי עיסקאות", exm, test);
 				} else {
 					test.fail("you not in " + aboutString + " page",
 							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());

@@ -61,7 +61,7 @@ public class homepage extends setUp {
 		login_user.Login(Title, exm, test);
 	}
 
-	@Test(priority = 2, enabled = true)
+	@Test(priority = 2, dependsOnMethods = { "login_user" }, enabled = true)
 	public void Navigation_bar() {
 		Navigation_bar.NavigationBar(driver, test1, exm);
 
@@ -78,7 +78,7 @@ public class homepage extends setUp {
 
 	}
 
-	@Test(priority = 5, enabled = true)
+	@Test(priority = 5, dependsOnMethods = { "login_user" }, enabled = true)
 	public void footer() {
 		Footer_Buttom.Footer(driver, test3, exm);
 
