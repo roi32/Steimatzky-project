@@ -15,7 +15,8 @@ import javax.imageio.ImageIO;
 import org.openqa.selenium.WebDriver;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -28,7 +29,7 @@ public class Extent_reports {
 	public static ExtentTest test1;
 	public static ExtentTest test2;
 	public static ExtentTest test3;
-	public static ExtentHtmlReporter htmlReporter;
+	public static ExtentSparkReporter htmlReporter;
 	public WebDriver driver;
 
 	public Extent_reports(WebDriver driver) {
@@ -49,11 +50,12 @@ public class Extent_reports {
 		return extent;
 	}
 
-	private static ExtentHtmlReporter getHtmlReporter(String Title) {
-		htmlReporter = new ExtentHtmlReporter(filePath);
+	private static ExtentSparkReporter getHtmlReporter(String Title) {
+		htmlReporter = new ExtentSparkReporter(filePath);
 		htmlReporter.config().setDocumentTitle("Steimatzky");
 		htmlReporter.config().setReportName(Title);
 		htmlReporter.config().setEncoding("windows-1255");
+		htmlReporter.config().setTheme(Theme.DARK);
 		return htmlReporter;
 	}
 
@@ -71,7 +73,7 @@ public class Extent_reports {
 		test2 = extent.createTest(name, description);
 		return test2;
 	}
-	
+
 	public static ExtentTest createTest3(String name, String description) {
 		test3 = extent.createTest(name, description);
 		return test3;
@@ -83,7 +85,8 @@ public class Extent_reports {
 		String folderPath = ("C:\\test\\" + reportDate);
 		String imagePath = folderPath + "/pic" + time + ".jpg";
 		Robot robot = new Robot();
-		BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+		BufferedImage screenShot = robot
+				.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
 		ImageIO.write(screenShot, "JPG", new File(imagePath));
 		return imagePath;
 	}

@@ -91,7 +91,7 @@ public class search extends func {
 					String Description = "All products contains the " + value + "";
 					resuleTest(driver.getTitle(), value, Description, exm, test);
 				} else {
-					test1.fail("The search of " + value + " not found products",
+					test.fail("The search of " + value + " not found products",
 							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 				}
 				Thread.sleep(1000);
