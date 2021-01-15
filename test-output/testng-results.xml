@@ -1,29 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-15T13:18:53 IST" name="Default suite" finished-at="2021-01-15T13:20:20 IST" duration-ms="87271">
-    <groups>
-    </groups>
-    <test started-at="2021-01-15T13:18:53 IST" name="Default test" finished-at="2021-01-15T13:20:20 IST" duration-ms="87271">
-      <class name="Pages.homepage">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Pages.homepage@1e683a3e]" started-at="2021-01-15T13:18:53 IST" name="BeforeClass" finished-at="2021-01-15T13:19:02 IST" duration-ms="8645" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.homepage@1e683a3e]" started-at="2021-01-15T13:19:02 IST" name="BeforeMethod" finished-at="2021-01-15T13:19:02 IST" duration-ms="21" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="Navigation_bar()[pri:2, instance:Pages.homepage@1e683a3e]" started-at="2021-01-15T13:19:02 IST" name="Navigation_bar" finished-at="2021-01-15T13:20:20 IST" duration-ms="77662" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Navigation_bar -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:Pages.homepage@1e683a3e]" started-at="2021-01-15T13:20:20 IST" name="AfterClass" finished-at="2021-01-15T13:20:20 IST" duration-ms="924" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- Pages.homepage -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
 </testng-results>
