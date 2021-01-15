@@ -15,16 +15,16 @@ public class search_product extends func {
 	static String sheet = "Product_search";
 	static elelments_id pof = new elelments_id();
 
-	public static void searchProduct(WebDriver driver, ExtentTest test1, Extent_reports exm) {
+	public static void searchProduct(WebDriver driver, ExtentTest test, Extent_reports exm) {
 
 		pof = PageFactory.initElements(driver, elelments_id.class);
 
 		try {
-			test1.info("---------books search----------- ");
+			test.info("--------- Books search ----------- ");
 			int rows = 0;
 			while (rows <= 58) {
 				// read from excel file
-				String value = Product_value(rows, 0, sheet);
+				String value = value(rows, 0, sheet);
 				Thread.sleep(500);
 				// search the product
 				pof.search.clear();
@@ -32,28 +32,8 @@ public class search_product extends func {
 				pof.submit.click();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// test if product is found
-				resuleTest(driver.getTitle(), value, exm);
-				Thread.sleep(1000);
-				rows++;
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} 
-
-		try {
-			test1.info("---------English Books search----------- ");
-			int rows = 0;
-			while (rows <= 11) {
-				// read from excel file
-				String value = Product_value(rows, 1, sheet);
-				Thread.sleep(500);
-				// search the product
-				pof.search.clear();
-				pof.search.sendKeys(value);
-				pof.submit.click();
-				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-				// test if product is found
-				resuleTest(driver.getTitle(), value, exm);
+				String Description = "The search of " + value + "";
+				resuleTest(driver.getTitle(), value, Description, exm, test);
 				Thread.sleep(1000);
 				rows++;
 			}
@@ -62,11 +42,11 @@ public class search_product extends func {
 		}
 
 		try {
-			test1.info("---------Games toys and puzzles search----------- ");
+			test.info("--------- English Books search ----------- ");
 			int rows = 0;
-			while (rows <= 5) {
+			while (rows <= 11) {
 				// read from excel file
-				String value = Product_value(rows, 2, sheet);
+				String value = value(rows, 1, sheet);
 				Thread.sleep(500);
 				// search the product
 				pof.search.clear();
@@ -74,20 +54,43 @@ public class search_product extends func {
 				pof.submit.click();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// test if product is found
-				resuleTest(driver.getTitle(), value, exm);
+				String Description = "The search of " + value + "";
+				resuleTest(driver.getTitle(), value, Description, exm, test);
 				Thread.sleep(1000);
 				rows++;
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		} 
+		}
 
 		try {
-			test1.info("---------Gifts and leisure search----------- ");
+			test.info("--------- Games toys and puzzles search----------- ");
+			int rows = 0;
+			while (rows <= 5) {
+				// read from excel file
+				String value = value(rows, 2, sheet);
+				Thread.sleep(500);
+				// search the product
+				pof.search.clear();
+				pof.search.sendKeys(value);
+				pof.submit.click();
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				// test if product is found
+				String Description = "The search of " + value + "";
+				resuleTest(driver.getTitle(), value, Description, exm, test);
+				Thread.sleep(1000);
+				rows++;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		try {
+			test.info("--------- Gifts and leisure search----------- ");
 			int rows = 0;
 			while (rows <= 13) {
 				// read from excel file
-				String value = Product_value(rows, 3, sheet);
+				String value = value(rows, 3, sheet);
 				Thread.sleep(500);
 				// search the product
 				pof.search.clear();
@@ -95,7 +98,8 @@ public class search_product extends func {
 				pof.submit.click();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// test if product is found
-				resuleTest(driver.getTitle(), value, exm);
+				String Description = "The search of " + value + "";
+				resuleTest(driver.getTitle(), value, Description, exm, test);
 				Thread.sleep(1000);
 				rows++;
 			}
@@ -104,11 +108,11 @@ public class search_product extends func {
 		}
 
 		try {
-			test1.info("---------music search----------- ");
+			test.info("--------- music search----------- ");
 			int rows = 0;
 			while (rows <= 6) {
 				// read from excel file
-				String value = Product_value(rows, 4, sheet);
+				String value = value(rows, 4, sheet);
 				Thread.sleep(500);
 				// search the product
 				pof.search.clear();
@@ -116,7 +120,8 @@ public class search_product extends func {
 				pof.submit.click();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// test if product is found
-				resuleTest(driver.getTitle(), value, exm);
+				String Description = "The search of " + value + "";
+				resuleTest(driver.getTitle(), value, Description, exm, test);
 				Thread.sleep(1000);
 				rows++;
 			}
@@ -125,11 +130,11 @@ public class search_product extends func {
 		}
 
 		try {
-			test1.info("---------Appliances and smartphones search----------- ");
+			test.info("--------- Appliances and smartphones search----------- ");
 			int rows = 0;
 			while (rows <= 10) {
 				// read from excel file
-				String value = Product_value(rows, 5, sheet);
+				String value = value(rows, 5, sheet);
 				Thread.sleep(500);
 				// search the product
 				pof.search.clear();
@@ -137,20 +142,21 @@ public class search_product extends func {
 				pof.submit.click();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// test if product is found
-				resuleTest(driver.getTitle(), value, exm);
+				String Description = "The search of " + value + "";
+				resuleTest(driver.getTitle(), value, Description, exm, test);
 				Thread.sleep(1000);
 				rows++;
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		} 
+		}
 
 		try {
-			test1.info("---------Cosmetics and perfumes search----------- ");
+			test.info("--------- Cosmetics and perfumes search----------- ");
 			int rows = 0;
 			while (rows <= 5) {
 				// read from excel file
-				String value = Product_value(rows, 6, sheet);
+				String value = value(rows, 6, sheet);
 				Thread.sleep(500);
 				// search the product
 				pof.search.clear();
@@ -158,20 +164,21 @@ public class search_product extends func {
 				pof.submit.click();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// test if product is found
-				resuleTest(driver.getTitle(), value, exm);
+				String Description = "The search of " + value + "";
+				resuleTest(driver.getTitle(), value, Description, exm, test);
 				Thread.sleep(1000);
 				rows++;
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		} 
+		}
 
 		try {
-			test1.info("---------Home and camping----------- ");
+			test.info("--------- Home and camping----------- ");
 			int rows = 0;
 			while (rows <= 11) {
 				// read from excel file
-				String value = Product_value(rows, 7, sheet);
+				String value = value(rows, 7, sheet);
 				Thread.sleep(500);
 				// search the product
 				pof.search.clear();
@@ -179,12 +186,13 @@ public class search_product extends func {
 				pof.submit.click();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// test if product is found
-				resuleTest(driver.getTitle(), value, exm);
+				String Description = "The search of " + value + "";
+				resuleTest(driver.getTitle(), value, Description, exm, test);
 				Thread.sleep(1000);
 				rows++;
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		} 
+		}
 	}
 }

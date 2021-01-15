@@ -2,7 +2,7 @@ package Pages;
 
 import Tools.Extent_reports;
 import Tools.setUp;
-import elements.Footer_link_test;
+import elements.Footer_Buttom;
 import elements.Navigation_bar;
 import elements.login_user;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -23,16 +24,17 @@ import ID.homepage_id;
 
 public class homepage extends setUp {
 
-	static String Title = "homepage";
+	static String Title = "Home page";
 	static Extent_reports exm = new Extent_reports(driver);
-	static String Description = "home page";
+	static Actions actions;
 
 	@BeforeClass
 	public void BeforeClass() {
 		extent = Extent_reports.GetExtent(Title);
-		test = Extent_reports.createTest("homepage", "Navigation bar");
-		test1 = Extent_reports.createTest1("homepage", "search test");
-		test2 = Extent_reports.createTest2("homepage", "Footer test");
+		test = Extent_reports.createTest("Home page", "Homepage - test");
+		test1 = Extent_reports.createTest1("Home page", "Navigation bar - test");
+		test2 = Extent_reports.createTest2("Home page", "Search test");
+		test3 = Extent_reports.createTest3("Home page", "Footer test");
 		WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		driver = new ChromeDriver();
@@ -56,29 +58,29 @@ public class homepage extends setUp {
 
 	@Test(priority = 1, enabled = true)
 	public void login_user() throws IOException, AWTException {
-		login_user.Login(Description, exm);
+		login_user.Login(Title, exm, test);
 	}
 
-	@Test(priority = 4, enabled = true)
+	@Test(priority = 2, enabled = true)
 	public void Navigation_bar() {
-		Navigation_bar.NavigationBar(driver, test, exm);
+		Navigation_bar.NavigationBar(driver, test1, exm);
 
 	}
 
 	@Test(priority = 3, enabled = true)
 	public void SearchProduct() {
-		search_product.searchProduct(driver, test1, exm);
+		search_product.searchProduct(driver, test2, exm);
 	}
 
-	@Test(priority = 2, enabled = true)
+	@Test(priority = 4, enabled = true)
 	public void Search() throws IOException, InterruptedException, AWTException {
-		search.Search(driver, test1, exm);
+		search.Search(driver, test2, exm);
 
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 5, enabled = true)
 	public void footer() {
-		Footer_link_test.Footer(driver, test2, exm);
+		Footer_Buttom.Footer(driver, test3, exm);
 
 	}
 }

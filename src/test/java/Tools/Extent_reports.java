@@ -27,6 +27,7 @@ public class Extent_reports {
 	public static ExtentTest test;
 	public static ExtentTest test1;
 	public static ExtentTest test2;
+	public static ExtentTest test3;
 	public static ExtentHtmlReporter htmlReporter;
 	public WebDriver driver;
 
@@ -65,9 +66,15 @@ public class Extent_reports {
 		test1 = extent.createTest(name, description);
 		return test1;
 	}
+
 	public static ExtentTest createTest2(String name, String description) {
 		test2 = extent.createTest(name, description);
 		return test2;
+	}
+	
+	public static ExtentTest createTest3(String name, String description) {
+		test3 = extent.createTest(name, description);
+		return test3;
 	}
 
 	public String CaptureScreen() throws AWTException, IOException {
@@ -76,8 +83,7 @@ public class Extent_reports {
 		String folderPath = ("C:\\test\\" + reportDate);
 		String imagePath = folderPath + "/pic" + time + ".jpg";
 		Robot robot = new Robot();
-		BufferedImage screenShot = robot
-				.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+		BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
 		ImageIO.write(screenShot, "JPG", new File(imagePath));
 		return imagePath;
 	}
