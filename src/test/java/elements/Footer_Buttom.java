@@ -161,12 +161,7 @@ public class Footer_Buttom extends func {
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			driver.switchTo().window(tabs2.get(1));
 			// Check if I got to the right page
-			if (driver.getTitle().contains("סטימצקי - דף הבית | פייסבוק")) {
-				test.pass("you in סטימצקי - דף הבית | פייסבוק page");
-			} else {
-				test.fail("you not in סטימצקי - דף הבית | פייסבוק page",
-						MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
-			}
+			pageTitleTest(driver.getTitle(), "סטימצקי - דף הבית | פייסבוק", exm, test);
 		} catch (Exception e) {
 			test.fail("The link test of facebook fail",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
