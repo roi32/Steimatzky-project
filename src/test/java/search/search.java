@@ -1,239 +1,257 @@
 package search;
 
-import org.testng.annotations.Test;
-
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
-import ID.search_id;
+import ID.elelments_id;
 import Tools.Extent_reports;
-import Tools.search_func;
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+import Tools.func;
 
 import java.awt.AWTException;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.AfterClass;
 
-public class search extends search_func {
-	static search_id pof;
+public class search extends func {
+
 	static String sheet = "text_search";
+	static elelments_id pof = new elelments_id();
 
-	@BeforeClass
-	public void beforeClass() {
-		extent = Extent_reports.GetExtent();
-		test1 = Extent_reports.createTest1("name", "desc");
-		WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.chrome.silentOutput", "true");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("https://www.steimatzky.co.il/");
-	}
+	public static void Search(WebDriver driver, ExtentTest test, Extent_reports exm) throws AWTException, IOException {
 
-	@BeforeMethod
-	public void BeforeMethod() {
-		pof = new search_id();
-		pof = PageFactory.initElements(driver, search_id.class);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	}
+		pof = PageFactory.initElements(driver, elelments_id.class);
 
-	@AfterClass
-	public void afterClass() {
-		extent.flush();
-		driver.close();
-
-	}
-
-	@Test(priority = 2)
-	public void key_word() throws IOException, InterruptedException, AWTException {
-		int rows = 0;
-		while (rows <= 9) {
-			// read from excel file
-			String value = Product_value(rows, 0, sheet);
-			Thread.sleep(500);
+		try {
+			test.info("---- Spaces ------");
 			// search the product
+			String titleString = driver.getTitle();
 			pof.search.clear();
-			pof.search.sendKeys(value);
+			pof.search.sendKeys("   ");
 			pof.submit.click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if products is found
-			for (int i = 0; i < pof.product_grid.size(); i++) {
-				resuleTest3(pof.product_grid, value);
-			}
-			Thread.sleep(1000);
-			rows++;
-		}
-	}
-
-	@Test(priority = 3)
-	public void authorTitle() throws IOException, InterruptedException, AWTException {
-		int rows = 0;
-		while (rows <= 11) {
-			// read from excel file
-			String value = Product_value(rows, 1, sheet);
-			Thread.sleep(500);
-			// search the product
-			pof.search.clear();
-			pof.search.sendKeys(value);
-			pof.submit.click();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			// test if products is found
-			if (driver.findElement(By.xpath("//h1")).getText().contains("תוצאות חיפוש")) {
-				resuleTest3(pof.authorTitle, value);
-			} else if (driver.findElement(By.xpath("//div[@id='product-info']/h1[@class='productTitle']"))
-					.isDisplayed()) {
-				resuleTest(driver.getTitle(), value);
+			if (driver.getTitle().equals(titleString)) {
+				test.pass("Test pass of spaces search");
 			} else {
-				test1.fail("the search of " + value + "not found products",
+				test.fail("Test fail of spaces search",
 						MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			}
 			Thread.sleep(1000);
-			rows++;
+		} catch (Exception e) {
+			test.fail("The of search spaces fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			e.printStackTrace();
 		}
-	}
 
-	@Test(priority = 4)
-	public void EauthorTitle() throws IOException, InterruptedException, AWTException {
-		int rows = 0;
-		while (rows <= 6) {
-			// read from excel file
-			String value = Product_value(rows, 2, sheet);
-			Thread.sleep(500);
-			// search the product
-			pof.search.clear();
-			pof.search.sendKeys(value);
-			pof.submit.click();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			// test if products is found
-			if (driver.findElement(By.xpath("//h1")).getText().contains("תוצאות חיפוש")) {
-				resuleTest3(pof.authorTitle, value);
-			} else if (driver.findElement(By.xpath("//div[@id='product-info']/h1[@class='productTitle']"))
-					.isDisplayed()) {
-				resuleTest(driver.getTitle(), value);
-			} else {
-				test1.fail("the search of " + value + "not found products",
-						MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
-			}
+		try {
+			test.info("---- Keywords ------");
+			int rows = 0;
 
-			Thread.sleep(1000);
-			rows++;
-		}
-	}
-
-	@Test(priority = 5)
-	public void Negative() throws IOException, InterruptedException, AWTException {
-		int rows = 0;
-		while (rows <= 6) {
-			// read from excel file
-			String value = Product_value(rows, 3, sheet);
-			Thread.sleep(500);
-			// search the product
-			pof.search.clear();
-			pof.search.sendKeys(value);
-			pof.submit.click();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			// test if products is found
-			if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText()
-					.contains("אין תוצאות לשאילתת חיפוש שלך")) {
-				test1.pass("test pass");
-			} else {
-				test1.fail("tast fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
-			}
-			Thread.sleep(1000);
-			rows++;
-		}
-	}
-
-	@Test(priority = 6)
-	public void Boundary() throws IOException, InterruptedException, AWTException {
-		int rows = 0;
-		while (rows <= 3) {
-			// read from excel file
-			String value = Product_value(rows, 4, sheet);
-			Thread.sleep(500);
-			// search the product
-			pof.search.clear();
-			pof.search.sendKeys(value);
-			String search = pof.search.getAttribute("value");
-			pof.submit.click();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			// test if products is found
-			if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText()
-					.contains("אין תוצאות לשאילתת חיפוש שלך") && search.length() <= 128 && search.length() >= 3) {
-				test1.pass("test pass");
-			} else {
-				test1.fail("tast fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
-			}
-			Thread.sleep(1000);
-			rows++;
-		}
-	}
-
-	@Test(priority = 7)
-	public void Num() throws InterruptedException, IOException, AWTException {
-		// search the product
-		pof.search.clear();
-		pof.search.sendKeys("4564654556");
-		pof.submit.click();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		// test if products is found
-		if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
-			test1.pass("test pass");
-		} else {
-			test1.fail("tast fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
-		}
-		Thread.sleep(1000);
-	}
-
-	@Test(priority = 1)
-	public void space() throws InterruptedException, IOException, AWTException {
-		// search the product
-		pof.search.clear();
-		pof.search.sendKeys("   ");
-		pof.submit.click();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		// test if products is found
-		if (driver.getTitle().equals("ספרים זה סטימצקי | ספרים באינטרנט קונים באתר סטימצקי")) {
-			test1.pass("test pass");
-		} else {
-			test1.fail("tast fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
-		}
-		Thread.sleep(1000);
-	}
-
-	@Test(priority = 8, enabled = true)
-	public void clean_search_field() throws IOException, InterruptedException, AWTException {
-		int rows = 0;
-		while (rows <= 30) {
-			// read from excel file
-			String value = Product_value(rows, 0, "Product_search");
-			Thread.sleep(500);
-			// search the value
-			pof.search.sendKeys(value);
-			pof.submit.click();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			String search = pof.search.getAttribute("value");
-			// test if search field is clear
-
-			if (search.equals("מה תרצו לקנות היום?")) {
+			while (rows <= 9) {
+				// read from excel file
+				String value = value(rows, 0, sheet);
+				Thread.sleep(500);
+				// search the product
+				pof.search.clear();
+				pof.search.sendKeys(value);
+				pof.submit.click();
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				// test if products is found
 				if (driver.findElement(By.xpath("//h1")).getText().contains("תוצאות חיפוש")) {
-					resuleTest3(pof.authorTitle, value);
-				} else if (driver.findElement(By.xpath("//div[@id='product-info']/h1[@class='productTitle']"))
-						.isDisplayed()) {
-					resuleTest(driver.getTitle(), value);
+					resuleTest2(pof.product_grid, value, exm, test2);
+				} else if (driver.findElement(By.xpath("//div[@id='product-info']/h1[@class='productTitle']")).isDisplayed()) {
+					String Description = "All products contains the " + value + "";
+					resuleTest(driver.getTitle(), value, Description, exm, test);
 				} else {
-					test1.fail("the search of " + value + "not found products",
+					test.fail("The search of " + value + "not found products",
 							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 				}
+				Thread.sleep(1000);
+				rows++;
+			}
+		} catch (Exception e) {
+			test.fail("The of search Keywords fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			e.printStackTrace();
+		}
+
+		try {
+			test.info("---- AuthorTitle ------");
+			int rows = 0;
+			while (rows <= 11) {
+				// read from excel file
+				String value = value(rows, 1, sheet);
+				Thread.sleep(500);
+				// search the product
+				pof.search.clear();
+				pof.search.sendKeys(value);
+				pof.submit.click();
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				// test if products is found
+				if (driver.findElement(By.xpath("//h1")).getText().contains("תוצאות חיפוש")) {
+					resuleTest2(pof.authorTitle, value, exm, test);
+				} else if (driver.findElement(By.xpath("//div[@id='product-info']/h1[@class='productTitle']")).isDisplayed()) {
+					String Description = "All products contains the " + value + "";
+					resuleTest(driver.getTitle(), value, Description, exm, test);
+				} else {
+					test.fail("The search of " + value + " not found products",
+							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+				}
+				Thread.sleep(1000);
+				rows++;
+			}
+		} catch (Exception e) {
+			test.fail("The of search AuthorTitle fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			e.printStackTrace();
+		}
+
+		try {
+			test.info("---- EauthorTitle------");
+			int rows = 0;
+			while (rows <= 6) {
+				// read from excel file
+				String value = value(rows, 2, sheet);
+				Thread.sleep(500);
+				// search the product
+				pof.search.clear();
+				pof.search.sendKeys(value);
+				pof.submit.click();
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				// test if products is found
+				if (driver.findElement(By.xpath("//h1")).getText().contains("תוצאות חיפוש")) {
+					resuleTest2(pof.authorTitle, value, exm, test2);
+				} else if (driver.findElement(By.xpath("//div[@id='product-info']/h1[@class='productTitle']")).isDisplayed()) {
+					String Description = "All products contains the " + value + "";
+					resuleTest(driver.getTitle(), value, Description, exm, test);
+				} else {
+					test.fail("the search of " + value + "not found products",
+							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+				}
+				Thread.sleep(1000);
+				rows++;
+			}
+		} catch (Exception e) {
+			test.fail("The of search EauthorTitle fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			e.printStackTrace();
+		}
+
+		try {
+			test.info("---- Nagative ------");
+			int rows = 0;
+			while (rows <= 6) {
+				// read from excel file
+				String value = value(rows, 3, sheet);
+				Thread.sleep(500);
+				// search the product
+				pof.search.clear();
+				pof.search.sendKeys(value);
+				pof.submit.click();
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				String Description = "The search of " + value + "";
+				// test if products is found
+				if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
+					test.pass(Description + " not found products");
+				} else {
+					test.fail(Description + " not found products",
+							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+				}
+				Thread.sleep(1000);
+				rows++;
+			}
+		} catch (Exception e) {
+			test.fail("The Nagative search  fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			e.printStackTrace();
+		}
+
+		try {
+			test.info("---- Boundary ------");
+			int rows = 0;
+			while (rows <= 3) {
+				// read from excel file
+				String value = value(rows, 4, sheet);
+				Thread.sleep(500);
+				// search the product
+				pof.search.clear();
+				pof.search.sendKeys(value);
+				String search = pof.search.getAttribute("value");
+				pof.submit.click();
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				String Description = "The Boundary test with " + value + "";
+				// test if products is found
+				if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך") && search.length() <= 128 && search.length() >= 3) {
+					test.pass(Description + " pass");
+				} else {
+					test.fail(Description + " fail",
+							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+				}
+				Thread.sleep(1000);
+				rows++;
+			}
+		} catch (Exception e) {
+			test.fail("The Boundary test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			e.printStackTrace();
+		}
+
+		try {
+			test.info("---- Num ------");
+			// search the product
+			pof.search.clear();
+			pof.search.sendKeys("4564654556");
+			pof.submit.click();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			// test if products is found
+			if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
+				test.pass("Test pass of num search");
+			} else {
+				test.fail("Test fail of num search",
+						MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			}
 			Thread.sleep(1000);
-			rows++;
+		} catch (Exception e) {
+			test.fail("The Num test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			e.printStackTrace();
 		}
+
+		try {
+			test.info("---- clean search field ------");
+			pof.search.clear();
+			int rows = 0;
+			while (rows <= 30) {
+				// read from excel file
+				String value = value(rows, 0, "Product_search");
+				Thread.sleep(500);
+				// search the value
+				pof.search.sendKeys(value);
+				pof.submit.click();
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				String search = pof.search.getAttribute("value");
+				// test if search field is clear
+				if (search.equals("מה תרצו לקנות היום?")) {
+					test.pass("The search field is cleared");
+				} else if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
+					test.info("No product found");
+					pof.search.clear();
+				} else {
+					test.fail("The search field is not cleared",
+							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+					pof.search.clear();
+				}
+				Thread.sleep(1000);
+				rows++;
+			}
+		} catch (Exception e) {
+			test.fail("The clean search field test fail",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			e.printStackTrace();
+		}
+
 	}
 }

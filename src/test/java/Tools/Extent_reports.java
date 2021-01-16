@@ -15,7 +15,8 @@ import javax.imageio.ImageIO;
 import org.openqa.selenium.WebDriver;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -26,7 +27,9 @@ public class Extent_reports {
 	public static ExtentReports extent;
 	public static ExtentTest test;
 	public static ExtentTest test1;
-	public static ExtentHtmlReporter htmlReporter;
+	public static ExtentTest test2;
+	public static ExtentTest test3;
+	public static ExtentSparkReporter htmlReporter;
 	public WebDriver driver;
 
 	public Extent_reports(WebDriver driver) {
@@ -38,31 +41,42 @@ public class Extent_reports {
 	static String reportDate = df.format(today);
 	public static String filePath = "C:\\test\\" + reportDate + "\\exReport.html";
 
-	public static ExtentReports GetExtent() {
+	public static ExtentReports GetExtent(String Title) {
 		new File("C:\\test\\" + reportDate).mkdirs();
 		if (extent != null)
 			return extent;
 		extent = new ExtentReports();
-		extent.attachReporter(getHtmlReporter());
+		extent.attachReporter(getHtmlReporter(Title));
 		return extent;
 	}
 
-	private static ExtentHtmlReporter getHtmlReporter() {
-		htmlReporter = new ExtentHtmlReporter(filePath);
+	private static ExtentSparkReporter getHtmlReporter(String Title) {
+		htmlReporter = new ExtentSparkReporter(filePath);
 		htmlReporter.config().setDocumentTitle("Steimatzky");
-		htmlReporter.config().setReportName("Steimatzky");
+		htmlReporter.config().setReportName(Title);
 		htmlReporter.config().setEncoding("windows-1255");
+		htmlReporter.config().setTheme(Theme.DARK);
 		return htmlReporter;
 	}
 
 	public static ExtentTest createTest(String name, String description) {
-		test = extent.createTest("Navigation bar", "link test");
+		test = extent.createTest(name, description);
 		return test;
 	}
 
 	public static ExtentTest createTest1(String name, String description) {
-		test1 = extent.createTest("steimatzky search", "search test");
+		test1 = extent.createTest(name, description);
 		return test1;
+	}
+
+	public static ExtentTest createTest2(String name, String description) {
+		test2 = extent.createTest(name, description);
+		return test2;
+	}
+
+	public static ExtentTest createTest3(String name, String description) {
+		test3 = extent.createTest(name, description);
+		return test3;
 	}
 
 	public String CaptureScreen() throws AWTException, IOException {
@@ -71,8 +85,7 @@ public class Extent_reports {
 		String folderPath = ("C:\\test\\" + reportDate);
 		String imagePath = folderPath + "/pic" + time + ".jpg";
 		Robot robot = new Robot();
-		BufferedImage screenShot = robot
-				.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+		BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
 		ImageIO.write(screenShot, "JPG", new File(imagePath));
 		return imagePath;
 	}

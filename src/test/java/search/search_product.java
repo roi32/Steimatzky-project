@@ -1,210 +1,218 @@
 package search;
 
-import org.testng.annotations.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
-import ID.search_id;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+
+import ID.elelments_id;
 import Tools.Extent_reports;
-import Tools.search_func;
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+import Tools.func;
 
 import java.awt.AWTException;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.AfterClass;
+public class search_product extends func {
 
-public class search_product extends search_func {
-
-	static search_id pof;
 	static String sheet = "Product_search";
+	static elelments_id pof = new elelments_id();
 
-	@BeforeClass
-	public void beforeClass() {
-		extent = Extent_reports.GetExtent();
-		test1 = Extent_reports.createTest1("name", "desc");
-		WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.chrome.silentOutput", "true");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("https://www.steimatzky.co.il/");
-	}
+	public static void searchProduct(WebDriver driver, ExtentTest test, Extent_reports exm) throws AWTException, IOException {
 
-	@BeforeMethod
-	public void BeforeMethod() {
-		pof = new search_id();
-		pof = PageFactory.initElements(driver, search_id.class);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	}
+		pof = PageFactory.initElements(driver, elelments_id.class);
 
-	@AfterClass
-	public void afterClass() {
-		extent.flush();
-		driver.close();
-
-	}
-
-	@Test(priority = 1, enabled = true)
-	public void books() throws IOException, InterruptedException, AWTException {
-		test1.info("---------books search----------- ");
-		int rows = 0;
-		while (rows <= 58) {
-			// read from excel file
-			String value = Product_value(rows, 0, sheet);
-			Thread.sleep(500);
-			// search the product
-			pof.search.clear();
-			pof.search.sendKeys(value);
-			pof.submit.click();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			// test if product is found
-			resuleTest(driver.getTitle(), value);
-			Thread.sleep(1000);
-			rows++;
+		try {
+			test.info("--------- Books search ----------- ");
+			int rows = 0;
+			while (rows <= 58) {
+				// read from excel file
+				String value = value(rows, 0, sheet);
+				Thread.sleep(500);
+				// search the product
+				pof.search.clear();
+				pof.search.sendKeys(value);
+				pof.submit.click();
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				// test if product is found
+				String Description = "The search of " + value + "";
+				resuleTest(driver.getTitle(), value, Description, exm, test);
+				Thread.sleep(1000);
+				rows++;
+			}
+		} catch (Exception e) {
+			test.fail("The  search of books products fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			e.printStackTrace();
 		}
-	}
 
-	@Test(priority = 2, enabled = true)
-	public void English_Books() throws IOException, InterruptedException, AWTException {
-		test1.info("---------English Books search----------- ");
-		int rows = 0;
-		while (rows <= 11) {
-			// read from excel file
-			String value = Product_value(rows, 1, sheet);
-			Thread.sleep(500);
-			// search the product
-			pof.search.clear();
-			pof.search.sendKeys(value);
-			pof.submit.click();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			// test if product is found
-			resuleTest(driver.getTitle(), value);
-			Thread.sleep(1000);
-			rows++;
+		try {
+			test.info("--------- English Books search ----------- ");
+			int rows = 0;
+			while (rows <= 11) {
+				// read from excel file
+				String value = value(rows, 1, sheet);
+				Thread.sleep(500);
+				// search the product
+				pof.search.clear();
+				pof.search.sendKeys(value);
+				pof.submit.click();
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				// test if product is found
+				String Description = "The search of " + value + "";
+				resuleTest(driver.getTitle(), value, Description, exm, test);
+				Thread.sleep(1000);
+				rows++;
+			}
+		} catch (Exception e) {
+			test.fail("The  search of English books products fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			e.printStackTrace();
 		}
-	}
 
-	@Test(priority = 3, enabled = true)
-	public void Games_toys_and_puzzles() throws IOException, InterruptedException, AWTException {
-		test1.info("---------Games toys and puzzles search----------- ");
-		int rows = 0;
-		while (rows <= 5) {
-			// read from excel file
-			String value = Product_value(rows, 2, sheet);
-			Thread.sleep(500);
-			// search the product
-			pof.search.clear();
-			pof.search.sendKeys(value);
-			pof.submit.click();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			// test if product is found
-			resuleTest(driver.getTitle(), value);
-			Thread.sleep(1000);
-			rows++;
+		try {
+			test.info("--------- Games toys and puzzles search----------- ");
+			int rows = 0;
+			while (rows <= 5) {
+				// read from excel file
+				String value = value(rows, 2, sheet);
+				Thread.sleep(500);
+				// search the product
+				pof.search.clear();
+				pof.search.sendKeys(value);
+				pof.submit.click();
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				// test if product is found
+				String Description = "The search of " + value + "";
+				resuleTest(driver.getTitle(), value, Description, exm, test);
+				Thread.sleep(1000);
+				rows++;
+			}
+		} catch (Exception e) {
+			test.fail("The  search of Games toys and puzzles products fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			e.printStackTrace();
 		}
-	}
 
-	@Test(priority = 3, enabled = true)
-	public void Gifts_and_leisure() throws IOException, InterruptedException, AWTException {
-		test1.info("---------Gifts and leisure search----------- ");
-		int rows = 0;
-		while (rows <= 13) {
-			// read from excel file
-			String value = Product_value(rows, 3, sheet);
-			Thread.sleep(500);
-			// search the product
-			pof.search.clear();
-			pof.search.sendKeys(value);
-			pof.submit.click();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			// test if product is found
-			resuleTest(driver.getTitle(), value);
-			Thread.sleep(1000);
-			rows++;
+		try {
+			test.info("--------- Gifts and leisure search----------- ");
+			int rows = 0;
+			while (rows <= 13) {
+				// read from excel file
+				String value = value(rows, 3, sheet);
+				Thread.sleep(500);
+				// search the product
+				pof.search.clear();
+				pof.search.sendKeys(value);
+				pof.submit.click();
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				// test if product is found
+				String Description = "The search of " + value + "";
+				resuleTest(driver.getTitle(), value, Description, exm, test);
+				Thread.sleep(1000);
+				rows++;
+			}
+		} catch (Exception e) {
+			test.fail("The  search of Gifts and leisure products fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			e.printStackTrace();
 		}
-	}
 
-	@Test(priority = 4, enabled = true)
-	public void music() throws IOException, InterruptedException, AWTException {
-		test1.info("---------music search----------- ");
-		int rows = 0;
-		while (rows <= 6) {
-			// read from excel file
-			String value = Product_value(rows, 4, sheet);
-			Thread.sleep(500);
-			// search the product
-			pof.search.clear();
-			pof.search.sendKeys(value);
-			pof.submit.click();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			// test if product is found
-			resuleTest(driver.getTitle(), value);
-			Thread.sleep(1000);
-			rows++;
+		try {
+			test.info("--------- music search----------- ");
+			int rows = 0;
+			while (rows <= 6) {
+				// read from excel file
+				String value = value(rows, 4, sheet);
+				Thread.sleep(500);
+				// search the product
+				pof.search.clear();
+				pof.search.sendKeys(value);
+				pof.submit.click();
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				// test if product is found
+				String Description = "The search of " + value + "";
+				resuleTest(driver.getTitle(), value, Description, exm, test);
+				Thread.sleep(1000);
+				rows++;
+			}
+		} catch (Exception e) {
+			test.fail("The  search of music products fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			e.printStackTrace();
 		}
-	}
 
-	@Test(priority = 5, enabled = true)
-	public void Appliances_and_smartphones() throws IOException, InterruptedException, AWTException {
-		test1.info("---------Appliances and smartphones search----------- ");
-		int rows = 0;
-		while (rows <= 10) {
-			// read from excel file
-			String value = Product_value(rows, 5, sheet);
-			Thread.sleep(500);
-			// search the product
-			pof.search.clear();
-			pof.search.sendKeys(value);
-			pof.submit.click();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			// test if product is found
-			resuleTest(driver.getTitle(), value);
-			Thread.sleep(1000);
-			rows++;
+		try {
+			test.info("--------- Appliances and smartphones search----------- ");
+			int rows = 0;
+			while (rows <= 10) {
+				// read from excel file
+				String value = value(rows, 5, sheet);
+				Thread.sleep(500);
+				// search the product
+				pof.search.clear();
+				pof.search.sendKeys(value);
+				pof.submit.click();
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				// test if product is found
+				String Description = "The search of " + value + "";
+				resuleTest(driver.getTitle(), value, Description, exm, test);
+				Thread.sleep(1000);
+				rows++;
+			}
+		} catch (Exception e) {
+			test.fail("The  search of Appliances and smartphones products fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			e.printStackTrace();
 		}
-	}
 
-	@Test(priority = 6, enabled = true)
-	public void Cosmetics_and_perfumes() throws IOException, InterruptedException, AWTException {
-		test1.info("---------Cosmetics and perfumes search----------- ");
-		int rows = 0;
-		while (rows <= 5) {
-			// read from excel file
-			String value = Product_value(rows, 6, sheet);
-			Thread.sleep(500);
-			// search the product
-			pof.search.clear();
-			pof.search.sendKeys(value);
-			pof.submit.click();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			// test if product is found
-			resuleTest(driver.getTitle(), value);
-			Thread.sleep(1000);
-			rows++;
+		try {
+			test.info("--------- Cosmetics and perfumes search----------- ");
+			int rows = 0;
+			while (rows <= 5) {
+				// read from excel file
+				String value = value(rows, 6, sheet);
+				Thread.sleep(500);
+				// search the product
+				pof.search.clear();
+				pof.search.sendKeys(value);
+				pof.submit.click();
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				// test if product is found
+				String Description = "The search of " + value + "";
+				resuleTest(driver.getTitle(), value, Description, exm, test);
+				Thread.sleep(1000);
+				rows++;
+			}
+		} catch (Exception e) {
+			test.fail("The  search of Cosmetics and perfumes products fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			e.printStackTrace();
 		}
-	}
 
-	@Test(priority = 7, enabled = true)
-	public void Home_and_camping() throws IOException, InterruptedException, AWTException {
-		test1.info("---------Home and camping----------- ");
-		int rows = 0;
-		while (rows <= 11) {
-			// read from excel file
-			String value = Product_value(rows, 7, sheet);
-			Thread.sleep(500);
-			// search the product
-			pof.search.clear();
-			pof.search.sendKeys(value);
-			pof.submit.click();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			// test if product is found
-			resuleTest(driver.getTitle(), value);
-			Thread.sleep(1000);
-			rows++;
+		try {
+			test.info("--------- Home and camping----------- ");
+			int rows = 0;
+			while (rows <= 11) {
+				// read from excel file
+				String value = value(rows, 7, sheet);
+				Thread.sleep(500);
+				// search the product
+				pof.search.clear();
+				pof.search.sendKeys(value);
+				pof.submit.click();
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				// test if product is found
+				String Description = "The search of " + value + "";
+				resuleTest(driver.getTitle(), value, Description, exm, test);
+				Thread.sleep(1000);
+				rows++;
+			}
+		} catch (Exception e) {
+			test.fail("The  search of Home and camping products fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			e.printStackTrace();
 		}
 	}
 }
