@@ -23,8 +23,6 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 
 public class func extends setUp {
 
-	static String Description = "home page";
-
 	public static String getData(String nodeName) throws ParserConfigurationException, SAXException, IOException {
 		File fXmlFile = new File("C:\\test\\configurtion\\configurtion.xml");
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -37,9 +35,9 @@ public class func extends setUp {
 	public static void pageTitleTest(String link, String pageTitle, Extent_reports exm, ExtentTest test)
 			throws IOException, AWTException {
 		if (link.contains(pageTitle)) {
-			test.pass("you in " + pageTitle + " page");
+			test.pass("You in " + pageTitle + " page");
 		} else {
-			test.fail("you not in " + pageTitle + " page",
+			test.fail("You not in " + pageTitle + " page",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
 	}
@@ -58,9 +56,9 @@ public class func extends setUp {
 	public static void resuleTest(String titleString, String value, String Description,Extent_reports exm, ExtentTest test)
 			throws IOException, AWTException {
 		if (titleString.contains(value)) {
-			test.pass("test pass of -  " +Description);
+			test.pass("Test pass of -  " +Description);
 		} else {
-			test.fail("test fail of -  " +Description,
+			test.fail("Test fail of -  " +Description,
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
 	}
