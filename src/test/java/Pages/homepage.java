@@ -27,6 +27,7 @@ public class homepage extends setUp {
 	static String Title = "Home page";
 	static Extent_reports exm = new Extent_reports(driver);
 	static Actions actions;
+	static homepage_id pof;
 
 	@BeforeClass
 	public void BeforeClass() {
