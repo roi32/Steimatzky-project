@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [steimatzky]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="steimatzky - test(failed)">
+  <test thread-count="5" name="steimatzky - homepage(failed)">
     <classes>
-      <class name="search.text_search">
+      <class name="Pages.homepage">
         <methods>
-          <include name="beforeClass"/>
-          <include name="test1"/>
+          <include name="SearchProduct"/>
           <include name="BeforeMethod"/>
-          <include name="afterClass"/>
+          <include name="AfterClass"/>
+          <include name="Search"/>
+          <include name="login_user"/>
+          <include name="Navigation_bar"/>
+          <include name="footer"/>
+          <include name="BeforeClass"/>
         </methods>
-      </class> <!-- search.text_search -->
+      </class> <!-- Pages.homepage -->
     </classes>
-  </test> <!-- steimatzky - test(failed) -->
+  </test> <!-- steimatzky - homepage(failed) -->
 </suite> <!-- Failed suite [steimatzky] -->

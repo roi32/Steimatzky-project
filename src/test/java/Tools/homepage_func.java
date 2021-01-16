@@ -22,14 +22,12 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
-import ID.Navigation_bar_id;
 
 public class homepage_func {
 	public static WebDriver driver;
 	public static ExtentReports extent;
 	public static ExtentTest test;
 	public static ExtentTest test1;
-	public static Navigation_bar_id pof;
 	public static Extent_reports exm = new Extent_reports(driver);
 	public static Actions actions;
 
