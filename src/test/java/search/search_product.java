@@ -72,7 +72,7 @@ public class search_product extends func {
 		}
 
 		try {
-			test.info("--------- Games toys and puzzles search----------- ");
+			test.info("--------- Games toys and puzzles search ----------- ");
 			int rows = 0;
 			while (rows <= 5) {
 				// read from excel file
@@ -96,7 +96,7 @@ public class search_product extends func {
 		}
 
 		try {
-			test.info("--------- Gifts and leisure search----------- ");
+			test.info("--------- Gifts and leisure search ----------- ");
 			int rows = 0;
 			while (rows <= 13) {
 				// read from excel file
@@ -120,7 +120,7 @@ public class search_product extends func {
 		}
 
 		try {
-			test.info("--------- music search----------- ");
+			test.info("--------- music search ----------- ");
 			int rows = 0;
 			while (rows <= 6) {
 				// read from excel file
@@ -144,7 +144,7 @@ public class search_product extends func {
 		}
 
 		try {
-			test.info("--------- Appliances and smartphones search----------- ");
+			test.info("--------- Appliances and smartphones search ----------- ");
 			int rows = 0;
 			while (rows <= 10) {
 				// read from excel file
@@ -192,7 +192,7 @@ public class search_product extends func {
 		}
 
 		try {
-			test.info("--------- Home and camping----------- ");
+			test.info("--------- Home and camping ----------- ");
 			int rows = 0;
 			while (rows <= 11) {
 				// read from excel file
