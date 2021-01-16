@@ -39,7 +39,7 @@ public class Footer_Buttom extends func {
 				actions.moveToElement(pof.about.get(i)).click().perform();
 				ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-				//close popup
+				//close popUp
 				try {
 					if (pof.Cpopup.isDisplayed()) {
 						actions.moveToElement(pof.Cpopup).click().perform();

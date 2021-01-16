@@ -33,9 +33,9 @@ public class homepage extends setUp {
 	public void BeforeClass() {
 		extent = Extent_reports.GetExtent(Title);
 		test = Extent_reports.createTest("Home page", "Homepage - test");
-		test1 = Extent_reports.createTest1("Home page", "Navigation bar - test");
-		test2 = Extent_reports.createTest2("Home page", "Search test");
-		test3 = Extent_reports.createTest3("Home page", "Footer test");
+		test1 = Extent_reports.createTest("Home page", "Navigation bar - test");
+		test2 = Extent_reports.createTest("Home page", "Search test");
+		test3 = Extent_reports.createTest("Home page", "Footer test");
 		WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		driver = new ChromeDriver();

@@ -64,21 +64,6 @@ public class Extent_reports {
 		return test;
 	}
 
-	public static ExtentTest createTest1(String name, String description) {
-		test1 = extent.createTest(name, description);
-		return test1;
-	}
-
-	public static ExtentTest createTest2(String name, String description) {
-		test2 = extent.createTest(name, description);
-		return test2;
-	}
-
-	public static ExtentTest createTest3(String name, String description) {
-		test3 = extent.createTest(name, description);
-		return test3;
-	}
-
 	public String CaptureScreen() throws AWTException, IOException {
 		LocalDateTime now = LocalDateTime.now();
 		String time = now.format(DateTimeFormatter.ofPattern("ddHHmmss"));

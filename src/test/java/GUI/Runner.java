@@ -44,7 +44,7 @@ public class Runner {
 					suites.add("C:\\Users\\royko\\git\\Steimatzky-project\\src\\test\\java\\GUI\\Home_Page.xml");
 					testng.setTestSuites(suites);
 					testng.run();
-					label1.setText("Home page test pass");
+					label1.setText("Home page test ended");
 				} catch (Exception e) {
 					e.printStackTrace();
 					label1.setText("Home page test fail");
