@@ -47,6 +47,8 @@ public class search_product extends func {
 			e.printStackTrace();
 		}
 
+		pof = PageFactory.initElements(driver, elelments_id.class);
+
 		try {
 			test.info("--------- English Books search ----------- ");
 			int rows = 0;
@@ -70,6 +72,8 @@ public class search_product extends func {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
+
+		pof = PageFactory.initElements(driver, elelments_id.class);
 
 		try {
 			test.info("--------- Games toys and puzzles search ----------- ");
@@ -95,6 +99,8 @@ public class search_product extends func {
 			e.printStackTrace();
 		}
 
+		pof = PageFactory.initElements(driver, elelments_id.class);
+
 		try {
 			test.info("--------- Gifts and leisure search ----------- ");
 			int rows = 0;
@@ -118,6 +124,8 @@ public class search_product extends func {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
+		
+		pof = PageFactory.initElements(driver, elelments_id.class);
 
 		try {
 			test.info("--------- music search ----------- ");
@@ -142,6 +150,8 @@ public class search_product extends func {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
+		
+		pof = PageFactory.initElements(driver, elelments_id.class);
 
 		try {
 			test.info("--------- Appliances and smartphones search ----------- ");
@@ -167,6 +177,8 @@ public class search_product extends func {
 			e.printStackTrace();
 		}
 
+		pof = PageFactory.initElements(driver, elelments_id.class);
+
 		try {
 			test.info("--------- Cosmetics and perfumes search----------- ");
 			int rows = 0;
@@ -190,6 +202,8 @@ public class search_product extends func {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
+		
+		pof = PageFactory.initElements(driver, elelments_id.class);
 
 		try {
 			test.info("--------- Home and camping ----------- ");

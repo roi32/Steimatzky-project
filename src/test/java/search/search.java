@@ -46,6 +46,8 @@ public class search extends func {
 			e.printStackTrace();
 		}
 
+		pof = PageFactory.initElements(driver, elelments_id.class);
+
 		try {
 			test.info("---- Keywords ------");
 			int rows = 0;
@@ -77,6 +79,8 @@ public class search extends func {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
+		
+		pof = PageFactory.initElements(driver, elelments_id.class);
 
 		try {
 			test.info("---- AuthorTitle ------");
@@ -109,6 +113,8 @@ public class search extends func {
 			e.printStackTrace();
 		}
 
+		pof = PageFactory.initElements(driver, elelments_id.class);
+
 		try {
 			test.info("---- EauthorTitle------");
 			int rows = 0;
@@ -140,6 +146,8 @@ public class search extends func {
 			e.printStackTrace();
 		}
 
+		pof = PageFactory.initElements(driver, elelments_id.class);
+
 		try {
 			test.info("---- Nagative ------");
 			int rows = 0;
@@ -168,6 +176,8 @@ public class search extends func {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
+		
+		pof = PageFactory.initElements(driver, elelments_id.class);
 
 		try {
 			test.info("---- Boundary ------");
@@ -198,6 +208,8 @@ public class search extends func {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
+		
+		pof = PageFactory.initElements(driver, elelments_id.class);
 
 		try {
 			test.info("---- Num ------");
@@ -219,6 +231,8 @@ public class search extends func {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
+
+		pof = PageFactory.initElements(driver, elelments_id.class);
 
 		try {
 			test.info("---- clean search field ------");

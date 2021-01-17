@@ -19,14 +19,13 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Footer_Buttom extends func {
 
-	static Actions actions;
 	static JavascriptExecutor js;
 	static elelments_id pof = new elelments_id();;
 
-	public static void Footer(WebDriver driver, ExtentTest test, Extent_reports exm) throws AWTException, IOException {
+	public static void Footer(WebDriver driver, ExtentTest test, Extent_reports exm, Actions actions) throws AWTException, IOException {
 
-		actions = new Actions(driver);
 		js = (JavascriptExecutor) driver;
+		
 		pof = PageFactory.initElements(driver, elelments_id.class);
 
 		try {
@@ -75,6 +74,8 @@ public class Footer_Buttom extends func {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
+		
+		pof = PageFactory.initElements(driver, elelments_id.class);
 
 		try {
 			test.info("---------- Useful_information -----------");
@@ -119,6 +120,8 @@ public class Footer_Buttom extends func {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
+		
+		pof = PageFactory.initElements(driver, elelments_id.class);
 
 		try {
 			test.info("-------------- Information_for_buyers_on_the_site ----------------");
@@ -150,6 +153,8 @@ public class Footer_Buttom extends func {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
+		
+		pof = PageFactory.initElements(driver, elelments_id.class);
 
 		try {
 			test.info("------------- facebook --------------");

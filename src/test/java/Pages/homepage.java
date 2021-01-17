@@ -26,7 +26,6 @@ public class homepage extends setUp {
 
 	static String Title = "Home page";
 	static Extent_reports exm = new Extent_reports(driver);
-	static Actions actions;
 	static homepage_id pof;
 
 	@BeforeClass
@@ -41,6 +40,7 @@ public class homepage extends setUp {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.steimatzky.co.il/");
+		actions=new Actions(driver);
 	}
 
 	@BeforeMethod
@@ -58,12 +58,12 @@ public class homepage extends setUp {
 
 	@Test(priority = 1,groups = "elements", enabled = true)
 	public void login_user() throws IOException, AWTException {
-		login_user.Login(Title, exm, test);
+		login_user.Login(Title, exm, test,actions);
 	}
 
 	@Test(priority = 2,groups = "elements", dependsOnMethods = { "login_user" }, enabled = true)
 	public void Navigation_bar() throws AWTException, IOException {
-		Navigation_bar.NavigationBar(driver, test1, exm);
+		Navigation_bar.NavigationBar(driver, test1, exm,actions);
 	}
 
 	@Test(priority = 3,groups = "elements", enabled = true)
@@ -78,6 +78,6 @@ public class homepage extends setUp {
 
 	@Test(priority = 5,groups = "elements", dependsOnMethods = { "login_user" }, enabled = true)
 	public void footer() throws AWTException, IOException {
-		Footer_Buttom.Footer(driver, test3, exm);
+		Footer_Buttom.Footer(driver, test3, exm,actions);
 	}
 }

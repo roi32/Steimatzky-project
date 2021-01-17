@@ -15,12 +15,12 @@ import Tools.func;
 import Tools.setUp;
 
 public class login_user extends setUp {
-	static Actions actions;
 	static elelments_id pof = new elelments_id();
 
-	public static void Login(String Description, Extent_reports exm, ExtentTest test) throws IOException, AWTException {
+	public static void Login(String Description, Extent_reports exm, ExtentTest test,Actions actions) throws IOException, AWTException {
+		
 		pof = PageFactory.initElements(driver, elelments_id.class);
-		actions = new Actions(driver);
+		
 		try {
 			actions.moveToElement(pof.login).click().perform();
 			Thread.sleep(2000);
