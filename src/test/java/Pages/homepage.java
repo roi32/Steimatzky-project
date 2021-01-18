@@ -1,6 +1,7 @@
 package Pages;
 
 import Tools.Extent_reports;
+import Tools.func;
 import Tools.setUp;
 import elements.Footer_Buttom;
 import elements.Navigation_bar;
@@ -40,7 +41,7 @@ public class homepage extends setUp {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.steimatzky.co.il/");
-		actions=new Actions(driver);
+		actions = new Actions(driver);
 	}
 
 	@BeforeMethod
@@ -56,28 +57,43 @@ public class homepage extends setUp {
 		driver.quit();
 	}
 
-	@Test(priority = 1,groups = "elements", enabled = true)
+	@Test(priority = 1, groups = "elements", enabled = true)
 	public void login_user() throws IOException, AWTException {
-		login_user.Login(Title, exm, test,actions);
+		login_user.Login(Title, exm, test, actions);
 	}
 
-	@Test(priority = 2,groups = "elements", dependsOnMethods = { "login_user" }, enabled = true)
+	@Test(priority = 2, groups = "home page", dependsOnMethods = { "login_user" }, enabled = true)
+	public void callPoppup() throws IOException, AWTException, InterruptedException {
+		actions.moveToElement(pof.callPoppup).click().perform();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		actions.moveToElement(pof.Cpopup).click().perform();
+		Thread.sleep(2000);
+		String pageTitle = driver.getTitle();
+		func.pageTitleTest(pageTitle, "סניפים פתוחים", exm, test);
+		Thread.sleep(1000);
+		actions.moveToElement(pof.logo).click().perform();
+		pageTitle = driver.getTitle();
+		func.pageTitleTest(pageTitle, "ספרים זה סטימצקי | ספרים באינטרנט קונים באתר סטימצקי", exm, test);
+		Thread.sleep(1000);
+	}
+
+	@Test(priority = 3, groups = "elements", dependsOnMethods = { "login_user" }, enabled = true)
 	public void Navigation_bar() throws AWTException, IOException {
-		Navigation_bar.NavigationBar(driver, test1, exm,actions);
+		Navigation_bar.NavigationBar(driver, test1, exm, actions);
 	}
 
-	@Test(priority = 3,groups = "elements", enabled = true)
+	@Test(priority = 4, groups = "elements", enabled = true)
 	public void SearchProduct() throws AWTException, IOException {
 		search_product.searchProduct(driver, test2, exm);
 	}
 
-	@Test(priority = 4,groups = "elements", enabled = true)
+	@Test(priority = 5, groups = "elements", enabled = true)
 	public void Search() throws IOException, InterruptedException, AWTException {
 		search.Search(driver, test2, exm);
 	}
 
-	@Test(priority = 5,groups = "elements", dependsOnMethods = { "login_user" }, enabled = true)
+	@Test(priority = 6, groups = "elements", dependsOnMethods = { "login_user" }, enabled = true)
 	public void footer() throws AWTException, IOException {
-		Footer_Buttom.Footer(driver, test3, exm,actions);
+		Footer_Buttom.Footer(driver, test3, exm, actions);
 	}
 }
