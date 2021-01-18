@@ -53,12 +53,12 @@ public class func extends setUp {
 		return value;
 	}
 
-	public static void resuleTest(String titleString, String value, String Description,Extent_reports exm, ExtentTest test)
-			throws IOException, AWTException {
+	public static void resuleTest(String titleString, String value, String Description, Extent_reports exm,
+			ExtentTest test) throws IOException, AWTException {
 		if (titleString.contains(value)) {
-			test.pass("Test pass of -  " +Description);
+			test.pass("Test pass of -  " + Description);
 		} else {
-			test.fail("Test fail of -  " +Description,
+			test.fail("Test fail of -  " + Description,
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
 	}

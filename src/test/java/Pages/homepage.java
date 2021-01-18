@@ -57,7 +57,7 @@ public class homepage extends setUp {
 		driver.quit();
 	}
 
-	@Test(priority = 1, groups = "elements", enabled = true)
+	@Test(priority = 1, groups = "home page", enabled = true)
 	public void login_user() throws IOException, AWTException {
 		login_user.Login(Title, exm, test, actions);
 	}
