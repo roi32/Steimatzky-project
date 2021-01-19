@@ -151,7 +151,7 @@ public class search extends func {
 		try {
 			test.info("---- Nagative ------");
 			int rows = 0;
-			while (rows <= 6) {
+			while (rows <= 7) {
 				// read from excel file
 				String value = value(rows, 3, sheet);
 				Thread.sleep(500);
@@ -162,10 +162,12 @@ public class search extends func {
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				String Description = "The search of " + value + "";
 				// test if products is found
-				if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
+				if (pof.note.getText().contains("Maximum words count is 10. In your search query was cut next part:")) {
+					test.pass("You can not search more than 10 words");
+				}else if (pof.note.getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
 					test.pass(Description + " not found products");
 				} else {
-					test.fail(Description + " not found products",
+					test.fail(Description + " found products",
 							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 				}
 				Thread.sleep(1000);
@@ -182,7 +184,7 @@ public class search extends func {
 		try {
 			test.info("---- Boundary ------");
 			int rows = 0;
-			while (rows <= 3) {
+			while (rows <= 4) {
 				// read from excel file
 				String value = value(rows, 4, sheet);
 				Thread.sleep(500);
@@ -196,7 +198,9 @@ public class search extends func {
 				// test if products is found
 				if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך") && search.length() <= 128 && search.length() >= 3) {
 					test.pass(Description + " pass");
-				} else {
+				} else if (pof.note.getText().contains("אורך שאילתת חיפוש מינימלי הוא 3")) {
+					test.pass("Minimum search query length is 3");
+				}else {
 					test.fail(Description + " fail",
 							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 				}

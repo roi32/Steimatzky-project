@@ -117,4 +117,6 @@ public class elelments_id {
 	@FindBy(how = How.XPATH, using = "//div[@id='ZA_CANVAS_1093222_CLOSE_IMG5_4_CONT']/img")
 	public WebElement Cpopup;
 
+	@FindBy(how = How.CLASS_NAME, using = "note-msg")
+	public WebElement note;
 }
