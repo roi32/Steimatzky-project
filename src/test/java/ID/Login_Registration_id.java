@@ -24,4 +24,9 @@ public class Login_Registration_id {
 	@FindBy(how = How.XPATH, using = "//div[@class='loginbox islogin']/a[1]")
 	public WebElement loginbox;
 
+	@FindBy(how = How.ID, using = "advice-required-entry-email")
+	public WebElement error_email;
+	
+	@FindBy(how = How.ID, using = "advice-required-entry-pass")
+	public WebElement error_pass;
 }

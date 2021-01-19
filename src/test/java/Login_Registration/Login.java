@@ -31,7 +31,7 @@ public class Login extends setUp {
 	@BeforeClass
 	public void beforeClass() {
 		extent = Extent_reports.GetExtent(Title);
-		test = Extent_reports.createTest("Home page", "Homepage - test");
+		test = Extent_reports.createTest("Home page", "Correct Login - test");
 		test1 = Extent_reports.createTest("Home page", "Navigation bar - test");
 		WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.silentOutput", "true");
@@ -58,6 +58,7 @@ public class Login extends setUp {
 	@Test(priority = 1)
 	public void Correct_Login() throws IOException, AWTException {
 		login_user.Login(Title, exm, test, actions);
+		//Check if user is login
 		if (pof.loginbox.getText().equals("שלום רועי")) {
 			test.pass("Login verified");
 		} else {
@@ -66,14 +67,38 @@ public class Login extends setUp {
 		}
 	}
 
-	@Test(priority = 2,dependsOnMethods = {"Correct_Login"})
+	@Test(priority = 2, dependsOnMethods = { "Correct_Login" })
 	public void logout() throws AWTException, IOException {
 		pof.logout.click();
+		//Check if user is logout
 		if (pof.login.getText().equals("התחברות")) {
 			test.pass("Logout verified");
-		}else {
+		} else {
 			test.fail("Logout not verified",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
+	}
+
+	@Test(priority = 3)
+	public void Empty_text_fields() throws InterruptedException, AWTException, IOException {
+		actions.moveToElement(pof.login).click().perform();
+		Thread.sleep(1000);
+		// click on login
+		actions.moveToElement(pof.send2).click().perform();
+		//Check if error massage is displayed
+		if (pof.error_email.isDisplayed() && pof.error_email.getText().equals("שדה זה הינו חובה.")) {
+			test1.pass("The error massage is displayed");
+		} else {
+			test1.fail("The error massage is not displayed",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+		if (pof.error_pass.isDisplayed() && pof.error_pass.getText().equals("שדה זה הינו חובה.")) {
+			test1.pass("The eror massage is displayed");
+		} else {
+			test1.fail("The eror massage is not displayed",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+		Thread.sleep(1000);
+
 	}
 }
