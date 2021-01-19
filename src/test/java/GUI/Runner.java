@@ -38,10 +38,11 @@ public class Runner {
 		btn.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent arg0) {
+				
 				try {
 					TestNG testng = new TestNG();
 					List<String> suites = Lists.newArrayList();
-					suites.add("C:\\Users\\royko\\git\\Steimatzky-project\\src\\test\\java\\GUI\\Home_Page.xml");
+					suites.add("Home_Page.xml");
 					testng.setTestSuites(suites);
 					testng.run();
 					label1.setText("Home page test ended");
