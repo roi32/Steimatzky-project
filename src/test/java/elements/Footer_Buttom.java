@@ -51,18 +51,18 @@ public class Footer_Buttom extends func {
 					driver.switchTo().window(tabs2.get(1));
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 					// Check if I got to the right page
-					pageTitleTest(driver.getTitle(), "δεφΰδ μΰεψ:", exm, test);
+					pageTitleTest(driver.getTitle(), "Χ”Χ•Χ¦ΧΧ” ΧΧΧ•Χ¨:", exm, test);
 					driver.close();
 					driver.switchTo().window(tabs2.get(0));
 				// Check if I got to the right page
 				} else if (driver.getTitle().contains(aboutString)) {
 					test.pass("you in " + aboutString + " page");
-				} else if (aboutString.equals("ρθιξφχι μςρχιν")) {
+				} else if (aboutString.equals("Χ΅ΧΧ™ΧΧ¦Χ§Χ™ ΧΧΆΧ΅Χ§Χ™Χ")) {
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					pageTitleTest(driver.getTitle(), "ρθιξφχι - δξημχδ δςρχιϊ", exm, test);
-				} else if (aboutString.equals("ρπιτιν")) {
+					pageTitleTest(driver.getTitle(), "Χ΅ΧΧ™ΧΧ¦Χ§Χ™ - Χ”ΧΧ—ΧΧ§Χ” Χ”ΧΆΧ΅Χ§Χ™Χª", exm, test);
+				} else if (aboutString.equals("Χ΅Χ Χ™Χ¤Χ™Χ")) {
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					pageTitleTest(driver.getTitle(), "ρπιτιν τϊεηιν", exm, test);
+					pageTitleTest(driver.getTitle(), "Χ΅Χ Χ™Χ¤Χ™Χ Χ¤ΧªΧ•Χ—Χ™Χ", exm, test);
 				} else {
 					test.fail("you not in " + aboutString + " page",
 							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
@@ -89,10 +89,10 @@ public class Footer_Buttom extends func {
 				//if open new tab
 				if (tabs2.size() == 2) {
 					driver.switchTo().window(tabs2.get(1));
-					if (aboutString.equals("αγιχϊ ιϊψϊ λψθιρ ξϊπδ")) {
+					if (aboutString.equals("Χ‘Χ“Χ™Χ§Χª Χ™ΧªΧ¨Χª Χ›Χ¨ΧΧ™Χ΅ ΧΧªΧ Χ”")) {
 						driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 						// Check if I got to the right page
-						pageTitleTest(driver.getTitle(), "αψελιν δαΰιν μτψχρμ λψθιρι ξϊπδ", exm, test);
+						pageTitleTest(driver.getTitle(), "Χ‘Χ¨Χ•Χ›Χ™Χ Χ”Χ‘ΧΧ™Χ ΧΧ¤Χ¨Χ§Χ΅Χ Χ›Χ¨ΧΧ™Χ΅Χ™ ΧΧªΧ Χ”", exm, test);
 						driver.close();
 						driver.switchTo().window(tabs2.get(0));
 					}
@@ -100,16 +100,16 @@ public class Footer_Buttom extends func {
 				} else if (driver.getTitle().contains(aboutString)) {
 					test.pass("you in " + aboutString + " page");
 
-				} else if (aboutString.equals("αμεβ ρθιξφχι")) {
+				} else if (aboutString.equals("Χ‘ΧΧ•Χ’ Χ΅ΧΧ™ΧΧ¦Χ§Χ™")) {
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 					pageTitleTest(driver.getTitle(), "Blog", exm, test);
 
-				} else if (aboutString.equals("ξεςγεο δριτεψ ωμι")) {
+				} else if (aboutString.equals("ΧΧ•ΧΆΧ“Χ•Χ Χ”Χ΅Χ™Χ¤Χ•Χ¨ Χ©ΧΧ™")) {
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					pageTitleTest(driver.getTitle(), "ηαψεϊ αξεςγεο δχεψΰιν ωμ ρθιξφχι - δριτεψ ωμι", exm, test);
-				} else if (aboutString.equals("φεψ χωψ")) {
+					pageTitleTest(driver.getTitle(), "Χ—Χ‘Χ¨Χ•Χª Χ‘ΧΧ•ΧΆΧ“Χ•Χ Χ”Χ§Χ•Χ¨ΧΧ™Χ Χ©Χ Χ΅ΧΧ™ΧΧ¦Χ§Χ™ - Χ”Χ΅Χ™Χ¤Χ•Χ¨ Χ©ΧΧ™", exm, test);
+				} else if (aboutString.equals("Χ¦Χ•Χ¨ Χ§Χ©Χ¨")) {
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					pageTitleTest(driver.getTitle(), "ιφιψϊ χωψ", exm, test);
+					pageTitleTest(driver.getTitle(), "Χ™Χ¦Χ™Χ¨Χª Χ§Χ©Χ¨", exm, test);
 				} else {
 					test.fail("you not in " + aboutString + " page",
 							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
@@ -134,15 +134,15 @@ public class Footer_Buttom extends func {
 				// Check if I got to the right page
 				if (driver.getTitle().contains(aboutString)) {
 					test.pass("you in " + aboutString + " page");
-				} else if (aboutString.equals("ξγιπιεϊ ξωμεηιν")) {
+				} else if (aboutString.equals("ΧΧ“Χ™Χ Χ™Χ•Χª ΧΧ©ΧΧ•Χ—Χ™Χ")) {
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					pageTitleTest(driver.getTitle(), "ϊχπεο ξωμεηιν", exm, test);
-				} else if (aboutString.equals("ϊχπεπιν")) {
+					pageTitleTest(driver.getTitle(), "ΧªΧ§Χ Χ•Χ ΧΧ©ΧΧ•Χ—Χ™Χ", exm, test);
+				} else if (aboutString.equals("ΧªΧ§Χ Χ•Χ Χ™Χ")) {
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					pageTitleTest(driver.getTitle(), "ϊχπεο ξεςγεο μχεηεϊ", exm, test);
-				} else if (aboutString.equals("ξγιπιεϊ δηζψεϊ ξεφψιν")) {
+					pageTitleTest(driver.getTitle(),"ΧªΧ§Χ Χ•Χ ΧΧ•ΧΆΧ“Χ•Χ ΧΧ§Χ•Χ—Χ•Χª", exm, test);
+				} else if (aboutString.equals("ΧΧ“Χ™Χ Χ™Χ•Χª Χ”Χ—Χ–Χ¨Χ•Χª ΧΧ•Χ¦Χ¨Χ™Χ")) {
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					pageTitleTest(driver.getTitle(), "ξγιπιεϊ δηζψϊ ξεφψιν εαιθεμι ςιρχΰεϊ", exm, test);
+					pageTitleTest(driver.getTitle(), "ΧΧ“Χ™Χ Χ™Χ•Χª Χ”Χ—Χ–Χ¨Χª ΧΧ•Χ¦Χ¨Χ™Χ Χ•Χ‘Χ™ΧΧ•ΧΧ™ ΧΆΧ™Χ΅Χ§ΧΧ•Χª", exm, test);
 				} else {
 					test.fail("you not in " + aboutString + " page",
 							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
@@ -166,7 +166,7 @@ public class Footer_Buttom extends func {
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			driver.switchTo().window(tabs2.get(1));
 			// Check if I got to the right page
-			pageTitleTest(driver.getTitle(), "ρθιξφχι - γσ δαιϊ | τιιραεχ", exm, test);
+			pageTitleTest(driver.getTitle(), "Χ΅ΧΧ™ΧΧ¦Χ§Χ™ - Χ“Χ£ Χ”Χ‘Χ™Χª | Χ¤Χ™Χ™Χ΅Χ‘Χ•Χ§", exm, test);
 		} catch (Exception e) {
 			test.fail("The link test of facebook fail",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());

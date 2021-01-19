@@ -58,7 +58,7 @@ public class Login extends setUp {
 	@Test(priority = 1)
 	public void Correct_Login() throws IOException, AWTException {
 		login_user.Login(Title, exm, test, actions);
-		if (pof.loginbox.getText().equals("ωμεν ψεςι")) {
+		if (pof.loginbox.getText().equals("Χ©ΧΧ•Χ Χ¨Χ•ΧΆΧ™")) {
 			test.pass("Login verified");
 		} else {
 			test.fail("Login not verified",
@@ -69,7 +69,7 @@ public class Login extends setUp {
 	@Test(priority = 2,dependsOnMethods = {"Correct_Login"})
 	public void logout() throws AWTException, IOException {
 		pof.logout.click();
-		if (pof.login.getText().equals("δϊηαψεϊ")) {
+		if (pof.login.getText().equals("Χ”ΧªΧ—Χ‘Χ¨Χ•Χª")) {
 			test.pass("Logout verified");
 		}else {
 			test.fail("Logout not verified",

@@ -62,7 +62,7 @@ public class search extends func {
 				pof.submit.click();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// test if products is found
-				if (driver.findElement(By.xpath("//h1")).getText().contains("ϊεφΰεϊ ηιτεω")) {
+				if (driver.findElement(By.xpath("//h1")).getText().contains("ΧªΧ•Χ¦ΧΧ•Χª Χ—Χ™Χ¤Χ•Χ©")) {
 					resuleTest2(pof.product_grid, value, exm, test2);
 				} else if (driver.findElement(By.xpath("//div[@id='product-info']/h1[@class='productTitle']")).isDisplayed()) {
 					String Description = "All products contains the " + value + "";
@@ -95,7 +95,7 @@ public class search extends func {
 				pof.submit.click();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// test if products is found
-				if (driver.findElement(By.xpath("//h1")).getText().contains("ϊεφΰεϊ ηιτεω")) {
+				if (driver.findElement(By.xpath("//h1")).getText().contains("ΧªΧ•Χ¦ΧΧ•Χª Χ—Χ™Χ¤Χ•Χ©")) {
 					resuleTest2(pof.authorTitle, value, exm, test);
 				} else if (driver.findElement(By.xpath("//div[@id='product-info']/h1[@class='productTitle']")).isDisplayed()) {
 					String Description = "All products contains the " + value + "";
@@ -128,7 +128,7 @@ public class search extends func {
 				pof.submit.click();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// test if products is found
-				if (driver.findElement(By.xpath("//h1")).getText().contains("ϊεφΰεϊ ηιτεω")) {
+				if (driver.findElement(By.xpath("//h1")).getText().contains("ΧªΧ•Χ¦ΧΧ•Χª Χ—Χ™Χ¤Χ•Χ©")) {
 					resuleTest2(pof.authorTitle, value, exm, test2);
 				} else if (driver.findElement(By.xpath("//div[@id='product-info']/h1[@class='productTitle']")).isDisplayed()) {
 					String Description = "All products contains the " + value + "";
@@ -164,7 +164,7 @@ public class search extends func {
 				// test if products is found
 				if (pof.note.getText().contains("Maximum words count is 10. In your search query was cut next part:")) {
 					test.pass("You can not search more than 10 words");
-				}else if (pof.note.getText().contains("ΰιο ϊεφΰεϊ μωΰιμϊϊ ηιτεω ωμκ")) {
+				}else if (pof.note.getText().contains("ΧΧ™Χ ΧªΧ•Χ¦ΧΧ•Χª ΧΧ©ΧΧ™ΧΧªΧª Χ—Χ™Χ¤Χ•Χ© Χ©ΧΧ")) {
 					test.pass(Description + " not found products");
 				} else {
 					test.fail(Description + " found products",
@@ -196,9 +196,9 @@ public class search extends func {
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				String Description = "The Boundary test with " + value + "";
 				// test if products is found
-				if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("ΰιο ϊεφΰεϊ μωΰιμϊϊ ηιτεω ωμκ") && search.length() <= 128 && search.length() >= 3) {
+				if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("ΧΧ™Χ ΧªΧ•Χ¦ΧΧ•Χª ΧΧ©ΧΧ™ΧΧªΧª Χ—Χ™Χ¤Χ•Χ© Χ©ΧΧ") && search.length() <= 128 && search.length() >= 3) {
 					test.pass(Description + " pass");
-				} else if (pof.note.getText().contains("ΰεψκ ωΰιμϊϊ ηιτεω ξιπιξμι δεΰ 3")) {
+				} else if (pof.note.getText().contains("ΧΧ•Χ¨Χ Χ©ΧΧ™ΧΧªΧª Χ—Χ™Χ¤Χ•Χ© ΧΧ™Χ Χ™ΧΧΧ™ Χ”Χ•Χ 3")) {
 					test.pass("Minimum search query length is 3");
 				}else {
 					test.fail(Description + " fail",
@@ -223,7 +223,7 @@ public class search extends func {
 			pof.submit.click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if products is found
-			if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("ΰιο ϊεφΰεϊ μωΰιμϊϊ ηιτεω ωμκ")) {
+			if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("ΧΧ™Χ ΧªΧ•Χ¦ΧΧ•Χª ΧΧ©ΧΧ™ΧΧªΧª Χ—Χ™Χ¤Χ•Χ© Χ©ΧΧ")) {
 				test.pass("Test pass of num search");
 			} else {
 				test.fail("Test fail of num search",
@@ -252,9 +252,9 @@ public class search extends func {
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				String search = pof.search.getAttribute("value");
 				// test if search field is clear
-				if (search.equals("ξδ ϊψφε μχπεϊ διεν?")) {
+				if (search.equals("ΧΧ” ΧªΧ¨Χ¦Χ• ΧΧ§Χ Χ•Χª Χ”Χ™Χ•Χ?")) {
 					test.pass("The search field is cleared");
-				} else if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("ΰιο ϊεφΰεϊ μωΰιμϊϊ ηιτεω ωμκ")) {
+				} else if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("ΧΧ™Χ ΧªΧ•Χ¦ΧΧ•Χª ΧΧ©ΧΧ™ΧΧªΧª Χ—Χ™Χ¤Χ•Χ© Χ©ΧΧ")) {
 					test.info("No product found");
 					pof.search.clear();
 				} else {

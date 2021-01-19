@@ -46,8 +46,8 @@ public class Navigation_bar extends func {
 				actions.moveToElement(pof.mCategory.get(i)).click().perform();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// Check if page title is equal to link text
-				if (topItemString.equals("ξεςγεο μχεηεϊ")) {
-					pageTitleTest("ηαψεϊ αξεςγεο δχεψΰιν ωμ ρθιξφχι - δριτεψ ωμι",
+				if (topItemString.equals("ΧΧ•ΧΆΧ“Χ•Χ ΧΧ§Χ•Χ—Χ•Χª")) {
+					pageTitleTest("Χ—Χ‘Χ¨Χ•Χª Χ‘ΧΧ•ΧΆΧ“Χ•Χ Χ”Χ§Χ•Χ¨ΧΧ™Χ Χ©Χ Χ΅ΧΧ™ΧΧ¦Χ§Χ™ - Χ”Χ΅Χ™Χ¤Χ•Χ¨ Χ©ΧΧ™",
 							driver.findElement(By.xpath("//div[@class='page-title']/h1")).getText(), exm, test);
 				} else {
 					pageTitleTest(topItemString, driver.findElement(By.className("pageTitle")).getText(), exm, test);
@@ -77,7 +77,7 @@ public class Navigation_bar extends func {
 					driver.switchTo().window(tabs2.get(1));
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 					// Check if the browser in right page
-					pageTitleTest(driver.getTitle(), "ρτψιν γιβιθμιιν αςαψιϊ μδεψγδ", exm, test);
+					pageTitleTest(driver.getTitle(), "Χ΅Χ¤Χ¨Χ™Χ Χ“Χ™Χ’Χ™ΧΧΧ™Χ™Χ Χ‘ΧΆΧ‘Χ¨Χ™Χª ΧΧ”Χ•Χ¨Χ“Χ”", exm, test);
 					driver.close();
 					driver.switchTo().window(tabs2.get(0));
 				} else if (tabs2.size() == 1) {
@@ -159,7 +159,8 @@ public class Navigation_bar extends func {
 				actions.moveToElement(pof.music_subCategory.get(i)).click().perform();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// Check if page title is equal to link text
-				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1[@class='pageTitle']")).getText(),exm, test);
+				pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//h1[@class='pageTitle']")).getText(),
+						exm, test);
 			}
 		} catch (Exception e) {
 			test.fail("The test of music subCategory links test fail",
@@ -272,14 +273,14 @@ public class Navigation_bar extends func {
 				pof.club_subCategory.get(i).click();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// Check if page title is equal to link text
-				if (subcatagoryString.equals("ηαψεϊ αξεςγεο")) {
+				if (subcatagoryString.equals("Χ—Χ‘Χ¨Χ•Χª Χ‘ΧΧ•ΧΆΧ“Χ•Χ")) {
 					pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(),
-							"ηαψεϊ αξεςγεο δχεψΰιν ωμ ρθιξφχι - δριτεψ ωμι", exm, test1);
-				} else if (subcatagoryString.equals("ϊχπεο δξεςγεο")) {
-					pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "ϊχπεο ξεςγεο δχεψΰιν ωμ ρθιξφχι",
+							"Χ—Χ‘Χ¨Χ•Χª Χ‘ΧΧ•ΧΆΧ“Χ•Χ Χ”Χ§Χ•Χ¨ΧΧ™Χ Χ©Χ Χ΅ΧΧ™ΧΧ¦Χ§Χ™ - Χ”Χ΅Χ™Χ¤Χ•Χ¨ Χ©ΧΧ™", exm, test1);
+				} else if (subcatagoryString.equals("ΧªΧ§Χ Χ•Χ Χ”ΧΧ•ΧΆΧ“Χ•Χ")) {
+					pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "ΧªΧ§Χ Χ•Χ ΧΧ•ΧΆΧ“Χ•Χ Χ”Χ§Χ•Χ¨ΧΧ™Χ Χ©Χ Χ΅ΧΧ™ΧΧ¦Χ§Χ™",
 							exm, test);
-				} else if (subcatagoryString.equals("δτψθιν ωμι")) {
-					pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "ξεςγεο μχεηεϊ ρθιξφχι", exm,
+				} else if (subcatagoryString.equals("Χ”Χ¤Χ¨ΧΧ™Χ Χ©ΧΧ™")) {
+					pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(), "ΧΧ•ΧΆΧ“Χ•Χ ΧΧ§Χ•Χ—Χ•Χª Χ΅ΧΧ™ΧΧ¦Χ§Χ™", exm,
 							test);
 				} else {
 					pageTitleTest(subcatagoryString, driver.findElement(By.xpath("//div/h1")).getText(), exm, test);
