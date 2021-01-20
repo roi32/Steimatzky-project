@@ -6,6 +6,7 @@
       <class name="Login_Registration.Login">
         <methods>
           <include name="afterClass"/>
+          <include name="worng_pass_num"/>
           <include name="beforeClass"/>
           <include name="beforeMethod"/>
           <include name="worng_pass"/>

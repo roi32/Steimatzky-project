@@ -38,6 +38,7 @@ public class Login extends setUp {
 		extent = Extent_reports.GetExtent(Title);
 		test = Extent_reports.createTest("login test", "Correct Login - test");
 		test1 = Extent_reports.createTest("login test", "Negative Login - test");
+		test2 = Extent_reports.createTest("login test", "Unregister email - test");
 		WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		driver = new ChromeDriver();
@@ -80,6 +81,7 @@ public class Login extends setUp {
 
 	@Test(priority = 3)
 	public void Empty_text_fields() throws InterruptedException, AWTException, IOException {
+		test1.info("--------- Empty text fields test ---------");
 		actions.moveToElement(pof.login).click().perform();
 		Thread.sleep(1000);
 		// click on login
@@ -102,6 +104,7 @@ public class Login extends setUp {
 
 	@Test(priority = 4)
 	public void worng_email() throws IOException, AWTException, InterruptedException {
+		test1.info("--------- worng email test ---------");
 		int rows = 0;
 		pof.pass.sendKeys("123456");
 		while (rows <= 3) {
@@ -122,8 +125,27 @@ public class Login extends setUp {
 	}
 
 	@Test(priority = 5)
+	public void worng_email_num() throws IOException, AWTException, InterruptedException {
+		test1.info("--------- worng email num test ---------");
+		pof.pass.sendKeys("123456");
+		pof.email.clear();
+		pof.email.sendKeys("1");
+		pof.send2.click();
+		Thread.sleep(2000);
+		if (pof.error_email2.isDisplayed()
+				&& pof.error_email2.getText().equals("נראה שנפלה טעות בכתובת הדוא\"ל. אנא בדקו ונסו שוב")) {
+			test1.pass("The email error massage is displayed");
+		} else {
+			test1.fail("The email error massage is not displayed",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+
+	}
+
+	@Test(priority = 6)
 	public void worng_pass()
 			throws IOException, InterruptedException, AWTException, ParserConfigurationException, SAXException {
+		test1.info("--------- worng pass test ---------");
 		int rows = 0;
 		pof.email.clear();
 		pof.email.sendKeys(func.getData("email"));
@@ -145,6 +167,36 @@ public class Login extends setUp {
 			}
 			rows++;
 		}
+	}
+
+	@Test(priority = 7)
+	public void worng_pass_num()
+			throws IOException, InterruptedException, AWTException, ParserConfigurationException, SAXException {
+		test1.info("--------- worng pass num test ---------");
+		pof.email.clear();
+		pof.email.sendKeys(func.getData("email"));
+		pof.pass.clear();
+		pof.pass.sendKeys("1");
+		pof.send2.click();
+		Thread.sleep(2000);
+		if (pof.error_pass2.isDisplayed()
+				&& pof.error_pass2.getText().equals("נראה שנפלה טעות בהקשת הסיסמה . אנא בדקו ונסו שוב.")) {
+			test1.pass("The password error massage is displayed");
+		} else {
+			test1.fail("The password error massage is not displayed",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+	}
+
+	// WIP
+	@Test(priority = 8, enabled = false)
+	public void Unregister_email() {
+		test2.info("--------- Unregister email test ---------");
+		pof.email.clear();
+		pof.pass.click();
+		pof.email.sendKeys("roi@gmail.com");
+		pof.pass.sendKeys("123456");
+		pof.send2.click();
 
 	}
 }

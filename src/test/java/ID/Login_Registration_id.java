@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class Login_Registration_id {
+	
 
 	@FindBy(how = How.ID, using = "email")
 	public WebElement email;
@@ -38,5 +39,5 @@ public class Login_Registration_id {
 
 	@FindBy(how = How.XPATH, using = "//div[@class='ajs-dialog']//button[@class='ajs-button']")
 	public WebElement ajs_button;
-
+	
 }
