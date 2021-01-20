@@ -17,6 +17,7 @@ public class Runner {
 	public static JLabel label2 = new JLabel();
 	public static JLabel label3 = new JLabel();
 
+
 	public static void main(String[] args) {
 
 		frame.setSize(300, 300);
