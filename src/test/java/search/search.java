@@ -16,7 +16,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class search extends func {
-
+	static String fileString="search - test.xlsx";
 	static String sheet = "text_search";
 	static elelments_id pof = new elelments_id();
 
@@ -54,7 +54,7 @@ public class search extends func {
 
 			while (rows <= 9) {
 				// read from excel file
-				String value = value(rows, 0, sheet);
+				String value = value(rows, 0, sheet,fileString);
 				Thread.sleep(500);
 				// search the product
 				pof.search.clear();
@@ -87,7 +87,7 @@ public class search extends func {
 			int rows = 0;
 			while (rows <= 11) {
 				// read from excel file
-				String value = value(rows, 1, sheet);
+				String value = value(rows, 1, sheet,fileString);
 				Thread.sleep(500);
 				// search the product
 				pof.search.clear();
@@ -120,7 +120,7 @@ public class search extends func {
 			int rows = 0;
 			while (rows <= 6) {
 				// read from excel file
-				String value = value(rows, 2, sheet);
+				String value = value(rows, 2, sheet,fileString);
 				Thread.sleep(500);
 				// search the product
 				pof.search.clear();
@@ -153,7 +153,7 @@ public class search extends func {
 			int rows = 0;
 			while (rows <= 7) {
 				// read from excel file
-				String value = value(rows, 3, sheet);
+				String value = value(rows, 3, sheet,fileString);
 				Thread.sleep(500);
 				// search the product
 				pof.search.clear();
@@ -186,7 +186,7 @@ public class search extends func {
 			int rows = 0;
 			while (rows <= 4) {
 				// read from excel file
-				String value = value(rows, 4, sheet);
+				String value = value(rows, 4, sheet,fileString);
 				Thread.sleep(500);
 				// search the product
 				pof.search.clear();
@@ -244,7 +244,7 @@ public class search extends func {
 			int rows = 0;
 			while (rows <= 30) {
 				// read from excel file
-				String value = value(rows, 0, "Product_search");
+				String value = value(rows, 0, "Product_search",fileString);
 				Thread.sleep(500);
 				// search the value
 				pof.search.sendKeys(value);

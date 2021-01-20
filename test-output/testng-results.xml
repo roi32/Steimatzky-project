@@ -1,41 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-19T13:54:25 IST" name="Default suite" finished-at="2021-01-19T13:54:43 IST" duration-ms="18003">
+  <suite started-at="2021-01-20T12:27:53 IST" name="Default suite" finished-at="2021-01-20T12:28:26 IST" duration-ms="33612">
     <groups>
     </groups>
-    <test started-at="2021-01-19T13:54:25 IST" name="Default test" finished-at="2021-01-19T13:54:43 IST" duration-ms="18003">
+    <test started-at="2021-01-20T12:27:53 IST" name="Default test" finished-at="2021-01-20T12:28:26 IST" duration-ms="33612">
       <class name="Login_Registration.Login">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Login_Registration.Login@446293d]" started-at="2021-01-19T13:54:25 IST" name="beforeClass" finished-at="2021-01-19T13:54:34 IST" duration-ms="8866" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Login_Registration.Login@793be5ca]" started-at="2021-01-20T12:27:53 IST" name="beforeClass" finished-at="2021-01-20T12:27:58 IST" duration-ms="5768" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@446293d]" started-at="2021-01-19T13:54:34 IST" name="beforeMethod" finished-at="2021-01-19T13:54:34 IST" duration-ms="17" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@793be5ca]" started-at="2021-01-20T12:27:58 IST" name="beforeMethod" finished-at="2021-01-20T12:27:58 IST" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="Correct_Login()[pri:1, instance:Login_Registration.Login@446293d]" started-at="2021-01-19T13:54:34 IST" name="Correct_Login" finished-at="2021-01-19T13:54:39 IST" duration-ms="4583" status="PASS">
+        <test-method signature="Correct_Login()[pri:1, instance:Login_Registration.Login@793be5ca]" started-at="2021-01-20T12:27:58 IST" name="Correct_Login" finished-at="2021-01-20T12:28:03 IST" duration-ms="4530" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Correct_Login -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@446293d]" started-at="2021-01-19T13:54:39 IST" name="beforeMethod" finished-at="2021-01-19T13:54:39 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@793be5ca]" started-at="2021-01-20T12:28:03 IST" name="beforeMethod" finished-at="2021-01-20T12:28:03 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="logout()[pri:2, instance:Login_Registration.Login@446293d]" started-at="2021-01-19T13:54:39 IST" name="logout" finished-at="2021-01-19T13:54:40 IST" depends-on-methods="Login_Registration.Login.Correct_Login" duration-ms="1257" status="PASS">
+        <test-method signature="logout()[pri:2, instance:Login_Registration.Login@793be5ca]" started-at="2021-01-20T12:28:03 IST" name="logout" finished-at="2021-01-20T12:28:05 IST" depends-on-methods="Login_Registration.Login.Correct_Login" duration-ms="2537" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@446293d]" started-at="2021-01-19T13:54:40 IST" name="beforeMethod" finished-at="2021-01-19T13:54:40 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@793be5ca]" started-at="2021-01-20T12:28:05 IST" name="beforeMethod" finished-at="2021-01-20T12:28:05 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="Empty_text_fields()[pri:3, instance:Login_Registration.Login@446293d]" started-at="2021-01-19T13:54:40 IST" name="Empty_text_fields" finished-at="2021-01-19T13:54:43 IST" duration-ms="2455" status="PASS">
+        <test-method signature="Empty_text_fields()[pri:3, instance:Login_Registration.Login@793be5ca]" started-at="2021-01-20T12:28:05 IST" name="Empty_text_fields" finished-at="2021-01-20T12:28:08 IST" duration-ms="2434" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Empty_text_fields -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Login_Registration.Login@446293d]" started-at="2021-01-19T13:54:43 IST" name="afterClass" finished-at="2021-01-19T13:54:43 IST" duration-ms="800" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@793be5ca]" started-at="2021-01-20T12:28:08 IST" name="beforeMethod" finished-at="2021-01-20T12:28:08 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="worng_email()[pri:4, instance:Login_Registration.Login@793be5ca]" started-at="2021-01-20T12:28:08 IST" name="worng_email" finished-at="2021-01-20T12:28:17 IST" duration-ms="8847" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- worng_email -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@793be5ca]" started-at="2021-01-20T12:28:17 IST" name="beforeMethod" finished-at="2021-01-20T12:28:17 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="worng_pass()[pri:5, instance:Login_Registration.Login@793be5ca]" started-at="2021-01-20T12:28:17 IST" name="worng_pass" finished-at="2021-01-20T12:28:25 IST" duration-ms="8650" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- worng_pass -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Login_Registration.Login@793be5ca]" started-at="2021-01-20T12:28:25 IST" name="afterClass" finished-at="2021-01-20T12:28:26 IST" duration-ms="795" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

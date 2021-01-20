@@ -43,8 +43,8 @@ public class func extends setUp {
 	}
 
 	@SuppressWarnings("resource")
-	public static String value(int rows, int cell, String sheets) throws IOException {
-		FileInputStream fis3 = new FileInputStream("search - test.xlsx");
+	public static String value(int rows, int cell, String sheets,String fileString) throws IOException {
+		FileInputStream fis3 = new FileInputStream(fileString);
 		XSSFWorkbook wb = new XSSFWorkbook(fis3);
 		XSSFSheet sheet = wb.getSheet(sheets);
 		XSSFRow row_r = sheet.getRow(rows);

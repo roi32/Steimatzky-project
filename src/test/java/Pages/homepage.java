@@ -21,6 +21,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import GUI.Runner;
 import ID.homepage_id;
 
 public class homepage extends setUp {
@@ -54,6 +55,7 @@ public class homepage extends setUp {
 	@AfterClass
 	public void AfterClass() {
 		extent.flush();
+		Runner.label1.setText("Home page test ended");
 		driver.quit();
 	}
 

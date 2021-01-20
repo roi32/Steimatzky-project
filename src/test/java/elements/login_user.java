@@ -17,10 +17,11 @@ import Tools.setUp;
 public class login_user extends setUp {
 	static elelments_id pof = new elelments_id();
 
-	public static void Login(String Description, Extent_reports exm, ExtentTest test,Actions actions) throws IOException, AWTException {
-		
+	public static void Login(String Description, Extent_reports exm, ExtentTest test, Actions actions)
+			throws IOException, AWTException {
+
 		pof = PageFactory.initElements(driver, elelments_id.class);
-		
+
 		try {
 			actions.moveToElement(pof.login).click().perform();
 			Thread.sleep(2000);
@@ -31,6 +32,12 @@ public class login_user extends setUp {
 			actions.moveToElement(pof.send2).click().perform();
 			Thread.sleep(2000);
 			test.pass("User login successful - " + Description);
+			if (pof.loginbox.getText().equals("שלום רועי")) {
+				test.pass("Login verified");
+			} else {
+				test.fail("Login not verified",
+						MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			}
 		} catch (Exception e) {
 			test.fail("User login failed" + Description,
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());

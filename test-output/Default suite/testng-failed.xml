@@ -3,18 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Pages.homepage">
+      <class name="Login_Registration.Login">
         <methods>
-          <include name="SearchProduct"/>
-          <include name="BeforeMethod"/>
-          <include name="AfterClass"/>
-          <include name="Search"/>
-          <include name="login_user"/>
-          <include name="Navigation_bar"/>
-          <include name="footer"/>
-          <include name="BeforeClass"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="worng_pass"/>
         </methods>
-      </class> <!-- Pages.homepage -->
+      </class> <!-- Login_Registration.Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

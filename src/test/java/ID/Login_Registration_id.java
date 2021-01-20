@@ -26,7 +26,17 @@ public class Login_Registration_id {
 
 	@FindBy(how = How.ID, using = "advice-required-entry-email")
 	public WebElement error_email;
-	
+
+	@FindBy(how = How.ID, using = "advice-validate-email-email")
+	public WebElement error_email2;
+
 	@FindBy(how = How.ID, using = "advice-required-entry-pass")
 	public WebElement error_pass;
+
+	@FindBy(how = How.ID, using = "advice-validate-password-pass")
+	public WebElement error_pass2;
+
+	@FindBy(how = How.XPATH, using = "//div[@class='ajs-dialog']//button[@class='ajs-button']")
+	public WebElement ajs_button;
+
 }
