@@ -52,7 +52,6 @@ public class Login extends setUp {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		pof = new Login_Registration_id();
 		pof = PageFactory.initElements(driver, Login_Registration_id.class);
-
 	}
 
 	@AfterClass

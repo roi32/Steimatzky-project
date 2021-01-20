@@ -39,10 +39,10 @@ public class Extent_reports {
 	static DateFormat df = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
 	static Date today = Calendar.getInstance().getTime();
 	static String reportDate = df.format(today);
-	public static String filePath = "C:\\test\\" + reportDate + "\\exReport.html";
+	public static String filePath = reportDate + "\\exReport.html";
 
 	public static ExtentReports GetExtent(String Title) {
-		new File("C:\\test\\" + reportDate).mkdirs();
+		new File(reportDate).mkdirs();
 		if (extent != null)
 			return extent;
 		extent = new ExtentReports();
@@ -67,7 +67,7 @@ public class Extent_reports {
 	public String CaptureScreen() throws AWTException, IOException {
 		LocalDateTime now = LocalDateTime.now();
 		String time = now.format(DateTimeFormatter.ofPattern("ddHHmmss"));
-		String folderPath = ("C:\\test\\" + reportDate);
+		String folderPath = (reportDate);
 		String imagePath = folderPath + "/pic" + time + ".jpg";
 		Robot robot = new Robot();
 		BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
