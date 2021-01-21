@@ -39,10 +39,10 @@ public class Extent_reports {
 	static DateFormat df = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
 	static Date today = Calendar.getInstance().getTime();
 	static String reportDate = df.format(today);
-	public static String filePath = "report\\" + reportDate + "\\exReport.html";
+	public static String filePath = "C:\\" + reportDate + "\\exReport.html";
 
 	public static ExtentReports GetExtent(String Title) {
-		new File("report\\" + reportDate).mkdirs();
+		new File("C:\\" + reportDate).mkdirs();
 		if (extent != null)
 			return extent;
 		extent = new ExtentReports();
@@ -68,7 +68,7 @@ public class Extent_reports {
 		LocalDateTime now = LocalDateTime.now();
 		String time = now.format(DateTimeFormatter.ofPattern("ddHHmmss"));
 		String folderPath = (reportDate);
-		String imagePath = "report\\" + folderPath + "/pic" + time + ".jpg";
+		String imagePath = "C:\\" + folderPath + "/pic" + time + ".jpg";
 		Robot robot = new Robot();
 		BufferedImage screenShot = robot
 				.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
