@@ -119,7 +119,11 @@ public class elelments_id {
 
 	@FindBy(how = How.CLASS_NAME, using = "note-msg")
 	public WebElement note;
-	
+
 	@FindBy(how = How.XPATH, using = "//div[@class='loginbox islogin']/a[1]")
 	public WebElement loginbox;
+
+	@FindBy(how = How.XPATH, using = "//div[@id='search_autocomplete']/ul/li/div[1]/a[1]")
+	public List<WebElement> search_autocomplete;
+
 }

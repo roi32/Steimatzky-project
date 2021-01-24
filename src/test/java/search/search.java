@@ -270,6 +270,34 @@ public class search extends func {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
+		
+		pof = PageFactory.initElements(driver, elelments_id.class);
+
+		try {
+			test.info("---- search autocomplete test ------");
+			int rows = 0;
+			while (rows <= 9) {
+				// read from excel file
+				String value = value(rows, 0, sheet,fileString);
+				Thread.sleep(500);
+				// search the product
+				pof.search.clear();
+				pof.search.sendKeys(value);
+				pof.search.sendKeys(" ");
+				Thread.sleep(2000);
+				String autoString=pof.search_autocomplete.get(0).getAttribute("title");
+				resuleTest2(pof.search_autocomplete, value, exm, test);
+				pof.search_autocomplete.get(0).click();
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				pageTitleTest(driver.getTitle(), autoString, exm, test);
+				Thread.sleep(1000);
+				rows++;
+			}
+		} catch (Exception e) {
+			test.fail("The of search autocomplete test fail ",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			e.printStackTrace();
+		}
 
 	}
 }
