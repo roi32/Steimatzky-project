@@ -1,150 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-24T13:29:30 IST" name="steimatzky" finished-at="2021-01-24T13:30:17 IST" duration-ms="46779">
+  <suite started-at="2021-01-24T13:59:16 IST" name="steimatzky" finished-at="2021-01-24T13:59:55 IST" duration-ms="38915">
     <groups>
     </groups>
-    <test started-at="2021-01-24T13:29:30 IST" name="steimatzky - login test" finished-at="2021-01-24T13:30:17 IST" duration-ms="46779">
+    <test started-at="2021-01-24T13:59:16 IST" name="steimatzky - login test" finished-at="2021-01-24T13:59:55 IST" duration-ms="38915">
       <class name="Login_Registration.Login">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:30 IST" name="beforeClass" finished-at="2021-01-24T13:29:35 IST" duration-ms="4706" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:16 IST" name="beforeClass" finished-at="2021-01-24T13:59:21 IST" duration-ms="5107" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:35 IST" name="beforeMethod" finished-at="2021-01-24T13:29:35 IST" duration-ms="17" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:21 IST" name="beforeMethod" finished-at="2021-01-24T13:59:21 IST" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="Correct_Login()[pri:1, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:35 IST" name="Correct_Login" finished-at="2021-01-24T13:29:39 IST" duration-ms="4553" status="PASS">
+        <test-method signature="Correct_Login()[pri:1, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:21 IST" name="Correct_Login" finished-at="2021-01-24T13:59:26 IST" duration-ms="4945" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Correct_Login -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:39 IST" name="beforeMethod" finished-at="2021-01-24T13:29:39 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:26 IST" name="beforeMethod" finished-at="2021-01-24T13:59:26 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="logout()[pri:2, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:39 IST" name="logout" finished-at="2021-01-24T13:29:40 IST" depends-on-methods="Login_Registration.Login.Correct_Login" duration-ms="1158" status="PASS">
+        <test-method signature="logout()[pri:2, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:26 IST" name="logout" finished-at="2021-01-24T13:59:27 IST" depends-on-methods="Login_Registration.Login.Correct_Login" duration-ms="1406" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:40 IST" name="beforeMethod" finished-at="2021-01-24T13:29:40 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:27 IST" name="beforeMethod" finished-at="2021-01-24T13:59:27 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="Empty_text_fields()[pri:3, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:40 IST" name="Empty_text_fields" finished-at="2021-01-24T13:29:43 IST" duration-ms="2494" status="PASS">
+        <test-method signature="Empty_text_fields()[pri:3, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:27 IST" name="Empty_text_fields" finished-at="2021-01-24T13:59:30 IST" duration-ms="2434" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Empty_text_fields -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:43 IST" name="beforeMethod" finished-at="2021-01-24T13:29:43 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:30 IST" name="beforeMethod" finished-at="2021-01-24T13:59:30 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="worng_email()[pri:4, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:43 IST" name="worng_email" finished-at="2021-01-24T13:29:52 IST" duration-ms="8847" status="PASS">
+        <test-method signature="Enter_spaces_in_text_fields()[pri:4, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:30 IST" name="Enter_spaces_in_text_fields" finished-at="2021-01-24T13:59:31 IST" duration-ms="1277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Enter_spaces_in_text_fields -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:31 IST" name="beforeMethod" finished-at="2021-01-24T13:59:31 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="worng_email()[pri:5, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:31 IST" name="worng_email" finished-at="2021-01-24T13:59:40 IST" duration-ms="8820" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- worng_email -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:52 IST" name="beforeMethod" finished-at="2021-01-24T13:29:52 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:40 IST" name="beforeMethod" finished-at="2021-01-24T13:59:40 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="worng_email_num()[pri:5, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:52 IST" name="worng_email_num" finished-at="2021-01-24T13:29:54 IST" duration-ms="2162" status="PASS">
+        <test-method signature="worng_email_num()[pri:6, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:40 IST" name="worng_email_num" finished-at="2021-01-24T13:59:42 IST" duration-ms="2155" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- worng_email_num -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:54 IST" name="beforeMethod" finished-at="2021-01-24T13:29:54 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:42 IST" name="beforeMethod" finished-at="2021-01-24T13:59:42 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="worng_pass()[pri:6, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:54 IST" name="worng_pass" finished-at="2021-01-24T13:30:03 IST" duration-ms="8719" status="PASS">
+        <test-method signature="worng_pass()[pri:7, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:42 IST" name="worng_pass" finished-at="2021-01-24T13:59:51 IST" duration-ms="8695" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- worng_pass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:30:03 IST" name="beforeMethod" finished-at="2021-01-24T13:30:03 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:51 IST" name="beforeMethod" finished-at="2021-01-24T13:59:51 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="worng_pass_num()[pri:7, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:30:03 IST" name="worng_pass_num" finished-at="2021-01-24T13:30:05 IST" duration-ms="2312" status="PASS">
+        <test-method signature="worng_pass_num()[pri:8, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:51 IST" name="worng_pass_num" finished-at="2021-01-24T13:59:53 IST" duration-ms="2313" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- worng_pass_num -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:30:05 IST" name="beforeMethod" finished-at="2021-01-24T13:30:05 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:53 IST" name="beforeMethod" finished-at="2021-01-24T13:59:53 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="Unregister_email()[pri:8, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:30:05 IST" name="Unregister_email" finished-at="2021-01-24T13:30:16 IST" duration-ms="10946" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=88.0.4324.104)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-CLI6E80', ip: '10.100.102.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.104, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\royko\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55976}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 9633004db49192004e1176aa4af46fae]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=88.0.4324.104)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-CLI6E80', ip: '10.100.102.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.104, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\royko\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55976}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 9633004db49192004e1176aa4af46fae
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at com.sun.proxy.$Proxy14.click(Unknown Source)
-at Login_Registration.Login.Unregister_email(Login.java:203)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+        <test-method signature="Unregister_email()[pri:9, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:53 IST" name="Unregister_email" finished-at="2021-01-24T13:59:54 IST" duration-ms="909" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Unregister_email -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:30:16 IST" name="afterClass" finished-at="2021-01-24T13:30:17 IST" duration-ms="820" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Login_Registration.Login@668953c8]" started-at="2021-01-24T13:59:54 IST" name="afterClass" finished-at="2021-01-24T13:59:55 IST" duration-ms="793" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

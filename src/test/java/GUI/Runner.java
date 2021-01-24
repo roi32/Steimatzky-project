@@ -17,7 +17,6 @@ public class Runner {
 	public static JLabel label2 = new JLabel();
 	public static JLabel label3 = new JLabel();
 
-
 	public static void main(String[] args) {
 
 		frame.setSize(300, 300);
@@ -41,7 +40,7 @@ public class Runner {
 		btn.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent arg0) {
-				
+
 				try {
 					TestNG testng = new TestNG();
 					List<String> suites = Lists.newArrayList();
@@ -54,18 +53,17 @@ public class Runner {
 				}
 			}
 		});
-		
+
 		btn1.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent arg0) {
-				
+
 				try {
 					TestNG testng = new TestNG();
 					List<String> suites = Lists.newArrayList();
 					suites.add("Login.xml");
 					testng.setTestSuites(suites);
 					testng.run();
-					label2.setText("Login test ended");
 				} catch (Exception e) {
 					e.printStackTrace();
 					label2.setText("Login test fail");

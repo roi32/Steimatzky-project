@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-steimatzky" class="navigator-link">
-              <span class="suite-name border-failed">steimatzky</span>
+              <span class="suite-name border-passed">steimatzky</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-steimatzky" class="hide-methods failed suite-steimatzky"> (hide)</a> <!-- hide-methods failed suite-steimatzky -->
-                      <a href="#" panel-name="suite-steimatzky" class="show-methods failed suite-steimatzky"> (show)</a> <!-- show-methods failed suite-steimatzky -->
-                    </span>
-                    <div class="method-list-content failed suite-steimatzky">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-steimatzky" title="Login_Registration.Login" class="method navigator-link" hash-for-method="Unregister_email">Unregister_email</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-steimatzky -->
+                    <span class="method-stats">9 methods,   9 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -124,6 +110,16 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-steimatzky" title="Login_Registration.Login" class="method navigator-link" hash-for-method="Empty_text_fields">Empty_text_fields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-steimatzky" title="Login_Registration.Login" class="method navigator-link" hash-for-method="Enter_spaces_in_text_fields">Enter_spaces_in_text_fields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-steimatzky" title="Login_Registration.Login" class="method navigator-link" hash-for-method="Unregister_email">Unregister_email</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -163,42 +159,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-steimatzky" class="panel steimatzky">
-          <div class="suite-steimatzky-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">Login_Registration.Login</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="Unregister_email">
-                  </a> <!-- Unregister_email -->
-                  <span class="method-name">Unregister_email</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=88.0.4324.104)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-CLI6E80&apos;, ip: &apos;10.100.102.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.104, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\royko\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55976}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 9633004db49192004e1176aa4af46fae
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy14.click(Unknown Source)
-	at Login_Registration.Login.Unregister_email(Login.java:203)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-steimatzky-class-failed -->
           <div class="suite-steimatzky-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -217,6 +177,20 @@ Session ID: 9633004db49192004e1176aa4af46fae
                   <a name="Empty_text_fields">
                   </a> <!-- Empty_text_fields -->
                   <span class="method-name">Empty_text_fields</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Enter_spaces_in_text_fields">
+                  </a> <!-- Enter_spaces_in_text_fields -->
+                  <span class="method-name">Enter_spaces_in_text_fields</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Unregister_email">
+                  </a> <!-- Unregister_email -->
+                  <span class="method-name">Unregister_email</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -308,44 +282,48 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(8);
+data.addRows(9);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Unregister_email')
+data.setCell(0, 1, 'worng_email')
 data.setCell(0, 2, 'Login_Registration.Login')
-data.setCell(0, 3, 10946);
+data.setCell(0, 3, 8820);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'worng_email')
+data.setCell(1, 1, 'worng_pass')
 data.setCell(1, 2, 'Login_Registration.Login')
-data.setCell(1, 3, 8847);
+data.setCell(1, 3, 8695);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'worng_pass')
+data.setCell(2, 1, 'Correct_Login')
 data.setCell(2, 2, 'Login_Registration.Login')
-data.setCell(2, 3, 8719);
+data.setCell(2, 3, 4945);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'Correct_Login')
+data.setCell(3, 1, 'Empty_text_fields')
 data.setCell(3, 2, 'Login_Registration.Login')
-data.setCell(3, 3, 4553);
+data.setCell(3, 3, 2434);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'Empty_text_fields')
+data.setCell(4, 1, 'worng_pass_num')
 data.setCell(4, 2, 'Login_Registration.Login')
-data.setCell(4, 3, 2494);
+data.setCell(4, 3, 2313);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'worng_pass_num')
+data.setCell(5, 1, 'worng_email_num')
 data.setCell(5, 2, 'Login_Registration.Login')
-data.setCell(5, 3, 2312);
+data.setCell(5, 3, 2155);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'worng_email_num')
+data.setCell(6, 1, 'logout')
 data.setCell(6, 2, 'Login_Registration.Login')
-data.setCell(6, 3, 2162);
+data.setCell(6, 3, 1406);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'logout')
+data.setCell(7, 1, 'Enter_spaces_in_text_fields')
 data.setCell(7, 2, 'Login_Registration.Login')
-data.setCell(7, 3, 1158);
+data.setCell(7, 3, 1277);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'Unregister_email')
+data.setCell(8, 2, 'Login_Registration.Login')
+data.setCell(8, 3, 909);
 window.suiteTableData['steimatzky']= { tableData: data, tableDiv: 'times-div-steimatzky'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 41 seconds</span>
+              <span class="suite-total-time">Total running time: 32 seconds</span>
               <div id="times-div-steimatzky">
               </div> <!-- times-div-steimatzky -->
             </div> <!-- times-div -->
@@ -378,73 +356,79 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">4712 ms</span>
+                <span class="method-start">5115 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">Correct_Login</span>
-                <span class="method-start">4729 ms</span>
+                <span class="method-start">5132 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">9285 ms</span>
+                <span class="method-start">10079 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">logout</span>
-                <span class="method-start">9288 ms</span>
+                <span class="method-start">10083 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">10447 ms</span>
+                <span class="method-start">11490 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">Empty_text_fields</span>
-                <span class="method-start">10450 ms</span>
+                <span class="method-start">11493 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">12944 ms</span>
+                <span class="method-start">13927 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Enter_spaces_in_text_fields</span>
+                <span class="method-start">13930 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">15207 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">worng_email</span>
-                <span class="method-start">12948 ms</span>
+                <span class="method-start">15210 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">21796 ms</span>
+                <span class="method-start">24030 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">worng_email_num</span>
-                <span class="method-start">21798 ms</span>
+                <span class="method-start">24032 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">23961 ms</span>
+                <span class="method-start">26187 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">worng_pass</span>
-                <span class="method-start">23963 ms</span>
+                <span class="method-start">26190 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">32683 ms</span>
+                <span class="method-start">34886 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">worng_pass_num</span>
-                <span class="method-start">32686 ms</span>
+                <span class="method-start">34889 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">34999 ms</span>
+                <span class="method-start">37202 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">Unregister_email</span>
-                <span class="method-start">35001 ms</span>
+                <span class="method-start">37204 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">45949 ms</span>
+                <span class="method-start">38114 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

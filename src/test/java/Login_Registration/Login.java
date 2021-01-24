@@ -5,6 +5,7 @@ import org.xml.sax.SAXException;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 
+import GUI.Runner;
 import ID.Login_Registration_id;
 import Tools.Extent_reports;
 import Tools.func;
@@ -57,6 +58,7 @@ public class Login extends setUp {
 	@AfterClass
 	public void afterClass() {
 		extent.flush();
+		Runner.label2.setText("Login test ended");
 		driver.quit();
 	}
 
@@ -102,6 +104,29 @@ public class Login extends setUp {
 	}
 
 	@Test(priority = 4)
+	public void Enter_spaces_in_text_fields() throws InterruptedException, AWTException, IOException {
+		test1.info("--------- Enter spaces in text fields test ---------");
+		pof.email.sendKeys("  ");
+		pof.pass.sendKeys("  ");
+		// click on login
+		actions.moveToElement(pof.send2).click().perform();
+		// Check if error massages is displayed
+		if (pof.error_email.isDisplayed() && pof.error_email.getText().equals("שדה זה הינו חובה.")) {
+			test1.pass("The email error massage is displayed");
+		} else {
+			test1.fail("The email error massage is not displayed",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+		if (pof.error_pass.isDisplayed() && pof.error_pass.getText().equals("שדה זה הינו חובה.")) {
+			test1.pass("The password error massage is displayed");
+		} else {
+			test1.fail("The password error massage is not displayed",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+		Thread.sleep(1000);
+	}
+
+	@Test(priority = 5)
 	public void worng_email() throws IOException, AWTException, InterruptedException {
 		test1.info("--------- worng email test ---------");
 		int rows = 0;
@@ -123,7 +148,7 @@ public class Login extends setUp {
 
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 6)
 	public void worng_email_num() throws IOException, AWTException, InterruptedException {
 		test1.info("--------- worng email num test ---------");
 		pof.pass.sendKeys("123456");
@@ -141,7 +166,7 @@ public class Login extends setUp {
 
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 7)
 	public void worng_pass()
 			throws IOException, InterruptedException, AWTException, ParserConfigurationException, SAXException {
 		test1.info("--------- worng pass test ---------");
@@ -170,7 +195,7 @@ public class Login extends setUp {
 		}
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 8)
 	public void worng_pass_num()
 			throws IOException, InterruptedException, AWTException, ParserConfigurationException, SAXException {
 		test1.info("--------- worng pass num test ---------");
@@ -189,7 +214,7 @@ public class Login extends setUp {
 		}
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 9)
 	public void Unregister_email() throws AWTException, IOException {
 		test2.info("--------- Unregister email test ---------");
 		pof.email.clear();
@@ -202,7 +227,7 @@ public class Login extends setUp {
 			test2.pass(("Error message username does not exist appears"));
 			test2.pass((pof.ajs_content.getText()));
 		} else {
-			test2.fail("Error message Existing username does not appear",
+			test2.fail("Error message username does not exist is not appears",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
 
