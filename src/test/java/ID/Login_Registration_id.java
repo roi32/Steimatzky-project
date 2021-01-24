@@ -39,5 +39,8 @@ public class Login_Registration_id {
 
 	@FindBy(how = How.XPATH, using = "//div[@class='ajs-dialog']//button[@class='ajs-button']")
 	public WebElement ajs_button;
-	
+
+	@FindBy(how = How.XPATH, using = "//div[@class='alertify  ajs-closable ajs-unpinned ajs-pulse']/div[2]/div/div[3]/div")
+	public WebElement ajs_content;
+
 }

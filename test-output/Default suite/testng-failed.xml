@@ -9,7 +9,6 @@
           <include name="worng_pass_num"/>
           <include name="beforeClass"/>
           <include name="beforeMethod"/>
-          <include name="worng_pass"/>
         </methods>
       </class> <!-- Login_Registration.Login -->
     </classes>

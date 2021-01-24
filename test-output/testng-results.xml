@@ -1,79 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-21T11:36:03 IST" name="steimatzky" finished-at="2021-01-21T11:49:18 IST" duration-ms="794831">
+  <suite started-at="2021-01-24T13:29:30 IST" name="steimatzky" finished-at="2021-01-24T13:30:17 IST" duration-ms="46779">
     <groups>
-      <group name="home page">
-        <method signature="homepage.login_user()[pri:1, instance:Pages.homepage@1a6bdc7b]" name="login_user" class="Pages.homepage"/>
-        <method signature="homepage.callPoppup()[pri:2, instance:Pages.homepage@1a6bdc7b]" name="callPoppup" class="Pages.homepage"/>
-      </group> <!-- home page -->
-      <group name="elements">
-        <method signature="homepage.Search()[pri:5, instance:Pages.homepage@1a6bdc7b]" name="Search" class="Pages.homepage"/>
-        <method signature="homepage.SearchProduct()[pri:4, instance:Pages.homepage@1a6bdc7b]" name="SearchProduct" class="Pages.homepage"/>
-        <method signature="homepage.Navigation_bar()[pri:3, instance:Pages.homepage@1a6bdc7b]" name="Navigation_bar" class="Pages.homepage"/>
-        <method signature="homepage.footer()[pri:6, instance:Pages.homepage@1a6bdc7b]" name="footer" class="Pages.homepage"/>
-      </group> <!-- elements -->
     </groups>
-    <test started-at="2021-01-21T11:36:03 IST" name="steimatzky - homepage" finished-at="2021-01-21T11:49:18 IST" duration-ms="794831">
-      <class name="Pages.homepage">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Pages.homepage@1a6bdc7b]" started-at="2021-01-21T11:36:03 IST" name="BeforeClass" finished-at="2021-01-21T11:36:08 IST" duration-ms="4911" status="PASS">
+    <test started-at="2021-01-24T13:29:30 IST" name="steimatzky - login test" finished-at="2021-01-24T13:30:17 IST" duration-ms="46779">
+      <class name="Login_Registration.Login">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:30 IST" name="beforeClass" finished-at="2021-01-24T13:29:35 IST" duration-ms="4706" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.homepage@1a6bdc7b]" started-at="2021-01-21T11:36:08 IST" name="BeforeMethod" finished-at="2021-01-21T11:36:08 IST" duration-ms="16" status="PASS">
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:35 IST" name="beforeMethod" finished-at="2021-01-24T13:29:35 IST" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="login_user()[pri:1, instance:Pages.homepage@1a6bdc7b]" started-at="2021-01-21T11:36:08 IST" name="login_user" finished-at="2021-01-21T11:36:13 IST" duration-ms="4539" status="PASS">
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="Correct_Login()[pri:1, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:35 IST" name="Correct_Login" finished-at="2021-01-24T13:29:39 IST" duration-ms="4553" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login_user -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.homepage@1a6bdc7b]" started-at="2021-01-21T11:36:13 IST" name="BeforeMethod" finished-at="2021-01-21T11:36:13 IST" duration-ms="3" status="PASS">
+        </test-method> <!-- Correct_Login -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:39 IST" name="beforeMethod" finished-at="2021-01-24T13:29:39 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="callPoppup()[pri:2, instance:Pages.homepage@1a6bdc7b]" started-at="2021-01-21T11:36:13 IST" name="callPoppup" finished-at="2021-01-21T11:36:21 IST" depends-on-methods="Pages.homepage.login_user" duration-ms="8015" status="PASS">
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="logout()[pri:2, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:39 IST" name="logout" finished-at="2021-01-24T13:29:40 IST" depends-on-methods="Login_Registration.Login.Correct_Login" duration-ms="1158" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- callPoppup -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.homepage@1a6bdc7b]" started-at="2021-01-21T11:36:21 IST" name="BeforeMethod" finished-at="2021-01-21T11:36:21 IST" duration-ms="3" status="PASS">
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:40 IST" name="beforeMethod" finished-at="2021-01-24T13:29:40 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="Navigation_bar()[pri:3, instance:Pages.homepage@1a6bdc7b]" started-at="2021-01-21T11:36:21 IST" name="Navigation_bar" finished-at="2021-01-21T11:38:54 IST" depends-on-methods="Pages.homepage.login_user" duration-ms="152822" status="PASS">
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="Empty_text_fields()[pri:3, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:40 IST" name="Empty_text_fields" finished-at="2021-01-24T13:29:43 IST" duration-ms="2494" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Navigation_bar -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.homepage@1a6bdc7b]" started-at="2021-01-21T11:38:54 IST" name="BeforeMethod" finished-at="2021-01-21T11:38:54 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- Empty_text_fields -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:43 IST" name="beforeMethod" finished-at="2021-01-24T13:29:43 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="SearchProduct()[pri:4, instance:Pages.homepage@1a6bdc7b]" started-at="2021-01-21T11:38:54 IST" name="SearchProduct" finished-at="2021-01-21T11:44:42 IST" duration-ms="348202" status="PASS">
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="worng_email()[pri:4, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:43 IST" name="worng_email" finished-at="2021-01-24T13:29:52 IST" duration-ms="8847" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchProduct -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.homepage@1a6bdc7b]" started-at="2021-01-21T11:44:42 IST" name="BeforeMethod" finished-at="2021-01-21T11:44:42 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- worng_email -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:52 IST" name="beforeMethod" finished-at="2021-01-24T13:29:52 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="Search()[pri:5, instance:Pages.homepage@1a6bdc7b]" started-at="2021-01-21T11:44:42 IST" name="Search" finished-at="2021-01-21T11:48:15 IST" duration-ms="213417" status="PASS">
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="worng_email_num()[pri:5, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:52 IST" name="worng_email_num" finished-at="2021-01-24T13:29:54 IST" duration-ms="2162" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Search -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.homepage@1a6bdc7b]" started-at="2021-01-21T11:48:15 IST" name="BeforeMethod" finished-at="2021-01-21T11:48:15 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- worng_email_num -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:54 IST" name="beforeMethod" finished-at="2021-01-24T13:29:54 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="footer()[pri:6, instance:Pages.homepage@1a6bdc7b]" started-at="2021-01-21T11:48:15 IST" name="footer" finished-at="2021-01-21T11:49:17 IST" depends-on-methods="Pages.homepage.login_user" duration-ms="61636" status="PASS">
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="worng_pass()[pri:6, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:29:54 IST" name="worng_pass" finished-at="2021-01-24T13:30:03 IST" duration-ms="8719" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- footer -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:Pages.homepage@1a6bdc7b]" started-at="2021-01-21T11:49:17 IST" name="AfterClass" finished-at="2021-01-21T11:49:18 IST" duration-ms="1244" status="PASS">
+        </test-method> <!-- worng_pass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:30:03 IST" name="beforeMethod" finished-at="2021-01-24T13:30:03 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- Pages.homepage -->
-    </test> <!-- steimatzky - homepage -->
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="worng_pass_num()[pri:7, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:30:03 IST" name="worng_pass_num" finished-at="2021-01-24T13:30:05 IST" duration-ms="2312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- worng_pass_num -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:30:05 IST" name="beforeMethod" finished-at="2021-01-24T13:30:05 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="Unregister_email()[pri:8, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:30:05 IST" name="Unregister_email" finished-at="2021-01-24T13:30:16 IST" duration-ms="10946" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=88.0.4324.104)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-CLI6E80', ip: '10.100.102.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.104, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\royko\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55976}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9633004db49192004e1176aa4af46fae]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=88.0.4324.104)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-CLI6E80', ip: '10.100.102.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.104, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\royko\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55976}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9633004db49192004e1176aa4af46fae
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy14.click(Unknown Source)
+at Login_Registration.Login.Unregister_email(Login.java:203)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Unregister_email -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Login_Registration.Login@101952da]" started-at="2021-01-24T13:30:16 IST" name="afterClass" finished-at="2021-01-24T13:30:17 IST" duration-ms="820" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Login_Registration.Login -->
+    </test> <!-- steimatzky - login test -->
   </suite> <!-- steimatzky -->
 </testng-results>

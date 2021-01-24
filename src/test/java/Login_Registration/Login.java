@@ -156,10 +156,12 @@ public class Login extends setUp {
 			if (pof.error_pass2.isDisplayed()
 					&& pof.error_pass2.getText().equals("נראה שנפלה טעות בהקשת הסיסמה . אנא בדקו ונסו שוב.")) {
 				test1.pass("The password error massage is displayed");
-			} else if (pof.ajs_button.isDisplayed()) {
+			} else if (pof.ajs_content.getText()
+					.contains("נראה שנפלה טעות בכתובת הדוא\"ל או אולי הסיסמה. אנא בדקו ונסו שוב")) {
+				test1.pass("The password error massage is displayed in windows");
+				test1.pass(pof.ajs_content.getText());
 				pof.ajs_button.click();
 				pof.email.sendKeys(func.getData("email"));
-				test1.pass("The password error massage is displayed in windows");
 			} else {
 				test1.fail("The password error massage is not displayed",
 						MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
@@ -187,15 +189,22 @@ public class Login extends setUp {
 		}
 	}
 
-	// WIP
-	@Test(priority = 8, enabled = false)
-	public void Unregister_email() {
+	@Test(priority = 8)
+	public void Unregister_email() throws AWTException, IOException {
 		test2.info("--------- Unregister email test ---------");
 		pof.email.clear();
-		pof.pass.click();
+		pof.pass.clear();
 		pof.email.sendKeys("roi@gmail.com");
 		pof.pass.sendKeys("123456");
 		pof.send2.click();
+		if (pof.ajs_content.getText()
+				.contains("לא נמצא חשבון באתר המשוייך לכתובת המייל שהוקלדה\n" + "אתה מוזמן להירשם, זה קל ומהיר!")) {
+			test2.pass(("Error message username does not exist appears"));
+			test2.pass((pof.ajs_content.getText()));
+		} else {
+			test2.fail("Error message Existing username does not appear",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
 
 	}
 }
