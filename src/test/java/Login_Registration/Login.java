@@ -114,7 +114,7 @@ public class Login extends setUp {
 			pof.email.sendKeys(func.value(rows, 1, "login", fileString));
 			pof.send2.click();
 			Thread.sleep(2000);
-			func.error_message(pof.error_email2, exm, test1,"נראה שנפלה טעות בכתובת הדוא\"ל. אנא בדקו ונסו שוב");
+			func.error_message(pof.error_email2, exm, test1, "נראה שנפלה טעות בכתובת הדוא\"ל. אנא בדקו ונסו שוב");
 			rows++;
 		}
 		Thread.sleep(1000);
@@ -128,7 +128,7 @@ public class Login extends setUp {
 		pof.email.sendKeys("1");
 		pof.send2.click();
 		Thread.sleep(2000);
-		func.error_message(pof.error_email2, exm, test1,"נראה שנפלה טעות בכתובת הדוא\"ל. אנא בדקו ונסו שוב");
+		func.error_message(pof.error_email2, exm, test1, "נראה שנפלה טעות בכתובת הדוא\"ל. אנא בדקו ונסו שוב");
 		Thread.sleep(1000);
 	}
 
@@ -171,7 +171,7 @@ public class Login extends setUp {
 		pof.pass.sendKeys("1");
 		pof.send2.click();
 		Thread.sleep(2000);
-		func.error_message(pof.error_pass2, exm, test1,"נראה שנפלה טעות בהקשת הסיסמה . אנא בדקו ונסו שוב." );
+		func.error_message(pof.error_pass2, exm, test1, "נראה שנפלה טעות בהקשת הסיסמה . אנא בדקו ונסו שוב.");
 	}
 
 	@Test(priority = 9)

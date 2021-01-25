@@ -78,7 +78,6 @@ public class func extends setUp {
 			test.fail("Not all products contains :" + value,
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
-
 	}
 	
 	public static void validFeilds(WebElement error_email,WebElement error_pass,Extent_reports exm, ExtentTest test) throws AWTException, IOException {
@@ -96,15 +95,14 @@ public class func extends setUp {
 		}
 	}
 	
-	public static void error_message(WebElement error_email,Extent_reports exm, ExtentTest test,String errorString ) throws AWTException, IOException {
-		if (error_email.isDisplayed()
-				&& error_email.getText().equals(errorString)) {
+	public static void error_message(WebElement error_message,Extent_reports exm, ExtentTest test,String errorString ) throws AWTException, IOException {
+		if (error_message.isDisplayed()
+				&& error_message.getText().equals(errorString)) {
 			test.pass("The email error massage is displayed");
 		} else {
 			test.fail("The email error massage is not displayed",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
-		
 	}
-
+//
 }
