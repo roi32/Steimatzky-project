@@ -63,7 +63,7 @@ public class search extends func {
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// test if products is found
 				if (driver.findElement(By.xpath("//h1")).getText().contains("תוצאות חיפוש")) {
-					resuleTest2(pof.product_grid, value, exm, test2);
+					resuleTest2(pof.product_grid, value, exm, test);
 				} else if (driver.findElement(By.xpath("//div[@id='product-info']/h1[@class='productTitle']")).isDisplayed()) {
 					String Description = "All products contains the " + value + "";
 					resuleTest(driver.getTitle(), value, Description, exm, test);
@@ -280,15 +280,17 @@ public class search extends func {
 				// read from excel file
 				String value = value(rows, 0, sheet,fileString);
 				Thread.sleep(500);
-				// search the product
 				pof.search.clear();
+				// add value and space
 				pof.search.sendKeys(value);
 				pof.search.sendKeys(" ");
 				Thread.sleep(2000);
 				String autoString=pof.search_autocomplete.get(0).getAttribute("title");
+				// check if all products contain value
 				resuleTest2(pof.search_autocomplete, value, exm, test);
 				pof.search_autocomplete.get(0).click();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				// check if the first link in auto complete list work
 				pageTitleTest(driver.getTitle(), autoString, exm, test);
 				Thread.sleep(1000);
 				rows++;

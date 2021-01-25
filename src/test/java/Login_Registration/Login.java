@@ -88,18 +88,7 @@ public class Login extends setUp {
 		// click on login
 		actions.moveToElement(pof.send2).click().perform();
 		// Check if error massages is displayed
-		if (pof.error_email.isDisplayed() && pof.error_email.getText().equals("שדה זה הינו חובה.")) {
-			test1.pass("The email error massage is displayed");
-		} else {
-			test1.fail("The email error massage is not displayed",
-					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
-		}
-		if (pof.error_pass.isDisplayed() && pof.error_pass.getText().equals("שדה זה הינו חובה.")) {
-			test1.pass("The password error massage is displayed");
-		} else {
-			test1.fail("The password error massage is not displayed",
-					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
-		}
+		func.validFeilds(pof.error_email, pof.error_pass, exm, test1);
 		Thread.sleep(1000);
 	}
 
@@ -111,18 +100,7 @@ public class Login extends setUp {
 		// click on login
 		actions.moveToElement(pof.send2).click().perform();
 		// Check if error massages is displayed
-		if (pof.error_email.isDisplayed() && pof.error_email.getText().equals("שדה זה הינו חובה.")) {
-			test1.pass("The email error massage is displayed");
-		} else {
-			test1.fail("The email error massage is not displayed",
-					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
-		}
-		if (pof.error_pass.isDisplayed() && pof.error_pass.getText().equals("שדה זה הינו חובה.")) {
-			test1.pass("The password error massage is displayed");
-		} else {
-			test1.fail("The password error massage is not displayed",
-					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
-		}
+		func.validFeilds(pof.error_email, pof.error_pass, exm, test1);
 		Thread.sleep(1000);
 	}
 
@@ -136,16 +114,10 @@ public class Login extends setUp {
 			pof.email.sendKeys(func.value(rows, 1, "login", fileString));
 			pof.send2.click();
 			Thread.sleep(2000);
-			if (pof.error_email2.isDisplayed()
-					&& pof.error_email2.getText().equals("נראה שנפלה טעות בכתובת הדוא\"ל. אנא בדקו ונסו שוב")) {
-				test1.pass("The email error massage is displayed");
-			} else {
-				test1.fail("The email error massage is not displayed",
-						MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
-			}
+			func.error_message(pof.error_email2, exm, test1,"נראה שנפלה טעות בכתובת הדוא\"ל. אנא בדקו ונסו שוב");
 			rows++;
 		}
-
+		Thread.sleep(1000);
 	}
 
 	@Test(priority = 6)
@@ -156,14 +128,8 @@ public class Login extends setUp {
 		pof.email.sendKeys("1");
 		pof.send2.click();
 		Thread.sleep(2000);
-		if (pof.error_email2.isDisplayed()
-				&& pof.error_email2.getText().equals("נראה שנפלה טעות בכתובת הדוא\"ל. אנא בדקו ונסו שוב")) {
-			test1.pass("The email error massage is displayed");
-		} else {
-			test1.fail("The email error massage is not displayed",
-					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
-		}
-
+		func.error_message(pof.error_email2, exm, test1,"נראה שנפלה טעות בכתובת הדוא\"ל. אנא בדקו ונסו שוב");
+		Thread.sleep(1000);
 	}
 
 	@Test(priority = 7)
@@ -205,17 +171,11 @@ public class Login extends setUp {
 		pof.pass.sendKeys("1");
 		pof.send2.click();
 		Thread.sleep(2000);
-		if (pof.error_pass2.isDisplayed()
-				&& pof.error_pass2.getText().equals("נראה שנפלה טעות בהקשת הסיסמה . אנא בדקו ונסו שוב.")) {
-			test1.pass("The password error massage is displayed");
-		} else {
-			test1.fail("The password error massage is not displayed",
-					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
-		}
+		func.error_message(pof.error_pass2, exm, test1,"נראה שנפלה טעות בהקשת הסיסמה . אנא בדקו ונסו שוב." );
 	}
 
 	@Test(priority = 9)
-	public void Unregister_email() throws AWTException, IOException {
+	public void Unregister_email() throws AWTException, IOException, InterruptedException {
 		test2.info("--------- Unregister email test ---------");
 		pof.email.clear();
 		pof.pass.clear();
@@ -230,6 +190,6 @@ public class Login extends setUp {
 			test2.fail("Error message username does not exist is not appears",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
-
+		Thread.sleep(1000);
 	}
 }

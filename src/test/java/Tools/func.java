@@ -73,12 +73,38 @@ public class func extends setUp {
 		}
 
 		if (check == true) {
-			test.pass("all products contains :" + value);
+			test.pass("All products contains :" + value);
 		} else {
-			test.fail("not all products contains :" + value,
+			test.fail("Not all products contains :" + value,
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
 
+	}
+	
+	public static void validFeilds(WebElement error_email,WebElement error_pass,Extent_reports exm, ExtentTest test) throws AWTException, IOException {
+		if (error_email.isDisplayed() && error_email.getText().equals("שדה זה הינו חובה.")) {
+			test.pass("The email error massage is displayed");
+		} else {
+			test.fail("The email error massage is not displayed",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+		if (error_pass.isDisplayed() && error_pass.getText().equals("שדה זה הינו חובה.")) {
+			test.pass("The password error massage is displayed");
+		} else {
+			test.fail("The password error massage is not displayed",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+	}
+	
+	public static void error_message(WebElement error_email,Extent_reports exm, ExtentTest test,String errorString ) throws AWTException, IOException {
+		if (error_email.isDisplayed()
+				&& error_email.getText().equals(errorString)) {
+			test.pass("The email error massage is displayed");
+		} else {
+			test.fail("The email error massage is not displayed",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+		
 	}
 
 }
