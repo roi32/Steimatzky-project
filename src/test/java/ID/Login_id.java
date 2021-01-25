@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class Login_Registration_id {
+public class Login_id {
 
 	@FindBy(how = How.ID, using = "email")
 	public WebElement email;

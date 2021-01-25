@@ -1,4 +1,4 @@
-package Login_Registration;
+package Login;
 
 import org.testng.annotations.Test;
 import org.xml.sax.SAXException;
@@ -6,7 +6,7 @@ import org.xml.sax.SAXException;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
 import GUI.Runner;
-import ID.Login_Registration_id;
+import ID.Login_id;
 import Tools.Extent_reports;
 import Tools.func;
 import Tools.setUp;
@@ -32,7 +32,7 @@ public class Login extends setUp {
 	static String fileString = "Login_Registration - test.xlsx";
 	static String Title = "steimatzky - login test";
 	static Extent_reports exm = new Extent_reports(driver);
-	static Login_Registration_id pof;
+	static Login_id pof;
 
 	@BeforeClass
 	public void beforeClass() {
@@ -51,8 +51,8 @@ public class Login extends setUp {
 	@BeforeMethod
 	public void beforeMethod() {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		pof = new Login_Registration_id();
-		pof = PageFactory.initElements(driver, Login_Registration_id.class);
+		pof = new Login_id();
+		pof = PageFactory.initElements(driver, Login_id.class);
 	}
 
 	@AfterClass
