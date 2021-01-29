@@ -29,7 +29,7 @@ import org.testng.annotations.AfterClass;
 
 public class Login extends setUp {
 
-	static String fileString = "Login_Registration - test.xlsx";
+	static String fileString = "Login - test.xlsx";
 	static String Title = "steimatzky - login test";
 	static Extent_reports exm = new Extent_reports(driver);
 	static Login_id pof;
@@ -138,7 +138,7 @@ public class Login extends setUp {
 		test1.info("--------- worng pass test ---------");
 		int rows = 0;
 		pof.email.clear();
-		pof.email.sendKeys(func.getData("email"));
+		pof.email.sendKeys("roi.steimatzky@gmail.com");
 		while (rows <= 3) {
 			pof.pass.clear();
 			pof.pass.sendKeys(func.value(rows, 1, "login", fileString));
@@ -152,7 +152,7 @@ public class Login extends setUp {
 				test1.pass("The password error massage is displayed in windows");
 				test1.pass(pof.ajs_content.getText());
 				pof.ajs_button.click();
-				pof.email.sendKeys(func.getData("email"));
+				pof.email.sendKeys("roi.steimatzky@gmail.com");
 			} else {
 				test1.fail("The password error massage is not displayed",
 						MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
@@ -166,7 +166,7 @@ public class Login extends setUp {
 			throws IOException, InterruptedException, AWTException, ParserConfigurationException, SAXException {
 		test1.info("--------- worng pass num test ---------");
 		pof.email.clear();
-		pof.email.sendKeys(func.getData("email"));
+		pof.email.sendKeys("roi.steimatzky@gmail.com");
 		pof.pass.clear();
 		pof.pass.sendKeys("1");
 		pof.send2.click();

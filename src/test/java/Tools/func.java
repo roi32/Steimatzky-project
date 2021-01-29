@@ -1,36 +1,19 @@
 package Tools;
 
 import java.awt.AWTException;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebElement;
-import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
-
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
 public class func extends setUp {
-
-	public static String getData(String nodeName) throws ParserConfigurationException, SAXException, IOException {
-		File fXmlFile = new File("C:\\test\\configurtion\\configurtion.xml");
-		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-		Document doc = dBuilder.parse(fXmlFile);
-		doc.getDocumentElement().normalize();
-		return doc.getElementsByTagName(nodeName).item(0).getTextContent();
-	}
 
 	public static void pageTitleTest(String link, String pageTitle, Extent_reports exm, ExtentTest test)
 			throws IOException, AWTException {
@@ -43,7 +26,7 @@ public class func extends setUp {
 	}
 
 	@SuppressWarnings("resource")
-	public static String value(int rows, int cell, String sheets,String fileString) throws IOException {
+	public static String value(int rows, int cell, String sheets, String fileString) throws IOException {
 		FileInputStream fis3 = new FileInputStream(fileString);
 		XSSFWorkbook wb = new XSSFWorkbook(fis3);
 		XSSFSheet sheet = wb.getSheet(sheets);
@@ -79,8 +62,9 @@ public class func extends setUp {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
 	}
-	
-	public static void validFeilds(WebElement error_email,WebElement error_pass,Extent_reports exm, ExtentTest test) throws AWTException, IOException {
+
+	public static void validFeilds(WebElement error_email, WebElement error_pass, Extent_reports exm, ExtentTest test)
+			throws AWTException, IOException {
 		if (error_email.isDisplayed() && error_email.getText().equals("שדה זה הינו חובה.")) {
 			test.pass("The email error massage is displayed");
 		} else {
@@ -94,10 +78,10 @@ public class func extends setUp {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
 	}
-	
-	public static void error_message(WebElement error_message,Extent_reports exm, ExtentTest test,String errorString ) throws AWTException, IOException {
-		if (error_message.isDisplayed()
-				&& error_message.getText().equals(errorString)) {
+
+	public static void error_message(WebElement error_message, Extent_reports exm, ExtentTest test, String errorString)
+			throws AWTException, IOException {
+		if (error_message.isDisplayed() && error_message.getText().equals(errorString)) {
 			test.pass("The email error massage is displayed");
 		} else {
 			test.fail("The email error massage is not displayed",

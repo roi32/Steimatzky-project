@@ -11,7 +11,6 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 
 import ID.elelments_id;
 import Tools.Extent_reports;
-import Tools.func;
 import Tools.setUp;
 
 public class login_user extends setUp {
@@ -26,8 +25,8 @@ public class login_user extends setUp {
 			actions.moveToElement(pof.login).click().perform();
 			Thread.sleep(2000);
 			// enter email and password
-			pof.email.sendKeys(func.getData("email"));
-			pof.pass.sendKeys(func.getData("pass"));
+			pof.email.sendKeys("roi.steimatzky@gmail.com");
+			pof.pass.sendKeys("123456");
 			// login for user
 			actions.moveToElement(pof.send2).click().perform();
 			Thread.sleep(2000);
