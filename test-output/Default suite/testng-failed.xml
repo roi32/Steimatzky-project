@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Login_Registration.Login">
+      <class name="Pages.my_account">
         <methods>
+          <include name="address_book"/>
+          <include name="BeforeMethod"/>
           <include name="afterClass"/>
           <include name="beforeClass"/>
-          <include name="Unregister_email"/>
-          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- Login_Registration.Login -->
+      </class> <!-- Pages.my_account -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

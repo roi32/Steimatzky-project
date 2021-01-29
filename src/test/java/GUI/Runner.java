@@ -28,14 +28,16 @@ public class Runner {
 		label3.setBounds(90, 190, 210, 110);
 		frame.add(label1);
 		frame.add(label2);
+		frame.add(label3);
 		JButton btn = new JButton("Home page");
 		btn.setBounds(90, 50, 120, 40);
 		JButton btn1 = new JButton("Login");
 		btn1.setBounds(90, 120, 120, 40);
-		JButton btn2 = new JButton("test3");
+		JButton btn2 = new JButton("My account");
 		btn2.setBounds(90, 190, 120, 40);
 		frame.add(btn);
 		frame.add(btn1);
+		frame.add(btn2);
 
 		btn.addActionListener(new ActionListener() {
 
@@ -67,6 +69,23 @@ public class Runner {
 				} catch (Exception e) {
 					e.printStackTrace();
 					label2.setText("Login test fail");
+				}
+			}
+		});
+
+		btn2.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent arg0) {
+
+				try {
+					TestNG testng = new TestNG();
+					List<String> suites = Lists.newArrayList();
+					suites.add("my_account.xml");
+					testng.setTestSuites(suites);
+					testng.run();
+				} catch (Exception e) {
+					e.printStackTrace();
+					label3.setText("My account test fail");
 				}
 			}
 		});
