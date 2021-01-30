@@ -50,4 +50,53 @@ public class my_account_id {
 	@FindBy(how = How.XPATH, using = "//div[@id='content']/p")
 	public WebElement content;
 
+	@FindBy(how = How.ID, using = "orderDetails")
+	public WebElement orderDetails;
+
+	@FindBy(how = How.ID, using = "createClub")
+	public WebElement createClub;
+
+	@FindBy(how = How.XPATH, using = "//div[@class='alertify  ajs-movable ajs-closable ajs-pinnable ajs-pulse']/div[@class='ajs-modal']//div[@class='ajs-content']")
+	public WebElement ajs_content2;
+
+	@FindBy(how = How.XPATH, using = "//div[@class='alertify  ajs-movable ajs-closable ajs-pinnable ajs-pulse']//div[@class='ajs-footer']//button")
+	public WebElement ajs_button2;
+
+	@FindBy(how = How.CLASS_NAME, using = "product-name")
+	public WebElement product_name;
+
+	@FindBy(how = How.CLASS_NAME, using = "price")
+	public WebElement price;
+
+	@FindBy(how = How.XPATH, using = "//table[@id='shopping-cart-table']//input")
+	public WebElement qty;
+
+	@FindBy(how = How.ID, using = "top-cart-icon")
+	public WebElement top_cart_icon;
+
+	@FindBy(how = How.XPATH, using = "//div[@id='userBox']//a[@id='top-cart-icon']/span[1]")
+	public WebElement num_cart;
+
+	@FindBy(how = How.XPATH, using = "//li[@class='clearafter minicartitem']")
+	public WebElement mini_cart_item;
+
+	@FindBy(how = How.XPATH, using = "//div[@class='prdDetails']//span[@class='price']/span[2]")
+	public WebElement price2;
+
+	@FindBy(how = How.XPATH, using = "//div[@class='prdDetails']//span[@class='price']/span[3]")
+	public WebElement price3;
+
+	@FindBy(how = How.XPATH, using = "//div[@class='prdQty']//span[1]")
+	public WebElement prdQty;
+
+	@FindBy(how = How.XPATH, using = "//footer[@class='minicartFooter']/button")
+	public WebElement forPay;
+
+	@FindBy(how = How.XPATH, using = "//div[@id='content']//table/tbody/tr/td[@class='prdTotal  a-right col-md-2 last']/a")
+	public WebElement remove;
+	
+	@FindBy(how = How.XPATH,using = "//div[@class='cart-empty']/p[1]")
+	public WebElement cart_empty;
+//	
+
 }

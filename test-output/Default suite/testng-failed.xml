@@ -5,9 +5,9 @@
     <classes>
       <class name="Pages.my_account">
         <methods>
-          <include name="address_book"/>
           <include name="BeforeMethod"/>
           <include name="afterClass"/>
+          <include name="window_cart"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- Pages.my_account -->

@@ -16,6 +16,7 @@ import org.testng.annotations.BeforeMethod;
 
 import java.awt.AWTException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -113,9 +114,9 @@ public class my_account extends setUp {
 		} else {
 			test.fail("test fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
+		pof.ajs_button.click();
 		func.pageTitleTest("ערוך פרטי חשבון", driver.findElement(By.xpath("//div[@class='page-title']/h1")).getText(),
 				exm, test);
-		pof.ajs_button.click();
 		pof.right_sidebar.get(1).click();
 	}
 
@@ -135,12 +136,97 @@ public class my_account extends setUp {
 	@Test(priority = 5)
 	public void my_orders() throws IOException, AWTException {
 		func.pageTitleTest("ההזמנות שלי", driver.findElement(By.xpath("//h1")).getText(), exm, test);
-		if (pof.address.getText().contains("אין לך הזמנות עדיין")) {
+		if (pof.content.getText().contains("אין לך הזמנות עדיין")) {
 			test.pass("test pass");
 		} else {
 			test.fail("test fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
 		pof.right_sidebar.get(3).click();
+	}
+
+	@Test(priority = 6)
+	public void clube() throws IOException, AWTException {
+		func.pageTitleTest("מועדון לקוחות סטימצקי", driver.findElement(By.xpath("//h1")).getText(), exm, test);
+		actions.moveToElement(pof.orderDetails).click().perform();
+		ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs2.get(1));
+		func.pageTitleTest("חברות במועדון הקוראים של סטימצקי - הסיפור שלי ",
+				driver.findElement(By.xpath("//h1")).getText(), exm, test);
+		driver.close();
+		driver.switchTo().window(tabs2.get(0));
+		actions.moveToElement(pof.createClub).click().perform();
+		if (pof.ajs_content2.isDisplayed() && pof.ajs_content2.getText().equals(
+				"כרטיס החבר התווסף לעגלת הקניות שלך, על מנת להשלים את ההצטרפות למועדון החברים של סטימצקי יש לסיים את תהליך התשלום")) {
+			test.pass("test pass");
+			test.info(pof.ajs_content2.getText());
+		} else {
+			test.fail("test fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+		actions.moveToElement(pof.ajs_button2).click().perform();
+	}
+
+	@Test(priority = 7)
+	public void cart() throws IOException, AWTException {
+		func.pageTitleTest("סל הקניות שלי", driver.findElement(By.xpath("//h1")).getText(), exm, test);
+		if (pof.product_name.getText().contains("כרטיס חבר מועדון סטימצקי")) {
+			test.pass("test pass");
+		} else {
+			test.fail("test fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+		if (pof.price.getText().equals("29.90 ₪")) {
+			test.pass("test pass");
+		} else {
+			test.fail("test fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+		if (pof.qty.getAttribute("value").equals("1")) {
+			test.pass("test pass");
+		} else {
+			test.fail("test fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+	}
+
+	@Test(priority = 8)
+	public void window_cart() throws AWTException, IOException {
+		actions.moveToElement(pof.top_cart_icon).perform();
+		if (pof.num_cart.getText().contains("1")) {
+			test.pass("test pass");
+		} else {
+			test.fail("test fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+		if (pof.mini_cart_item.getAttribute("aria-label").equals("כרטיס חבר מועדון סטימצקי")) {
+			test.pass("test pass");
+		} else {
+			test.fail("test fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+		String priceString = pof.price2.getText() + pof.price3.getText();
+		if (priceString.equals("29.90")) {
+			test.pass("test pass");
+		} else {
+			test.fail("test fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+		if (pof.prdQty.getText().contains("1")) {
+			test.pass("test pass");
+		} else {
+			test.fail("test fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+		pof.forPay.click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		func.pageTitleTest("סל הקניות שלי", driver.findElement(By.xpath("//h1")).getText(), exm, test);
+		pof.remove.click();
+		if (pof.cart_empty.getText().contains("סל הקניות שלך ריק")) {
+			test.pass("test pass");
+		} else {
+			test.fail("test fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+		pof.loginbox.click();
+		func.pageTitleTest("החשבון שלי", driver.findElement(By.xpath("//div[@class='page-title']/h1")).getText(), exm,
+				test);
+		pof.right_sidebar.get(4).click();
+	}
+
+	@Test(priority = 9)
+	public void steimatzky_prime() {
 
 	}
+
 }
