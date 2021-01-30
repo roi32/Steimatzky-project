@@ -94,9 +94,15 @@ public class my_account_id {
 
 	@FindBy(how = How.XPATH, using = "//div[@id='content']//table/tbody/tr/td[@class='prdTotal  a-right col-md-2 last']/a")
 	public WebElement remove;
-	
-	@FindBy(how = How.XPATH,using = "//div[@class='cart-empty']/p[1]")
-	public WebElement cart_empty;
-//	
 
+	@FindBy(how = How.XPATH, using = "//div[@class='cart-empty']/p[1]")
+	public WebElement cart_empty;
+
+	@FindBy(how = How.ID, using = "add-premium")
+	public WebElement add_premium;
+
+	@FindBy(how = How.XPATH, using = "//div[@id='main_content']/div/div/div/div/p/a")
+	public WebElement Steimatzkys_Prime;
+
+//	
 }

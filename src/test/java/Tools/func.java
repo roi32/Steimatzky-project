@@ -88,5 +88,16 @@ public class func extends setUp {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 		}
 	}
+
+	public static void resuleTest3(String titleString, String value, WebElement Element, String Description,
+			Extent_reports exm, ExtentTest test) throws IOException, AWTException {
+		if (titleString.contains(value) && Element.isDisplayed()) {
+			test.pass("Test pass of -  " + Description);
+			test.info(Element.getText());
+		} else {
+			test.fail("Test fail of -  " + Description,
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+		}
+	}
 //
 }
