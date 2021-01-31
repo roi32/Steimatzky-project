@@ -111,9 +111,11 @@ public class Login extends setUp {
 		pof.pass.sendKeys("123456");
 		while (rows <= 3) {
 			pof.email.clear();
+			//Insert value to email field
 			pof.email.sendKeys(func.value(rows, 1, "login", fileString));
 			pof.send2.click();
 			Thread.sleep(2000);
+			// Check if error massages is displayed
 			func.error_message(pof.error_email2, exm, test1, "נראה שנפלה טעות בכתובת הדוא\"ל. אנא בדקו ונסו שוב");
 			rows++;
 		}
@@ -125,9 +127,11 @@ public class Login extends setUp {
 		test1.info("--------- worng email num test ---------");
 		pof.pass.sendKeys("123456");
 		pof.email.clear();
+		//Insert number to email field
 		pof.email.sendKeys("1");
 		pof.send2.click();
 		Thread.sleep(2000);
+		// Check if error massages is displayed
 		func.error_message(pof.error_email2, exm, test1, "נראה שנפלה טעות בכתובת הדוא\"ל. אנא בדקו ונסו שוב");
 		Thread.sleep(1000);
 	}
@@ -141,16 +145,18 @@ public class Login extends setUp {
 		pof.email.sendKeys("roi.steimatzky@gmail.com");
 		while (rows <= 3) {
 			pof.pass.clear();
+			//Insert value to password field
 			pof.pass.sendKeys(func.value(rows, 1, "login", fileString));
 			pof.send2.click();
 			Thread.sleep(2000);
+			// Check if error massages is displayed
 			if (pof.error_pass2.isDisplayed()
 					&& pof.error_pass2.getText().equals("נראה שנפלה טעות בהקשת הסיסמה . אנא בדקו ונסו שוב.")) {
 				test1.pass("The password error massage is displayed");
 			} else if (pof.ajs_content.getText()
 					.contains("נראה שנפלה טעות בכתובת הדוא\"ל או אולי הסיסמה. אנא בדקו ונסו שוב")) {
 				test1.pass("The password error massage is displayed in windows");
-				test1.pass(pof.ajs_content.getText());
+				test1.info(pof.ajs_content.getText());
 				pof.ajs_button.click();
 				pof.email.sendKeys("roi.steimatzky@gmail.com");
 			} else {
@@ -168,9 +174,11 @@ public class Login extends setUp {
 		pof.email.clear();
 		pof.email.sendKeys("roi.steimatzky@gmail.com");
 		pof.pass.clear();
+		//Insert number to password field
 		pof.pass.sendKeys("1");
 		pof.send2.click();
 		Thread.sleep(2000);
+		// Check if error massages is displayed
 		func.error_message(pof.error_pass2, exm, test1, "נראה שנפלה טעות בהקשת הסיסמה . אנא בדקו ונסו שוב.");
 	}
 
@@ -179,13 +187,15 @@ public class Login extends setUp {
 		test2.info("--------- Unregister email test ---------");
 		pof.email.clear();
 		pof.pass.clear();
+		//Insert Unregister email to email field
 		pof.email.sendKeys("roi@gmail.com");
 		pof.pass.sendKeys("123456");
 		pof.send2.click();
+		// Check if error massages is displayed
 		if (pof.ajs_content.getText()
 				.contains("לא נמצא חשבון באתר המשוייך לכתובת המייל שהוקלדה\n" + "אתה מוזמן להירשם, זה קל ומהיר!")) {
 			test2.pass(("Error message username does not exist appears"));
-			test2.pass((pof.ajs_content.getText()));
+			test2.info((pof.ajs_content.getText()));
 		} else {
 			test2.fail("Error message username does not exist is not appears",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());

@@ -25,7 +25,7 @@ public class Runner {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		label1.setBounds(90, 50, 210, 110);
 		label2.setBounds(100, 120, 210, 110);
-		label3.setBounds(90, 190, 210, 110);
+		label3.setBounds(85, 190, 210, 110);
 		frame.add(label1);
 		frame.add(label2);
 		frame.add(label3);

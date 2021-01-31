@@ -17,6 +17,15 @@ public class my_account_id {
 	@FindBy(how = How.XPATH, using = "//div[@class='welcome-msg']/h2")
 	public WebElement welcome_msg;
 
+	@FindBy(how = How.XPATH, using = "//div[@class='box-content row']/div/address")
+	public WebElement address_Account_Control_Panel;
+
+	@FindBy(how = How.XPATH, using = "//h2[@class='subtitle']")
+	public WebElement subtitle;
+
+	@FindBy(how = How.XPATH, using = "//h2[@class='subtitle']")
+	public List<WebElement> subtitles;
+
 	@FindBy(how = How.XPATH, using = "//div[@class='col-md-6'][1]/div/div[2]/p")
 	public WebElement accountDetailes;
 
@@ -47,8 +56,14 @@ public class my_account_id {
 	@FindBy(how = How.XPATH, using = "//li[@class='col-md-6 box-info'][2]//address")
 	public WebElement address;
 
+	@FindBy(how = How.XPATH, using = "//div[@class='col-2 addresses-additional']//address")
+	public WebElement addresses_additional;
+
 	@FindBy(how = How.XPATH, using = "//div[@id='content']/p")
 	public WebElement content;
+
+	@FindBy(how = How.XPATH, using = "//div[@class='dashboard']/p")
+	public WebElement content2;
 
 	@FindBy(how = How.ID, using = "orderDetails")
 	public WebElement orderDetails;
@@ -62,17 +77,29 @@ public class my_account_id {
 	@FindBy(how = How.XPATH, using = "//div[@class='alertify  ajs-movable ajs-closable ajs-pinnable ajs-pulse']//div[@class='ajs-footer']//button")
 	public WebElement ajs_button2;
 
+	@FindBy(how = How.XPATH, using = "//span[@class='nobr']")
+	public List<WebElement> cart_titles;
+
 	@FindBy(how = How.CLASS_NAME, using = "product-name")
 	public WebElement product_name;
 
+	@FindBy(how = How.XPATH, using = "//tr[@class='clearafter first last']/th[@class='col-md-2'][3]")
+	public WebElement pricetitle;
+
 	@FindBy(how = How.CLASS_NAME, using = "price")
 	public WebElement price;
+
+	@FindBy(how = How.XPATH, using = "//tr[@class='clearafter first last']/th[@class='col-md-1']")
+	public WebElement titeqty;
 
 	@FindBy(how = How.XPATH, using = "//table[@id='shopping-cart-table']//input")
 	public WebElement qty;
 
 	@FindBy(how = How.ID, using = "top-cart-icon")
 	public WebElement top_cart_icon;
+	
+	@FindBy(how = How.XPATH,using = "//header[@class='minicartHeader']/h3/a")
+	public WebElement minicartTitle;
 
 	@FindBy(how = How.XPATH, using = "//div[@id='userBox']//a[@id='top-cart-icon']/span[1]")
 	public WebElement num_cart;
@@ -97,6 +124,9 @@ public class my_account_id {
 
 	@FindBy(how = How.XPATH, using = "//div[@class='cart-empty']/p[1]")
 	public WebElement cart_empty;
+	
+	@FindBy(how = How.XPATH,using = "//div[@class='desc']")
+	public WebElement desc;
 
 	@FindBy(how = How.ID, using = "add-premium")
 	public WebElement add_premium;
