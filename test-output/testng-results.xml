@@ -1,106 +1,166 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="13" passed="9" failed="0" skipped="0">
+<testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-31T13:41:04 IST" name="Default suite" finished-at="2021-01-31T13:41:29 IST" duration-ms="24556">
+  <suite started-at="2021-02-01T12:07:34 IST" name="steimatzky" finished-at="2021-02-01T12:18:22 IST" duration-ms="648019">
     <groups>
       <group name="elements">
-        <method signature="my_account.login()[pri:1, instance:Pages.my_account@10feca44]" name="login" class="Pages.my_account"/>
+        <method signature="my_account.Search()[pri:15, instance:Pages.my_account@25486ea3]" name="Search" class="Pages.my_account"/>
+        <method signature="my_account.login()[pri:1, instance:Pages.my_account@25486ea3]" name="login" class="Pages.my_account"/>
+        <method signature="my_account.Footer()[pri:15, instance:Pages.my_account@25486ea3]" name="Footer" class="Pages.my_account"/>
+        <method signature="my_account.Navigation_bar()[pri:13, instance:Pages.my_account@25486ea3]" name="Navigation_bar" class="Pages.my_account"/>
+        <method signature="my_account.SearchProduct()[pri:14, instance:Pages.my_account@25486ea3]" name="SearchProduct" class="Pages.my_account"/>
       </group> <!-- elements -->
       <group name="my account">
-        <method signature="my_account.Account_Control_Panel()[pri:2, instance:Pages.my_account@10feca44]" name="Account_Control_Panel" class="Pages.my_account"/>
-        <method signature="my_account.Account_Details()[pri:3, instance:Pages.my_account@10feca44]" name="Account_Details" class="Pages.my_account"/>
-        <method signature="my_account.Address_book()[pri:4, instance:Pages.my_account@10feca44]" name="Address_book" class="Pages.my_account"/>
-        <method signature="my_account.Cart()[pri:7, instance:Pages.my_account@10feca44]" name="Cart" class="Pages.my_account"/>
-        <method signature="my_account.Club()[pri:6, instance:Pages.my_account@10feca44]" name="Club" class="Pages.my_account"/>
-        <method signature="my_account.My_orders()[pri:5, instance:Pages.my_account@10feca44]" name="My_orders" class="Pages.my_account"/>
-        <method signature="my_account.Popup_cart()[pri:8, instance:Pages.my_account@10feca44]" name="Popup_cart" class="Pages.my_account"/>
-        <method signature="my_account.Steimatzky_prime()[pri:9, instance:Pages.my_account@10feca44]" name="Steimatzky_prime" class="Pages.my_account"/>
+        <method signature="my_account.Account_Control_Panel()[pri:2, instance:Pages.my_account@25486ea3]" name="Account_Control_Panel" class="Pages.my_account"/>
+        <method signature="my_account.Account_Details()[pri:3, instance:Pages.my_account@25486ea3]" name="Account_Details" class="Pages.my_account"/>
+        <method signature="my_account.Address_book()[pri:4, instance:Pages.my_account@25486ea3]" name="Address_book" class="Pages.my_account"/>
+        <method signature="my_account.Cart()[pri:10, instance:Pages.my_account@25486ea3]" name="Cart" class="Pages.my_account"/>
+        <method signature="my_account.Club()[pri:9, instance:Pages.my_account@25486ea3]" name="Club" class="Pages.my_account"/>
+        <method signature="my_account.My_orders()[pri:8, instance:Pages.my_account@25486ea3]" name="My_orders" class="Pages.my_account"/>
+        <method signature="my_account.Popup_cart()[pri:11, instance:Pages.my_account@25486ea3]" name="Popup_cart" class="Pages.my_account"/>
+        <method signature="my_account.Steimatzky_prime()[pri:12, instance:Pages.my_account@25486ea3]" name="Steimatzky_prime" class="Pages.my_account"/>
       </group> <!-- my account -->
     </groups>
-    <test started-at="2021-01-31T13:41:04 IST" name="Default test" finished-at="2021-01-31T13:41:29 IST" duration-ms="24556">
+    <test started-at="2021-02-01T12:07:34 IST" name="steimatzky - my account" finished-at="2021-02-01T12:18:22 IST" duration-ms="648019">
       <class name="Pages.my_account">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:04 IST" name="beforeClass" finished-at="2021-01-31T13:41:08 IST" duration-ms="4262" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:34 IST" name="beforeClass" finished-at="2021-02-01T12:07:39 IST" duration-ms="5049" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:08 IST" name="BeforeMethod" finished-at="2021-01-31T13:41:08 IST" duration-ms="20" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:39 IST" name="BeforeMethod" finished-at="2021-02-01T12:07:39 IST" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="login()[pri:1, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:08 IST" name="login" finished-at="2021-01-31T13:41:13 IST" duration-ms="4632" status="PASS">
+        <test-method signature="login()[pri:1, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:39 IST" name="login" finished-at="2021-02-01T12:07:44 IST" duration-ms="4492" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:13 IST" name="BeforeMethod" finished-at="2021-01-31T13:41:13 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:44 IST" name="BeforeMethod" finished-at="2021-02-01T12:07:44 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="Account_Control_Panel()[pri:2, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:13 IST" name="Account_Control_Panel" finished-at="2021-01-31T13:41:14 IST" depends-on-methods="Pages.my_account.login" duration-ms="995" status="PASS">
+        <test-method signature="Account_Control_Panel()[pri:2, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:44 IST" name="Account_Control_Panel" finished-at="2021-02-01T12:07:45 IST" depends-on-methods="Pages.my_account.login" duration-ms="959" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Account_Control_Panel -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:14 IST" name="BeforeMethod" finished-at="2021-01-31T13:41:14 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:45 IST" name="BeforeMethod" finished-at="2021-02-01T12:07:45 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="Account_Details()[pri:3, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:14 IST" name="Account_Details" finished-at="2021-01-31T13:41:18 IST" depends-on-methods="Pages.my_account.login" duration-ms="3630" status="PASS">
+        <test-method signature="Account_Details()[pri:3, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:45 IST" name="Account_Details" finished-at="2021-02-01T12:07:48 IST" depends-on-methods="Pages.my_account.login" duration-ms="3724" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Account_Details -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:18 IST" name="BeforeMethod" finished-at="2021-01-31T13:41:18 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:48 IST" name="BeforeMethod" finished-at="2021-02-01T12:07:48 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="Address_book()[pri:4, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:18 IST" name="Address_book" finished-at="2021-01-31T13:41:18 IST" depends-on-methods="Pages.my_account.login" duration-ms="856" status="PASS">
+        <test-method signature="Address_book()[pri:4, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:48 IST" name="Address_book" finished-at="2021-02-01T12:07:50 IST" depends-on-methods="Pages.my_account.login" duration-ms="1822" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Address_book -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:18 IST" name="BeforeMethod" finished-at="2021-01-31T13:41:18 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:50 IST" name="BeforeMethod" finished-at="2021-02-01T12:07:50 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="My_orders()[pri:5, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:18 IST" name="My_orders" finished-at="2021-01-31T13:41:19 IST" depends-on-methods="Pages.my_account.login" duration-ms="788" status="PASS">
+        <test-method signature="addAddress()[pri:5, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:50 IST" name="addAddress" finished-at="2021-02-01T12:07:53 IST" duration-ms="2695" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addAddress -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:53 IST" name="BeforeMethod" finished-at="2021-02-01T12:07:53 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="added_address()[pri:6, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:53 IST" name="added_address" finished-at="2021-02-01T12:07:54 IST" duration-ms="1029" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- added_address -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:54 IST" name="BeforeMethod" finished-at="2021-02-01T12:07:54 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="remove_addresses_additional()[pri:7, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:54 IST" name="remove_addresses_additional" finished-at="2021-02-01T12:07:56 IST" duration-ms="2130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- remove_addresses_additional -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:56 IST" name="BeforeMethod" finished-at="2021-02-01T12:07:56 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="My_orders()[pri:8, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:56 IST" name="My_orders" finished-at="2021-02-01T12:07:57 IST" depends-on-methods="Pages.my_account.login" duration-ms="832" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- My_orders -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:19 IST" name="BeforeMethod" finished-at="2021-01-31T13:41:19 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:57 IST" name="BeforeMethod" finished-at="2021-02-01T12:07:57 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="Club()[pri:6, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:19 IST" name="Club" finished-at="2021-01-31T13:41:22 IST" depends-on-methods="Pages.my_account.login" duration-ms="3045" status="PASS">
+        <test-method signature="Club()[pri:9, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:07:57 IST" name="Club" finished-at="2021-02-01T12:08:00 IST" depends-on-methods="Pages.my_account.login" duration-ms="3016" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Club -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:22 IST" name="BeforeMethod" finished-at="2021-01-31T13:41:22 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:08:00 IST" name="BeforeMethod" finished-at="2021-02-01T12:08:00 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="Cart()[pri:7, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:22 IST" name="Cart" finished-at="2021-01-31T13:41:22 IST" depends-on-methods="Pages.my_account.login" duration-ms="227" status="PASS">
+        <test-method signature="Cart()[pri:10, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:08:00 IST" name="Cart" finished-at="2021-02-01T12:08:00 IST" depends-on-methods="Pages.my_account.login" duration-ms="157" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Cart -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:22 IST" name="BeforeMethod" finished-at="2021-01-31T13:41:22 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:08:00 IST" name="BeforeMethod" finished-at="2021-02-01T12:08:00 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="Popup_cart()[pri:8, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:22 IST" name="Popup_cart" finished-at="2021-01-31T13:41:26 IST" depends-on-methods="Pages.my_account.login" duration-ms="3254" status="PASS">
+        <test-method signature="Popup_cart()[pri:11, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:08:00 IST" name="Popup_cart" finished-at="2021-02-01T12:08:04 IST" depends-on-methods="Pages.my_account.login" duration-ms="3821" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Popup_cart -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:26 IST" name="BeforeMethod" finished-at="2021-01-31T13:41:26 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:08:04 IST" name="BeforeMethod" finished-at="2021-02-01T12:08:04 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="Steimatzky_prime()[pri:9, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:26 IST" name="Steimatzky_prime" finished-at="2021-01-31T13:41:27 IST" depends-on-methods="Pages.my_account.login" duration-ms="1776" status="PASS">
+        <test-method signature="Steimatzky_prime()[pri:12, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:08:04 IST" name="Steimatzky_prime" finished-at="2021-02-01T12:08:06 IST" depends-on-methods="Pages.my_account.login" duration-ms="1696" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Steimatzky_prime -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Pages.my_account@10feca44]" started-at="2021-01-31T13:41:27 IST" name="afterClass" finished-at="2021-01-31T13:41:29 IST" duration-ms="1019" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:08:06 IST" name="BeforeMethod" finished-at="2021-02-01T12:08:06 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Navigation_bar()[pri:13, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:08:06 IST" name="Navigation_bar" finished-at="2021-02-01T12:10:41 IST" depends-on-methods="Pages.my_account.login" duration-ms="155626" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Navigation_bar -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:10:41 IST" name="BeforeMethod" finished-at="2021-02-01T12:10:41 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="SearchProduct()[pri:14, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:10:41 IST" name="SearchProduct" finished-at="2021-02-01T12:16:44 IST" duration-ms="363205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchProduct -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:16:44 IST" name="BeforeMethod" finished-at="2021-02-01T12:16:44 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Footer()[pri:15, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:16:44 IST" name="Footer" finished-at="2021-02-01T12:17:47 IST" depends-on-methods="Pages.my_account.login" duration-ms="62694" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Footer -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:17:47 IST" name="BeforeMethod" finished-at="2021-02-01T12:17:47 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Search()[pri:15, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:17:47 IST" name="Search" finished-at="2021-02-01T12:18:21 IST" duration-ms="33861" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Search -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Pages.my_account@25486ea3]" started-at="2021-02-01T12:18:21 IST" name="afterClass" finished-at="2021-02-01T12:18:22 IST" duration-ms="1127" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- Pages.my_account -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- steimatzky - my account -->
+  </suite> <!-- steimatzky -->
 </testng-results>

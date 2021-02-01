@@ -56,8 +56,38 @@ public class my_account_id {
 	@FindBy(how = How.XPATH, using = "//li[@class='col-md-6 box-info'][2]//address")
 	public WebElement address;
 
+	@FindBy(how = How.XPATH, using = "//div[@class='page-title title-buttons']//button")
+	public WebElement addAddresses;
+	
+	@FindBy(how = How.XPATH,using = "//li[@class='fields']//label")
+	public List<WebElement> labels;
+
+	@FindBy(how = How.ID, using = "telephone")
+	public WebElement telephone;
+
+	@FindBy(how = How.ID, using = "street_1")
+	public WebElement street_1;
+
+	@FindBy(how = How.ID, using = "house_number")
+	public WebElement house_number;
+
+	@FindBy(how = How.ID, using = "city")
+	public WebElement city;
+
+	@FindBy(how = How.ID, using = "zip")
+	public WebElement zip;
+
+	@FindBy(how = How.XPATH, using = "//div[@class='col-md-10 buttons-set']/button")
+	public WebElement add_addresses_additional;
+
 	@FindBy(how = How.XPATH, using = "//div[@class='col-2 addresses-additional']//address")
 	public WebElement addresses_additional;
+
+	@FindBy(how = How.XPATH, using = "//div[@class='col-2 addresses-additional']//p/a[@class='link-remove']")
+	public WebElement link_remove;
+
+	@FindBy(how = How.XPATH, using = "//div[@class='col-2 addresses-additional']//p")
+	public WebElement no_addresses;
 
 	@FindBy(how = How.XPATH, using = "//div[@id='content']/p")
 	public WebElement content;
@@ -97,8 +127,8 @@ public class my_account_id {
 
 	@FindBy(how = How.ID, using = "top-cart-icon")
 	public WebElement top_cart_icon;
-	
-	@FindBy(how = How.XPATH,using = "//header[@class='minicartHeader']/h3/a")
+
+	@FindBy(how = How.XPATH, using = "//header[@class='minicartHeader']/h3/a")
 	public WebElement minicartTitle;
 
 	@FindBy(how = How.XPATH, using = "//div[@id='userBox']//a[@id='top-cart-icon']/span[1]")
@@ -124,8 +154,8 @@ public class my_account_id {
 
 	@FindBy(how = How.XPATH, using = "//div[@class='cart-empty']/p[1]")
 	public WebElement cart_empty;
-	
-	@FindBy(how = How.XPATH,using = "//div[@class='desc']")
+
+	@FindBy(how = How.XPATH, using = "//div[@class='desc']")
 	public WebElement desc;
 
 	@FindBy(how = How.ID, using = "add-premium")

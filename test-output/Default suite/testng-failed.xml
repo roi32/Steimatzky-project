@@ -5,10 +5,9 @@
     <classes>
       <class name="Pages.my_account">
         <methods>
+          <include name="remove_addresses_additional"/>
           <include name="BeforeMethod"/>
           <include name="afterClass"/>
-          <include name="Steimatzky_prime"/>
-          <include name="login"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- Pages.my_account -->

@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -42,7 +43,7 @@ public class my_account extends setUp {
 		test = Extent_reports.createTest("My account", "My account pages - test");
 		test1 = Extent_reports.createTest("My account", "Navigation Bar - test");
 		test2 = Extent_reports.createTest("My account", "Search - test");
-		test3 = Extent_reports.createTest("My account", "footer - test");
+		test3 = Extent_reports.createTest("My account", "Footer - test");
 		WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		driver = new ChromeDriver();
@@ -123,9 +124,8 @@ public class my_account extends setUp {
 		pof.right_sidebar.get(1).click();
 	}
 
-	// WIP
 	@Test(priority = 4, groups = "my account", dependsOnMethods = { "login" }, enabled = true)
-	public void Address_book() throws IOException, AWTException {
+	public void Address_book() throws IOException, AWTException, InterruptedException {
 		test.info("---------- Address book page test -----------");
 		func.pageTitleTest("ספר הכתובות", driver.findElement(By.xpath("//h1")).getText(), exm, test);
 		String Description;
@@ -135,17 +135,78 @@ public class my_account extends setUp {
 		func.resuleTest(pof.address.getText(),
 				"רועי יצחק\n" + "עמק החולה\n" + "9\n" + "מודיעין, 45645\n" + "Israel\n" + "טלפון: 0525254545",
 				Description, exm, test);
+		Thread.sleep(1000);
+		pof.addAddresses.click();
+	}
+
+	@Test(priority = 5, groups = "Address", dependsOnMethods = { "Address_book" })
+	public void addAddress() throws IOException, AWTException, InterruptedException {
+		test.info("---------- add Address test -----------");
+		func.pageTitleTest("הוסף כתובת חדשה", driver.findElement(By.xpath("//h1")).getText(), exm, test);
+		String Description;
+		Description = "If the correct text appears in the first subtitle";
+		func.resuleTest(pof.subtitles.get(0).getText(), "פרטי יצירת קשר", Description, exm, test);
+		Description = "If the correct text appears in the first name label";
+		func.resuleTest(pof.labels.get(0).getText(), "*שם פרטי", Description, exm, test);
+		Description = "If the correct text appears in the last name label";
+		func.resuleTest(pof.labels.get(1).getText(), "*שם משפחה", Description, exm, test);
+		Description = "If the correct text appears in the telephone label";
+		func.resuleTest(pof.labels.get(2).getText(), "*טלפון נייד", Description, exm, test);
+		pof.telephone.sendKeys("0525275545");
+		Description = "If the correct text appears in the second subtitle";
+		func.resuleTest(pof.subtitles.get(1).getText(), "כתובת", Description, exm, test);
+		Description = "If the correct text appears in the street label";
+		func.resuleTest(pof.labels.get(3).getText(), "*רחוב", Description, exm, test);
+		pof.street_1.sendKeys("נחל עיון");
+		Description = "If the correct text appears in the house number label";
+		func.resuleTest(pof.labels.get(4).getText(), "*מספר בית", Description, exm, test);
+		pof.house_number.sendKeys("8");
+		Description = "If the correct text appears in the city label";
+		func.resuleTest(pof.labels.get(5).getText(), "*עיר", Description, exm, test);
+		pof.city.sendKeys("מודיעין");
+		Description = "If the correct text appears in the zip label";
+		func.resuleTest(pof.labels.get(6).getText(), "מיקוד", Description, exm, test);
+		pof.zip.sendKeys("45645");
+		Description = "If the correct text appears in the country label";
+		func.resuleTest(pof.labels.get(7).getText(), "*ארץ", Description, exm, test);
+		pof.add_addresses_additional.click();
+		pof.ajs_button.click();
+		Thread.sleep(1000);
+	}
+
+	@Test(priority = 6, groups = "Address", dependsOnMethods = { "Address_book" })
+	public void added_address() throws IOException, AWTException, InterruptedException {
+		test.info("---------- added Address test -----------");
+		String Description;
+		Thread.sleep(1000);
 		Description = "If the correct text appears in the second subtitle";
 		func.resuleTest(pof.subtitles.get(1).getText(), "כתובות נוספות", Description, exm, test);
 		Description = "If the additional shipping address is correct";
 		func.resuleTest(pof.addresses_additional.getText(),
 				"רועי יצחק\n" + "נחל עיון\n" + "8\n" + "מודיעין, 45645\n" + "Israel\n" + "טלפון: 0525275545",
 				Description, exm, test);
-		pof.right_sidebar.get(2).click();
 
 	}
 
-	@Test(priority = 5, groups = "my account", dependsOnMethods = { "login" }, enabled = true)
+	@Test(priority = 7, groups = "Address", dependsOnMethods = { "Address_book" })
+	public void remove_addresses_additional() throws IOException, AWTException {
+		test.info("---------- remove addresses additional test -----------");
+		pof.link_remove.click();
+		Alert alert = driver.switchTo().alert();
+		String Description;
+		Description = "If the correct text appears in alert";
+		func.resuleTest(alert.getText(), "אתה בטוח שברצונך להסיר כתובת זו?", Description, exm, test);
+		driver.switchTo().alert().accept();
+		driver.switchTo().defaultContent();
+		Description = "If the correct text appears in window";
+		func.resuleTest(pof.ajs_content.getText(), "הכתובת נמחקה בהצלחה", Description, exm, test);
+		pof.ajs_button.click();
+		Description = "If there are no additional addresses";
+		func.resuleTest(pof.no_addresses.getText(), "אין לך כתובות נוספות בספר הכתובות שלך.", Description, exm, test);
+		pof.right_sidebar.get(2).click();
+	}
+
+	@Test(priority = 8, groups = "my account", dependsOnMethods = { "login" }, enabled = true)
 	public void My_orders() throws IOException, AWTException {
 		test.info("---------- My orders page test -----------");
 		func.pageTitleTest("ההזמנות שלי", driver.findElement(By.xpath("//h1")).getText(), exm, test);
@@ -154,7 +215,7 @@ public class my_account extends setUp {
 		pof.right_sidebar.get(3).click();
 	}
 
-	@Test(priority = 6, groups = "my account", dependsOnMethods = { "login" }, enabled = true)
+	@Test(priority = 9, groups = "my account", dependsOnMethods = { "login" }, enabled = true)
 	public void Club() throws IOException, AWTException {
 		test.info("---------- Club test -----------");
 		func.pageTitleTest("מועדון לקוחות סטימצקי", driver.findElement(By.xpath("//h1")).getText(), exm, test);
@@ -179,7 +240,7 @@ public class my_account extends setUp {
 		actions.moveToElement(pof.ajs_button2).click().perform();
 	}
 
-	@Test(priority = 7, groups = "my account", dependsOnMethods = { "login" }, enabled = true)
+	@Test(priority = 10, groups = "my account", dependsOnMethods = { "login" }, enabled = true)
 	public void Cart() throws IOException, AWTException {
 		test.info("---------- Cart test -----------");
 		func.pageTitleTest("סל הקניות שלי", driver.findElement(By.xpath("//h1")).getText(), exm, test);
@@ -202,7 +263,7 @@ public class my_account extends setUp {
 		func.resuleTest(pof.price.getText(), "29.90 ₪", Description, exm, test);
 	}
 
-	@Test(priority = 8, groups = "my account", dependsOnMethods = { "login" }, enabled = true)
+	@Test(priority = 11, groups = "my account", dependsOnMethods = { "login" }, enabled = true)
 	public void Popup_cart() throws AWTException, IOException {
 		test.info("---------- Popup cart test -----------");
 		actions.moveToElement(pof.top_cart_icon).perform();
@@ -235,7 +296,7 @@ public class my_account extends setUp {
 		pof.right_sidebar.get(4).click();
 	}
 
-	@Test(priority = 9, groups = "my account", dependsOnMethods = { "login" }, enabled = true)
+	@Test(priority = 12, groups = "my account", dependsOnMethods = { "login" }, enabled = true)
 	public void Steimatzky_prime() throws IOException, AWTException {
 		test.info("---------- Steimatzky prime page test -----------");
 		func.pageTitleTest(driver.getTitle(), "סטימצקי PRIME", exm, test);
@@ -254,27 +315,27 @@ public class my_account extends setUp {
 		func.resuleTest(pof.ajs_content2.getText(), "יש לאשר את קריאת תקנון 'סטימצקי PRIME'", Description, exm, test);
 		pof.ajs_button2.click();
 		pof.Steimatzkys_Prime.click();
-		func.pageTitleTest("סטימצקי PRIME", driver.findElement(By.xpath("//div[@id='content']/div/p[1]")).getText(),
-				exm, test);
+		func.pageTitleTest("תקנון תכנית סטימצקי PRIME",
+				driver.findElement(By.xpath("//div[@id='content']/div/p[1]")).getText(), exm, test);
 	}
 
-	@Test(priority = 10, groups = "elements", dependsOnMethods = { "login" }, enabled = false)
+	@Test(priority = 13, groups = "elements", dependsOnMethods = { "login" }, enabled = true)
 	public void Navigation_bar() throws AWTException, IOException {
 		Navigation_bar.NavigationBar(driver, test1, exm, actions);
 	}
 
-	@Test(priority = 11, groups = "elements", enabled = false)
+	@Test(priority = 14, groups = "elements", enabled = true)
 	public void SearchProduct() throws AWTException, IOException {
 		search_product.searchProduct(driver, test2, exm);
 	}
 
-	@Test(priority = 12, groups = "elements", enabled = false)
+	@Test(priority = 15, groups = "elements", enabled = true)
 	public void Search() throws IOException, InterruptedException, AWTException {
 		search.Search(driver, test2, exm);
 	}
 
-	@Test(priority = 13, groups = "elements", dependsOnMethods = { "login" }, enabled = false)
-	public void footer() throws AWTException, IOException {
+	@Test(priority = 16, groups = "elements", dependsOnMethods = { "login" }, enabled = true)
+	public void Footer() throws AWTException, IOException {
 		Footer_Buttom.Footer(driver, test3, exm, actions);
 	}
 }

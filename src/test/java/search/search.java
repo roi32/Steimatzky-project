@@ -16,7 +16,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class search extends func {
-	static String fileString="search - test.xlsx";
+	static String fileString = "search - test.xlsx";
 	static String sheet = "text_search";
 	static elelments_id pof = new elelments_id();
 
@@ -54,7 +54,7 @@ public class search extends func {
 
 			while (rows <= 9) {
 				// read from excel file
-				String value = value(rows, 0, sheet,fileString);
+				String value = value(rows, 0, sheet, fileString);
 				Thread.sleep(500);
 				// search the product
 				pof.search.clear();
@@ -64,7 +64,8 @@ public class search extends func {
 				// test if products is found
 				if (driver.findElement(By.xpath("//h1")).getText().contains("תוצאות חיפוש")) {
 					resuleTest2(pof.product_grid, value, exm, test);
-				} else if (driver.findElement(By.xpath("//div[@id='product-info']/h1[@class='productTitle']")).isDisplayed()) {
+				} else if (driver.findElement(By.xpath("//div[@id='product-info']/h1[@class='productTitle']"))
+						.isDisplayed()) {
 					String Description = "All products contains the " + value + "";
 					resuleTest(driver.getTitle(), value, Description, exm, test);
 				} else {
@@ -79,7 +80,7 @@ public class search extends func {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
-		
+
 		pof = PageFactory.initElements(driver, elelments_id.class);
 
 		try {
@@ -87,7 +88,7 @@ public class search extends func {
 			int rows = 0;
 			while (rows <= 11) {
 				// read from excel file
-				String value = value(rows, 1, sheet,fileString);
+				String value = value(rows, 1, sheet, fileString);
 				Thread.sleep(500);
 				// search the product
 				pof.search.clear();
@@ -97,7 +98,8 @@ public class search extends func {
 				// test if products is found
 				if (driver.findElement(By.xpath("//h1")).getText().contains("תוצאות חיפוש")) {
 					resuleTest2(pof.authorTitle, value, exm, test);
-				} else if (driver.findElement(By.xpath("//div[@id='product-info']/h1[@class='productTitle']")).isDisplayed()) {
+				} else if (driver.findElement(By.xpath("//div[@id='product-info']/h1[@class='productTitle']"))
+						.isDisplayed()) {
 					String Description = "All products contains the " + value + "";
 					resuleTest(driver.getTitle(), value, Description, exm, test);
 				} else {
@@ -120,7 +122,7 @@ public class search extends func {
 			int rows = 0;
 			while (rows <= 6) {
 				// read from excel file
-				String value = value(rows, 2, sheet,fileString);
+				String value = value(rows, 2, sheet, fileString);
 				Thread.sleep(500);
 				// search the product
 				pof.search.clear();
@@ -130,7 +132,8 @@ public class search extends func {
 				// test if products is found
 				if (driver.findElement(By.xpath("//h1")).getText().contains("תוצאות חיפוש")) {
 					resuleTest2(pof.authorTitle, value, exm, test2);
-				} else if (driver.findElement(By.xpath("//div[@id='product-info']/h1[@class='productTitle']")).isDisplayed()) {
+				} else if (driver.findElement(By.xpath("//div[@id='product-info']/h1[@class='productTitle']"))
+						.isDisplayed()) {
 					String Description = "All products contains the " + value + "";
 					resuleTest(driver.getTitle(), value, Description, exm, test);
 				} else {
@@ -153,7 +156,7 @@ public class search extends func {
 			int rows = 0;
 			while (rows <= 7) {
 				// read from excel file
-				String value = value(rows, 3, sheet,fileString);
+				String value = value(rows, 3, sheet, fileString);
 				Thread.sleep(500);
 				// search the product
 				pof.search.clear();
@@ -164,7 +167,7 @@ public class search extends func {
 				// test if products is found
 				if (pof.note.getText().contains("Maximum words count is 10. In your search query was cut next part:")) {
 					test.pass("You can not search more than 10 words");
-				}else if (pof.note.getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
+				} else if (pof.note.getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
 					test.pass(Description + " not found products");
 				} else {
 					test.fail(Description + " found products",
@@ -178,7 +181,7 @@ public class search extends func {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
-		
+
 		pof = PageFactory.initElements(driver, elelments_id.class);
 
 		try {
@@ -186,7 +189,7 @@ public class search extends func {
 			int rows = 0;
 			while (rows <= 4) {
 				// read from excel file
-				String value = value(rows, 4, sheet,fileString);
+				String value = value(rows, 4, sheet, fileString);
 				Thread.sleep(500);
 				// search the product
 				pof.search.clear();
@@ -196,11 +199,12 @@ public class search extends func {
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				String Description = "The Boundary test with " + value + "";
 				// test if products is found
-				if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך") && search.length() <= 128 && search.length() >= 3) {
+				if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText()
+						.contains("אין תוצאות לשאילתת חיפוש שלך") && search.length() <= 128 && search.length() >= 3) {
 					test.pass(Description + " pass");
 				} else if (pof.note.getText().contains("אורך שאילתת חיפוש מינימלי הוא 3")) {
 					test.pass("Minimum search query length is 3");
-				}else {
+				} else {
 					test.fail(Description + " fail",
 							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 				}
@@ -212,7 +216,7 @@ public class search extends func {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
-		
+
 		pof = PageFactory.initElements(driver, elelments_id.class);
 
 		try {
@@ -223,7 +227,8 @@ public class search extends func {
 			pof.submit.click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// test if products is found
-			if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
+			if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText()
+					.contains("אין תוצאות לשאילתת חיפוש שלך")) {
 				test.pass("Test pass of num search");
 			} else {
 				test.fail("Test fail of num search",
@@ -231,8 +236,7 @@ public class search extends func {
 			}
 			Thread.sleep(1000);
 		} catch (Exception e) {
-			test.fail("The Num test fail",
-					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
+			test.fail("The Num test fail", MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
 
@@ -244,7 +248,7 @@ public class search extends func {
 			int rows = 0;
 			while (rows <= 30) {
 				// read from excel file
-				String value = value(rows, 0, "Product_search",fileString);
+				String value = value(rows, 0, "Product_search", fileString);
 				Thread.sleep(500);
 				// search the value
 				pof.search.sendKeys(value);
@@ -254,7 +258,8 @@ public class search extends func {
 				// test if search field is clear
 				if (search.equals("מה תרצו לקנות היום?")) {
 					test.pass("The search field is cleared");
-				} else if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText().contains("אין תוצאות לשאילתת חיפוש שלך")) {
+				} else if (driver.findElement(By.xpath("//p[@class='note-msg']")).getText()
+						.contains("אין תוצאות לשאילתת חיפוש שלך")) {
 					test.info("No product found");
 					pof.search.clear();
 				} else {
@@ -270,7 +275,7 @@ public class search extends func {
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen()).build());
 			e.printStackTrace();
 		}
-		
+
 		pof = PageFactory.initElements(driver, elelments_id.class);
 
 		try {
@@ -278,14 +283,14 @@ public class search extends func {
 			int rows = 0;
 			while (rows <= 9) {
 				// read from excel file
-				String value = value(rows, 0, sheet,fileString);
+				String value = value(rows, 0, sheet, fileString);
 				Thread.sleep(500);
 				pof.search.clear();
 				// add value and space
 				pof.search.sendKeys(value);
 				pof.search.sendKeys(" ");
 				Thread.sleep(2000);
-				String autoString=pof.search_autocomplete.get(0).getAttribute("title");
+				String autoString = pof.search_autocomplete.get(0).getAttribute("title");
 				// check if all products contain value
 				resuleTest2(pof.search_autocomplete, value, exm, test);
 				pof.search_autocomplete.get(0).click();
