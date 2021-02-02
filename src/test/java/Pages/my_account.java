@@ -37,6 +37,7 @@ public class my_account extends setUp {
 	static Extent_reports exm = new Extent_reports(driver);
 	static my_account_id pof;
 
+
 	@BeforeClass
 	public void beforeClass() {
 		extent = Extent_reports.GetExtent(Title);
@@ -241,7 +242,7 @@ public class my_account extends setUp {
 	}
 
 	@Test(priority = 10, groups = "my account", dependsOnMethods = { "login" }, enabled = true)
-	public void Cart() throws IOException, AWTException {
+	public void Cart() throws IOException, AWTException, InterruptedException {
 		test.info("---------- Cart test -----------");
 		func.pageTitleTest("סל הקניות שלי", driver.findElement(By.xpath("//h1")).getText(), exm, test);
 		String Description;
@@ -260,7 +261,31 @@ public class my_account extends setUp {
 		Description = "If the title of Subtotal price appears on the shopping cart";
 		func.resuleTest(pof.pricetitle.getText(), "סך ביניים", Description, exm, test);
 		Description = "If the price is right everywhere on the shopping cart page";
-		func.resuleTest(pof.price.getText(), "29.90 ₪", Description, exm, test);
+		func.resuleTest(pof.price.get(2).getText(), "29.90 ₪", Description, exm, test);
+		Description = "If the price is right everywhere on the shopping cart page";
+		func.resuleTest(pof.price.get(3).getText(), "29.90 ₪", Description, exm, test);
+		Description = "If the price is right everywhere on the shopping cart page";
+		func.resuleTest(pof.price.get(5).getText(), "29.90 ₪", Description, exm, test);
+		Description = "If the price is right everywhere on the shopping cart page";
+		func.resuleTest(pof.Cprice.get(0).getText(), "29.90 ₪", Description, exm, test);
+		Description = "If the price is right everywhere on the shopping cart page";
+		func.resuleTest(pof.Cprice.get(1).getText(), "29.90 ₪", Description, exm, test);
+		Description = "If the price is right everywhere on the shopping cart page";
+		func.resuleTest(pof.cart_label_price.getText(), "29.90 ₪", Description, exm, test);
+		pof.addtocount_plus_cart_item_qty.click();
+		pof.update_cart_action.click();
+		if (pof.ajs_content.isDisplayed()
+				&& pof.ajs_content.getText().contains("לא ניתן לרכוש יותר מיחידה אחת למוצר שבמבצע")) {
+			test.pass("test pass");
+		} else {
+			test.fail("test fail");
+		}
+		pof.ajs_button.click();
+		Thread.sleep(2000);
+		actions.moveToElement(pof.addtocount_minus_cart_item_qty).click().perform();
+		pof.update_cart_action.click();
+		Description = "If the number of club cards is 1";
+		func.resuleTest(pof.qty.getAttribute("value"), "1", Description, exm, test);
 	}
 
 	@Test(priority = 11, groups = "my account", dependsOnMethods = { "login" }, enabled = true)
@@ -319,22 +344,22 @@ public class my_account extends setUp {
 				driver.findElement(By.xpath("//div[@id='content']/div/p[1]")).getText(), exm, test);
 	}
 
-	@Test(priority = 13, groups = "elements", dependsOnMethods = { "login" }, enabled = true)
+	@Test(priority = 13, groups = "elements", dependsOnMethods = { "login" }, enabled = false)
 	public void Navigation_bar() throws AWTException, IOException {
 		Navigation_bar.NavigationBar(driver, test1, exm, actions);
 	}
 
-	@Test(priority = 14, groups = "elements", enabled = true)
+	@Test(priority = 14, groups = "elements", enabled = false)
 	public void SearchProduct() throws AWTException, IOException {
 		search_product.searchProduct(driver, test2, exm);
 	}
 
-	@Test(priority = 15, groups = "elements", enabled = true)
+	@Test(priority = 15, groups = "elements", enabled = false, dependsOnMethods = { "SearchProduct" })
 	public void Search() throws IOException, InterruptedException, AWTException {
 		search.Search(driver, test2, exm);
 	}
 
-	@Test(priority = 16, groups = "elements", dependsOnMethods = { "login" }, enabled = true)
+	@Test(priority = 16, groups = "elements", dependsOnMethods = { "login" }, enabled = false)
 	public void Footer() throws AWTException, IOException {
 		Footer_Buttom.Footer(driver, test3, exm, actions);
 	}

@@ -89,7 +89,7 @@ public class homepage extends setUp {
 		search_product.searchProduct(driver, test2, exm);
 	}
 
-	@Test(priority = 5, groups = "elements", enabled = true)
+	@Test(priority = 5, groups = "elements", dependsOnMethods = { "SearchProduct" }, enabled = true)
 	public void Search() throws IOException, InterruptedException, AWTException {
 		search.Search(driver, test2, exm);
 	}

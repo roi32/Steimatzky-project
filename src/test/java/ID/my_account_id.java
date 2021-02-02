@@ -58,8 +58,8 @@ public class my_account_id {
 
 	@FindBy(how = How.XPATH, using = "//div[@class='page-title title-buttons']//button")
 	public WebElement addAddresses;
-	
-	@FindBy(how = How.XPATH,using = "//li[@class='fields']//label")
+
+	@FindBy(how = How.XPATH, using = "//li[@class='fields']//label")
 	public List<WebElement> labels;
 
 	@FindBy(how = How.ID, using = "telephone")
@@ -116,14 +116,29 @@ public class my_account_id {
 	@FindBy(how = How.XPATH, using = "//tr[@class='clearafter first last']/th[@class='col-md-2'][3]")
 	public WebElement pricetitle;
 
-	@FindBy(how = How.CLASS_NAME, using = "price")
-	public WebElement price;
+	@FindBy(how = How.XPATH, using = "//tbody/tr[@class='clearafter first last odd']/td//span[@class='price']")
+	public List<WebElement> price;
+
+	@FindBy(how = How.XPATH, using = "//td[@class='a-right'][2]")
+	public List<WebElement> Cprice;
+
+	@FindBy(how = How.XPATH, using = "//span[@class='cart-label']/span[@class='price']")
+	public WebElement cart_label_price;
 
 	@FindBy(how = How.XPATH, using = "//tr[@class='clearafter first last']/th[@class='col-md-1']")
 	public WebElement titeqty;
 
 	@FindBy(how = How.XPATH, using = "//table[@id='shopping-cart-table']//input")
 	public WebElement qty;
+
+	@FindBy(how = How.XPATH, using = "//span[@class='addtocount_plus cart-item-qty']")
+	public WebElement addtocount_plus_cart_item_qty;
+
+	@FindBy(how = How.XPATH, using = "//span[@class='addtocount_minus cart-item-qty ']")
+	public WebElement addtocount_minus_cart_item_qty;
+
+	@FindBy(how = How.XPATH, using = "//button[@class='update_cart_action']")
+	public WebElement update_cart_action;
 
 	@FindBy(how = How.ID, using = "top-cart-icon")
 	public WebElement top_cart_icon;
