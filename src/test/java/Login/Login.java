@@ -111,7 +111,7 @@ public class Login extends setUp {
 		pof.pass.sendKeys("123456");
 		while (rows <= 3) {
 			pof.email.clear();
-			//Insert value to email field
+			// Insert value to email field
 			pof.email.sendKeys(func.value(rows, 1, "login", fileString));
 			pof.send2.click();
 			Thread.sleep(2000);
@@ -127,7 +127,7 @@ public class Login extends setUp {
 		test1.info("--------- worng email num test ---------");
 		pof.pass.sendKeys("123456");
 		pof.email.clear();
-		//Insert number to email field
+		// Insert number to email field
 		pof.email.sendKeys("1");
 		pof.send2.click();
 		Thread.sleep(2000);
@@ -145,7 +145,7 @@ public class Login extends setUp {
 		pof.email.sendKeys("roi.steimatzky@gmail.com");
 		while (rows <= 3) {
 			pof.pass.clear();
-			//Insert value to password field
+			// Insert value to password field
 			pof.pass.sendKeys(func.value(rows, 1, "login", fileString));
 			pof.send2.click();
 			Thread.sleep(2000);
@@ -174,7 +174,7 @@ public class Login extends setUp {
 		pof.email.clear();
 		pof.email.sendKeys("roi.steimatzky@gmail.com");
 		pof.pass.clear();
-		//Insert number to password field
+		// Insert number to password field
 		pof.pass.sendKeys("1");
 		pof.send2.click();
 		Thread.sleep(2000);
@@ -187,7 +187,7 @@ public class Login extends setUp {
 		test2.info("--------- Unregister email test ---------");
 		pof.email.clear();
 		pof.pass.clear();
-		//Insert Unregister email to email field
+		// Insert Unregister email to email field
 		pof.email.sendKeys("roi@gmail.com");
 		pof.pass.sendKeys("123456");
 		pof.send2.click();

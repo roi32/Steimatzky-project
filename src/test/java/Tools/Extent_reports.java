@@ -47,6 +47,7 @@ public class Extent_reports {
 			return extent;
 		extent = new ExtentReports();
 		extent.attachReporter(getHtmlReporter(Title));
+		extent.setSystemInfo("Roi Izchak ", "Steimatzky-project‬");
 		return extent;
 	}
 
